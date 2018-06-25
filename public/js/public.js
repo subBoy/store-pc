@@ -1,5 +1,9 @@
 function initNav () { 
-  var sTop = $(window).scrollTop();  
+  var sTop = $(window).scrollTop();
+  var sWidth = $(window).width(); 
+  if (sWidth < 1340) {
+  	return;
+  }
   sTop = parseInt(sTop);
   if (sTop >= 10) {
   	$(".global-body, .header-wrapper, .header-logo").addClass('win-nav');
