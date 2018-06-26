@@ -22,21 +22,21 @@
 				<p class="header-logo-name">RACK ROD</p>
 			</div>
 			<div class="header-r">
-				<span class="sp-cart-btn-ctr in-block ft-right">
+				<span class="header-r-item sp-cart-btn-ctr in-block ft-right" unfold="购物车">
 					<span class="sp-cart-num in-block">9</span>
 				</span>
-				<span class="user-info-btn-ctr in-block ft-right">
+				<span class="header-r-item user-info-btn-ctr in-block ft-right" unfold="用户中心">
 					<img src="./images/user-center-icon.png"  class="user-info-btn">
 				</span>
-				<span class="hd-search-btn-ctr in-block ft-right">
+				<span class="header-r-item hd-search-btn-ctr in-block ft-right" unfold="搜索框">
 					<span class="hd-search-btn in-block">SEARCH</span>
 					<img src="./images/search-icon.png"  class="hd-search-btn-icon in-block">
 				</span>
 				<!-- 右边搜索框&个人中心信息&购物车展开内容 -->
-				<div class="header-r-nav-list-ctr" style="display: none;">
-					<img src="./images/arrows-top.png" class="arrows-top set-animation user-site cart-site">
+				<div class="header-r-nav-list-ctr set-animation" style="display: none;">
+					<img src="./images/arrows-top.png" class="arrows-top set-animation">
 					<!-- 搜索框展开内容 -->
-					<div class="serach-input-wrapper" style="display: none;">
+					<div class="serach-input-wrapper header-r-nav-unfold" unfold="搜索框" style="display: none;">
 						<p class="global-input-desc">搜索</p>
 						<div class="serach-input-group">
 							<div class="serach-input-ctr">
@@ -45,136 +45,138 @@
 							</div>
 						</div>
 					</div>
-					<!-- 账号未登录状态 -->
-					<div class="sign-input-wrapper" style="display: none;">
-						<p class="global-input-desc">账号登录</p>
-						<div class="sign-input-group">
-							<div class="sign-input-layout">
-								<div class="sign-input-ctr u-ic">
-									<span class="sign-input-tle in-block">手机/邮箱：</span>
-									<input type="text" class="sign-input global-input-focus userAccount" value="请输入您的邮箱或手机号">
-									<p class="err-txt-wrapper"></p>
+					<div class="header-r-nav-unfold" unfold="用户中心" style="display: none;">
+						<!-- 账号未登录状态 -->
+						<div class="sign-input-wrapper">
+							<p class="global-input-desc">账号登录</p>
+							<div class="sign-input-group">
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr u-ic">
+										<span class="sign-input-tle in-block">手机/邮箱：</span>
+										<input type="text" class="sign-input global-input-focus userAccount" value="请输入您的邮箱或手机号">
+										<p class="err-txt-wrapper"></p>
+									</div>
 								</div>
-							</div>
-							<div class="sign-input-layout">
-								<div class="sign-input-ctr p-ic">
-									<span class="sign-input-tle in-block">确认密码：</span>
-									<input type="text" class="sign-input in-block global-input-focus userPassword" value="请确认密码">
-									<p class="err-txt-wrapper"></p>
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr p-ic">
+										<span class="sign-input-tle in-block">确认密码：</span>
+										<input type="text" class="sign-input in-block global-input-focus userPassword" value="请确认密码">
+										<p class="err-txt-wrapper"></p>
+									</div>
 								</div>
-							</div>
-							<div class="sign-input-layout">
-								<div class="sign-input-ctr c-ic">
-									<span class="sign-input-tle in-block">验证码：</span>
-									<input type="text" class="sign-input global-input-focus userCode" value="">
-									<span class="code-img-ctr in-block">
-										<img src="../developerImg/code.jpg" class="code-img">
-									</span>
-									<p class="err-txt-wrapper"></p>
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr c-ic">
+										<span class="sign-input-tle in-block">验证码：</span>
+										<input type="text" class="sign-input global-input-focus userCode" value="">
+										<span class="code-img-ctr in-block">
+											<img src="../developerImg/code.jpg" class="code-img">
+										</span>
+										<p class="err-txt-wrapper"></p>
+									</div>
 								</div>
-							</div>
-							<div class="rest-operation-wrapper">
-								<p class="remember-login-info">
-									<span class="global-select-wrapper in-block">
-										<input class="global-select-input" type="checkbox">
-									</span>
-									记住我的登录信息！
-								</p>
-								<p class="forget-pw-and-sign-up">
-									<a href="../components/sign-up/sign-up.html" class="fs-opertion-btn">新用户注册</a>
-									<a href="../components/forget-pw/forget-pw.html" class="fs-opertion-btn">忘记密码</a>
-								</p>
-							</div>
-							<div class="nav-sign-in-btn-ctr">
-								<button id="login-btn-ctr" class="nav-sign-in-btn">登录</button>
-							</div>
-							<div class="third-party-sign-in">
-								<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
-								<div class="third-party-style-list in-block">
-									<a class="third-party-item tp-qq in-block">
-										<span class="tp-icon"></span>
-										<span class="tp-name">QQ</span>
-									</a>
-									<a class="third-party-item tp-wx in-block">
-										<span class="tp-icon"></span>
-										<span class="tp-name">微信</span>
-									</a>
-									<a class="third-party-item tp-wb in-block">
-										<span class="tp-icon"></span>
-										<span class="tp-name">微博</span>
-									</a>
+								<div class="rest-operation-wrapper">
+									<p class="remember-login-info">
+										<span class="global-select-wrapper in-block">
+											<input class="global-select-input" type="checkbox">
+										</span>
+										记住我的登录信息！
+									</p>
+									<p class="forget-pw-and-sign-up">
+										<a href="../components/sign-up/sign-up.html" class="fs-opertion-btn">新用户注册</a>
+										<a href="../components/forget-pw/forget-pw.html" class="fs-opertion-btn">忘记密码</a>
+									</p>
+								</div>
+								<div class="nav-sign-in-btn-ctr">
+									<button id="login-btn-ctr" class="nav-sign-in-btn">登录</button>
+								</div>
+								<div class="third-party-sign-in">
+									<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
+									<div class="third-party-style-list in-block">
+										<a class="third-party-item tp-qq in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">QQ</span>
+										</a>
+										<a class="third-party-item tp-wx in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">微信</span>
+										</a>
+										<a class="third-party-item tp-wb in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">微博</span>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- 账号已登录状态 -->
-					<div class="sign-input-wrapper" style="display: none;">
-						<div class="user-info-wrapper">
-							<span class="nav-user-name-greet in-block">你好！秋帆</span>
-							<span class="nav-sign-out-btn in-block">退出</span>
-						</div>
-						<div class="user-module-wrapper">
-							<div class="user-module-group">
-								<p class="user-module-desc">个人信息</p>
-								<ul class="user-module-list">
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的账号面板</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的个人信息</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的配送地址簿</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的优惠信息</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的积分信息</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的收藏</a>
-										<span class="user-module-indent"></span>
-									</li>
-								</ul>
+						<!-- 账号已登录状态 -->
+						<div class="sign-input-wrapper" style="display: none;">
+							<div class="user-info-wrapper">
+								<span class="nav-user-name-greet in-block">你好！秋帆</span>
+								<span class="nav-sign-out-btn in-block">退出</span>
 							</div>
-							<div class="user-module-group">
-								<p class="user-module-desc">订单信息</p>
-								<ul class="user-module-list">
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的订单</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">我的退单</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">到货提醒</a>
-										<span class="user-module-indent"></span>
-									</li>
-									<li class="user-module-item">
-										<a href="" class="user-module-link">退货说明</a>
-										<span class="user-module-indent"></span>
-									</li>
-								</ul>
-							</div>
-							<div class="user-module-recommend">
-								<p class="recommend-module-tle">野派资料馆</p>
-								<div class="recommend-module-info in-block">
-									<img src="./images/home-of.png"  class="home-of-img">
-									<p class="recommend-module-name">HOME OF ®</p>
+							<div class="user-module-wrapper">
+								<div class="user-module-group">
+									<p class="user-module-desc">个人信息</p>
+									<ul class="user-module-list">
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的账号面板</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的个人信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的配送地址簿</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的优惠信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的积分信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的收藏</a>
+											<span class="user-module-indent"></span>
+										</li>
+									</ul>
+								</div>
+								<div class="user-module-group">
+									<p class="user-module-desc">订单信息</p>
+									<ul class="user-module-list">
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的订单</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的退单</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">到货提醒</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">退货说明</a>
+											<span class="user-module-indent"></span>
+										</li>
+									</ul>
+								</div>
+								<div class="user-module-recommend">
+									<p class="recommend-module-tle">野派资料馆</p>
+									<div class="recommend-module-info in-block">
+										<img src="./images/home-of.png"  class="home-of-img">
+										<p class="recommend-module-name">HOME OF ®</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- 购物车展开状态 -->
-					<div class="nav-sp-cart-wrapper" style="display: none">
+					<div class="nav-sp-cart-wrapper header-r-nav-unfold" unfold="购物车" style="display: none">
 						<p class="sp-cart-desc-wrapper">添加至购物车的商品</p>
 						<div class="sp-cart-list-wrapper">
 							<!-- 购物车为空的状态 -->
@@ -183,9 +185,9 @@
 								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="" class="sp-list-link">逛逛</a>！</p>
 							</div>
 							<!-- 购物车非空的状态 -->
-							<div class="nav-sp-cart-group" style="display: none">
+							<div class="nav-sp-cart-group">
 								<ul class="nav-sp-cart-list">
-									<li class="nav-sp-cart-item">
+									<li class="nav-sp-cart-item set-animation">
 										<a href="" class="nav-sp-cart-link">
 											<span class="sp-img-ctr">
 												<img src="../developerImg/sp-img.jpg" class="sp-img">
@@ -201,7 +203,7 @@
 										</a>
 										<span class="del-sp-btn-ctr"></span>
 									</li>
-									<li class="nav-sp-cart-item">
+									<li class="nav-sp-cart-item set-animation">
 										<a href="" class="nav-sp-cart-link">
 											<span class="sp-img-ctr">
 												<img src="../developerImg/sp-img.jpg" class="sp-img">
@@ -217,7 +219,55 @@
 										</a>
 										<span class="del-sp-btn-ctr"></span>
 									</li>
-									<li class="nav-sp-cart-item">
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
 										<a href="" class="nav-sp-cart-link">
 											<span class="sp-img-ctr">
 												<img src="../developerImg/sp-img.jpg" class="sp-img">
