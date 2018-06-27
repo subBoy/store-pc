@@ -55,5 +55,11 @@ $.extend(window, {
 		  return obj;
 		}
 		return obj;
+	},
+	navHighlight: function () {
+		// 设置导航高亮
+		var itemIndex = $('#nav-item-index').val();
+		$('.header-nav-item .nav-item-link').removeClass('now-link');
+		$('.header-nav-item').eq(itemIndex).find('.nav-item-link').addClass('now-link');
 	}
 })

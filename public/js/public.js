@@ -264,4 +264,5 @@ $(function () {
 	levelNav(); // 导航列表显隐操作
 	headerNavR(); // 头部右侧下拉菜单显隐操作
 	delCartSp(); // 头部删除购物车里面的商品操作
+	navHighlight(); // 设置导航高亮
 })
