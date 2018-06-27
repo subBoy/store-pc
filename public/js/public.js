@@ -1,15 +1,22 @@
+var sh, hr, st;
 function initNav () { 
   var sTop = $(window).scrollTop();
   var sWidth = $(window).width(); 
   if (sWidth < 1340) {
-  	$(".global-body, .header-wrapper, .header-logo").removeClass('win-nav');
+  	$(".global-body, .header-wrapper").removeClass('win-nav');
+  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
   	return;
   }
   sTop = parseInt(sTop);
   if (sTop >= 10) {
-  	$(".global-body, .header-wrapper, .header-logo").addClass('win-nav');
+  	$(".global-body, .header-wrapper").addClass('win-nav');
+  	$(".header-logo").addClass('win-nav-top');
+  	setTimeout(function () {
+  		$(".header-logo").addClass('win-nav set-animation');
+  	}, 300);
   } else { 
-  	$(".global-body, .header-wrapper, .header-logo").removeClass('win-nav');
+  	$(".global-body, .header-wrapper").removeClass('win-nav');
+  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
   } 
 }
 function setWinNav () {
@@ -30,21 +37,27 @@ function setNavItemStyl () {
 	});
 }
 function setInputFB () {
-	$('input[class*=input]').each(function(){
+	$('input.fb').each(function(){
 		var oldVal = $(this).val();
 		$(this).focus(function () {
 			var nowVal = $(this).val();
-			$(this).parent().addClass('add-styl');
-			$(this).parent().find('.err-txt-wrapper').html('');
 			if (nowVal === oldVal) {
 				$(this).val('');
 			}
 		}).blur(function () {
 			var nowVal = $(this).val();
-			$(this).parent().removeClass('add-styl');
 			if (nowVal === '') {
 				$(this).val(oldVal);
 			}
+		})
+	})
+
+	$('input.sign-input').each(function(){
+		$(this).focus(function () {
+			$(this).parent().addClass('add-styl');
+			$('#err-txt-wrapper').html('');
+		}).blur(function () {
+			$(this).parent().removeClass('add-styl');
 		})
 	})
 }
@@ -59,63 +72,67 @@ function checkedItem () {
 	});
 }
 function fromVerify () {
-	$(".userAccount").blur(function () {
-		var userAccount = $.trim($(this).val());
-		var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
-    var reg1 = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
-    if(!reg.test(userAccount) && !reg1.test(userAccount)){
-      $(this).parent().find('.err-txt-wrapper').html('请输入有效的手机号或邮箱！')
-    }
+	$(".userAccount").focus(function () {
+		clearTimeout(st);
+		var accmountList = $('.sign-accmount-wrapper .sign-accmount-item');
+		if (accmountList.length) {
+			$('.sign-accmount-wrapper').show();
+			if (!st) {
+				shotcut();
+			}
+		}
+	}).blur(function () {
+		st = setTimeout(function () {
+			$('.sign-accmount-wrapper').hide();
+			var userAccount = $.trim($(".userAccount").val());
+			var  obj = nonNull(userAccount, '账号');
+			if (!obj.status) {
+				$('#err-txt-wrapper').html(obj.msg);
+			}
+		}, 300);
 	})
+
 	$(".userPassword").blur(function () {
-		var userPassword = $.trim($(this).val());
-    if(userPassword === '请确认密码'){
-      $(this).parent().find('.err-txt-wrapper').html('请输入密码！')
-      return;
-    }
-    if(userPassword.length < 8 || userPassword.length > 16){
-      $(this).parent().find('.err-txt-wrapper').html('密码长度需控制在8-16位！')
-      return;
-    }
-    var reg2 = /^[a-zA-Z0-9]\w{7,15}$/
-    if(!reg2.test(userPassword)){
-      $(this).parent().find('.err-txt-wrapper').html('密码不能还有特殊字符！');
-    }
+		var userPassword = $.trim($(".userPassword").val());
+		var  obj = nonNull(userPassword, '密码');
+		if (!obj.status) {
+			$('#err-txt-wrapper').html(obj.msg);
+		}
 	})
+
 	$(".userCode").blur(function () {
-		var userCode = $.trim($(this).val());
-    if(!userCode){
-      $(this).parent().find('.err-txt-wrapper').html('请输入验证码！')
-    }
+		var userCode = $.trim($(".userCode").val());
+		var  obj = nonNull(userCode, '验证码');
+		if (!obj.status) {
+			$('#err-txt-wrapper').html(obj.msg);
+		}
 	})
 }
 function login () {
 		var userAccount = $.trim($(".userAccount").val());
-		var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
-    var reg1 = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
-    if(!reg.test(userAccount) && !reg1.test(userAccount)){
-      $(".userAccount").parent().find('.err-txt-wrapper').html('请输入有效的手机号或邮箱！');
+		var  obj = nonNull(userAccount, '账号');
+		if (!obj.status) {
+			$('#err-txt-wrapper').html(obj.msg);
       return;
-    }
+		}
+
 		var userPassword = $.trim($(".userPassword").val());
-		var reg2 = /^[a-zA-Z0-9]\w{7,15}$/
-    if(userPassword === '请确认密码'){
-      $(".userPassword").parent().find('.err-txt-wrapper').html('请输入密码！');
+		var  obj2 = nonNull(userPassword, '密码');
+		if (!obj2.status) {
+			$('#err-txt-wrapper').html(obj2.msg);
       return;
-    }
-    if(!reg2.test(userPassword)){
-      $(".userPassword").parent().find('.err-txt-wrapper').html('密码不能还有特殊字符！');
-      return;
-    }
+		}
+
 		var userCode = $.trim($(".userCode").val());
+		var  obj3 = nonNull(userCode, '验证码');
 		var imgCodeStatus = true;
 		// imgCodeStatus 此变量决定是否验证图片验证码
-    if(!userCode && imgCodeStatus){
-      $(".userCode").parent().find('.err-txt-wrapper').html('请输入验证码！');
+		if (!obj3.status && imgCodeStatus) {
+			$('#err-txt-wrapper').html(obj3.msg);
       return;
-    }
+		}
     //在下面执行登录操作
-   // ...
+    // ...
 }
 function clearDefault () {
 	$('.nav-sp-cart-group').mouseover(function(e){
@@ -123,7 +140,6 @@ function clearDefault () {
 		e.preventDefault();
   });
 }
-var sh, hr;
 function levelNav () {
 	$('.header-nav-item').find('.nav-item-link').hover(function () {
 		var levelName = $(this).parent().attr('levelName');
@@ -181,33 +197,35 @@ function headerNavR () {
 			$('.header-r-nav-list-ctr').addClass('unfold');
 		}, 10)
 	}, function () {
-		$('.header-r-nav-list-ctr').removeClass('unfold')
+		$('#err-txt-wrapper').html('');
+		$('.header-r-nav-list-ctr').removeClass('unfold');
 		hr = setTimeout(function () {
 			$('.header-r-nav-list-ctr').hide();
+			$('.header-r-nav-unfold').hide();
 		}, 300)
 	})
 
 	$('.header-r-item').hover(function () {
 		$('.arrows-top').removeClass('cart-site user-site');
-		$('.header-r-nav-unfold').hide();
 		var _index = $(this).index();
 		if (_index === 0) {
 			$(".arrows-top").addClass('cart-site');
 		} else if (_index === 1) {
 			$(".arrows-top").addClass('user-site')
 		}
-
 		var unfold = $(this).attr('unfold');
 		var rItems = $('.header-r-nav-unfold');
 		for (var i = 0; i < rItems.length; i++) {
 			(function (i) {
 				var _unfold = rItems.eq(i).attr('unfold');
 				if (unfold === _unfold) {
+					$('.header-r-nav-unfold').hide();
 					rItems.eq(i).show();
 				}
 			})(i)
 		}
 	}, function () {
+		$('#err-txt-wrapper').html('');
 	})
 }
 function delCartSp () {
@@ -223,6 +241,14 @@ function delCartSp () {
 			}
 		}, 300)
 		$('.header-r-nav-list-ctr').show();
+	})
+}
+function shotcut () {
+	$('.sign-accmount-item').on('click', function () {
+		clearTimeout(st);
+		var _thisVal = $(this).html();
+		$('.userAccount').val(_thisVal);
+		$(this).parent().parent().hide();
 	})
 }
 $(function () {
