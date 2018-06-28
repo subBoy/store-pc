@@ -87,12 +87,12 @@ h1, h2, h3, h4, h5, h6, p {
   float: right;
 }
 .global-body {
-  padding-top: 130px;
+  padding-top: 129px;
 }
 .global-body.win-nav {
   padding-top: 60px;
 }
-.set-animation {
+.set-animation, .global-btn-styl {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
@@ -266,6 +266,9 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
   letter-spacing: 2px;
   color: #000;
+}
+.header-nav-item.spl-styl .nav-item-link {
+  letter-spacing: 0;
 }
 .nav-item-link:hover, .nav-item-link.now-link {
   color: #b3494d;
@@ -1055,4 +1058,7 @@ h1, h2, h3, h4, h5, h6, p {
   filter: alpha(opacity=0);
   -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.global-btn-styl:hover {
+  background-color: #262626;
 }

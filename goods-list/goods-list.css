@@ -1,1 +1,120 @@
 @charset"UTF-8";
+.gl-banner-ctr {
+	position: relative;
+	height: 550px;
+	background-image: url(./images/goods-banner.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.gl-banner-txt-wrapper {
+	position: absolute;
+	top: 250px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.gl-banner-txt {
+	padding-left: 5px;
+	line-height: 40px;
+	letter-spacing: 5px;
+	color: #fff;
+	font-size: 18px;
+}
+.gl-content-ctr {
+	margin: 0 auto;
+	max-width: 1528px;
+}
+.gl-content-wrapper {
+	padding: 0 30px;
+}
+.gl-content-tle-wrapper {
+	position: relative;
+	padding: 60px 0 40px;
+}
+.gl-ct-tle-group {
+	position: relative;
+	margin: 0 auto;
+	width: 250px;
+	text-align: center;
+	cursor: pointer;
+}
+.gl-ct-tle-view {
+	line-height: 60px;
+	padding: 0 30px 0 5px;
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(./images/pull-down.png);
+}
+.gl-ct-tle-view.clicked {
+	background-image: url(./images/pull-down-3.png);
+}
+.gl-ct-tle-list {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.gl-ct-tle-item {
+	margin-top: -1px;
+	line-height: 40px;
+	padding-left: 15px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: left;
+	border: 1px solid #b0b0b0;
+	background-repeat: repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.gl-ct-tle-item:hover {
+	color: #fff;
+	background-image: url(./images/pull-down-list-bg.png);
+}
+.gl-tle-item-txt {
+	padding-left: 2px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.gl-sort-ctr {
+	position: absolute;
+	right: 0px;
+	top: 69px;
+	width: 185px;
+	cursor: pointer;
+}
+.gl-sort-view {
+	display: block;
+	line-height: 40px;
+	padding-left: 20px;
+	border: 1px solid #b7b7b7;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: 160px center;
+	background-image: url(./images/pull-down-2.png);
+}
+.gl-sort-view.clicked {
+	background-image: url(./images/pull-down-4.png);
+}
+.gl-sort-styles {
+	border: 1px solid #b7b7b7;
+	border-top: none;
+}
+.gl-sort-item {
+	line-height: 40px;
+	padding: 0 10px;
+	font-size: 14px;
+	color: #808080;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.gl-sort-item:hover {
+	color: #fff;
+	background-color: #a11f24;
+}
