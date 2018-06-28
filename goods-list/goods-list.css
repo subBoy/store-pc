@@ -25,11 +25,12 @@
 	max-width: 1528px;
 }
 .gl-content-wrapper {
-	padding: 0 30px;
+	padding: 0 15px;
 }
 .gl-content-tle-wrapper {
 	position: relative;
 	padding: 60px 0 40px;
+	margin: 0 15px;
 }
 .gl-ct-tle-group {
 	position: relative;
@@ -117,4 +118,67 @@
 .gl-sort-item:hover {
 	color: #fff;
 	background-color: #a11f24;
+}
+.gl-main-content {
+	overflow: hidden;
+}
+.gl-main-ct-side-wrapper {
+	width: 26%;
+	height: 100px;
+}
+.gl-main-list-wrapper {
+	width: 74%;
+}
+.gl-ct-list-view {
+	overflow: hidden;
+}
+.gl-ct-list-item {
+	float: left;
+	width: 33.3333333%;
+}
+.gl-ct-item-img-wrapper {
+	margin: 0 15px;
+}
+.gl-ct-item-img-group {
+	position: relative;
+	padding-top: 100%;
+	height: 0;
+	overflow: hidden;
+}
+.gl-ct-item-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1
+}
+.gl-ct-item-img {
+	width: 100%;
+	height: 100%;
+}
+.gl-ct-item-info {
+	margin: 0 15px;
+}
+.gl-ct-item-info {
+	text-align: center;
+}
+.gl-ct-series-ctr {
+	text-align: center;
+}
+.series-ctr {
+	margin: 0 2px;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #5a6161;
+}
+.series-ctr.spl-cl-1 {
+	background-color: #2f4242;
+}
+.series-ctr.spl-cl-2 {
+	background-color: #fff;
+}
+.series-ctr.spl-cl-3 {
+	background-color: #314442;
 }
