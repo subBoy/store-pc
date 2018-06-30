@@ -86,6 +86,10 @@ h1, h2, h3, h4, h5, h6, p {
 .ft-right {
   float: right;
 }
+..gl-content-wrapper {
+  position: relative;
+  padding: 0 15px;
+}
 .global-body {
   padding-top: 129px;
 }
@@ -1061,4 +1065,120 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .global-btn-styl:hover {
   background-color: #262626;
+}
+.footer-controller {
+  position: relative;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+.footer-logo-wrapper {
+  padding-bottom: 14px;
+}
+.footer-logo-img {
+  width: 60px;
+  padding: 32px 0 0 10px;
+  margin: 0 auto;
+}
+.footer-logo-txt {
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer-search-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 345px;
+  height: 38px;
+  border: 1px solid #000;
+}
+.footer-search {
+  float: left;
+  line-height: 38px;
+  padding-left: 15px;
+  width: 260px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer-search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 38px;
+  height: 38px;
+  width: 70px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer-moit-link {
+  line-height: 32px;
+  padding: 12px 0 0 2px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.footer-nav-list {
+  overflow: hidden;
+}
+.footer-nav-item {
+  float: left;
+}
+.footer-nav-link {
+  line-height: 40px;
+  padding: 0 5px;
+  font-size: 12px;
+}
+.footer-nav-link .spl-styl {
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer-recommend-wrapper {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  text-align: left;
+}
+.footer-recommend-list {
+  overflow: hidden;
+}
+.footer-recommend-item {
+  float: left;
+}
+.footer-recommend-link {
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tb-link {
+  padding-left: 10px;
+  width: 45px;
+  background-image: url(./images/tb.png);
+}
+.wx-link {
+  width: 45px;
+  background-image: url(./images/wx.png);
+}
+.wb-link {
+  width: 45px;
+  background-image: url(./images/wb.png);
+}
+.tm-link {
+  width: 45px;
+  background-image: url(./images/tm.png);
+}
+.yh-link {
+  width: 45px;
+  background-image: url(./images/yh.png);
+}
+.yk-link {
+  width: 45px;
+  background-image: url(./images/yk.png);
+}
+.footer-recommend-desc {
+  line-height: 20px;
+  font-size: 12px;
 }
