@@ -68,7 +68,12 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0px;
   margin: 0px;
 }
-
+@font-face {
+  font-family: 'yst-font';
+  /*src:url('pictos/pictos-web.woff'),  */
+  src: url('./font.ttf');
+  /*url('pictos/pictos-web.eot');*/
+}
 /**
  * 全局公共样式
  *头部
@@ -110,7 +115,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: #fff;
   border-top: 8px solid #000;
   border-bottom: 1px solid #808080;
-  z-index: 99;
+  z-index: 999;
 }
 .header-wrapper {
   position: relative;
@@ -186,7 +191,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 0;
   padding-right: 15px;
   width: 270px;
-  z-index: 1;
+  z-index: 999;
   font-size: 0;
   border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
@@ -718,17 +723,18 @@ h1, h2, h3, h4, h5, h6, p {
 .global-select-wrapper.checked-item {
   background-image: url(./images/selected-icon.png);
 }
-.global-select-input {
+.global-select-input, .global-all-select-input {
   position: absolute;
   left: 0;
   top: 0;
-  width: 28px;
-  height: 26px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   filter: alpha(opacity=0);
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   z-index: 1;
+  cursor: pointer;
 }
 .forget-pw-and-sign-up {
   position: absolute;
@@ -755,7 +761,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 40px;
   line-height: 40px;
   background-color: #000;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   letter-spacing: 5px;
   color: #ff8c90;
@@ -945,7 +951,7 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 40px;
   padding-left: 3px;
   background-color: #000;
-  font-size: 16px;
+  font-size: 17px;
   color: #ff8c90;
   text-align: center;
   letter-spacing: 3px;
@@ -1064,7 +1070,7 @@ h1, h2, h3, h4, h5, h6, p {
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .global-btn-styl:hover {
-  background-color: #262626;
+  background-color: #373737;
 }
 .footer-controller {
   position: relative;
@@ -1127,6 +1133,9 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 40px;
   padding: 0 5px;
   font-size: 12px;
+}
+.footer-nav-link:hover {
+  color: #b3494d;
 }
 .footer-nav-link .spl-styl {
   font-size: 14px;

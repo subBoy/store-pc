@@ -38,12 +38,14 @@
 		},
 		template: '<div class="slider-container">\
 			<div class="back-bar">\
-                <div class="selected-bar"></div>\
-                <div class="pointer low"></div><div class="pointer-label">123456</div>\
-                <div class="pointer high"></div><div class="pointer-label">456789</div>\
-                <div class="clickable-dummy"></div>\
-            </div>\
-            <div class="scale"></div>\
+				<span class="left-bar-add"></span>\
+				<span class="right-bar-add"></span>\
+        <div class="selected-bar"></div>\
+        <div class="pointer low"></div><div class="pointer-label">123456</div>\
+        <div class="pointer high"></div><div class="pointer-label">456789</div>\
+        <div class="clickable-dummy"></div>\
+      </div>\
+      <div class="scale"></div>\
 		</div>',
 		init: function(node, options) {
 			this.options       = $.extend({}, this.defaults, options);
@@ -248,7 +250,10 @@
 		},
 		positionToValue: function(pos) {
 			var value = (pos / this.domNode.width()) * this.interval;
-			value = value + this.options.from;
+			value = this.options.from - 0 + value;
+			// value = value + '';
+			// value = value.split('.')[0];
+			// return value;
 			return Math.round(value / this.options.step) * this.options.step;
 		},
 		setInputValue: function(pointer, v) {
@@ -264,7 +269,7 @@
 				}
 			}
 			if (this.inputNode.val() !== this.options.value) {
-				this.inputNode.val(this.options.value);
+				this.inputNode.val(this.options.value).change();
 				this.options.onstatechange.call(this, this.options.value);
 			}
 		},
