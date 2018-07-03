@@ -1,1 +1,133 @@
 @charset"UTF-8";
+.goods-detail-info-wrapper {
+	overflow: hidden;
+}
+.gd-img-wrapper {
+	position: relative;
+	width: 50%;
+	background-color: #eff2f7;
+}
+.gd-img-nav {
+	position: absolute;
+	top: 21%;
+	left: 10%;
+	width: 6.5%;
+}
+.img-config-btn {
+	display: block;
+	padding-top: 100%;
+	height: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.img-prev-btn {
+	background-image: url(./images/arrow-top.png);
+}
+.img-prev-btn.has-more {
+	background-image: url(./images/arrow-top-1.png);
+}
+.img-next-btn {
+	background-image: url(./images/arrow-bottom.png);
+}
+.img-next-btn.has-more {
+	background-image: url(./images/arrow-bottom-1.png);
+}
+.img-nav-list-wrapper {
+	position: relative;
+	padding-top: 520%;
+	height: 0;
+	overflow: hidden;
+}
+.img-nav-list {
+	position: absolute;
+	top: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+.img-nav-item {
+	position: relative;
+	padding-top: 100%;
+	margin-bottom: 40%;
+	height: 0;
+	overflow: hidden;
+}
+.gd-small-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	cursor: pointer;
+	z-index: 1;
+}
+.gd-img-view {
+	padding-left: 20%;
+}
+.gd-big-img {
+	width: 100%;
+}
+
+.goods-detail-desc-wrapper {
+	width: 50%;
+}
+.gd-txt-info {
+	padding-left: 10%;
+}
+.goods-name {
+	padding: 10% 0 7px 0;
+	line-height: 28px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.goods-series {
+	padding: 4px 0;
+	line-height: 24px;
+	font-size: 20px;
+	color: #808080;
+	font-weight: bold;
+}
+.goods-price {
+	padding: 7px 0px;
+	line-height: 24px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #252525;
+}
+.goods-price.now-price {
+	padding: 4px 0px;
+}
+.old-price-num {
+	position: relative;
+	padding: 0 2px;
+}
+.old-price-hr {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #b34d49;
+}
+.goods-color {
+	padding: 7px 0;
+	font-size: 0;
+}
+.goods-color-desc {
+	font-size: 16px;
+	font-weight: bold;
+}
+.goods-color-name {
+	padding: 0 5px 0 10px;
+	font-size: 16px;
+	color: #808080;
+}
+.goods-color-item {
+	margin-left: 10px;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #585857;
+}

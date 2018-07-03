@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p {
 	border-right: 1px solid #9e9e9e;
 }
 .hd-search-btn-ctr {
-  margin: 31px 32px 0 0;
+  padding: 31px 32px 0 50px;
 }
 .hd-search-btn {
   line-height: 18px;
@@ -215,8 +215,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #808080; 
 }
 .user-info-btn-ctr {
-	margin-top: 21px;
-  margin-right: 18px;
+  padding: 21px 18px 0 0;
   width: 18px;
   height: 28px;
 }
