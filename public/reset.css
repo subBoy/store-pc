@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6, p {
 .ft-right {
   float: right;
 }
-..gl-content-wrapper {
+.gl-content-wrapper {
   position: relative;
   padding: 0 15px;
 }
