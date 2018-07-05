@@ -156,6 +156,9 @@
   background-position: 95% center;
   background-image: url(../public/images/pull-down.png);
 }
+.goods-size-view.is-show {
+	background-image: url(../public/images/pull-down-3.png);
+}
 .size-view-num {
 	font-weight: bold;
 }
@@ -166,6 +169,7 @@
 	left: 0;
 	width: 100%;
   border-bottom: 1px solid #b7b7b7;
+  background-color: #fff;
   z-index: 1;
 }
 .goods-size-item {
@@ -226,6 +230,7 @@
 	cursor: pointer;
 }
 .add-goods-err {
+	display: none;
 	position: absolute;
 	right: 0;
 	top: 50px;
@@ -406,7 +411,7 @@
 }
 .recommended-goods-item {
 	float: left;
-	width: 25%;
+	width: 275px;
 }
 .slide-goods-item {
 	margin: 0 auto;
@@ -453,7 +458,10 @@
 	padding-bottom: 20px;
   font-family: 'yst-font';
   color: #b3494d;
-  font-size: 48px;
+  font-size: 56px;
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-image: url(../public/images/txt-bg.png);
 }
 .yws-i-am-desc {
 	line-height: 34px;
@@ -465,6 +473,7 @@
 }
 
 .gd-win-wrapper {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -482,7 +491,7 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }
-.gd-win-content {
+.gd-win-content, .store-reserve-win, .reserve-success-win {
 	display: none;
 	position: absolute;
 	left: 50%;
@@ -549,7 +558,7 @@
 	background-image: url(../public/images/pull-down.png);
 	z-index: 1;
 }
-.win-drop-down-view.is-show .win-drop-down-icon {
+.gd-size-box.is-show .win-drop-down-icon {
 	background-image: url(../public/images/pull-down-3.png);
 }
 .win-drop-down-list {
@@ -572,17 +581,6 @@
 	color: #fff;
 }
 
-.store-reserve-win {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	margin: -306px 0 0 -475px;
-	width: 948px;
-	height: 610px;
-	border: 1px solid #b7b7b7; 
-	background-color: #fff;
-	overflow: hidden;
-}
 .store-reserve-win-tle-wrapper {
 	position: relative;
 	padding: 20px 0 10px;
@@ -646,6 +644,8 @@
 	left: 0;
 	top: 0;
 	width: 100px;
+	height: 100px;
+	overflow: hidden;
 	z-index: 1;
 }
 .reserve-win-goods-name {
@@ -670,6 +670,9 @@
 	padding-top: 42px;
 	font-size: 0;
 }
+.reserve-goods-color-group {
+	font-size: 0;
+}
 .reserve-win-goods-color-ctr {
 	margin-right: 10px; 
 	width: 14px;
@@ -684,9 +687,10 @@
 
 .reserve-win-main-drop-down {
 	margin: 30px auto; 
-	width: 60%;
+	width: auto;
 }
 .reserve-win-main-drop-down .goods-size-view {
+	padding-right: 30px;
 	border: none;
 	text-align: left;
 }
@@ -697,7 +701,7 @@
 .reserve-item-input {
 	position: relative;
 	margin: 39px auto 0; 
-	width: 80px;
+	width: 70px;
 	height: 20px;
 	border: 1px solid #b7b7b7;
 	border-radius: 3px;
@@ -740,7 +744,7 @@
 	left: 20px;
 	top: 0;
 	line-height: 20px;
-	width: 40px;
+	width: 30px;
 	height: 20px;
 	text-align: center;
 	font-size: 12px;
@@ -751,28 +755,33 @@
 .reserve-submit-self {
 	display: block;
 	margin: 50px auto;
+	padding-left: 2px;
 	line-height: 36px;
 	width: 200px;
 	height: 36px;
+	font-size: 16px;
+	letter-spacing: 2px;
 	text-align: center;
-	background-color: #252525;
-	color: #fff;
+	color: #ff8c90;
 	cursor: pointer;
 }
 .inform-style-item-ctr {
 	position: relative;
-	padding-left: 46px;
+	padding: 30px 0 40px 40px;
 }
 .inform-style-btn {
 	display: block;
 	position: absolute;
 	left: 0px;
-	top: 0px;
-	width: 40px;
-	height: 40px;
+	top: 30px;
+	width: 36px;
+	height: 36px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-image: url(../public/images/select-icon.png);
+}
+.inform-style-btn.selected {
+	background-image: url(../public/images/selected-icon.png);
 }
 .inform-style-btn-input {
 	position: absolute;
@@ -780,5 +789,40 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+	cursor: pointer;
 	z-index: 1;
+}
+.inform-style-name {
+	line-height: 36px;
+	font-size: 0;
+}
+.inform-name-tle {
+	font-size: 14px;
+}
+.inform-name-txt {
+	padding: 0 30px;
+	min-width: 50px;
+	text-align: center;
+	font-size: 14px;
+}
+.inform-style-oper {
+	line-height: 24px;
+	padding-left: 2px;
+	width: 80px;
+	height: 24px;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 2px;
+	cursor: pointer;
+	color: #ff8c90;
+}
+.reserve-success-img {
+	height: 480px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(./images/note.png);
 }

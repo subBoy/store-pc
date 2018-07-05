@@ -715,7 +715,7 @@
 					<span class="img-next-btn img-config-btn has-more"></span>
 				</div>
 				<div class="gd-img-view">
-					<img src="../developerImg/gd-view.jpg" class="gd-big-img">
+					<img src="../developerImg/gd-view.jpg" class="gd-big-img" id="gd-big-img">
 				</div>
 			</div>
 			<div class="goods-detail-desc-wrapper ft-left">
@@ -730,12 +730,12 @@
 						<span class="goods-color-desc in-block">颜色: </span>
 						<span class="goods-color-name in-block">黑色</span>
 						<span class="goods-color-ctr in-block">
-							<span class="goods-color-item in-block" colorName="黑色" style="background-color: #000000"></span>
-							<span class="goods-color-item in-block" colorName="白色" style="background-color: #ffffff"></span>
+							<span class="goods-color-item in-block" colorname="黑色" style="background-color: #000000"></span>
+							<span class="goods-color-item in-block" colorname="白色" style="background-color: #ffffff"></span>
 						</span>
 					</div>
 					<div class="goods-size-wrapper">
-						<span class="goods-size-view">尺码<i class="size-view-num">:M</i></span>
+						<span class="goods-size-view">尺码<i class="size-view-num" id="goods-size-num"></i></span>
 						<ul class="goods-size-list">
 							<li class="goods-size-item set-animation">
 								<span class="has-store-status">
@@ -894,13 +894,15 @@
 			</div>
 			<div class="gd-win-drop-down-box">
 				<div class="win-drop-down-view">
-					<span class="win-drop-down-box-tle in-block">款式:</span>
-					<span class="win-drop-down-box-result in-block">男款</span>
-					<span class="win-drop-down-icon"></span>
+					<div class="gd-size-box">
+						<span class="win-drop-down-box-tle in-block">款式:</span>
+						<span class="win-drop-down-box-result in-block">男款</span>
+						<span class="win-drop-down-icon"></span>
+					</div>
 					<ul class="win-drop-down-list">
-						<li class="win-drop-down-item set-animation" imgSrc="./images/size-1.jpg">男款</li>
-						<li class="win-drop-down-item set-animation" imgSrc="./images/size-2.jpg">女款</li>
-						<li class="win-drop-down-item set-animation" imgSrc="./images/size-8.jpg">中性款</li>
+						<li class="win-drop-down-item set-animation" imgsrc="./images/size-1.jpg">男款</li>
+						<li class="win-drop-down-item set-animation" imgsrc="./images/size-2.jpg">女款</li>
+						<li class="win-drop-down-item set-animation" imgsrc="./images/size-8.jpg">中性款</li>
 					</ul>
 				</div>
 				<div class="win-drop-down-select">
@@ -935,13 +937,15 @@
 					</li>
 					<li class="reserve-win-main-item item-2">
 						<div class="reserve-win-goods-color-oper">
-							<span class="reserve-win-goods-color-ctr in-block" colorName="黑色" style="background-color: #000000"></span>
-							<span class="reserve-win-goods-color-ctr in-block" colorName="白色" style="background-color: #ffffff"></span>
+							<span class="reserve-goods-color-group in-block">
+								<span class="reserve-win-goods-color-ctr in-block" colorName="黑色" style="background-color: #000000"></span>
+								<span class="reserve-win-goods-color-ctr in-block" colorName="白色" style="background-color: #ffffff"></span>
+							</span>
 							<span class="reserve-win-goods-color-name in-block">黑色</span>
 						</div>
 					</li>
 					<li class="reserve-win-main-item item-2">
-						<div class="goods-size-wrapper reserve-win-main-drop-down">
+						<div class="goods-size-wrapper reserve-win-main-drop-down in-block">
 							<span class="goods-size-view">尺码<i class="size-view-num">:M</i></span>
 							<ul class="goods-size-list">
 								<li class="goods-size-item set-animation">
@@ -976,13 +980,10 @@
 									<input type="radio" name="sel-inform-style" class="inform-style-btn-input">
 								</span>
 								<p class="inform-style-name">
-									<span class="inform-name-tle">邮箱地址：</span>
-									<span class="inform-name-txt">47932312@qq.com</span>
+									<span class="inform-name-tle in-block">邮箱地址：</span>
+									<span class="inform-name-txt in-block">47932312@qq.com</span>
+									<a href="#" class="global-btn-styl inform-style-oper in-block">修改</a>
 								</p>
-								<div class="set-inform-style-btns">
-									<span class="set-inform-btn">已认证</span>
-									<span class="set-inform-btn">修改</span>
-								</div>
 							</div>
 						</li>
 						<li class="inform-style-item inform-style-2">
@@ -991,21 +992,27 @@
 									<input type="radio" name="sel-inform-style" class="inform-style-btn-input">
 								</span>
 								<p class="inform-style-name">
-									<span class="inform-name-tle">手机号：</span>
-									<span class="inform-name-txt">无</span>
+									<span class="inform-name-tle in-block">手机号：</span>
+									<span class="inform-name-txt in-block">无</span>
+									<a href="#" class="global-btn-styl inform-style-oper in-block">添加</a>
 								</p>
-								<div class="set-inform-style-btns">
-									<span class="set-inform-btn">未认证</span>
-									<span class="set-inform-btn">去验证</span>
-								</div>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="store-reserve-win-submit">
-				<span class="reserve-submit-self global-btn-styl">提价预定</span>
+				<span class="reserve-submit-self global-btn-styl">提交预定</span>
 			</div>
+		</div>
+		<!-- 预定成功 -->
+		<div class="reserve-success-win">
+			<div class="store-reserve-win-tle-wrapper">
+				<h3 class="store-reserve-win-tle">预定成功</h3>
+				<p class="store-reserve-win-desc">感谢您对本商品的预定，商品上架后我们会优先通知您！</p>
+				<span class="gd-win-close-btn"></span>
+			</div>
+			<div class="reserve-success-img"></div>
 		</div>
 	</div>
 	<!-- 底部区域 -->

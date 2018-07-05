@@ -50,16 +50,14 @@ function spItemSH () {
 	$('.gl-ct-tle-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-ct-tle-list').slideDown();
-	})
-
-	$('.global-body').on('click', function () {
-		$('.gl-ct-tle-list, .gl-sort-styles').slideUp();
+		$(this).addClass('is-show');
 	})
 
 	// 排序
 	$('.gl-sort-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-sort-styles').slideDown();
+		$(this).addClass('is-show');
 	})
 	$('.gl-sort-item').on('click', function () {
 		var _val = $(this).html();

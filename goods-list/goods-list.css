@@ -18,6 +18,9 @@
 	font-family: 'yst-font';
 	color: #b3494d;
 	font-size: 48px;
+	background-repeat: no-repeat;
+  background-position: center 40px;
+  background-image: url(../public/images/txt-bg.png);
 }
 .gl-banner-txt {
 	padding-left: 5px;
@@ -52,7 +55,7 @@
 	background-position: right center;
 	background-image: url(./images/pull-down.png);
 }
-.gl-ct-tle-view.clicked {
+.gl-ct-tle-view.is-show {
 	background-image: url(./images/pull-down-3.png);
 }
 .gl-ct-tle-list {
@@ -103,7 +106,7 @@
 	background-position: 160px center;
 	background-image: url(./images/pull-down-2.png);
 }
-.gl-sort-view.clicked {
+.gl-sort-view.is-show {
 	background-image: url(./images/pull-down-4.png);
 }
 .gl-sort-styles {
