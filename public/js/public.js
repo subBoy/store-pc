@@ -63,30 +63,6 @@ function setInputFB () {
 		})
 	})
 }
-function checkedItem () {
-	$(".global-select-input").change(function() { 
-		var status = $(this).attr('checked');
-		if (status) {
-			$(this).parent().addClass('checked-item');
-		} else {
-			$(this).parent().removeClass('checked-item');
-			var _thisPar = $(this).parent().parent().parent().parent().find('.global-all-select-input');
-			_thisPar.attr('checked', false).change();
-			_thisPar.parent().removeClass('checked-item')
-		}
-	});
-	$('.global-all-select-input').on('click', function () {
-		var status = $(this).attr('checked');
-		var _thisPar = $(this).parent().parent().parent().nextAll('.gl-condition-item-threelevel').find('.global-select-input');
-		if (status) {
-			$(this).parent().addClass('checked-item');
-			_thisPar.attr('checked', 'checked').change();
-		} else {
-			$(this).parent().removeClass('checked-item');
-			_thisPar.attr('checked', false).change();
-		}
-	});
-}
 function fromVerify () {
 	$(".userAccount").focus(function () {
 		clearTimeout(st);
@@ -273,7 +249,6 @@ $(function () {
 	setNavItemStyl(); // 设置当前页面所属导航样式
 	setWinNav(); // 浏览器滚动操作
 	setInputFB(); // input设置聚焦&失焦操作
-	checkedItem(); // 复选框状态改变处理
 	fromVerify(); // 表单验证
 	$("#login-btn-ctr").on('click', login); // 登录
 	clearDefault(); // 阻止冒泡与默认事件

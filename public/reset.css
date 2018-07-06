@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header-wrapper {
   position: relative;
-  padding: 70px 70px 0;
+  padding: 70px 30px 0;
 }
 .header-wrapper.win-nav {
   padding-top: 0; 
@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header-logo-name {
   display: none;
+  margin-left: -10px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
@@ -149,7 +150,7 @@ h1, h2, h3, h4, h5, h6, p {
 .header-logo.win-nav-top {
   margin-left: 0;
   margin-top: -70px;
-  left: 75px;
+  left: 30px;
 }
 .header-logo.win-nav-top.win-nav {
   margin-top: 0;
@@ -1150,7 +1151,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer-recommend-wrapper {
   position: absolute;
   right: 15px;
-  top: 0;
+  top: 15px;
   text-align: left;
 }
 .footer-recommend-list {
@@ -1195,5 +1196,47 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .footer-recommend-desc {
   line-height: 20px;
+  font-size: 12px;
+}
+
+
+/* 全局数量控件样式 */
+.reserve-item-input {
+  position: relative;
+  margin: 39px auto 0; 
+  width: 70px;
+  height: 20px;
+  border: 1px solid #b7b7b7;
+  border-radius: 3px;
+}
+.reserve-config-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  line-height: 19px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.reserve-config-btn.islimit {
+  cursor: default;
+  color: #808080;
+}
+.remove-btn {
+  left: 0;
+}
+.add-btn {
+  right: 0;
+}
+.reserve-goods-input {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  line-height: 20px;
+  width: 30px;
+  height: 20px;
+  text-align: center;
   font-size: 12px;
 }

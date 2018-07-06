@@ -3,6 +3,7 @@ function selectColor (control, view) {
 	// 选择颜色
 	var control = $(control);
 	control.on('click', function () {
+		$(this).addClass('colorSel').siblings().removeClass('colorSel');
 		var colorName = $(this).attr('colorname');
 		control.parent().siblings(view).html(colorName)
 	})
@@ -37,6 +38,7 @@ function addCart () {
 function cutBigImg () {
 	// 切换大图
 	$('.img-nav-item').on('click', function () {
+		$(this).addClass('now-page').siblings().removeClass('now-page');
 		var imgSrc = $(this).find('img').attr('src');
 		$('#gd-big-img').attr('src', imgSrc);
 	})
@@ -82,11 +84,6 @@ var cutNav = {
 				$('.img-prev-btn').addClass('has-more');
 			}
 		}
-	},
-	init: function () {
-		$(".img-nav-list").animate({
-			top: 0
-		});
 	}
 };
 function cutImgNav () {
@@ -97,7 +94,7 @@ function cutImgNav () {
 	$(window).resize(function () {
 		clearTimeout(hr);
 		hr = setTimeout(function () {
-			cutNav.init();
+			cutNav.basics();
 		}, 500);
 	})
 }
@@ -193,28 +190,8 @@ function outOfStore () {
 		$('.gd-win-wrapper, .gd-win-content, .store-reserve-win, .reserve-success-win').fadeOut();
 	})
 	selectColor('.reserve-win-goods-color-ctr', '.reserve-win-goods-color-name');
-	reserveNum();
+	globalInputNum();
 	selInformStyle();
-}
-function reserveNum () {
-	// 缺货尺码预定数量控制
-	$('.remove-btn').on('click', function () {
-		var _val = $('.reserve-goods-input').val()
-		_val--;
-		if (_val <= 1) {
-			_val = 1;
-			$(this).addClass('islimit');
-		} else {
-			$(this).removeClass('islimit');
-		};
-		$('.reserve-goods-input').val(_val)
-	})
-	$('.add-btn').on('click', function () {
-		$('.remove-btn').removeClass('islimit');
-		var _val = $('.reserve-goods-input').val()
-		_val = _val - 0 + 1;
-		$('.reserve-goods-input').val(_val)
-	})
 }
 function selInformStyle () {
 	// 选择通知方式

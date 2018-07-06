@@ -1,0 +1,119 @@
+@charset"UTF-8";
+.sc-content-box {
+	margin: 0 auto;
+	width: 990px;
+}
+.sc-ct-tle {
+	padding-top: 20px;
+	text-align: center;
+}
+.sc-ct-tle-txt {
+	line-height: 84px;
+	padding-left: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(./images/cart-icon.png);
+}
+.sc-goods-ctl-wrapper {
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.sc-goods-ctl-item {
+	float: left;
+	line-height: 54px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+.sc-goods-list-wrapper {
+	padding-top: 12px;
+}
+.sc-goods-list {
+	margin-bottom: 28px;
+	height: 100px;
+	background-color: #f4f6f5;
+	overflow: hidden;
+}
+.sc-goods-item {
+	float: left;
+	text-align: center;
+}
+.sc-goods-item.v-center {
+	line-height: 100px;
+	color: #494a4a;
+}
+.sc-goods-item.del-btn {
+	cursor: pointer;
+}
+.sc-goods-item.del-btn:hover {
+	color: #b3494d;
+}
+.wh-45 {
+	width: 45%;
+	text-align: left;
+}
+.wh-25 {
+	width: 25%;
+}
+.wh-20 {
+	width: 20%;
+}
+.wh-10 {
+	width: 10%;
+}
+.reserve-win-goods-info {
+	position: relative;
+	padding: 10px 0 0 115px;
+}
+.reserve-win-goods-img {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	z-index: 1;
+}
+.reserve-win-goods-name {
+	line-height: 28px;
+	font-size: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+}
+.reserve-win-goods-name .goods-name-txt {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.reserve-win-goods-name .goods-name-hr {
+	margin: 0 6px;
+	width: 2px;
+	height: 2px;
+}
+.reserve-win-goods-desc {
+	font-size: 0;
+}
+.sc-goods-size-color {
+	padding-right: 15px;
+	line-height: 26px;
+	font-size: 14px;
+}
+.sc-goods-info {
+	line-height: 26px;
+	font-size: 14px;
+	color: #494a4a;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	letter-spacing: 1px;
+}
+.goods-name-hr {
+	margin: 0 10px;
+	width: 5px;
+	height: 5px;
+	background-color: #000;
+}

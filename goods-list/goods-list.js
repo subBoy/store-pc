@@ -1,3 +1,27 @@
+function checkedItem () {
+	$(".global-select-input").change(function() { 
+		var status = $(this).attr('checked');
+		if (status) {
+			$(this).parent().addClass('checked-item');
+		} else {
+			$(this).parent().removeClass('checked-item');
+			var _thisPar = $(this).parent().parent().parent().parent().find('.global-all-select-input');
+			_thisPar.attr('checked', false).change();
+			_thisPar.parent().removeClass('checked-item')
+		}
+	});
+	$('.global-all-select-input').on('click', function () {
+		var status = $(this).attr('checked');
+		var _thisPar = $(this).parent().parent().parent().siblings('.gl-condition-item-threelevel').find('.global-select-input');
+		if (status) {
+			$(this).parent().addClass('checked-item');
+			_thisPar.attr('checked', 'checked').change();
+		} else {
+			$(this).parent().removeClass('checked-item');
+			_thisPar.attr('checked', false).change();
+		}
+	});
+}
 function range () {
 	var _w = $('.gl-ct-side-item').width() - 15;
 	var _val = $('.slider-range-input').val();
@@ -27,14 +51,15 @@ function rangeInit () {
 }
 function slideSH () {
 	$('.gl-item-stair-name, .gl-item-secondleve-name').on('click', function () {
-		var _par = $(this).nextAll('.gl-condition-list-secondlevel');
-		var _threePar = $(this).nextAll('.gl-condition-list-threelevel');
-		if ($(this).hasClass('is-show')) {
-			$(this).removeClass('is-show');
+		console.log(0);
+		var _par = $(this).siblings('.gl-condition-list-secondlevel');
+		var _threePar = $(this).siblings('.gl-condition-list-threelevel');
+		if ($(this).hasClass('isShow')) {
+			$(this).removeClass('isShow');
 			_par.slideUp();
 			_threePar.slideUp();
 		} else {
-			$(this).addClass('is-show');
+			$(this).addClass('isShow');
 			_par.slideDown();
 			_threePar.slideDown();
 		}
@@ -50,14 +75,14 @@ function spItemSH () {
 	$('.gl-ct-tle-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-ct-tle-list').slideDown();
-		$(this).addClass('is-show');
+		$(this).addClass('isShow');
 	})
 
 	// 排序
 	$('.gl-sort-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-sort-styles').slideDown();
-		$(this).addClass('is-show');
+		$(this).addClass('isShow');
 	})
 	$('.gl-sort-item').on('click', function () {
 		var _val = $(this).html();
@@ -97,6 +122,7 @@ $(function () {
 	slideSH(); // 侧边显隐
 	spItemSH(); // 切换商品
 	manWoman(); //切换男女装
+	checkedItem(); // 复选框状态改变处理
 	var hr;
 	$(window).resize(function () {
 		clearTimeout(hr);

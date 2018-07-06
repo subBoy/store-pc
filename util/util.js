@@ -61,5 +61,26 @@ $.extend(window, {
 		var itemIndex = $('#nav-item-index').val();
 		$('.header-nav-item .nav-item-link').removeClass('now-link');
 		$('.header-nav-item').eq(itemIndex).find('.nav-item-link').addClass('now-link');
+	},
+	globalInputNum: function () {
+		$('.remove-btn').on('click', function () {
+			var _input = $(this).siblings('.reserve-goods-input');
+			var _val = _input.val()
+			_val--;
+			if (_val <= 1) {
+				_val = 1;
+				$(this).addClass('islimit');
+			} else {
+				$(this).removeClass('islimit');
+			};
+			_input.val(_val)
+		})
+		$('.add-btn').on('click', function () {
+			var _input = $(this).siblings('.reserve-goods-input');
+			$(this).siblings('.remove-btn').removeClass('islimit');
+			var _val = _input.val()
+			_val = _val - 0 + 1;
+			_input.val(_val)
+		})
 	}
 })

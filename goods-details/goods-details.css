@@ -4,7 +4,7 @@
 }
 .gd-img-wrapper {
 	position: relative;
-	width: 55%;
+	width: 50%;
 	background-color: #eff2f7;
 }
 .gd-img-nav {
@@ -56,6 +56,16 @@
 	margin-bottom: 40%;
 	height: 0;
 	overflow: hidden;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+}
+.img-nav-item.now-page {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
 }
 .gd-small-img {
 	position: absolute;
@@ -73,49 +83,67 @@
 }
 
 .goods-detail-desc-wrapper {
-	width: 45%;
+	width: 50%;
 }
 .gd-txt-info {
-	padding-left: 6%;
+	padding-left: 8%;
 }
 .goods-name {
-	padding: 5% 0 7px 0;
+	padding: 6% 0 7px 0;
 	line-height: 28px;
+	font-size: 0;
+}
+.goods-name-txt {
 	font-size: 24px;
 	font-weight: bold;
 	letter-spacing: 2px;
+}
+.goods-name-hr {
+	margin: 0 10px;
+	width: 5px;
+	height: 5px;
+	background-color: #000;
 }
 .goods-series {
 	padding: 4px 0;
 	line-height: 24px;
 	font-size: 20px;
-	color: #808080;
+	color: #494a4a;
 	font-weight: bold;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 .goods-price {
 	padding: 7px 0px;
-	line-height: 24px;
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	color: #252525;
+	line-height: 20px;
+	font-size: 16px;
 }
-.goods-price.now-price {
+.goods-price.old-price {
+	line-height: 16px;
 	padding: 4px 0px;
+	font-size: 0;
+}
+.goods-old-price-desc {
+	padding: 0 3px;
+	margin-right: 5px;
+	font-size: 12px;
+	color: #b34d49;
+	border: 1px solid #b34d49;
+	font-weight: bold;
 }
 .old-price-num {
 	position: relative;
 	padding: 0 2px;
+	font-size: 12px;
+	color: #252525;
 }
 .old-price-hr {
 	display: block;
 	position: absolute;
-	top: 10px;
+	top: 8px;
 	left: 0;
 	width: 100%;
-	height: 2px;
-	background-color: #b34d49;
+	height: 1px;
+	background-color: #252525;
 }
 .goods-color {
 	padding: 7px 0;
@@ -124,19 +152,32 @@
 }
 .goods-color-desc {
 	font-size: 16px;
-	font-weight: bold;
+	color: #010101;
 }
 .goods-color-name {
-	padding: 0 5px 0 10px;
+	padding-right: 10px;
 	font-size: 16px;
-	color: #808080;
+	color: #010101;
 }
 .goods-color-item {
-	margin-left: 10px;
-	width: 14px;
-	height: 14px;
-	border: 1px solid #585857;
+	position: relative;
+	margin-right: 2px;
+	width: 21px;
+	height: 22px;
 	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.goods-color-item.colorSel {
+	background-image: url(./images/colorSel.png);
+}
+.goods-color-item-view {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 13px;
+	height: 14px;
+	border: 1px solid #e3e3e3;
 }
 .goods-size-wrapper {
 	position: relative;
@@ -191,16 +232,18 @@
 	color: #fff;
 }
 .has-store-status {
-	display: block;
+	display: none;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #000;
-	opacity: 0.1;
-	filter: alpha(opacity=10);
-	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
-	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';
+	background-color: rgba(0, 0, 0, 0.1);
 	cursor: default;
+}
+.not-size .has-store-status {
+	display: block;
+}
+.not-size .goods-size-item-num {
+	color: #808080;
 }
 .store-reserve-btn {
 	margin-top: 10px;
@@ -294,7 +337,7 @@
 .collect-btn {
 	line-height: 26px;
 	padding-left: 35px;
-	margin-right: 15px;
+	margin-right: 40px;
 	font-size: 16px;
 	font-weight: bold;
 	background-repeat: no-repeat;
@@ -650,12 +693,20 @@
 }
 .reserve-win-goods-name {
 	line-height: 28px;
-	font-size: 16px;
-	font-weight: bold;
+	font-size: 0;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap; 
-	letter-spacing: 3px;
+}
+.reserve-win-goods-name .goods-name-txt {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.reserve-win-goods-name .goods-name-hr {
+	margin: 0 6px;
+	width: 2px;
+	height: 2px;
 }
 .reserve-win-goods-desc {
 	line-height: 26px;
@@ -664,7 +715,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap; 
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .reserve-win-goods-color-oper {
 	padding-top: 42px;
@@ -674,11 +725,16 @@
 	font-size: 0;
 }
 .reserve-win-goods-color-ctr {
-	margin-right: 10px; 
-	width: 14px;
-	height: 14px;
-	border: 1px solid #585857;
-	cursor: pointer; 
+	position: relative;
+	margin-right: 5px;
+	width: 21px;
+	height: 22px;
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.reserve-win-goods-color-ctr.colorSel {
+	background-image: url(./images/colorSel.png);
 }
 .reserve-win-goods-color-name {
 	line-height: 16px;
@@ -698,35 +754,6 @@
 	border-top: 1px solid #b7b7b7;
 	background-color: #fff;
 }
-.reserve-item-input {
-	position: relative;
-	margin: 39px auto 0; 
-	width: 70px;
-	height: 20px;
-	border: 1px solid #b7b7b7;
-	border-radius: 3px;
-}
-.reserve-config-btn {
-	display: block;
-	position: absolute;
-	top: 0;
-	line-height: 19px;
-	width: 20px;
-	height: 20px;
-	font-size: 12px;
-	text-align: center;
-	cursor: pointer;
-}
-.reserve-config-btn.islimit {
-	cursor: default;
-	color: #808080;
-}
-.remove-btn {
-	left: 0;
-}
-.add-btn {
-	right: 0;
-}
 .inform-style-list {
 	overflow: hidden;
 }
@@ -738,16 +765,6 @@
 }
 .inform-style-2 {
 	width: 45%;
-}
-.reserve-goods-input {
-	position: absolute;
-	left: 20px;
-	top: 0;
-	line-height: 20px;
-	width: 30px;
-	height: 20px;
-	text-align: center;
-	font-size: 12px;
 }
 .store-reserve-win-submit {
 	border-top: 3px solid #393939;
