@@ -1,1 +1,198 @@
 @charset"UTF-8";
+.join-us-wrapper {
+	background-color: #f1f1f1;
+}
+.join-us-banner {
+	position: relative;
+	height: 425px;
+	background-image: url(./images/banner.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.join-us-banner-txt {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -143px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.ju-bt-title {
+	position: relative;
+	padding-left: 4px;
+	font-size: 70px;
+	font-weight: bold;
+	letter-spacing: 4px;
+}
+.ju-bt-icon {
+	position: absolute;
+	right: -30px;
+	top: 0px;
+	z-index: 1;
+	font-size: 24px;
+}
+.ju-bt-desc {
+	padding: 10px 0 38px 4px;
+	font-size: 42px;
+	font-weight: bold;
+	letter-spacing: 4px;
+}
+.join-us-logo {
+	display: block;
+	padding-bottom: 5px;
+	text-align: center;
+}
+.join-us-logo-txt {
+	margin-left: -14px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.join-us-logo-img {
+	margin: 0 auto;
+}
+.join-us-group {
+	margin: 0 auto;
+	width: 1250px;
+	background-color: #fff;
+}
+.join-us-box {
+	padding: 0 60px 0 240px;
+}
+/*侧边*/
+.ju-silde-wrapper {
+	display: none;
+	position: fixed;
+	top: 140px;
+	left: 50%;
+	margin-left: -625px;
+	width: 240px;
+}
+.ju-silde-link {
+	position: relative;
+	line-height: 30px;
+	padding-left: 80px;
+	font-size: 14px;
+}
+.ju-slide-icon {
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	margin-top: -1px;
+	width: 20px;
+	height: 1px;
+	background-color: #a0a0a0;
+}
+.now-station .ju-silde-link {
+	color: #b3494d;
+}
+.now-station .ju-slide-icon {
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	background-color: #b3494d;
+}
+/*主体*/
+.ju-content-tle {
+	line-height: 70px;
+	padding: 20px 0 0 2px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	letter-spacing: 2px;
+	color: #b3494d;
+}
+.ju-desc-txt {
+	padding: 20px 0 12px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.ju-content-small-tle {
+	position: relative;
+	line-height: 60px;
+	font-size: 24px;
+}
+.small-tle-ic {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+	height: 2px;
+	background-color: #b3494d;
+	z-index: 1;
+}
+.ju-input-info-wrapper {
+	margin-top: 22px;
+	padding-bottom: 20px;
+	border: 1px solid #a3a3a3;
+}
+.ju-input-info-item {
+	position: relative;
+	padding-left: 130px;
+	border-bottom: 1px solid #e6e6e7;
+}
+.ju-input-info-item.pg-150 {
+	padding-left: 150px;
+}
+.ju-input-info-name {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 55px;
+	padding-left: 20px;
+	font-size: 14px;
+}
+.ju-info-input {
+	line-height: 55px;
+	width: 100%;
+	height: 55px;
+	font-size: 14px;
+}
+.ju-contact-type {
+	text-align: center;
+	font-size: 0;
+}
+.ju-contact-mobile {
+	padding: 15px 30px 15px 25px;
+	line-height: 40px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(./images/mobile.png);
+}
+.ju-contact-email {
+	padding: 15px 30px;
+	line-height: 40px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(./images/mail.png);
+}
+.ju-apply-btn {
+	margin: 0 auto;
+	line-height: 46px;
+	padding-left: 2px;
+	width: 280px;
+	height: 46px;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 2px;
+	color: #fff;
+	cursor: pointer;
+}
+.ju-content-desc-txt {
+	padding: 45px 0;
+	line-height: 44px;
+	font-size: 14px;
+	text-align: center;
+}
+.about-footer-controller .join-us-logo-wrapper {
+	padding: 12px 0; 
+	background-color: #000;
+	text-align: center;
+}

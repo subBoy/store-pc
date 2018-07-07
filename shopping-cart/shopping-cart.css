@@ -65,17 +65,44 @@
 }
 .reserve-win-goods-info {
 	position: relative;
-	padding: 10px 0 0 115px;
+	padding: 10px 0 0 155px;
 }
 .reserve-win-goods-img {
 	display: block;
 	position: absolute;
-	left: 0;
+	left: 40px;
 	top: 0;
 	width: 100px;
 	height: 100px;
 	overflow: hidden;
 	z-index: 1;
+}
+.select-input-wrapper {
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../public/images/select-icon.png);
+}
+.select-input-wrapper.checked-item, .sc-all-sel.checked-item {
+	background-image: url(../public/images/selected-icon.png);
+}
+.sp-select-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
 }
 .reserve-win-goods-name {
 	line-height: 28px;
@@ -116,4 +143,190 @@
 	width: 5px;
 	height: 5px;
 	background-color: #000;
+}
+.sc-goods-total-oper {
+	padding: 30px 0 100px;
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+}
+.sc-goods-oper-sel {
+	float: left;
+	font-size: 0;
+}
+.sc-all-sel-wrapper {
+	position: relative;
+	line-height: 22px;
+	padding-left: 40px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+.sc-all-sel {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../public/images/select-icon.png);
+}
+.sc-all-sel-input {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
+.sc-all-del-btn {
+	line-height: 22px;
+	margin: 0 12px;
+	padding: 0 12px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+.sc-clear-soldout-btn {
+	line-height: 22px;cursor: pointer;
+	font-size: 14px;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+.sc-goods-oper-total {
+	float: right;
+	font-size: 0;
+}
+.seled-sp-box {
+	padding-right: 15px;
+	vertical-align: top;
+	line-height: 22px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.sel-num {
+	padding: 0 5px;
+	color: #b3494d;
+	font-weight: bold;
+}
+.total-price {
+	display: block;
+	padding-bottom: 5px;
+	line-height: 22px;
+	font-size: 0;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.total-price-name {
+	font-size: 14px;
+}
+.total-price-num {
+	font-size: 20px;
+	color: #b3494d;
+}
+.sale-price {
+	display: block;
+	font-size: 14px;
+	text-align: right;
+}
+.close-order-btn {
+	line-height: 46px;
+	margin-left: 20px;
+	padding-left: 2px;
+	width: 210px;
+	height: 46px;
+	font-size: 18px;
+	color: #ff8c90;
+	text-align: center;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+.sc-hint-wrapper {
+	padding: 20px 10% 46px;
+	border-top: 1px solid #ccc;
+}
+.sc-hint-list {
+	overflow: hidden;
+}
+.sc-hint-item {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.sc-hint-link {
+	display: block;
+	border-right: 1px solid #ccc;
+}
+.sc-hint-link.no-border {
+	border: none;
+}
+.sc-hint-icon {
+	display: block;
+	height: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.hint-icon-1 {
+	background-image: url(./images/sc-1.png);
+}
+.sc-hint-link:hover .hint-icon-1 {
+	background-image: url(./images/sc-1-1.png);
+}
+.hint-icon-2 {
+	background-image: url(./images/sc-2.png);
+}
+.sc-hint-link:hover .hint-icon-2 {
+	background-image: url(./images/sc-2-1.png);
+}
+.hint-icon-3 {
+	background-image: url(./images/sc-3.png);
+}
+.sc-hint-link:hover .hint-icon-3 {
+	background-image: url(./images/sc-3-1.png);
+}
+.hint-icon-4 {
+	background-image: url(./images/sc-4.png);
+}
+.sc-hint-link:hover .hint-icon-4 {
+	background-image: url(./images/sc-4-1.png);
+}
+.sc-hint-name {
+	display: block;
+	line-height: 28px;
+	padding-left: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.sc-not-goods-wrapper {
+	padding-bottom: 100px;
+}
+.not-goods-img {
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.not-goods-desc {
+	padding-bottom: 25px;
+	text-align: center;
+	font-size: 14px;
+}
+.go-list-btn {
+	display: block;
+	line-height: 34px;
+	margin: 0 auto;
+	padding-left: 2px;
+	width: 154px;
+	height: 34px;
+	text-align: center;
+	color: #ff8c90;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
 }

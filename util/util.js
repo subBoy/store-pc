@@ -62,7 +62,7 @@ $.extend(window, {
 		$('.header-nav-item .nav-item-link').removeClass('now-link');
 		$('.header-nav-item').eq(itemIndex).find('.nav-item-link').addClass('now-link');
 	},
-	globalInputNum: function () {
+	globalInputNum: function (callback) {
 		$('.remove-btn').on('click', function () {
 			var _input = $(this).siblings('.reserve-goods-input');
 			var _val = _input.val()
@@ -73,14 +73,20 @@ $.extend(window, {
 			} else {
 				$(this).removeClass('islimit');
 			};
-			_input.val(_val)
+			_input.val(_val);
+			if (callback) {
+				callback();
+			}
 		})
 		$('.add-btn').on('click', function () {
 			var _input = $(this).siblings('.reserve-goods-input');
 			$(this).siblings('.remove-btn').removeClass('islimit');
 			var _val = _input.val()
 			_val = _val - 0 + 1;
-			_input.val(_val)
+			_input.val(_val);
+			if (callback) {
+				callback();
+			}
 		})
 	}
 })
