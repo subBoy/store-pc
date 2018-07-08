@@ -86,16 +86,21 @@
 	background-color: #fff;
 }
 .join-us-box {
+	position: relative;
 	padding: 0 60px 0 240px;
 }
 /*侧边*/
 .ju-silde-wrapper {
-	display: none;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 240px;
+}
+.ju-silde-wrapper.fixed-slide {
 	position: fixed;
 	top: 140px;
 	left: 50%;
 	margin-left: -625px;
-	width: 240px;
 }
 .ju-silde-link {
 	position: relative;

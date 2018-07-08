@@ -1,9 +1,11 @@
 function showSlide (callback) {
 	var sTop = $(window).scrollTop();
 	if (sTop >= 350) {
-		$('.ju-silde-wrapper').fadeIn();
+		$('.ju-silde-wrapper').addClass('fixed-slide');
+		// $('.ju-silde-wrapper').fadeIn();
 	} else {
-		$('.ju-silde-wrapper').hide();
+		$('.ju-silde-wrapper').removeClass('fixed-slide')
+		// $('.ju-silde-wrapper').hide();
 	}
 	if (callback) {
 		callback();
