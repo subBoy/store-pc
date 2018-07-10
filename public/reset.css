@@ -32,6 +32,7 @@ a {
   -webkit-user-select: none;
   color: #000;
   -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 a:active {
@@ -106,6 +107,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .set-animation, .global-btn-styl {
   -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 .header-controller {
@@ -233,7 +235,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 21px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+       background-size: 100% 100%;
   background-image: url(./images/sp-cart.png);
 }
 .sp-cart-num {
@@ -284,11 +287,14 @@ h1, h2, h3, h4, h5, h6, p {
   color: #b3494d;
   font-weight: bold;
   -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 .nav-item-link:hover:before, .nav-item-link.now-link:before{
   visibility: visible;
   -webkit-transform: scaleX(1);
+       -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
        transform: scaleX(1);
 }
 .nav-item-link:before {
@@ -301,8 +307,11 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #b3494d;
   visibility: hidden;
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  -moz-transform: scaleX(0);
+   -ms-transform: scaleX(0);
+       transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   z-index: 1;
 }
@@ -311,7 +320,8 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
   background-repeat: no-repeat;
   background-position: center right;
-  background-size: 19px 10px;
+  -moz-background-size: 19px 10px;
+       background-size: 19px 10px;
   background-image: url(./images/home-of-icon-b.gif);
 }
 .nav-item-link.home-of:hover, .nav-item-link.now-link.home-of {
@@ -357,7 +367,8 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   width: 288px;
   height: 100%;
-  background-size: 100% auto;
+  -moz-background-size: 100% auto;
+       background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #f7f7f7;
@@ -977,7 +988,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .nav-sp-cart-item.del {
   -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+          -moz-transform: translate3d(-100%, 0, 0);
+       transform: translate3d(-100%, 0, 0);
   opacity: 0;
   filter: alpha(opacity=0);
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -1197,7 +1209,8 @@ h1, h2, h3, h4, h5, h6, p {
   width: 70px;
   height: 20px;
   border: 1px solid #b7b7b7;
-  border-radius: 3px;
+  -moz-border-radius: 3px;
+       border-radius: 3px;
 }
 .reserve-config-btn {
   display: block;

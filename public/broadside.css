@@ -123,7 +123,9 @@
 }
 .now-station .ju-slide-icon {
 	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	 -ms-transform: rotate(-45deg);
+	     transform: rotate(-45deg);
 	background-color: #b3494d;
 }
 /*底部*/
