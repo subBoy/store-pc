@@ -1141,7 +1141,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer-recommend-wrapper {
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 20px;
   text-align: left;
 }
 .footer-recommend-list {
@@ -1152,8 +1152,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .footer-recommend-link {
   display: block;
-  line-height: 40px;
-  height: 40px;
+  line-height: 50px;
+  height: 50px;
   font-size: 14px;
   font-weight: bold;
   background-repeat: no-repeat;

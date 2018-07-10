@@ -8,12 +8,12 @@
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
-<link rel="stylesheet" href="./shopping-cart.css">
+<link rel="stylesheet" href="./constructor.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation">
 	<!-- 头部区域 -->
-	<input type="hidden" value="1" id="nav-item-index">
+	<input type="hidden" value="0" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
@@ -695,176 +695,417 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="shopping-cart-wrapper">
-		<div class="sc-content-box">
-			<div class="sc-ct-tle">
-				<span class="sc-ct-tle-txt in-block">购 物 车 / Shopping  Cart</span>
-			</div>
-			<!-- 有商品 -->
-			<div class="sc-has-goods-wrapper" style="display: none;">
-				<ul class="sc-goods-ctl-wrapper">
-					<li class="sc-goods-ctl-item wh-45">商品名称</li>
-					<li class="sc-goods-ctl-item wh-20">数量</li>
-					<li class="sc-goods-ctl-item wh-25">小计</li>
-					<li class="sc-goods-ctl-item wh-10">操作</li>
-				</ul>
-				<div class="sc-goods-list-wrapper">
-					<ul class="sc-goods-list set-animation">
-						<li class="sc-goods-item wh-45">
-							<div class="reserve-win-goods-info">
-								<span class="select-input-wrapper">
-									<input type="checkbox" class="sp-select-input">
-								</span>
-								<span class="reserve-win-goods-img">
-									<img src="../developerImg/dl-img-1.jpg" width="100%">
-								</span>
-								<h4 class="reserve-win-goods-name">
-									<span class="goods-name-txt in-block">短袖</span>
-									<span class="goods-name-hr in-block"></span>
-									<span class="goods-name-txt in-block">RACK ROD</span>
-								</h4>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-								</p>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-size-color in-block">S / 白色</span>
-									<span class="sc-goods-info in-block">货号 : A100001</span>
-								</p>
+	<div class="constructor-wrapper">
+		<div class="constructor-info-box">
+			<div class="cr-info-wrapper">
+				<div class="cr-info-l">
+					<div class="cr-info-vm">
+						<div class="cr-info-desc">
+							<h3 class="cr-info-name">TATOO辰</h3>
+							<p class="cr-info-address">中国 | 北京</p>
+							<p class="cr-info-desc-txt">TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融ewe入纹身手绘。TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色纹身师reterawe e。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色wqew 纹身师。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融入纹身手绘。TATOO辰是一位热爱生活色纹身师。她喜欢讲生活元素融入纹身手绘。</p>
+							<div class="cr-oper-btns">
+								<span class="cr-oper-btn collect-btn in-block set-animation">收藏</span>
+								<span class="cr-oper-btn they-index in-block set-animation">他/她的主页</span>
 							</div>
-						</li>
-						<li class="sc-goods-item wh-20">
-							<div class="reserve-item-input">
-								<span class="remove-btn reserve-config-btn islimit">-</span>
-								<input class="reserve-goods-input" type="text" value="1">
-								<span class="add-btn reserve-config-btn">+</span>
-							</div>
-						</li>
-						<li class="sc-goods-item v-center wh-25">￥ : <span class="preice-num">299.00</span></li>
-						<li class="sc-goods-item set-animation v-center del-btn wh-10">删除</li>
-					</ul>
-					<ul class="sc-goods-list set-animation">
-						<li class="sc-goods-item wh-45">
-							<div class="reserve-win-goods-info">
-								<span class="select-input-wrapper">
-									<input type="checkbox" class="sp-select-input">
-								</span>
-								<span class="reserve-win-goods-img">
-									<img src="../developerImg/dl-img-1.jpg" width="100%">
-								</span>
-								<h4 class="reserve-win-goods-name">
-									<span class="goods-name-txt in-block">短袖</span>
-									<span class="goods-name-hr in-block"></span>
-									<span class="goods-name-txt in-block">RACK ROD</span>
-								</h4>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-								</p>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-size-color in-block">S / 白色</span>
-									<span class="sc-goods-info in-block">货号 : A100001</span>
-								</p>
-							</div>
-						</li>
-						<li class="sc-goods-item wh-20">
-							<div class="reserve-item-input">
-								<span class="remove-btn reserve-config-btn islimit">-</span>
-								<input class="reserve-goods-input" type="text" value="1">
-								<span class="add-btn reserve-config-btn">+</span>
-							</div>
-						</li>
-						<li class="sc-goods-item v-center wh-25">￥ : <span class="preice-num">299.00</span></li>
-						<li class="sc-goods-item set-animation v-center del-btn wh-10">删除</li>
-					</ul>
-					<ul class="sc-goods-list set-animation">
-						<li class="sc-goods-item wh-45">
-							<div class="reserve-win-goods-info">
-								<span class="select-input-wrapper">
-									<input type="checkbox" class="sp-select-input">
-								</span>
-								<span class="reserve-win-goods-img">
-									<img src="../developerImg/dl-img-1.jpg" width="100%">
-								</span>
-								<h4 class="reserve-win-goods-name">
-									<span class="goods-name-txt in-block">短袖</span>
-									<span class="goods-name-hr in-block"></span>
-									<span class="goods-name-txt in-block">RACK ROD</span>
-								</h4>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-								</p>
-								<p class="reserve-win-goods-desc">
-									<span class="sc-goods-size-color in-block">S / 白色</span>
-									<span class="sc-goods-info in-block">货号 : A100001</span>
-								</p>
-							</div>
-						</li>
-						<li class="sc-goods-item wh-20">
-							<div class="reserve-item-input">
-								<span class="remove-btn reserve-config-btn islimit">-</span>
-								<input class="reserve-goods-input" type="text" value="1">
-								<span class="add-btn reserve-config-btn">+</span>
-							</div>
-						</li>
-						<li class="sc-goods-item v-center wh-25">￥ : <span class="preice-num">299.00</span></li>
-						<li class="sc-goods-item set-animation v-center del-btn wh-10">删除</li>
-					</ul>
-				</div>
-				<div class="sc-goods-total-oper">
-					<div class="sc-goods-oper-sel in-block">
-						<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
-						<span class="sc-all-del-btn in-block">删除</span>
-						<span class="sc-clear-soldout-btn in-block">清除下架产品</span>
-					</div>
-					<div class="sc-goods-oper-total in-block">
-						<span class="seled-sp-box in-block">已选产品<span class="sel-num">0</span>件</span>
-						<span class="in-block">
-							<span class="total-price">
-								<span class="in-block total-price-name">合计：</span>
-								<span class="total-price-num in-block">￥0.00</span>
-							</span>
-							<span class="sale-price">已优惠：￥0</span>
-						</span>
-						<span class="close-order-btn in-block global-btn-styl">结算订单</span>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- 无商品 -->
-			<div class="sc-not-goods-wrapper" style="display: none;">
-				<div class="not-goods-icon">
-					<img src="./images/air-cart.png" class="not-goods-img">
+				<div class="cr-info-r">
+					<img src="./images/cr-b.jpg" class="cr-info-img">
 				</div>
-				<p class="not-goods-desc">您的购物车还没有商品，去商城逛逛！</p>
-				<a href="" class="go-list-btn global-btn-styl">去逛逛</a>
+			</div>
+		</div>
+		<div class="constructor-new-product">
+			<div class="constructor-desc">
+				<h3 class="cr-name">TATOO辰</h3>
+				<p class="cr-desc-txt">她是一位热爱生活色纹身师。</p>
+				<p class="cr-desc-txt">她擅长人物手绘，正运用该技能设计以下单品。</p>
+			</div>
+			<ul class="cr-new-pt-box">
+				<li class="cr-new-pt-item">
+					<div class="cr-new-pt-icon">
+						<img src="./images/item-1.png" class="cr-new-pt-img">
+					</div>
+					<p class="cr-new-pt-name">新设计单品</p>
+					<div class="cr-new-pt-btn global-btn-styl">
+						<span class="cr-new-pt-btn-txt">提前预定</span>
+					</div>
+				</li>
+				<li class="cr-new-pt-item">
+					<div class="cr-new-pt-icon">
+						<img src="./images/item-2.png" class="cr-new-pt-img">
+					</div>
+					<p class="cr-new-pt-name">新设计单品</p>
+					<div class="cr-new-pt-btn global-btn-styl">
+						<span class="cr-new-pt-btn-txt">提前预定</span>
+					</div>
+				</li>
+				<li class="cr-new-pt-item">
+					<div class="cr-new-pt-icon">
+						<img src="./images/item-3.png" class="cr-new-pt-img">
+					</div>
+					<p class="cr-new-pt-name">新设计单品</p>
+					<div class="cr-new-pt-btn global-btn-styl">
+						<span class="cr-new-pt-btn-txt">提前预定</span>
+					</div>
+				</li>
+				<li class="cr-new-pt-item">
+					<div class="cr-new-pt-icon">
+						<img src="./images/item-4.png" class="cr-new-pt-img">
+					</div>
+					<p class="cr-new-pt-name">新设计单品</p>
+					<div class="cr-new-pt-btn global-btn-styl">
+						<span class="cr-new-pt-btn-txt">提前预定</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="constructor-works">
+			<div class="cr-works-tle">已开单作品</div>
+			<div class="cr-works-box">
+				<!-- 有商品 -->
+				<div class="gl-main-list-group">
+					<div class="gl-main-list">
+						<ul class="gl-ct-list-view">
+							<li class="gl-ct-list-item">
+								<ul class="gl-ct-item-list">
+									<li class="gl-ct-series-item">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+											<p class="gl-ct-item-price-old"><span class="gl-ct-price-old-num in-block"><span class="price-old-hr"></span>￥399.00</span></p>
+										</div>
+									</li>
+									<li class="gl-ct-series-item" style="display: none;">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">90%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 野派系列</p>
+											<p class="gl-ct-item-price">RMB:22200</p>
+										</div>
+									</li>
+								</ul>
+								<div class="gl-ct-series-ctr">
+									<span class="series-ctr in-block spl-cl-1"></span>
+									<span class="series-ctr in-block spl-cl-3"></span>
+								</div>
+							</li>
+							<li class="gl-ct-list-item">
+								<ul class="gl-ct-item-list">
+									<li class="gl-ct-series-item">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+									<li class="gl-ct-series-item" style="display: none;">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+								</ul>
+								<div class="gl-ct-series-ctr">
+									<span class="series-ctr in-block spl-cl-1"></span>
+									<span class="series-ctr in-block spl-cl-3"></span>
+								</div>
+							</li>
+							<li class="gl-ct-list-item">
+								<ul class="gl-ct-item-list">
+									<li class="gl-ct-series-item">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+									<li class="gl-ct-series-item" style="display: none;">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+								</ul>
+								<div class="gl-ct-series-ctr">
+									<span class="series-ctr in-block spl-cl-1"></span>
+									<span class="series-ctr in-block spl-cl-3"></span>
+								</div>
+							</li>
+							<li class="gl-ct-list-item">
+								<ul class="gl-ct-item-list">
+									<li class="gl-ct-series-item">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+									<li class="gl-ct-series-item" style="display: none;">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+								</ul>
+								<div class="gl-ct-series-ctr">
+									<span class="series-ctr in-block spl-cl-1"></span>
+									<span class="series-ctr in-block spl-cl-3"></span>
+								</div>
+							</li>
+							<li class="gl-ct-list-item">
+								<ul class="gl-ct-item-list">
+									<li class="gl-ct-series-item">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+									<li class="gl-ct-series-item" style="display: none;">
+										<div class="gl-ct-item-img-wrapper">
+											<div class="gl-ct-item-img-group">
+												<a class="gl-ct-item-link" href="">
+													<span class="item-discount-wrapper">
+														<span class="item-discount-num">50%</span>
+													</span>
+													<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
+													<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
+												</a>
+											</div>
+										</div>
+										<div class="gl-ct-item-info">
+											<p class="gl-ct-item-name">Evil Party 恶党系列</p>
+											<p class="gl-ct-item-price">RMB:2200</p>
+										</div>
+									</li>
+								</ul>
+								<div class="gl-ct-series-ctr">
+									<span class="series-ctr in-block spl-cl-1"></span>
+									<span class="series-ctr in-block spl-cl-3"></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 没有商品 -->
+				<div class="gl-main-list-air" style="display: none">
+					<img src="../goods-list/images/air-goods.jpg" class="gl-main-list-air-img">
+					<p class="gl-main-list-air-txt">很抱歉！</p>
+					<p class="gl-main-list-air-desc">该设计师的作品还未上线，敬请期待！</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="sc-hint-wrapper">
-		<ul class="sc-hint-list">
-			<li class="sc-hint-item">
-				<a href="../website-boon/website-boon.html#gwly" class="sc-hint-link">
-					<span class="sc-hint-icon hint-icon-1"></span>
-					<span class="sc-hint-name">专享官网礼遇</span>
-				</a>
-			</li>
-			<li class="sc-hint-item">
-				<a href="../website-boon/website-boon.html#xdby" class="sc-hint-link">
-					<span class="sc-hint-icon hint-icon-2"></span>
-					<span class="sc-hint-name">会员下单免运费</span>
-				</a>
-			</li>
-			<li class="sc-hint-item">
-				<a href="../website-boon/website-boon.html#zysh" class="sc-hint-link">
-					<span class="sc-hint-icon hint-icon-3"></span>
-					<span class="sc-hint-name">快速专业售后</span>
-				</a>
-			</li>
-			<li class="sc-hint-item">
-				<a href="../website-boon/website-boon.html#dhtx" class="sc-hint-link no-border">
-					<span class="sc-hint-icon hint-icon-4"></span>
-					<span class="sc-hint-name">到货为您提醒</span>
-				</a>
-			</li>
-		</ul>
+	<!-- 弹窗区域 -->
+	<div class="gd-win-wrapper">
+		<em class="gd-win-bg"></em>
+		<!-- 新设计单品预定 -->
+		<div class="store-reserve-win">
+			<div class="store-reserve-win-tle-wrapper">
+				<h3 class="store-reserve-win-tle">新设计商品预定</h3>
+				<p class="store-reserve-win-desc">您将免费预定以下商品，预定成功后，商品上架您将获得优先购买权！</p>
+				<span class="gd-win-close-btn"></span>
+			</div>
+			<div class="store-reserve-win-ct">
+				<ul class="reserve-win-ct-tle">
+					<li class="reserve-win-ct-tle-item item-1">商品描述</li>
+					<li class="reserve-win-ct-tle-item item-2">商品颜色选择</li>
+					<li class="reserve-win-ct-tle-item item-2">商品尺码选择</li>
+					<li class="reserve-win-ct-tle-item item-2">预定数量</li>
+				</ul>
+				<ul class="reserve-win-main-ct">
+					<li class="reserve-win-main-item item-1">
+						<div class="reserve-win-goods-info">
+							<span class="reserve-win-goods-img">
+								<img src="../developerImg/dl-img-1.jpg" width="100%">
+							</span>
+							<h4 class="reserve-win-goods-name">
+								<span class="goods-name-txt in-block">短袖</span>
+								<span class="goods-name-hr in-block"></span>
+								<span class="goods-name-txt in-block">RACK ROD</span>
+							</h4>
+							<p class="reserve-win-goods-desc">EVIL PARTY SERIES 恶党系列</p>
+							<p class="reserve-win-goods-desc">货号：A100001</p>
+						</div>
+					</li>
+					<li class="reserve-win-main-item item-2">
+						<div class="reserve-win-goods-color-oper">
+							<span class="reserve-goods-color-group in-block">
+								<span class="reserve-win-goods-color-ctr colorSel in-block" colorName="黑色">
+									<span class="goods-color-item-view" style="background-color: #000000"></span>
+								</span>
+								<span class="reserve-win-goods-color-ctr in-block" colorName="白色">
+									<span class="goods-color-item-view" style="background-color: #fffff"></span>
+								</span>
+							</span>
+							<span class="reserve-win-goods-color-name in-block">黑色</span>
+						</div>
+					</li>
+					<li class="reserve-win-main-item item-2">
+						<div class="goods-size-wrapper reserve-win-main-drop-down in-block">
+							<span class="goods-size-view">尺码<i class="size-view-num">:M</i></span>
+							<ul class="goods-size-list">
+								<li class="goods-size-item set-animation">
+									<span class="goods-size-item-num">M</span>
+								</li>
+								<li class="goods-size-item set-animation">
+									<span class="goods-size-item-num">L</span>
+								</li>
+								<li class="goods-size-item set-animation">
+									<span class="goods-size-item-num">XL</span>
+								</li>
+								<li class="goods-size-item set-animation">
+									<span class="goods-size-item-num">XXL</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="reserve-win-main-item item-2">
+						<div class="reserve-item-input">
+							<span class="remove-btn reserve-config-btn islimit">-</span>
+							<input class="reserve-goods-input" type="text" value="1">
+							<span class="add-btn reserve-config-btn">+</span>
+						</div>
+					</li>
+				</ul>
+				<div class="inform-style-wrapper">
+					<p class="inform-style-tle">通知方式</p>
+					<ul class="inform-style-list">
+						<li class="inform-style-item inform-style-1">
+							<div class="inform-style-item-ctr">
+								<span class="inform-style-btn">
+									<input type="radio" name="sel-inform-style" class="inform-style-btn-input">
+								</span>
+								<p class="inform-style-name">
+									<span class="inform-name-tle in-block">邮箱地址：</span>
+									<span class="inform-name-txt in-block">47932312@qq.com</span>
+									<a href="#" class="global-btn-styl inform-style-oper in-block">修改</a>
+								</p>
+							</div>
+						</li>
+						<li class="inform-style-item inform-style-2">
+							<div class="inform-style-item-ctr">
+								<span class="inform-style-btn" style="display: none;">
+									<input type="radio" name="sel-inform-style" class="inform-style-btn-input">
+								</span>
+								<p class="inform-style-name">
+									<span class="inform-name-tle in-block">手机号：</span>
+									<span class="inform-name-txt in-block">无</span>
+									<a href="#" class="global-btn-styl inform-style-oper in-block">添加</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="store-reserve-win-submit">
+				<span class="reserve-submit-self global-btn-styl">提交预定</span>
+			</div>
+		</div>
+		<!-- 预定成功 -->
+		<div class="reserve-success-win">
+			<div class="store-reserve-win-tle-wrapper">
+				<h3 class="store-reserve-win-tle">预定成功</h3>
+				<p class="store-reserve-win-desc">感谢您对本商品的预定，商品上架后我们会优先通知您！</p>
+				<span class="gd-win-close-btn"></span>
+			</div>
+			<div class="reserve-success-img"></div>
+		</div>
 	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
@@ -920,6 +1161,6 @@
 	<script src="../public/js/jquery-1.8.0.min.js"></script>
 	<script src="../util/util.js"></script>
 	<script src="../public/js/public.js"></script>
-	<script src="./shopping-cart.js"></script>
+	<script src="./constructor.js"></script>
 </body>
 </html>
