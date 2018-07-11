@@ -8,10 +8,20 @@
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
+<script src="../public/js/jquery-1.8.0.min.js"></script>
+<script src="../util/util.js"></script>
 <link rel="stylesheet" href="./shopping-cart.css">
 <title>RACK ROD</title>
 </head>
-<body class="global-body set-animation">
+<body class="global-body set-animation not-scroll">
+	<!-- loading -->
+	<div id="loading-wrapper">
+		<div class="loading-bar"></div>
+		<div class="loading-box">
+			<img src="../public/images/loading.gif" class="img-responsive">
+			<p class="loading-txt">Loading...</p>
+		</div>
+	</div>
 	<!-- 头部区域 -->
 	<input type="hidden" value="1" id="nav-item-index">
 	<div class="header-controller">
@@ -917,8 +927,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="../public/js/jquery-1.8.0.min.js"></script>
-	<script src="../util/util.js"></script>
 	<script src="../public/js/public.js"></script>
 	<script src="./shopping-cart.js"></script>
 </body>

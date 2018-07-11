@@ -19,6 +19,9 @@ html, body {
   -ms-user-select: none; 
   user-select: none;
 }
+.not-scroll {
+  overflow-y: hidden;
+}
 img {
   display: block;
   border: none;
@@ -1242,4 +1245,37 @@ h1, h2, h3, h4, h5, h6, p {
   height: 20px;
   text-align: center;
   font-size: 12px;
+}
+
+/*loading*/
+#loading-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: #000;
+}
+.loading-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+.loading-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -90px 0 0 -139px;
+  text-align: center;
+  z-index: 1;
+}
+.loading-txt {
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
 }

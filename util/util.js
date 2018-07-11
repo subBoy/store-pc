@@ -88,5 +88,33 @@ $.extend(window, {
 				callback();
 			}
 		})
+	},
+	globalLoading: function () {
+		var prg = 0;
+		var timer = setInterval(function () {
+			if (prg >= 100) {
+				clearInterval(timer);
+				prg = 100;
+			} else {
+				prg++
+			}
+			$('.loading-bar').animate({
+				width: prg + '%'
+			}, 50)
+		}, 50);
+		window.onload = function () {
+			prg = 100;
+		  $('.loading-bar').animate({
+				width: prg + '%'
+			}, 100, function () {
+				$('#loading-wrapper').delay(300).hide(0);
+				setTimeout(function () {
+					$('body').removeClass('not-scroll');
+				}, 300);
+			})
+		}
 	}
+})
+$(function () {
+	globalLoading();
 })
