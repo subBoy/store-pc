@@ -494,27 +494,6 @@
 	font-size: 14px;
 	font-weight: bold;
 }
-.yws-i-am-wrapper {
-	padding-top: 50px;
-	text-align: center;
-}
-.yws-i-am-tle {
-	padding-bottom: 20px;
-  font-family: 'yst-font';
-  color: #b3494d;
-  font-size: 56px;
-  background-repeat: no-repeat;
-  background-position: center 50px;
-  background-image: url(../public/images/txt-bg.png);
-}
-.yws-i-am-desc {
-	line-height: 34px;
-	font-size: 14px;
-}
-.yws-i-am-img {
-	padding-top: 20px;
-	margin: 0 auto;
-}
 
 .gd-win-wrapper {
 	display: none;

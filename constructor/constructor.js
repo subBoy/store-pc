@@ -79,4 +79,5 @@ $(function () {
 	outOfStore();
 	collectGoods();
 	vmCon();
+	$('.go-to-top-btn').on('click', goToTop);
 })

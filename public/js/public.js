@@ -2,6 +2,11 @@ var sh, hr, st;
 function initNav () { 
   var sTop = $(window).scrollTop();
   var sWidth = $(window).width(); 
+  if (sTop >= 100) {
+  	$('.go-to-top-btn').fadeIn();
+  } else {
+  	$('.go-to-top-btn').fadeOut();
+  }
   if (sWidth < 1340) {
   	$(".global-body, .header-wrapper").removeClass('win-nav');
   	$(".header-logo").removeClass('win-nav win-nav-top set-animation');

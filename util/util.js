@@ -92,17 +92,18 @@ $.extend(window, {
 	globalLoading: function () {
 		var prg = 0;
 		var timer = setInterval(function () {
-			if (prg >= 100) {
+			if (prg >= 90) {
 				clearInterval(timer);
-				prg = 100;
+				prg = 90;
 			} else {
-				prg++
+				prg = prg - 0 + 1.5;
 			}
 			$('.loading-bar').animate({
 				width: prg + '%'
 			}, 50)
 		}, 50);
 		window.onload = function () {
+			clearInterval(timer);
 			prg = 100;
 		  $('.loading-bar').animate({
 				width: prg + '%'
@@ -113,7 +114,27 @@ $.extend(window, {
 				}, 300);
 			})
 		}
-	}
+	},
+	goToTop: function () {
+		var sTop = $(window).scrollTop();
+		var cardinal = 0;
+    var _to = function () {
+			cardinal = (sTop - cardinal) / 20;
+      if (cardinal < 100) {
+      	if (sh) {
+        	clearInterval(sh);
+      	}
+      	$("html,body").animate({
+					scrollTop: 0 + 'px'
+				}, 500);
+      } else {
+      	$("html,body").animate({
+					scrollTop: cardinal + 'px'
+				}, 500);
+      }
+    };
+    var sh = setInterval(_to, 10);
+  }
 })
 $(function () {
 	globalLoading();

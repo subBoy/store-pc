@@ -1087,6 +1087,8 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   border-top: 1px solid #000;
   text-align: center;
+  background-color: #fff;
+  z-index: 10;
 }
 .footer-logo-wrapper {
   padding-bottom: 14px;
@@ -1278,4 +1280,36 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 30px;
   font-size: 16px;
   color: #fff;
+}
+
+.yws-i-am-wrapper {
+  padding-top: 50px;
+  text-align: center;
+}
+.yws-i-am-tle {
+  padding-bottom: 20px;
+  font-family: 'yst-font';
+  color: #b3494d;
+  font-size: 56px;
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-image: url(./images/txt-bg.png);
+}
+.yws-i-am-desc {
+  line-height: 34px;
+  font-size: 14px;
+}
+.yws-i-am-img {
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.go-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  right: 30px;
+  width: 80px;
+  cursor: pointer;
+  z-index: 100;
 }

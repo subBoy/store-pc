@@ -71,6 +71,7 @@
 	cursor: pointer;
 }
 .they-index:hover {
+	background-image: url(./images/cr-index-1.png);
 	color: #b34d49;
 }
 .cr-info-r {
