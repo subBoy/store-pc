@@ -24,7 +24,21 @@ function spItemSH () {
 		_li.eq(_index).fadeIn();
 	})
 }
+function videoPlayer () {
+  if (!document.addEventListener || !1 in document.documentElement.style) {
+    $('#video').hide();
+  } else {
+    jsModern.video("#video");
+  }
+}
+function setMar () {
+  var _h = $(window).height();
+  $('.index-main-content').css({'margin-top': _h + 'px'});
+}
 $(function () {
 	bannerSlider();
 	spItemSH();
+  videoPlayer();
+  setMar();
+  $(window).resize(setMar);
 })

@@ -66,18 +66,11 @@ function spItemSH () {
 		_li.eq(_index).fadeIn();
 	})
 }
-function vmCon () {
-	var _h = $('.cr-info-vm').height();
-	$('.cr-info-vm').animate({
-		'margin-top': '-' + _h / 2 + 'px'
-	}, 500)
-}
 $(function () {
 	spItemSH();
 	selectColor('.goods-color-item', '.goods-color-name');
 	selectSize('.goods-size-list', '.goods-size-view', '.goods-size-item-num')
 	outOfStore();
 	collectGoods();
-	vmCon();
 	$('.go-to-top-btn').on('click', goToTop);
 })

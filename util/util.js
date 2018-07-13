@@ -134,8 +134,17 @@ $.extend(window, {
       }
     };
     var sh = setInterval(_to, 10);
+  },
+  vmCon: function () {
+  	$('.cr-info-vm').each(function () {
+  		var _h = $(this).height();
+			$(this).animate({
+				'margin-top': '-' + _h / 2 + 'px'
+			}, 500)
+  	})
   }
 })
 $(function () {
 	globalLoading();
+	vmCon();
 })

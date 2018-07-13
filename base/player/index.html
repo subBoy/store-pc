@@ -9,15 +9,10 @@
 <script>
 	$(function () {
 		if (!document.addEventListener || !1 in document.documentElement.style) {
-			console.log('ie8-');
+			$('#video').hide();
 		} else {
 			jsModern.video("#video");
 		}
-		// if (jsModern) {
-		// 	jsModern.video("#video");
-		// } else {
-		// 	console.log('ie8-');
-		// }
 	})
 </script>
 </head>
