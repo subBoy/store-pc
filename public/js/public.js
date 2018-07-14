@@ -248,7 +248,14 @@ function shotcut () {
 		$(this).parent().parent().hide();
 	})
 }
+function setFooterStyle () {
+	var _child = $('.gl-content-wrapper').find('.footer-nav-wrapper');
+	if (!_child.length || _child.length === 0) {
+		$('.gl-content-wrapper').find('.footer-omit-wrapper').addClass('ft-2');
+	}
+}
 $(function () {
+	setFooterStyle();
 	initNav(); // 判断悬浮导航出现的时机
 	winResize(); // 浏览器窗口变化做出处理
 	setNavItemStyl(); // 设置当前页面所属导航样式

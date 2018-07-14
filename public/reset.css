@@ -1130,6 +1130,9 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
   font-weight: bold;
 }
+.ft-2 {
+  padding-bottom: 12px;
+}
 .footer-moit-link {
   line-height: 32px;
   padding: 12px 0 0 2px;
@@ -1150,6 +1153,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .footer-nav-link:hover {
   color: #b3494d;
+}
+.footer-nav-link.not-link:hover {
+  color: #000;
 }
 .footer-nav-link .spl-styl {
   font-size: 14px;
@@ -1282,15 +1288,20 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
 }
 
+.yws-i-am-bg-r {
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  background-image: url(../public/images/c-bg.png);
+}
 .yws-i-am-wrapper {
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: center;
 }
 .yws-i-am-tle {
   padding-bottom: 20px;
   font-family: 'yst-font';
   color: #b3494d;
-  font-size: 56px;
+  font-size: 46px;
   background-repeat: no-repeat;
   background-position: center 50px;
   background-image: url(./images/txt-bg.png);
@@ -1300,7 +1311,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 14px;
 }
 .yws-i-am-img {
-  padding-top: 20px;
+  padding: 45px 0 12px 0;
   margin: 0 auto;
 }
 

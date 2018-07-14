@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="../public/reset.css">
+<script src="../public/js/jquery-1.8.0.min.js"></script>
+<script src="../util/util.js"></script>
+<link rel="stylesheet" href="./vip.css">
+<title>RACK ROD</title>
+</head>
+<body class="global-body set-animation not-scroll">
+	<!-- loading -->
+	<div id="loading-wrapper">
+		<div class="loading-bar"></div>
+		<div class="loading-box">
+			<img src="../public/images/loading.gif" class="img-responsive">
+			<p class="loading-txt">Loading...</p>
+		</div>
+	</div>
+	<!-- 头部区域 -->
+	<input type="hidden" value="0" id="nav-item-index">
+	<div class="header-controller">
+		<div class="header-wrapper">
+			<div class="header-l set-animation">
+				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
+				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
+			</div>
+			<div class="header-logo">
+				<img src="../public/images/logo.png" alt="RACK ROD" class="logo-img">
+				<p class="header-logo-name">RACK ROD</p>
+			</div>
+			<div class="header-r">
+				<span class="header-r-item sp-cart-btn-ctr in-block ft-right" unfold="购物车">
+					<span class="sp-cart-num in-block">9</span>
+				</span>
+				<span class="header-r-item user-info-btn-ctr in-block ft-right" unfold="用户中心">
+					<img src="../public/images/user-center-icon.png"  class="user-info-btn">
+				</span>
+				<span class="header-r-item hd-search-btn-ctr in-block ft-right" unfold="搜索框">
+					<span class="hd-search-btn in-block">SEARCH</span>
+					<img src="../public/images/search-icon.png"  class="hd-search-btn-icon in-block">
+				</span>
+				<!-- 右边搜索框&个人中心信息&购物车展开内容 -->
+				<div class="header-r-nav-list-ctr set-animation" style="display: none;">
+					<img src="../public/images/arrows-top.png" class="arrows-top set-animation">
+					<!-- 搜索框展开内容 -->
+					<div class="serach-input-wrapper header-r-nav-unfold" unfold="搜索框" style="display: none;">
+						<p class="global-input-desc">搜索</p>
+						<div class="serach-input-group">
+							<div class="serach-input-ctr">
+								<input type="text" class="serach-input fb" value="输入商品关键词">
+								<button class="serach-btn"></button>
+							</div>
+						</div>
+					</div>
+					<div class="header-r-nav-unfold" unfold="用户中心" > 
+						<!-- 账号未登录状态 -->
+						<div class="sign-input-wrapper">
+							<p class="global-input-desc">账号登录<span id="err-txt-wrapper" class="err-txt-wrapper"></span></p>
+							<div class="sign-input-group">
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr u-ic">
+										<span class="sign-input-tle in-block">手机/邮箱：</span>
+										<input type="text" class="sign-input global-input-focus userAccount" value="">
+									</div>
+									<div class="sign-accmount-wrapper" style="display: none;">
+										<ul class="sign-accmount-list">
+											<li class="sign-accmount-item">15212345678</li>
+											<li class="sign-accmount-item">15212345678@qq.com</li>
+											<li class="sign-accmount-item">15212345678@163.com</li>
+										</ul>
+									</div>
+								</div>
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr p-ic">
+										<span class="sign-input-tle in-block">确认密码：</span>
+										<input type="password" class="sign-input in-block global-input-focus userPassword" value="">
+									</div>
+								</div>
+								<div class="sign-input-layout">
+									<div class="sign-input-ctr c-ic">
+										<span class="sign-input-tle in-block">验证码：</span>
+										<input type="text" class="sign-input global-input-focus userCode" value="">
+										<span class="code-img-ctr in-block">
+											<img src="../developerImg/code.jpg" class="code-img">
+										</span>
+									</div>
+								</div>
+								<div class="rest-operation-wrapper">
+									<p class="remember-login-info">
+										<span class="global-select-wrapper in-block">
+											<input class="global-select-input" type="checkbox">
+										</span>
+										记住我的登录信息！
+									</p>
+									<p class="forget-pw-and-sign-up">
+										<a href="../sign-up/sign-up.html" class="fs-opertion-btn">新用户注册</a>
+										<a href="../forget-pw/forget-pw.html" class="fs-opertion-btn">忘记密码</a>
+									</p>
+								</div>
+								<div class="nav-sign-in-btn-ctr">
+									<button id="login-btn-ctr" class="nav-sign-in-btn global-btn-styl">登录</button>
+								</div>
+								<div class="third-party-sign-in">
+									<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
+									<div class="third-party-style-list in-block">
+										<a class="third-party-item tp-qq in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">QQ</span>
+										</a>
+										<a class="third-party-item tp-wx in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">微信</span>
+										</a>
+										<a class="third-party-item tp-wb in-block">
+											<span class="tp-icon"></span>
+											<span class="tp-name">微博</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 账号已登录状态 -->
+						<div class="sign-input-wrapper" style="display: none;">
+							<div class="user-info-wrapper">
+								<span class="nav-user-name-greet in-block">你好！秋帆</span>
+								<span class="nav-sign-out-btn in-block">退出</span>
+							</div>
+							<div class="user-module-wrapper">
+								<div class="user-module-group">
+									<p class="user-module-desc">个人信息</p>
+									<ul class="user-module-list">
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的账号面板</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的个人信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的配送地址簿</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的优惠信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的积分信息</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的收藏</a>
+											<span class="user-module-indent"></span>
+										</li>
+									</ul>
+								</div>
+								<div class="user-module-group">
+									<p class="user-module-desc">订单信息</p>
+									<ul class="user-module-list">
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的订单</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">我的退单</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">到货提醒</a>
+											<span class="user-module-indent"></span>
+										</li>
+										<li class="user-module-item">
+											<a href="" class="user-module-link">退货说明</a>
+											<span class="user-module-indent"></span>
+										</li>
+									</ul>
+								</div>
+								<div class="user-module-recommend">
+									<p class="recommend-module-tle">野派资料馆</p>
+									<div class="recommend-module-info in-block">
+										<img src="../public/images/home-of.png"  class="home-of-img">
+										<p class="recommend-module-name">HOME OF ®</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 购物车展开状态 -->
+					<div class="nav-sp-cart-wrapper header-r-nav-unfold" unfold="购物车" style="display: none">
+						<p class="sp-cart-desc-wrapper">添加至购物车的商品</p>
+						<div class="sp-cart-list-wrapper">
+							<!-- 购物车为空的状态 -->
+							<div class="sp-air-cart-wrapper" style="display: none">
+								<img src="../public/images/air-cart.png" class="air-cart-img">
+								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="" class="sp-list-link">逛逛</a>！</p>
+							</div>
+							<!-- 购物车非空的状态 -->
+							<div class="nav-sp-cart-group">
+								<ul class="nav-sp-cart-list">
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+									<li class="nav-sp-cart-item set-animation">
+										<a href="" class="nav-sp-cart-link">
+											<span class="sp-img-ctr">
+												<img src="../developerImg/sp-img.jpg" class="sp-img">
+											</span>
+											<span class="sp-info-wapper">
+												<span class="sp-info-name">短袖  RACK  ROD</span>
+												<span class="sp-info-desc">Evil Party series 恶党系列</span>
+												<span class="sp-info-group">
+													<span class="sp-info-size-color">S / 白色</span>
+													<span class="sp-info-price-num">¥:225×1</span>
+												</span>
+											</span>
+										</a>
+										<span class="del-sp-btn-ctr"></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sp-cart-operal">
+							<div class="sp-cart-total">
+								<span class="sp-cart-total-name">共计</span>
+								<p class="sp-cart-total-ctr">￥: <span class="sp-cart-total-sum">0</span></p>
+							</div>
+							<a href="../shopping-cart/shopping-cart.html" class="sp-cart-link-ctr global-btn-styl">查看购物车</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 中间导航内容 -->
+			<div class="header-nav-ctr win-nav">
+				<ul class="header-nav-wrapper in-block">
+					<li class="header-nav-item ft-left">
+						<a href="../index/index.html" itemIdx="0" class="nav-item-link in-block now-link">首页</a>
+					</li>
+					<li class="header-nav-item ft-left" levelName="男款">
+						<a href="../goods-list/goods-list.html" itemIdx="1" class="nav-item-link in-block">男款</a>
+					</li>
+					<li class="header-nav-item ft-left" levelName="女款">
+						<a href="../goods-list/goods-list.html" itemIdx="2" class="nav-item-link in-block">女款</a>
+					</li>
+					<li class="header-nav-item ft-left">
+						<a href="../hand-custom/hand-custom.html" itemIdx="3" class="nav-item-link in-block">手匠定制</a>
+					</li>
+					<li class="header-nav-item ft-left">
+						<a href="../reflect-shop/reflect-shop.html" itemIdx="4" class="nav-item-link in-block">体验店</a>
+					</li>
+					<li class="header-nav-item ft-left spl-styl" levelName="home-of">
+						<a href="../home-of/home-of.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
+					</li>
+					<li class="header-nav-item ft-left">
+						<a href="../about-us/about-us.html" itemIdx="6" class="nav-item-link in-block">关于我们</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 中间导航展开内容 -->
+			<div class="header-nav-list-ctr set-animation" style="display: none;">
+				<div class="header-nav-list-wrapper">
+					<!-- 男款展开内容 -->
+					<div levelName="男款" class="header-nav-list-info set-animation man-nav-list-info" style="display: none;">
+						<div class="nav-list-info-hr"></div>
+						<div class="man-nav-list-info-l ft-left">
+							<div class="nav-info-poster man-poster"></div>
+							<div class="nav-info-items-group">
+								<div class="nav-info-items-wrapper">
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">服装</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部服装</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">背心</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">T恤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">衬衫</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">针织衫</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">卫衣</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">短裤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">牛仔裤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">工装裤</a>
+											</li>
+										</ul>
+									</div>
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">鞋</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部鞋</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">拖鞋</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">休闲鞋</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="nav-info-items-wrapper ornament-wrapper">
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">银饰</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部银饰</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">指环</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">项链</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">胸针</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">其他配饰</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+											</li>
+										</ul>
+									</div>
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">皮具</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部皮具</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">背包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">钱包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">休闲包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">垃圾包</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="man-nav-list-info-r ft-left">
+							<div class="designer-wrapper">
+								<div class="designer-tle">设计师<a href="" class="designer-list-btn">全部设计师</a></div>
+								<div class="designer-list-ctr">
+									<ul class="designer-list">
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜gfg</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜fgdfgdf</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜gf菜</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰gf</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li><li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜</a>
+										</li>
+									</ul>
+								</div>
+								<div class="designer-icon">
+									<img src="../public/images/man-icon.jpg" class="designer-icon-img">
+									<p class="designer-icon-name">RACKMAN</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 女款展开内容 -->
+					<div levelName="女款" class="header-nav-list-info set-animation women-nav-list-info" style="display: none;">
+						<div class="nav-list-info-hr"></div>
+						<div class="man-nav-list-info-l ft-left">
+							<div class="nav-info-poster women-poster"></div>
+							<div class="nav-info-items-group">
+								<div class="nav-info-items-wrapper">
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">服装</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部服装</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">背心</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">T恤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">衬衫</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">针织衫</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">卫衣</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">短裤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">牛仔裤</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">工装裤</a>
+											</li>
+										</ul>
+									</div>
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">鞋</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部鞋</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">拖鞋</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">休闲鞋</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="nav-info-items-wrapper ornament-wrapper">
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">银饰</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部银饰</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">指环</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">项链</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">胸针</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">其他配饰</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+											</li>
+										</ul>
+									</div>
+									<div class="nav-info-item">
+										<h3 class="nav-info-item-name">皮具</h3>
+										<ul class="nav-info-item-list">
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">全部皮具</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">背包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">钱包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">休闲包</a>
+											</li>
+											<li class="nav-info-item-list-cell">
+												<a href="" class="nav-info-item-list-link">垃圾包</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="man-nav-list-info-r ft-left">
+							<div class="designer-wrapper">
+								<div class="designer-tle">设计师<a href="" class="designer-list-btn">全部设计师</a></div>
+								<div class="designer-list-ctr">
+									<ul class="designer-list">
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜gfg</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜fgdfgdf</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜gf菜</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰gf</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">TATOO辰</a>
+										</li><li class="designer-item">
+											<a href="" class="designer-link">RACK ROD</a>
+										</li>
+										<li class="designer-item">
+											<a href="" class="designer-link">菜菜</a>
+										</li>
+									</ul>
+								</div>
+								<div class="designer-icon">
+									<img src="../public/images/women-icon.jpg" class="designer-icon-img">
+									<p class="designer-icon-name">RACKWOMEN</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- home of 展开内容 -->
+				<div levelName="home-of" class="header-nav-list-info set-animation home-of-nav-list-ctr" style="display: none;">
+					<a href="" class="about-home-of-link">关于HOME OF Ⓡ</a>
+					<ul class="about-home-of-list in-block">
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">刺青</span>
+								<span class="home-of-link-desc in-block">纹身插画</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">机车</span>
+								<span class="home-of-link-desc in-block">Cafe ride</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">滑板</span>
+								<span class="home-of-link-desc in-block">走向街头</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">街舞</span>
+								<span class="home-of-link-desc in-block">Dancer</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">FM</span>
+								<span class="home-of-link-desc in-block in-block">硬汉柔情</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">影像</span>
+								<span class="home-of-link-desc in-block">野派电影分享</span>
+							</a>
+						</li>
+						<li class="about-home-of-item">
+							<a href="" class="home-of-item-link">
+								<span class="home-of-link-name">野派文化</span>
+								<span class="home-of-link-desc in-block">关于HOME OF Ⓡ</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主题内容区域 -->
+	<div class="vip-wrapper">
+		<div class="vip-banner">
+			<div class="vip-banner-ct">
+				<span class="vip-banner-txt">即刻加入RACK ROD会员</span>
+			</div>
+		</div>
+		<div class="vip-c-tle-wrapper">
+			<p class="vip-c-tle">即刻加入RACK ROD官方会员俱乐部</p>
+			<p class="vip-c-tle">您将享受到更多优惠与活动</p>
+		</div>
+		<div class="vip-great-club" ju-silde-item>
+			<h3 class="vip-great-club-tle">Be part of a great club！</h3>
+			<div class="vip-great-club-txt">
+				<p class="vip-desc-txt">RACK ROD会员是我们在中国大陆唯一的设立的官方会员俱乐部，让您与RACK ROD品牌紧紧相连。</p>
+				<p class="vip-desc-txt">成为RACK ROD会员，您在官方网站或其他官方店铺购物可获得积分。</p>
+				<p class="vip-desc-txt">购买得越多，获享的会员福利也越多。同时，您还会收到各种RACK ROD会员专属活动的邀约、在第一时间获得新产品上市信息。银牌和金牌会员还可能获得限量版的产品优先购买的机会。</p>
+			</div>
+			<div class="vip-great-club-step">
+				<p class="vip-desc-txt">1. 注册会员</p>
+				<p class="vip-desc-txt">你可以在RACK ROD官方网站或其他官方店铺上申请RACK ROD会员资格。</p>
+				<p class="vip-desc-txt">在RACK ROD官方网站或其他官方店铺，并阅读、接受《RACK ROD会员规则》，便可注册并激活成RACK ROD的新标会员；若同时一次性购物实际支付满1,000元及以上（并无退货情况），便可成为铜牌级以上等级会员。</p>
+				<p class="vip-desc-txt">2. 完成激活会员资格</p>
+				<p class="vip-desc-txt">在除官网的其他官方店铺购物并注册成为铜牌及以上等级的会员，需要在RACK ROD官方网站完成激活后，即可享受消费积分带来的购物优惠。</p>
+				<p class="vip-desc-txt">3. 会员资格有效期</p>
+				<p class="vip-desc-txt">新加入的铜牌/银牌/金牌会员，其会员有效期从入会当月起至第12个月的最后一日到期。升级为铜牌/银牌/金牌会员的，其会员有效期从升级之日起至第12个月的最后一日到期。</p>
+				<p class="vip-desc-txt">新标会员终身有效。</p>
+				<p class="vip-desc-txt">有关RACK ROD会员的更多信息及相关条款和条件，请参见末尾《RACK ROD会员规则》。</p>
+			</div>
+		</div>
+		<div class="vip-c-tle-wrapper styl-per">
+			<p class="vip-c-tle">会员权益</p>
+		</div>
+		<div class="vip-grade-wrapper">
+			<div class="vip-great-club">
+				<div class="vip-grade-info vip-mass-grade">
+					<div class="vip-grade-ident">
+						<div class="vip-grade-ident-box">
+							<div class="vip-name">
+								<p class="vip-name-txt">新标会员</p>
+								<p class="vip-code">编号：00001</p>
+							</div>
+							<div class="vip-logo">
+								<div class="vip-logo-img">
+									<img src="./images/v-logo-f.png" width="100%">
+								</div>
+								<div class="vip-brand-box">
+									<p class="vip-brand">© RACK ROD</p>
+									<p class="vip-brand-desc">
+										<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
+										<span class="vip-brand-desc-ident in-block">TM</span>
+									</p>
+								</div>
+							</div>
+							<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
+							<div class="vip-intergral">
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">积分：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
+								</p>
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">优惠券：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="vip-grade-desc">
+						<p class="vip-desc-txt">会员资格： 在RACK ROD官方网站，或其他官方店铺注册并填写提交完整会员资料，并阅读、接受《RACK R ju-silde-itemOD会员规则》，即可成为新标会员。</p>
+						<p class="vip-desc-txt">会员有效期： 终身。</p>
+						<p class="vip-desc-txt">积分换券： 任何时候在RACK ROD官方网站或其他官方店铺购物可获积分。积分以实际商品支付金额计算，每实际支付1元=1分。</p>
+						<p class="vip-desc-txt">新标会员12个月内在RACK ROD官方网站或其他官方店铺购物累计实际支付满1,000元及以上（并无退货情况），即可升级成为铜牌及以上等级会员后，并可享受积分换券的会员权益。</p>
+						<p class="vip-desc-txt">新品信息： 第一时间内收到产品及活动信息。</p>
+					</div>
+				</div>
+				<div class="vip-grade-info vip-bronze-grade">
+					<div class="vip-grade-ident">
+						<div class="vip-grade-ident-box">
+							<div class="vip-name">
+								<p class="vip-name-txt">铜标会员</p>
+								<p class="vip-code">编号：00001</p>
+							</div>
+							<div class="vip-logo">
+								<div class="vip-logo-img">
+									<img src="./images/v-logo-b.png" width="100%">
+								</div>
+								<div class="vip-brand-box">
+									<p class="vip-brand">© RACK ROD</p>
+									<p class="vip-brand-desc">
+										<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
+										<span class="vip-brand-desc-ident in-block">TM</span>
+									</p>
+								</div>
+							</div>
+							<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
+							<div class="vip-intergral">
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">积分：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">1000</span>
+								</p>
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">优惠券：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="vip-grade-desc">
+						<p class="vip-desc-txt">会员资格： - 在RACK ROD官方网站或其他官方店铺一次性购物实际支付满1,000元（并无退货情况），填写、提交会员申请表，并阅读、接受《RACK R ju-silde-itemOD会员规则》，即可成为铜标会员。</p>
+						<p class="vip-desc-txt">- 新标会员12个月内在RACK ROD官方网站或其他官方店铺购物累计实际支付金额达到1000元，即可自动升级为铜标会员。</p>
+						<p class="vip-desc-txt">会员有效期： 12个月 （升级会员从升级之日起计算）。</p>
+						<p class="vip-desc-txt">积分换券： 任何时候在RACK ROD官方网站或其他官方店铺购物即可获积分。积分以实际商品支付金额计算，每实际支付1元=1分。</p>
+						<p class="vip-desc-txt">在RACK ROD官方网站或其他官方店铺购物，下单（并无退货情况）后的第7天购物所产生的积分将进入待兑换状态。在线激活您的会员账户后，每累计满500待兑换积分，系统将自动兑换成50元普通优惠券并转入会员账户，普通优惠券有效期为90天。 </p>
+						<p class="vip-desc-txt">普通优惠券以现金折扣方式使用，您可在RACK ROD官方网站或其他官方店铺使用购买商品。</p>
+						<p class="vip-desc-txt">生日优惠券： 电子优惠券 50元 (有效期30天) 。</p>
+						<p class="vip-desc-txt">*成为铜牌会员后第二年开始有电子生日券</p>
+						<p class="vip-desc-txt">新品信息： 第一时间内收到产品及活动信息</p>
+						<p class="vip-desc-txt">专属活动： VIP会员折扣专场活动 </p>
+					</div>
+				</div>
+				<div class="vip-grade-info vip-silver-grade">
+					<div class="vip-grade-ident">
+						<div class="vip-grade-ident-box">
+							<div class="vip-name">
+								<p class="vip-name-txt">银标会员</p>
+								<p class="vip-code">编号：00001</p>
+							</div>
+							<div class="vip-logo">
+								<div class="vip-logo-img">
+									<img src="./images/v-logo-b.png" width="100%">
+								</div>
+								<div class="vip-brand-box">
+									<p class="vip-brand">© RACK ROD</p>
+									<p class="vip-brand-desc">
+										<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
+										<span class="vip-brand-desc-ident in-block">TM</span>
+									</p>
+								</div>
+							</div>
+							<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
+							<div class="vip-intergral">
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">积分：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">5000</span>
+								</p>
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">优惠券：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="vip-grade-desc">
+						<p class="vip-desc-txt">会员资格： - 在RACK ROD官方网站或其他官方店铺一次性购物实际支付满5000元（并无退货情况），填写、提交会员申请表，并阅读、接受《RACK R ju-silde-itemOD会员规则》，即可成为银标会员。</p>
+						<p class="vip-desc-txt">- 新标/铜标会员12个月内在RACK ROD官方网站或其他官方店铺累计实际支付金额达到5000元，即可自动升级为银标会员。</p>
+						<p class="vip-desc-txt">会员有效期： 12个月（升级会员从升级之日起计算）。</p>
+						<p class="vip-desc-txt">积分换券： 任何时候RACK ROD官方网站或其他官方店铺购物可获积分。积分以实际商品支付金额计算，每实际支付1元=1分。</p>
+						<p class="vip-desc-txt">在RACK ROD官方网站或其他官方店铺购物，下单（并无退货情况）后的第7天购物所产生的积分将进入待兑换状态。在线激活您的会员账户后，每累计满500待兑换积分，系统将自动兑换成50元普通优惠券并转入会员账户，普通优惠券有效期为90天。  </p>
+						<p class="vip-desc-txt">普通优惠券以现金折扣方式使用，您可在RACK ROD官方网站或其他官方店铺使用购买商品。</p>
+						<p class="vip-desc-txt">生日优惠券： 电子优惠券 100元 (有效期30天)。</p>
+						<p class="vip-desc-txt">会员升级优惠券： 电子优惠券 150元 (有效期30天)。</p>
+						<p class="vip-desc-txt">新品信息： 第一时间内收到产品及活动信息。</p>
+						<p class="vip-desc-txt">专属服务： 限量版产品的抢先预订机会。</p>
+						<p class="vip-desc-txt">VIP专属活动邀请。</p>
+						<p class="vip-desc-txt">专属活动： VIP会员折扣专场活动。</p>
+						<p class="vip-desc-txt">体育赛事或演唱会等免费赠票机会。</p>
+					</div>
+				</div>
+				<div class="vip-grade-info vip-gold-grade">
+					<div class="vip-grade-ident">
+						<div class="vip-grade-ident-box">
+							<div class="vip-name">
+								<p class="vip-name-txt">金标会员</p>
+								<p class="vip-code">编号：00001</p>
+							</div>
+							<div class="vip-logo">
+								<div class="vip-logo-img">
+									<img src="./images/v-logo-b.png" width="100%">
+								</div>
+								<div class="vip-brand-box">
+									<p class="vip-brand">© RACK ROD</p>
+									<p class="vip-brand-desc">
+										<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
+										<span class="vip-brand-desc-ident in-block">TM</span>
+									</p>
+								</div>
+							</div>
+							<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
+							<div class="vip-intergral">
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">积分：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">10000</span>
+								</p>
+								<p class="vip-intergral-box">
+									<span class="vip-intergral-txt in-block">优惠券：</span>
+									<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="vip-grade-desc">
+						<p class="vip-desc-txt">会员资格： - 在RACK ROD官方网站或其他官方店铺一次性购物实际支付满10000元（并无退货情况），填写、提交会员申请表，并阅读、接受《RACK R ju-silde-itemOD会员规则》，即可成为金标会员。 </p>
+						<p class="vip-desc-txt">- 新标/铜标/银标会员12个月内在RACK ROD官方网站或其他官方店铺累计实际支付金额达到10000元，即可自动升级为金标会员。</p>
+						<p class="vip-desc-txt">会员有效期： 12个月 （升级会员从升级之日起计算）。</p>
+						<p class="vip-desc-txt">积分换券： 任何时候在RACK ROD官方网站或其他官方店铺购物可获积分。积分以实际商品支付金额计算，每实际支付1元=1分。</p>
+						<p class="vip-desc-txt">在RACK ROD官方网站或其他官方店铺购物，下单（并无退货情况）后的第7天购物所产生的积分将进入待兑换状态。在线激活您的会员账户后，每累计满500待兑换积分，系统将自动兑换成50元普通优惠券并转入会员账户，普通优惠券有效期为90天。  </p>
+						<p class="vip-desc-txt">普通优惠券以现金折扣方式使用，您可在RACK ROD官方网站或其他官方店铺使用购买商品。</p>
+						<p class="vip-desc-txt">生日优惠券： 电子优惠券 200元 (有效期30天)。</p>
+						<p class="vip-desc-txt">会员升级优惠券： 电子优惠券 200元 (有效期30天)。</p>
+						<p class="vip-desc-txt">新品信息： 第一时间内收到产品及活动信息。</p>
+						<p class="vip-desc-txt">专属服务： 限量版产品的抢先预订机会。</p>
+						<p class="vip-desc-txt">VIP专属活动邀请</p>
+						<p class="vip-desc-txt">专属活动： VIP会员折扣专场活动。 </p>
+						<p class="vip-desc-txt">体育赛事或演唱会等免费赠票。</p>
+						<p class="vip-desc-txt">新品上市优惠享折扣。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="vip-rule-wrapper hygz">
+			<h3 class="vip-rule-tle">RACK ROD会员规则</h3>
+			<div class="vip-great-club">
+				<p class="vip-desc-txt">1.在任何时候在RACK ROD官方网站或其他官方店铺购物，可获得积分（包括打折及限量版产品），积分以实际支付金额计算，每实际支付1元=1分。特定商品或消费不享受积分。若购买商品后又退货的，由此产生的积分将取消。</p>
+				<p class="vip-desc-txt">2.下单（并无退货情况）后的第7天购物所产生的积分将进入待兑换状态；在任何时候除官网外的其他店铺购物的，在购物（并无退货情况）后的第7天购物所产生的积分将进入待兑换状态。铜牌及以上级别会员每累计满500待兑换积分，系统将自动兑换成50元普通优惠券并转入会员账户，优惠券有效期为90天。</p>
+				<p class="vip-desc-txt">3.普通优惠券生成并发放至会员账户后，会以短信或者微信形式通知会员。会员任何时候在RACK ROD官方网站或其他官方店铺购物时，可直接选择使用仍在有效期内的优惠券。</p>
+				<p class="vip-desc-txt">4.手工定制限量版产品和其他RACK ROD限量版商品、打折商品、促销活动礼品、明示不得使用优惠券的商品等，列明不得使用优惠券的情形不在优惠券使用范围内。</p>
+				<p class="vip-desc-txt">5.优惠券仅可在RACK ROD官方网站或其他官方店铺购物使用。</p>
+				<p class="vip-desc-txt">6.如在消费时曾使用了优惠券，发生退货时，不会退回促销优惠券及优惠券对应的金额。</p>
+				<p class="vip-desc-txt">7.金标会员在会员有效期内在RACK ROD官方网站或其他官方店铺购物累计支付满1,000元并无退货；银标会员在会员有效期内在RACK ROD官方网站或其他官方店铺购物累计支付满5,000元并无退货；铜标会员在会员有效期内在RACK ROD官方网站或其他官方店铺购物累计支付满1,000元并无退货，即可续会，从续会当日起至第12个月的最后一日到期有效。</p>
+				<p class="vip-desc-txt">8.如铜标/银标/金标会员在12个月内累计消费未满1,000元，则自动降级为新标会员。</p>
+				<p class="vip-desc-txt">9.如会员级别有所变更，我们将通过邮件或短信形式通知。</p>
+				<p class="vip-desc-txt">10.RACK ROD官方对会员制度享有制定和最终解释权。</p>
+			</div>
+		</div>
+	</div>
+	<div class="more-recommended-wrapper">
+		<div class="global-title-wrapper">
+			<h3 class="global-title-h3">商品推荐</h3>
+			<p class="global-title-english">MORE RECOMMENDED</p>
+		</div>
+		<div class="more-recommended">
+			<div class="recommended-goods">
+				<ul class="recommended-goods-list">
+					<li class="recommended-goods-item">
+						<div class="slide-goods-item">
+							<a href="" class="recommended-goods-link">
+								<span class="goods-img-wrapper">
+									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+								</span>
+								<span class="goods-name-wrapper">WILD FACTION 野派</span>
+								<span class="goods-price-wrapper">RMB:2200</span>
+							</a>
+						</div>
+					</li>
+					<li class="recommended-goods-item">
+						<div class="slide-goods-item">
+							<a href="" class="recommended-goods-link">
+								<span class="goods-img-wrapper">
+									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+								</span>
+								<span class="goods-name-wrapper">WILD FACTION 野派</span>
+								<span class="goods-price-wrapper">RMB:2200</span>
+							</a>
+						</div>
+					</li>
+					<li class="recommended-goods-item">
+						<div class="slide-goods-item">
+							<a href="" class="recommended-goods-link">
+								<span class="goods-img-wrapper">
+									<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
+								</span>
+								<span class="goods-name-wrapper">WILD FACTION 野派</span>
+								<span class="goods-price-wrapper">RMB:2200</span>
+							</a>
+						</div>
+					</li>
+					<li class="recommended-goods-item">
+						<div class="slide-goods-item">
+							<a href="" class="recommended-goods-link">
+								<span class="goods-img-wrapper">
+									<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
+								</span>
+								<span class="goods-name-wrapper">WILD FACTION 野派</span>
+								<span class="goods-price-wrapper">RMB:2200</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="yws-i-am-bg-r">
+		<div class="yws-i-am-wrapper">
+			<h3 class="yws-i-am-tle">Yes i am</h3>
+			<p class="yws-i-am-desc">恶党、野派、魔巫、铁皮人、冰血暴、凝明潮体、法外之徒、野性难驯！</p>
+			<p class="yws-i-am-desc">这是一次独立，关于我们的品牌和文化！</p>
+			<img src="../public/images/dl-png.png" class="yws-i-am-img">
+		</div>
+	</div>
+	<!-- 底部区域 -->
+	<div class="footer-controller">
+		<div class="gl-content-wrapper">
+			<div class="footer-logo-wrapper">
+				<img src="../public/images/logo.png" alt="" class="footer-logo-img">
+				<p class="footer-logo-txt">RACK ROD</p>
+			</div>
+			<div class="footer-search-wrapper">
+				<input type="text" class="footer-search" placeholder="EMAIL">
+				<button class="footer-search-btn">订阅</button>
+			</div>
+			<div class="footer-omit-wrapper">
+				<a href="" class="footer-moit-link in-block">订阅RACK ROD最新动态</a>
+			</div>
+			<div class="footer-recommend-wrapper">
+				<ul class="footer-recommend-list">
+					<li class="footer-recommend-item">
+						<a class="footer-recommend-link">更多我们 :</a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wx-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tm-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yh-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yk-link"></a>
+					</li>
+				</ul>
+				<p class="footer-recommend-desc">粤ICP备17111534号-2</p>
+			</div>
+		</div>
+	</div>
+	<script src="../public/js/public.js"></script>
+	<script src="../public/js/broadside.js"></script>
+</body>
+</html>

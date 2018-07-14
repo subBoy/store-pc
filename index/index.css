@@ -261,6 +261,15 @@
 	text-align: center;
 	cursor: pointer;
 }
+.index-rack-rod-border {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 2px solid #d57377;
+	z-index: 1;
+}
 .index-rack-rod-group {
 	position: absolute;
 	left: 0;
@@ -357,7 +366,7 @@
 	position: relative;
 	margin: 0 auto;
 	width: 990px;
-	height: 530px;
+	height: 557px;
 	background-color: #000;
 }
 .video-box {
@@ -365,7 +374,7 @@
 	left: 0;
 	top: 0;
 	width: 990px;
-	height: 530px;
+	height: 557px;
 	z-index: 10
 }
 .video-error-desc {
@@ -377,6 +386,11 @@
 	font-weight: bold;
 	letter-spacing: 2px;
 	color: #fff;
+}
+.index-main-bg-l {
+	background-repeat: no-repeat;
+	background-position: 4% 37%;
+	background-image: url(../public/images/c-bg.png);
 }
 .index-goods-list {
 	padding-top: 40px;
@@ -456,4 +470,9 @@
 	font-size: 18px;
 	letter-spacing: 1px;
 	color: #fff;
+}
+.index-main-bg-r {
+	background-repeat: no-repeat;
+	background-position: 96% 20%;
+	background-image: url(../public/images/c-bg.png);
 }
