@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./user-center.css">
+<link rel="stylesheet" href="./collect.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -717,7 +717,7 @@
 				<div class="user-link-wrapper">
 					<h3 class="user-link-tle">个人信息</h3>
 					<ul class="user-link-box">
-						<li class="user-link-item now-page" sideIdent="userCenter">
+						<li class="user-link-item" sdeIdent="userCenter">
 							<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link">
 								<span class="user-link-name">我的账号面板</span>
 							</a>
@@ -742,7 +742,7 @@
 								<span class="user-link-name">我的积分信息</span>
 							</a>
 						</li>
-						<li class="user-link-item" sideIdent="collect">
+						<li class="user-link-item now-page" sideIdent="collect">
 							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-link">
 								<span class="user-link-name">我的收藏</span>
 							</a>
@@ -790,95 +790,323 @@
 			</div>
 		</div>
 		<div class="user-content-wrapper">
-			<!-- 已设置用户名用户显示 -->
-			<div class="user-greetings-real">
-				<h3 class="user-greetings-name">
-					<span class="user-name">你好！邱帆</span>
-					<span class="user-sign-out">退出</span>
-					<span class="user-sign-out-desc">不是邱帆？</span>
-				</h3>
-				<p class="user-greetings-desc">在我的账号面板，您可以查看最近会员更新状态、账号和订单信息。选择下面的链接查看或修改内容。</p>
+			<div class="ucw-title-wrapper">我的收藏</div>
+			<div class="ucw-tab-wrapper">
+				<a class="ucw-tab-item ident item-br in-block">商品收藏</a>
+				<a class="ucw-tab-item item-br in-block">设计师收藏</a>
+				<a href="../home-of/home-of.html" class="ucw-tab-item not-lep in-block">HOME OF ®</a>
+				<a class="ucw-tab-item my-let in-block">我的电台</a>
 			</div>
-			<!-- 未设置用户名用户显示 -->
-			<div class="user-greetings-new" style="display: none;">
-				<h3 class="user-greetings-name">
-					<span class="user-name">你好！新用户！</span>
-					<span class="user-sign-out">退出</span>
-				</h3>
-				<p class="user-greetings-desc">为方便您更好的体验浏览本站内容，请前往我的个人信息面板补全个人信息！</p>
-			</div>
-			<!-- 
-				新标 vip-mass-grade
-				铜 vip-bronze-grade
-				银 vip-silver-grade
-				金 vip-gold-grade
-			 -->
-			<div class="vip-grade-ident vip-mass-grade">
-				<div class="vip-grade-ident-box">
-					<div class="vip-name">
-						<p class="vip-name-txt">新标会员</p>
-						<p class="vip-code">编号：00001</p>
+			<!-- 商品收藏 -->
+			<div class="ucw-tab-content collect-gooods" style="display: none;">
+				<div class="sc-has-goods-wrapper">
+					<div class="sc-goods-list-wrapper collect-wrapper">
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">RMB : <span class="preice-num">299.00</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">RMB : <span class="preice-num">299.00</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">RMB : <span class="preice-num">299.00</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">RMB : <span class="preice-num">299.00</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">RMB : <span class="preice-num">299.00</span></li>
+						</ul>
 					</div>
-					<div class="vip-logo">
-						<div class="vip-logo-img">
-							<!-- 新标 -->
-							<img src="../vip/images/v-logo-f.png" width="100%">
-							<!-- 铜 银 金 -->
-							<img src="../vip/images/v-logo-b.png" width="100%" style="display: none;">
+					<div class="sc-goods-total-oper">
+						<div class="sc-goods-oper-sel in-block">
+							<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
+							<span class="sc-all-del-btn in-block">删除</span>
 						</div>
-						<div class="vip-brand-box">
-							<p class="vip-brand">© RACK ROD</p>
-							<p class="vip-brand-desc">
-								<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
-								<span class="vip-brand-desc-ident in-block">TM</span>
-							</p>
+						<!-- 只有一页 -->
+						<div class="global-paging" style="display: none;">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
-					<div class="vip-intergral">
-						<p class="vip-intergral-box">
-							<span class="vip-intergral-txt in-block">积分：</span>
-							<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
-						</p>
-						<p class="vip-intergral-box">
-							<span class="vip-intergral-txt in-block">优惠券：</span>
-							<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
-						</p>
+				</div>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/air-cart.png" class="not-air-img">
+						<p class="not-air-desc">您还没有商品收藏</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
 					</div>
 				</div>
 			</div>
-			<div class="user-center-content">
-				<div class="ucc-box">
-					<div class="ucc-item ucc-item-br">
-						<h3 class="ucc-item-name">更新个人信息</h3>
-						<div class="ucc-item-list">
-							<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="ucc-item-link in-block br-r">我的个人信息</a>
-							<a href="../user-info/user-info.html?sideIdent=userAddress&ident=address" class="ucc-item-link in-block">我的配送地址簿</a>
-						</div>
+			<!-- 设计师收藏 -->
+			<div class="ucw-tab-content collect-der-singer">
+				<div class="sc-has-goods-wrapper" style="display: none;">
+					<div class="sc-goods-list-wrapper collect-wrapper">
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/der.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">TATOO辰工作室</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">北京 | 国子辰</span> 
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/der.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">TATOO辰工作室</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">北京 | 国子辰</span> 
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/der.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">TATOO辰工作室</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">北京 | 国子辰</span> 
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/der.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">TATOO辰工作室</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">北京 | 国子辰</span> 
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-71">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/der.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">TATOO辰工作室</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">北京 | 国子辰</span> 
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+						</ul>
 					</div>
-					<div class="ucc-item">
-						<h3 class="ucc-item-name">我的历史订单</h3>
-						<div class="ucc-item-list">
-							<a href="../order/order.html?sideIdent=orderOk&ident=ok" class="ucc-item-link in-block br-r">我的订单</a>
-							<a href="../order/order.html?sideIdent=orderClose&ident=close" class="ucc-item-link in-block">我的退单</a>
+					<div class="sc-goods-total-oper">
+						<div class="sc-goods-oper-sel in-block">
+							<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
+							<span class="sc-all-del-btn in-block">删除</span>
+						</div>
+						<!-- 只有一页 -->
+						<div class="global-paging" style="display: none;">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="ucc-box">
-					<div class="ucc-item">
-						<h3 class="ucc-item-name">我的收藏</h3>
-						<div class="ucc-item-list ucc-3rd">
-							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="ucc-item-link in-block br-r">商品收藏</a>
-							<a href="../collect/collect.html?sideIdent=collect&ident=designer" class="ucc-item-link in-block br-r">设计师收藏</a>
-							<a href="../collect/collect.html?sideIdent=collect&ident=homeof" class="ucc-item-link letp-1 in-block">HOME OF ®</a>
-						</div>
+				<div class="sc-not-goods-wrapper">
+					<div class="not-air-box">
+						<img src="../public/images/not-der.png" class="not-air-img">
+						<p class="not-air-desc">您还没有设计师收藏</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
 					</div>
-				</div>
-				<div class="ucc-help-wrapper">
-					<p class="ucc-help-tle ucc-help-desc">帮助</p>
-					<p class="ucc-help-desc">服务热线：13552709942</p>
-					<p class="ucc-help-desc">在线服务时间：</p>
-					<p class="ucc-help-desc">周一至周日上午9:00-下午6:00</p>
 				</div>
 			</div>
 		</div>
@@ -895,7 +1123,7 @@
 						<div class="slide-goods-item">
 							<a href="" class="recommended-goods-link">
 								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+									<img src="../developerImg/sp-img.jpg" width="100%" class="slide-goods-img">
 								</span>
 								<span class="goods-name-wrapper">WILD FACTION 野派</span>
 								<span class="goods-price-wrapper">RMB:2200</span>
@@ -906,7 +1134,7 @@
 						<div class="slide-goods-item">
 							<a href="" class="recommended-goods-link">
 								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+									<img src="../developerImg/sp-img.jpg" width="100%" class="slide-goods-img">
 								</span>
 								<span class="goods-name-wrapper">WILD FACTION 野派</span>
 								<span class="goods-price-wrapper">RMB:2200</span>
@@ -1000,5 +1228,6 @@
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../user-center/user.js"></script>
+	<script src="./collect.js"></script>
 </body>
 </html>

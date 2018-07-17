@@ -142,6 +142,9 @@ $.extend(window, {
 				'margin-top': '-' + _h / 2 + 'px'
 			}, 500)
   	})
+  },
+  goBack: function () {
+  	window.history.go(-1)
   }
 })
 $(function () {

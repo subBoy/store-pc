@@ -1,24 +1,24 @@
 function checkedItem () {
-	$(".global-select-input").change(function() { 
-		var status = $(this).attr('checked');
+	$(".global-select-input").change(function() {
+		var status = $(this).is(':checked');
 		if (status) {
 			$(this).parent().addClass('checked-item');
 		} else {
 			$(this).parent().removeClass('checked-item');
 			var _thisPar = $(this).parent().parent().parent().parent().find('.global-all-select-input');
-			_thisPar.attr('checked', false).change();
+			_thisPar.prop('checked', false).change();
 			_thisPar.parent().removeClass('checked-item')
 		}
 	});
 	$('.global-all-select-input').on('click', function () {
-		var status = $(this).attr('checked');
+		var status = $(this).is(':checked');
 		var _thisPar = $(this).parent().parent().parent().siblings('.gl-condition-item-threelevel').find('.global-select-input');
 		if (status) {
 			$(this).parent().addClass('checked-item');
-			_thisPar.attr('checked', 'checked').change();
+			_thisPar.prop('checked', 'checked').change();
 		} else {
 			$(this).parent().removeClass('checked-item');
-			_thisPar.attr('checked', false).change();
+			_thisPar.prop('checked', false).change();
 		}
 	});
 }
@@ -51,7 +51,6 @@ function rangeInit () {
 }
 function slideSH () {
 	$('.gl-item-stair-name, .gl-item-secondleve-name').on('click', function () {
-		console.log(0);
 		var _par = $(this).siblings('.gl-condition-list-secondlevel');
 		var _threePar = $(this).siblings('.gl-condition-list-threelevel');
 		if ($(this).hasClass('isShow')) {
