@@ -61,11 +61,11 @@ function showNotGoods () {
 	var len = $('.sc-goods-list').length;
 	console.log(len);
 	if (!len || len < 0) {
-		$('.sc-has-goods-wrapper').fadeOut();
+		$('.sc-has-goods-wrapper').hide();
 		$('.sc-not-goods-wrapper').fadeIn();
 	} else {
 		$('.sc-has-goods-wrapper').fadeIn();
-		$('.sc-not-goods-wrapper').fadeOut();
+		$('.sc-not-goods-wrapper').hide();
 	}
 }
 $(function () {

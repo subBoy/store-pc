@@ -14,6 +14,9 @@
 	text-align: right;
 	line-height: 50px;
 	color: #494a4a;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .sc-goods-item.del-btn {
 	cursor: pointer;
@@ -26,7 +29,8 @@
 	text-align: left;
 }
 .wh-25 {
-	width: 25%;
+	float: right;
+	width: 20%;
 }
 .reserve-win-goods-info {
 	position: relative;

@@ -742,7 +742,7 @@
 								<span class="user-link-name">我的积分信息</span>
 							</a>
 						</li>
-						<li class="user-link-item now-page" sideIdent="collect">
+						<li class="user-link-item" sideIdent="collect">
 							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-link">
 								<span class="user-link-name">我的收藏</span>
 							</a>
@@ -772,7 +772,7 @@
 								<span class="user-link-name">退货说明</span>
 							</a>
 						</li>
-						<li class="user-link-item now-page">
+						<li class="user-link-item">
 							<a href="../home-of/home-of.html" class="user-link user-home-of-link">
 								<span class="user-home-of-pic">
 									<img src="../user-center/images/home-of.jpg" width="100%" class="user-home-of-bg">
@@ -792,13 +792,13 @@
 		<div class="user-content-wrapper">
 			<div class="ucw-title-wrapper">我的收藏</div>
 			<div class="ucw-tab-wrapper">
-				<a class="ucw-tab-item ident item-br in-block">商品收藏</a>
-				<a class="ucw-tab-item item-br in-block">设计师收藏</a>
+				<a class="ucw-tab-item item-br in-block ident" ident="shop">商品收藏</a>
+				<a class="ucw-tab-item item-br in-block" ident="designer">设计师收藏</a>
 				<a href="../home-of/home-of.html" class="ucw-tab-item not-lep in-block">HOME OF ®</a>
 				<a class="ucw-tab-item my-let in-block">我的电台</a>
 			</div>
 			<!-- 商品收藏 -->
-			<div class="ucw-tab-content collect-gooods" style="display: none;">
+			<div class="ucw-tab-content collect-gooods" ident="shop">
 				<div class="sc-has-goods-wrapper">
 					<div class="sc-goods-list-wrapper collect-wrapper">
 						<ul class="sc-goods-list set-animation">
@@ -959,7 +959,7 @@
 				</div>
 			</div>
 			<!-- 设计师收藏 -->
-			<div class="ucw-tab-content collect-der-singer">
+			<div class="ucw-tab-content collect-der-singer" ident="designer" style="display: none;">
 				<div class="sc-has-goods-wrapper" style="display: none;">
 					<div class="sc-goods-list-wrapper collect-wrapper">
 						<ul class="sc-goods-list set-animation">
@@ -998,7 +998,7 @@
 									</p>
 								</div>
 							</li>
-							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具</span></li>
+							<li class="sc-goods-item v-center wh-25">擅长 : <span class="preice-num">皮具、上衣、裤子</span></li>
 						</ul>
 						<ul class="sc-goods-list set-animation">
 							<li class="sc-goods-item wh-71">

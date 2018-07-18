@@ -145,7 +145,15 @@ $.extend(window, {
   },
   goBack: function () {
   	window.history.go(-1)
-  }
+  },
+  GetQueryString: function (name) {
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r!=null) {
+			return  unescape(r[2]);
+		} 
+		return null;
+	}
 })
 $(function () {
 	globalLoading();
