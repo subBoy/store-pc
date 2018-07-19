@@ -1,0 +1,231 @@
+@charset"UTF-8";
+.urio-ctr-wrapper {
+	position: relative;
+}
+.urio-wrapper {
+	padding: 20px 0;
+}
+.urio-item-box {
+	position: relative;
+	padding: 7px 0 7px 120px;
+	font-size: 0;
+}
+.urio-item-box.oper-styl {
+	padding: 14px 0 14px 120px;
+}
+.urio-item-tle {
+	position: absolute;
+	left: 0;
+	top: 7px;
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.urio-item-box.oper-styl .urio-item-tle {
+	top: 14px;
+}
+.urio-item-txt {
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.urio-avatar-box {
+	position: absolute;
+	right: 60px;
+	top: 35px;
+	z-index: 1;
+}
+.urio-avatar-ctr {
+	position: relative;
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%; 
+	overflow: hidden;
+}
+.urio-avatar-img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -36px 0 0 -36px;
+}
+.urio-avatar-name {
+	display: block;
+	padding-top: 10px;
+	padding-left: 2px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.revise-urio-btn {
+	display: block;
+	line-height: 34px;
+	margin-top: 14px;
+	padding-left: 2px;
+	width: 100px;
+	height: 34px;
+	text-align: center;
+	color: #ff8c90;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.urio-item-input-box {
+	width: 154px;
+	border: 1px solid #bdb9b8;
+	overflow: hidden;
+}
+.urio-item-input {
+	width: 100%;
+	line-height: 28px;
+	height: 28px;
+	padding-left: 2px;
+	text-align: center;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	letter-spacing: 2px
+}
+.urio-item-input-box.in-focus, .urio-item-input-box.in-focus .urio-item-input {
+	border-bottom: 1px solid #000;
+}
+.detection-urio-name {
+	margin-left: 30px;
+	line-height: 28px;
+	padding-left: 2px;
+	width: 100px;
+	height: 28px;
+	text-align: center;
+	color: #ff8c90;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.urio-item-input-error {
+	position: absolute;
+	left: 306px;
+	top: 46px;
+	padding: 8px 10px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #666;
+	z-index: 1;
+	border: 1px solid #a80000;
+	border-radius: 3px;
+}
+.urio-item-input-error.isError {
+	color: #a80000;
+}
+.urio-item-radio-box {
+	position: relative;
+	line-height: 28px;
+	margin-right: 25px;
+	padding-left: 30px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(../public/images/radio.png);
+}
+.urio-item-radio-box.seled {
+	background-image: url(../public/images/radioed.png);
+}
+.urio-item-radio {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	cursor: pointer;
+	filter: alpha(opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.urio-item-select-box {
+	position: relative;
+	line-height: 26px;
+	margin-right: 20px;
+	width: 64px;
+	height: 26px;
+	border: 1px solid #666;
+}
+.urio-item-select {
+	position: absolute;
+	left: 0px;
+	top: 4px;
+	z-index: 1;
+	padding: 0 8px 0 18px;
+	border: none;
+	font-size: 14px;
+	color: #222021;
+}
+.urio-item-select.urio-years {
+	padding: 0 2px 0 8px;
+}
+.urio-item-select-desc {
+	display: block;
+	line-height: 40px;
+	font-size: 14px;
+}
+.urio-sign-box {
+	font-size: 0;
+}
+.urio-sign-tle {
+	line-height: 34px;
+	width: 100px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.urio-sign-txt {
+	line-height: 34px;
+	width: 300px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.urio-sign-btn {
+	line-height: 32px;
+	margin-right: 35px;
+	padding-left: 2px;
+	width: 100px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	border: 1px solid #bdbdbd;
+	text-align: center;
+}
+.urio-sign-btn.oper-btn {
+	color: #ff8c90;
+	cursor: pointer;
+}
+.urio-sign-oper-box {
+	margin-top: 10px;
+	padding: 10px 0;
+	border-top: 1px dashed #222021;
+}
+.urio-sign-oper-item {
+	padding: 10px 0;
+}
+.urio-sign-oper {
+	margin-right: 30px;
+	width: 370px;
+}
+.urio-sign-code-btn {
+	line-height: 34px;
+	margin-right: 35px;
+	padding-left: 2px;
+	width: 140px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #ff8c90;
+	cursor: pointer;
+}
+.urio-sign-group, .urio-sign-wrapper {
+	padding: 10px 0;
+}
+.urio-sign-error {
+
+}
