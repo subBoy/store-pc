@@ -886,23 +886,23 @@
 						<span class="urio-sign-tle in-block">邮箱地址：</span>
 						<span class="urio-sign-txt in-block">47901828@qq.com</span>
 						<span class="urio-sign-btn oper-btn global-btn-styl in-block">修改</span>
-						<span class="urio-sign-btn in-block">已认证</span>
-						<div class="urio-sign-error">dfdg</div>
+						<span class="urio-sign-btn status-btn in-block">已认证</span>
+						<div class="urio-sign-error" id="email-input-err">dfdg</div>
 					</div>
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
 								<span class="urio-sign-oper-tle email-icon">新的邮箱：</span>
-								<input type="text" class="urio-sign-oper-input">
+								<input type="text" class="urio-sign-oper-input" id="emailInput">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">发送验证邮件</span>
+							<span class="urio-sign-code-btn global-btn-styl in-block" id="getEmailCode">发送验证邮件</span>
 						</div>
 						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
+							<span class="urio-sign-oper urio-code-box in-block">
 								<span class="urio-sign-oper-tle code-icon">验证码：</span>
 								<input type="text" class="urio-sign-oper-input">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">确认</span>
+							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="submitEmail">确认</span>
 						</div>
 					</div>
 				</div>
@@ -911,23 +911,23 @@
 						<span class="urio-sign-tle in-block">手机号：</span>
 						<span class="urio-sign-txt in-block">无</span>
 						<span class="urio-sign-btn oper-btn global-btn-styl in-block">去验证</span>
-						<span class="urio-sign-btn in-block">未认证</span>
-						<div class="urio-sign-error"></div>
+						<span class="urio-sign-btn status-btn in-block">未认证</span>
+						<div class="urio-sign-error" id="mobile-input-err"></div>
 					</div>
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
 								<span class="urio-sign-oper-tle mb-icon">输入手机号：</span>
-								<input type="text" class="urio-sign-oper-input">
+								<input type="text" class="urio-sign-oper-input" id="mobileInput">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">发送手机验证码</span>
+							<span class="urio-sign-code-btn global-btn-styl in-block" id="getMobileCode">发送手机验证码</span>
 						</div>
 						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
+							<span class="urio-sign-oper urio-code-box in-block">
 								<span class="urio-sign-oper-tle code-icon">验证码：</span>
 								<input type="text" class="urio-sign-oper-input">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">确认</span>
+							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="submitMobile">确认</span>
 						</div>
 					</div>
 				</div>
@@ -936,28 +936,28 @@
 						<span class="urio-sign-tle in-block">密码：</span>
 						<span class="urio-sign-txt in-block">**********</span>
 						<span class="urio-sign-btn oper-btn global-btn-styl in-block">修改</span>
-						<div class="urio-sign-error"></div>
+						<div class="urio-sign-error" id="pd-err"></div>
 					</div>
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
 								<span class="urio-sign-oper-tle old-pd">原密码：</span>
-								<input type="text" class="urio-sign-oper-input">
+								<input type="password" class="urio-sign-oper-input" id="old-pd-box">
 							</span>
 						</div>
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
 								<span class="urio-sign-oper-tle new-pd">新密码：</span>
-								<input type="text" class="urio-sign-oper-input">
+								<input type="password" class="urio-sign-oper-input" id="new-pd-box">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">确认修改</span>
+							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="affirm-pd-btn">确认修改</span>
 						</div>
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle new-pd">确认新密码：</span>
-								<input type="text" class="urio-sign-oper-input">
+								<span class="urio-sign-oper-tle affirm-pd">确认新密码：</span>
+								<input type="password" class="urio-sign-oper-input" id="new-pd-config">
 							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block">取消</span>
+							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="close-pd-btn">取消</span>
 						</div>
 					</div>
 				</div>

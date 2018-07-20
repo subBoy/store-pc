@@ -201,16 +201,13 @@
 	cursor: pointer;
 }
 .urio-sign-oper-box {
+	display: none;
 	margin-top: 10px;
 	padding: 10px 0;
 	border-top: 1px dashed #222021;
 }
 .urio-sign-oper-item {
 	padding: 10px 0;
-}
-.urio-sign-oper {
-	margin-right: 30px;
-	width: 370px;
 }
 .urio-sign-code-btn {
 	line-height: 34px;
@@ -222,6 +219,11 @@
 	text-align: center;
 	color: #ff8c90;
 	cursor: pointer;
+}
+.urio-sign-code-btn.not-click, .urio-sign-code-btn.not-click:hover {
+	background-color: #ccc;
+	color: #fff;
+	cursor: default;
 }
 .urio-sign-group, .urio-sign-wrapper {
 	padding: 10px 0;
@@ -243,12 +245,22 @@
 	color: #a40000;
 	border-radius: 3px;
 }
+.urio-sign-error.desc-status {
+	color: #666;
+}
 .urio-sign-oper {
 	position: relative;
 	margin: 0 45px 0 20px;
 	padding-left: 125px;
 	width: 210px;
 	border: 1px solid #bdb9b8;
+	background-repeat: no-repeat;
+	background-position: 98% center;
+	background-image: url(../public/images/essential-icon.png); 
+}
+.urio-sign-oper.urio-code-box {
+	margin-right: 95px;
+	width: 160px;
 }
 .urio-sign-oper-tle {
 	display: block;
@@ -267,6 +279,18 @@
 .code-icon {
 	background-image: url(../public/images/code-icon.png);
 }
+.mb-icon {
+	background-image: url(../public/images/mb.png);
+}
+.old-pd {
+	background-image: url(../public/images/old-pd.png);
+}
+.new-pd {
+	background-image: url(../public/images/n-pd.png);
+}
+.affirm-pd {
+	background-image: url(../public/images/pw-icon.png);
+}
 .urio-sign-oper-input {
 	line-height: 30px;
 	width: 100%;
@@ -274,6 +298,6 @@
 	border-bottom: 1px solid #fff;
 	border-top: 1px solid #fff;
 }
-.urio-sign-oper.in-focus, .urio-sign-oper.in-focus .urio-sign-oper-input {
-	border-bottom: 1px solid #000;
+.urio-sign-oper.in-focus {
+	border-bottom: 2px solid #000;
 }
