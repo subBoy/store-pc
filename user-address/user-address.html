@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./user-info.css">
+<link rel="stylesheet" href="./user-address.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -28,7 +28,7 @@
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -137,27 +137,27 @@
 									<p class="user-module-desc">个人信息</p>
 									<ul class="user-module-list">
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的账号面板</a>
+											<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-module-link">我的账号面板</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的个人信息</a>
+											<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="user-module-link">我的个人信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的配送地址簿</a>
+											<a href="../user-address/user-address.html?sideIdent=userAddress" class="user-module-link">我的配送地址簿</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的优惠信息</a>
+											<a href="../sale/sale.html?sideIdent=sale" class="user-module-link">我的优惠信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的积分信息</a>
+											<a href="../intergral/intergral.html?sideIdent=intergral" class="user-module-link">我的积分信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的收藏</a>
+											<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-module-link">我的收藏</a>
 											<span class="user-module-indent"></span>
 										</li>
 									</ul>
@@ -166,29 +166,31 @@
 									<p class="user-module-desc">订单信息</p>
 									<ul class="user-module-list">
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的订单</a>
+											<a href="../order/order.html?sideIdent=orderOk&ident=ok" class="user-module-link">我的订单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">我的退单</a>
+											<a href="../order/order.html?sideIdent=orderClose&ident=close" class="user-module-link">我的退单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">到货提醒</a>
+											<a href="../arrival-remind/arrival-remind.html?sideIdent=arrivalRemind" class="user-module-link">到货提醒</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="" class="user-module-link">退货说明</a>
+											<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="user-module-link">退货说明</a>
 											<span class="user-module-indent"></span>
 										</li>
 									</ul>
 								</div>
 								<div class="user-module-recommend">
-									<p class="recommend-module-tle">野派资料馆</p>
-									<div class="recommend-module-info in-block">
-										<img src="../public/images/home-of.png"  class="home-of-img">
-										<p class="recommend-module-name">HOME OF ®</p>
-									</div>
+									<a href="../home-of/home-of.html">
+										<p class="recommend-module-tle">野派资料馆</p>
+										<div class="recommend-module-info in-block">
+											<img src="../public/images/home-of.png"  class="home-of-img">
+											<p class="recommend-module-name">HOME OF ®</p>
+										</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -200,7 +202,7 @@
 							<!-- 购物车为空的状态 -->
 							<div class="sp-air-cart-wrapper" style="display: none">
 								<img src="../public/images/air-cart.png" class="air-cart-img">
-								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="" class="sp-list-link">逛逛</a>！</p>
+								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="../goods-list/goods-list.html" class="sp-list-link">逛逛</a>！</p>
 							</div>
 							<!-- 购物车非空的状态 -->
 							<div class="nav-sp-cart-group">
@@ -712,7 +714,7 @@
 				<div class="user-side-path">
 					<a onclick="goBack()" class="side-path-item in-block">返回 /</a>
 					<a href="../index/index.html" class="side-path-item in-block">首页 /</a>
-					<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="side-path-item in-block">我的个人信息</a>
+					<a href="../user-address/user-address.html?sideIdent=userAddress" class="side-path-item in-block">我的配送地址簿</a>
 				</div>
 				<div class="user-link-wrapper">
 					<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link-main-tle">我的账户</a>
@@ -791,200 +793,232 @@
 			</div>
 		</div>
 		<div class="user-content-wrapper">
-			<div class="ucw-title-wrapper">个人信息</div>
-			<div class="urio-ctr-wrapper">
-				<div class="urio-wrapper approved">
-					<p class="urio-item-box">
-						<span class="urio-item-tle in-block">账户名：</span>
-						<span class="urio-item-txt in-block">RACK ROD</span>
-					</p>
-					<p class="urio-item-box">
-						<span class="urio-item-tle in-block">性别：</span>
-						<span class="urio-item-txt in-block">男</span>
-					</p>
-					<p class="urio-item-box">
-						<span class="urio-item-tle in-block">出生年月：</span>
-						<span class="urio-item-txt in-block">1990/12/29</span>
-					</p>
-					<span class="revise-urio-btn global-btn-styl">信息修改</span>
-					<div class="urio-avatar-box">
-						<span class="urio-avatar-ctr">
-							<img src="../public/images/avatar.png" width="72" height="72" class="urio-avatar-img">
-						</span>
-						<span class="urio-avatar-name">我的头像</span>
+			<!-- 已有配送地址 -->
+			<div class="has-address-wrapper">
+				<div class="ucw-title-wrapper">配送地址<span class="ucw-title-btn set-animation add-address-btn-ctr">新增地址》</span></div>
+				<div class="user-address-info-tle-wrapper">
+					<ul class="uras-info-tles">
+						<li class="uras-info-tle wd-li-1">
+							<span class="in-block uras-info-tle-txt">收货人</span>
+						</li>
+						<li class="uras-info-tle wd-li-2">
+							<span class="in-block uras-info-tle-txt">所在地区</span>
+						</li>
+						<li class="uras-info-tle wd-li-3">
+							<span class="in-block uras-info-tle-txt">详细地址</span>
+						</li>
+						<li class="uras-info-tle wd-li-4">
+							<span class="in-block uras-info-tle-txt">邮编</span>
+						</li>
+						<li class="uras-info-tle wd-li-5">
+							<span class="in-block uras-info-tle-txt">电话/手机号</span>
+						</li>
+						<li class="uras-info-tle wd-li-6">
+							<span class="in-block uras-info-tle-txt">操作</span>
+						</li>
+					</ul>
+				</div>
+				<div class="user-address-wrapper">
+					<div class="user-address-info">
+						<ul class="uras-info-list">
+							<li class="uras-info-item wd-li-1">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">邱帆</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-2">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-io-vw">
+										<span class="in-block">北京</span>
+										<span class="in-block">北京市</span>
+										<span class="in-block">通州区</span>
+									</div>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-3">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">新华联家园42号311</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-4">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">10118</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-5">
+								<div class="uras-info-view cr-info-vm">
+								<span class="io-vw in-block">135****9924</span>
+							</div>
+							</li>
+							<li class="uras-info-item wd-li-6">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-info-item-btns">
+										<span class="uras-info-item-btn cg-btn in-block">修改</span>
+										<span class="uras-info-item-btn in-block">删除</span>
+									</div>
+									<span class="default-address-btn in-block">默认地址</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-address-info">
+						<ul class="uras-info-list">
+							<li class="uras-info-item wd-li-1">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">邱帆</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-2">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-io-vw">
+										<span class="in-block">北京</span>
+										<span class="in-block">北京市</span>
+										<span class="in-block">通州区</span>
+									</div>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-3">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">新华联家园42号311新华联家园42号311新华联家园42号311</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-4">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">10118</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-5">
+								<div class="uras-info-view cr-info-vm">
+								<span class="io-vw in-block">135****9924</span>
+							</div>
+							</li>
+							<li class="uras-info-item wd-li-6">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-info-item-btns">
+										<span class="uras-info-item-btn cg-btn in-block">修改</span>
+										<span class="uras-info-item-btn in-block">删除</span>
+									</div>
+									<span class="set-default-address-btn set-animation in-block">设置默认</span>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="urio-wrapper not-approve" style="display: none;">
-					<p class="urio-item-box">
-						<span class="urio-item-tle in-block">账户名：</span>
-						<span class="urio-item-input-box in-block">
-							<input type="text" class="urio-item-input" maxlength="10" value="RACK ROD" placeholder="请输入账户名">
-						</span>
-						<span class="detection-urio-name in-block global-btn-styl">检测可用</span>
-						<span class="urio-item-input-error in-block">不能使用特殊符号。<br/>可以用6-10位汉字，数字，英文字母！</span>
-					</p>
-					<p class="urio-item-box oper-styl">
-						<span class="urio-item-tle in-block">性别：</span>
-						<span class="urio-item-radio-box in-block">
-							<input type="radio" name="userSex" value="0" class="urio-item-radio">女
-						</span>
-						<span class="urio-item-radio-box in-block">
-							<input type="radio" name="userSex" value="1" class="urio-item-radio">男
-						</span>
-					</p>
-					<p class="urio-item-box">
-						<span class="urio-item-tle in-block">出生年月：</span>
-						<span class="urio-item-select-box in-block">
-							<select class="urio-item-select urio-years" onmousedown="this.size=5" onblur="this.size=0" onchange="this.size=0">
-								<option value="">1990</option>
-								<option value="">1991</option>
-								<option value="">1992</option>
-							</select>
-						</span>
-						<span class="urio-item-select-box in-block">
-							<select class="urio-item-select" onmousedown="this.size=5" onblur="this.size=0" onchange="this.size=0">
-								<option value="">01</option>
-								<option value="">02</option>
-								<option value="">03</option>
-								<option value="">04</option>
-								<option value="">05</option>
-								<option value="">06</option>
-								<option value="">07</option>
-								<option value="">08</option>
-								<option value="">09</option>
-								<option value="">10</option>
-								<option value="">11</option>
-								<option value="">12</option>
-							</select>
-						</span>
-						<span class="urio-item-select-box in-block">
-							<select class="urio-item-select" onmousedown="this.size=5" onblur="this.size=0" onchange="this.size=0">
-								<option value="">01</option>
-								<option value="">02</option>
-								<option value="">03</option>
-								<option value="">04</option>
-								<option value="">05</option>
-								<option value="">06</option>
-								<option value="">07</option>
-							</select>
-						</span>
-						<span class="urio-item-select-desc">（注：生日设置只能填写一次，请谨慎选择）</span>
-					</p>
-					<span class="revise-urio-btn global-btn-styl">保存信息</span>
-					<div class="urio-avatar-box">
-						<span class="urio-avatar-ctr">
-							<img src="../public/images/avatar.png" width="72" height="72" class="urio-avatar-img">
-						</span>
-						<span class="urio-avatar-name">修改头像</span>
+				<!-- 分页 -->
+				<div class="sc-goods-total-oper">
+					<div class="sc-goods-oper-sel">您已创建<span class="address-list-num">5</span>个收货地址，最多可创建<span class="address-list-num">10</span>个！</div>
+					<!-- 只有一页 -->
+					<div class="global-paging">
+						<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+						<ul class="global-paging-ctr">
+							<li class="global-paging-item prev-next-wrapper">
+								<a href="" class="global-paging-item-link prev-next">下一页</a>
+							</li>
+						</ul>
 					</div>
-				</div>
-			</div>
-			<div class="ucw-title-wrapper">登录信息</div>
-			<div class="urio-sign-wrapper">
-				<div class="urio-sign-box">
-					<div class="urio-sign-group">
-						<span class="urio-sign-tle in-block">邮箱地址：</span>
-						<span class="urio-sign-txt in-block">47901828@qq.com</span>
-						<span class="urio-sign-btn oper-btn global-btn-styl in-block">修改</span>
-						<span class="urio-sign-btn status-btn in-block">已认证</span>
-						<div class="urio-sign-error" id="email-input-err">dfdg</div>
-					</div>
-					<div class="urio-sign-oper-box">
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle email-icon">新的邮箱：</span>
-								<input type="text" class="urio-sign-oper-input" id="emailInput">
-							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block" id="getEmailCode">发送验证邮件</span>
-						</div>
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper urio-code-box in-block">
-								<span class="urio-sign-oper-tle code-icon">验证码：</span>
-								<input type="text" class="urio-sign-oper-input">
-							</span>
-							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="submitEmail">确认</span>
-						</div>
-					</div>
-				</div>
-				<div class="urio-sign-box">
-					<div class="urio-sign-group">
-						<span class="urio-sign-tle in-block">手机号：</span>
-						<span class="urio-sign-txt in-block">无</span>
-						<span class="urio-sign-btn oper-btn global-btn-styl in-block">去验证</span>
-						<span class="urio-sign-btn status-btn in-block">未认证</span>
-						<div class="urio-sign-error" id="mobile-input-err"></div>
-					</div>
-					<div class="urio-sign-oper-box">
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle mb-icon">输入手机号：</span>
-								<input type="text" class="urio-sign-oper-input" id="mobileInput">
-							</span>
-							<span class="urio-sign-code-btn global-btn-styl in-block" id="getMobileCode">发送手机验证码</span>
-						</div>
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper urio-code-box in-block">
-								<span class="urio-sign-oper-tle code-icon">验证码：</span>
-								<input type="text" class="urio-sign-oper-input">
-							</span>
-							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="submitMobile">确认</span>
-						</div>
-					</div>
-				</div>
-				<div class="urio-sign-box">
-					<div class="urio-sign-group">
-						<span class="urio-sign-tle in-block">密码：</span>
-						<span class="urio-sign-txt in-block">**********</span>
-						<span class="urio-sign-btn oper-btn global-btn-styl in-block">修改</span>
-						<div class="urio-sign-error" id="pd-err"></div>
-					</div>
-					<div class="urio-sign-oper-box">
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle old-pd">原密码：</span>
-								<input type="password" class="urio-sign-oper-input" id="old-pd-box">
-							</span>
-						</div>
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle new-pd">新密码：</span>
-								<input type="password" class="urio-sign-oper-input" id="new-pd-box">
-							</span>
-							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="affirm-pd-btn">确认修改</span>
-						</div>
-						<div class="urio-sign-oper-item">
-							<span class="urio-sign-oper in-block">
-								<span class="urio-sign-oper-tle affirm-pd">确认新密码：</span>
-								<input type="password" class="urio-sign-oper-input" id="new-pd-config">
-							</span>
-							<span class="urio-sign-code-btn urio-sign-submit-btn global-btn-styl in-block" id="close-pd-btn">取消</span>
-						</div>
+					<!-- 两页以上 -->
+					<div class="global-paging" style="display: none;">
+						<ul class="global-paging-ctr">
+							<li class="global-paging-item">
+								<a href="" class="global-paging-item-link">上一页</a>
+							</li>
+							<li class="global-paging-item">
+								<a href="" class="global-paging-item-link">1</a>
+							</li>
+							<li class="global-paging-item now-page">
+								<a href="" class="global-paging-item-link">2</a>
+							</li>
+							<li class="global-paging-item prev-next-wrapper">
+								<a href="" class="global-paging-item-link prev-next">下一页</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="ucw-title-wrapper">第三方登录信息</div>
-			<div class="urio-sign-three-wrapper">
-				<p class="urio-sign-three-desc">( 点击图标绑定，您可以使用任意已绑定的帐号登录<span class="urio-sign-three-styl">RACK ROD</span>官网 )</p>
-				<ul class="urio-sign-three-list">
-					<li class="urio-sign-three-item wx-type binded">
-						<a href="" class="urio-sign-three-link">
-							<span class="urio-sign-three-icon"></span>
-							<span class="urio-sign-three-name">已绑定</span>
-						</a>
+			<!-- 没有配送地址 -->
+			<div class="not-address-wrapper" style="display: none;">
+				<div class="ucw-title-wrapper">配送地址</div>
+				<div class="not-address-box">
+					<div class="not-address-icon">
+						<img src="../public/images/not-address.png" class="not-address-img">
+					</div>
+					<p class="not-address-desc">您还没有添加收货地址</p>
+					<div class="not-address-btn global-btn-styl add-address-btn-ctr">新赠收货地址</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 弹窗区域 -->
+	<div class="user-cpm-wrapper">
+		<em class="user-cpm-bg"></em>
+		<div class="user-cpm-content cr-info-vm">
+			<div class="user-cpm-tle">修改收获地址</div>
+			<span class="user-cpm-close-btn"></span>
+			<div class="user-cpm-content-group">
+				<ul class="user-cpm-input-wrapper">
+					<li class="user-cpm-input-item">
+						<div class="user-cpm-input-box">
+							<span class="user-cpm-input-name">收货人姓名：</span>
+							<input type="text" class="user-cpm-input-ctr" value="邱帆">
+						</div>
 					</li>
-					<li class="urio-sign-three-item qq-type binded">
-						<a href="" class="urio-sign-three-link">
-							<span class="urio-sign-three-icon"></span>
-							<span class="urio-sign-three-name">已绑定</span>
-						</a>
+					<li class="user-cpm-input-item">
+						<div class="user-cpm-input-box">
+							<span class="user-cpm-input-name">地址：</span>
+							<div class="trigeminy-address">
+								<div class="trigeminy-address-box">
+									<span class="trigeminy-address-view">北京</span>
+									<ul class="trigeminy-address-list">
+										<li class="trigeminy-address-item"></li>
+									</ul>
+								</div>
+								<div class="trigeminy-address-box">
+									<span class="trigeminy-address-view">北京</span>
+									<ul class="trigeminy-address-list">
+										<li class="trigeminy-address-item"></li>
+									</ul>
+								</div>
+								<div class="trigeminy-address-box">
+									<span class="trigeminy-address-view">通州区</span>
+									<ul class="trigeminy-address-list">
+										<li class="trigeminy-address-item"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</li>
-					<li class="urio-sign-three-item wb-type unbind">
-						<a href="" class="urio-sign-three-link">
-							<span class="urio-sign-three-icon"></span>
-							<span class="urio-sign-three-name">未绑定</span>
-						</a>
+					<li class="user-cpm-input-item">
+						<div class="user-cpm-input-box">
+							<span class="user-cpm-input-name">街道地址：</span>
+							<input type="text" class="user-cpm-input-ctr" value="邱帆">
+						</div>
+					</li>
+					<li class="user-cpm-input-item">
+						<div class="user-cpm-input-box">
+							<span class="user-cpm-input-name">邮政编号：</span>
+							<input type="text" class="user-cpm-input-ctr" value="邱帆">
+						</div>
+					</li>
+					<li class="user-cpm-input-item">
+						<div class="user-cpm-input-box">
+							<span class="user-cpm-input-name">手机号/电话：</span>
+							<input type="text" class="user-cpm-input-ctr" value="邱帆">
+						</div>
 					</li>
 				</ul>
+				<div class="user-cpm-set-default">
+					<span class="cpm-set-dt-btn">
+						<input type="checkbox" class="set-dt-checkbox">
+					</span>
+					设为默认地址
+				</div>
+			</div>
+			<div class="user-cpm-ft">
+				<p class="user-cpm-desc">若订单出现错误，出于隐私考虑我们将仅与您联系。请务必填写所有信息！</p>
+				<div class="user-cpm-btns">
+					<span class="user-cpm-btn global-btn-styl in-block">保存到地址簿</span>
+					<span class="user-cpm-btn in-block">取消</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1105,6 +1139,5 @@
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../user-center/user.js"></script>
-	<script src="./user-info.js"></script>
 </body>
 </html>

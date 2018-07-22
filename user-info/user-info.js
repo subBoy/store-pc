@@ -174,12 +174,20 @@ function passWordVerify () {
 function changePassword () {
 	$('#affirm-pd-btn').on('click', function () {
 		if (passWordVerify()) {
-
+			$('#pd-err').html('修改成功！').fadeIn();
+			var _this = $(this);
+			setTimeout(function () {
+				$('#pd-err').hide();
+				_this.parent().siblings('.urio-sign-oper-box').slideUp();
+			}, 500)
 		}
 	})
 	$('#close-pd-btn').on('click', function () {
 		$('#pd-err').hide();
-		$(this).parent().siblings('.urio-sign-oper-box').slideUp();
+		$(this).parent().parent().slideUp();
+		$('#old-pd-box').val('');
+		$('#new-pd-box').val('');
+		$('#new-pd-config').val('');
 	})
 }
 function inputFocus () {

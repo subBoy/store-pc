@@ -256,3 +256,56 @@
 	background-position: left center;
 	background-image: url(../user-center/images/radio.png);
 }
+
+
+.user-cpm-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+}
+.user-cpm-bg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+}
+.user-cpm-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -375px;
+	width: 750px;
+	background-color: #fff;
+	z-index: 1;
+}
+.user-cpm-tle {
+	line-height: 85px;
+	padding-left: 4px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 4px;
+	border-bottom: 3px solid #393939;
+}
+.user-cpm-close-btn {
+	display: block;
+	position: absolute;
+	right: 22px;
+	top: 22px;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../public/images/close.png);
+	cursor: pointer;
+}
+.user-cpm-ft {
+	border-top: 3px solid #393939;
+}

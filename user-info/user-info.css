@@ -301,3 +301,55 @@
 .urio-sign-oper.in-focus {
 	border-bottom: 2px solid #000;
 }
+.urio-sign-three-desc {
+	padding-top: 16px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.urio-sign-three-styl {
+	font-weight: bold;
+}
+.urio-sign-three-list {
+	margin-top: 30px;
+	overflow: hidden;
+}
+.urio-sign-three-item {
+	float: left;
+	margin-right: 80px;
+	width: 60px;
+	text-align: center;
+}
+.urio-sign-three-icon {
+	display: block;
+	width: 60px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.wx-type.binded .urio-sign-three-icon {
+	background-image: url(../public/images/wechat-hover.png);
+}
+.wx-type.unbind .urio-sign-three-icon {
+	background-image: url(../public/images/wechat.png);
+}
+.qq-type.binded .urio-sign-three-icon {
+	background-image: url(../public/images/qq-hover.png);
+}
+.qq-type.unbind .urio-sign-three-icon {
+	background-image: url(../public/images/qq.png);
+}
+.wb-type.binded .urio-sign-three-icon {
+	background-image: url(../public/images/microblog-hover.png);
+}
+.wb-type.unbind .urio-sign-three-icon {
+	background-image: url(../public/images/microblog.png);
+}
+.urio-sign-three-name {
+	padding-left: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.unbind .urio-sign-three-name {
+	color: #828282;
+}
