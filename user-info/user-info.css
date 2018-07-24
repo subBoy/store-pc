@@ -35,6 +35,9 @@
 	top: 35px;
 	z-index: 1;
 }
+.change-avatar-btn {
+	cursor: pointer;
+}
 .urio-avatar-ctr {
 	position: relative;
 	display: block;
@@ -352,4 +355,134 @@
 }
 .unbind .urio-sign-three-name {
 	color: #828282;
+}
+
+.tailoring-box-parcel {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	background-color: #f1f2f5;
+	overflow: hidden;
+}
+.select-img-btn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -22.5px 0 0 -25px;
+	width: 50px;
+	height: 45px;
+	background-image: url(../public/images/sel-img.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+#chooseImg {
+	position: absolute;
+	left: -100%;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
+.tailoring-box-parcel:hover {
+	background-color: #e6e8eb;
+}
+.circular {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.tailoring-content {
+	position: relative;
+	padding-top: 80px;
+	text-align: center;
+	font-size: 0;
+}
+.sureCut {
+	margin: 0 auto;
+	padding-left: 2px;
+	line-height: 36px;
+	width: 110px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #fff;
+	text-align: center;
+	background-color: #9f9f9f;
+}
+.global-btn-styl {
+	color: #ff8c90;
+	background-color: #000;
+	cursor: pointer;
+}
+.sureCut-decs {
+	padding: 40px 0 30px 2px;
+	line-height: 30px;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 14px;
+}
+.select-img-again {
+	display: none;
+	position: absolute;
+	top: 280px;
+	left: 50%;
+	line-height: 40px;
+	padding-left: 25px;
+	margin-left: -186px;
+	width: 66px;
+	height: 40px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(../public/images/refresh.png); 
+	cursor: pointer;
+}
+.select-img-again:hover {
+	color: #9c0107;
+	background-image: url(../public/images/refreshed.png); 
+}
+.circular-desc {
+	line-height: 60px;
+	padding-left: 2px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+#tailoringImg {
+	width: 100%;
+}
+.tailoring-content-r {
+	position: relative;
+	padding: 20px 100px 20px 81px;
+}
+.hr-m {
+	position: absolute;
+	left: 40px;
+	top: 0;
+	width: 1px;
+	height: 200px;
+	background-color: #e8e8e8;
+}
+.user-cpm-content {
+	padding-bottom: 80px;
+}
+.urio-avatar-desc {
+	padding-left: 2px;
+	line-height: 30px;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: #b3494d;
+}
+.cropper-point, .cropper-line {
+	background-color: #fff;
 }

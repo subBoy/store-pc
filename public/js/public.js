@@ -269,7 +269,7 @@ $(function () {
 	delCartSp(); // 头部删除购物车里面的商品操作
 	navHighlight(); // 设置导航高亮
 	$('.global-body').on('click', function () {
-		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list').slideUp();
+		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list').slideUp();
 		$('.is-show').removeClass('is-show');
 	})
 })

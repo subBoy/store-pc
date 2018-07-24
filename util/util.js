@@ -135,9 +135,15 @@ $.extend(window, {
     };
     var sh = setInterval(_to, 10);
   },
-  vmCon: function () {
+  vmCon: function (str) {
   	$('.cr-info-vm').each(function () {
   		var _h = $(this).height();
+  		if (str === 'not-an') {
+  			$(this).css({
+					'margin-top': '-' + _h / 2 + 'px'
+				});
+				return;
+  		}
 			$(this).animate({
 				'margin-top': '-' + _h / 2 + 'px'
 			}, 500)

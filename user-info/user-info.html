@@ -7,6 +7,7 @@
 <meta name="keywords" content=""/>
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="../base/cropper/cropper.min.css">
 <link rel="stylesheet" href="../public/reset.css">
 <link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
@@ -814,6 +815,7 @@
 						<span class="urio-avatar-name">我的头像</span>
 					</div>
 				</div>
+				<!-- 可修改状态 -->
 				<div class="urio-wrapper not-approve" style="display: none;">
 					<p class="urio-item-box">
 						<span class="urio-item-tle in-block">账户名：</span>
@@ -839,6 +841,10 @@
 								<option value="">1990</option>
 								<option value="">1991</option>
 								<option value="">1992</option>
+								<option value="">1993</option>
+								<option value="">1994</option>
+								<option value="">1995</option>
+								<option value="">1996</option>
 							</select>
 						</span>
 						<span class="urio-item-select-box in-block">
@@ -871,7 +877,7 @@
 						<span class="urio-item-select-desc">（注：生日设置只能填写一次，请谨慎选择）</span>
 					</p>
 					<span class="revise-urio-btn global-btn-styl">保存信息</span>
-					<div class="urio-avatar-box">
+					<div class="urio-avatar-box change-avatar-btn" id="change-avatar-btn">
 						<span class="urio-avatar-ctr">
 							<img src="../public/images/avatar.png" width="72" height="72" class="urio-avatar-img">
 						</span>
@@ -889,6 +895,7 @@
 						<span class="urio-sign-btn status-btn in-block">已认证</span>
 						<div class="urio-sign-error" id="email-input-err">dfdg</div>
 					</div>
+					<!-- 可修改状态 -->
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
@@ -914,6 +921,7 @@
 						<span class="urio-sign-btn status-btn in-block">未认证</span>
 						<div class="urio-sign-error" id="mobile-input-err"></div>
 					</div>
+					<!-- 可修改状态 -->
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
@@ -938,6 +946,7 @@
 						<span class="urio-sign-btn oper-btn global-btn-styl in-block">修改</span>
 						<div class="urio-sign-error" id="pd-err"></div>
 					</div>
+					<!-- 可修改状态 -->
 					<div class="urio-sign-oper-box">
 						<div class="urio-sign-oper-item">
 							<span class="urio-sign-oper in-block">
@@ -988,6 +997,36 @@
 			</div>
 		</div>
 	</div>
+	<!-- 弹窗区域 -->
+	<!-- 修改 -->
+	<div class="user-cpm-wrapper" id="change-user-avatar-win">
+		<em class="user-cpm-bg"></em>
+		<div class="user-cpm-content cr-info-vm">
+			<div class="user-cpm-tle">头像修改</div>
+			<span class="user-cpm-close-btn" onclick="closeTailor(this)"></span>
+			<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" onChange="selectImg(this)">
+		  <div class="tailoring-content">
+		  	<p class="urio-avatar-desc"></p>
+		  	<div class="tailoring-content-l in-block">
+		      <div class="tailoring-box-parcel set-animation">
+	          <img id="tailoringImg">
+	          <div class="select-img-btn"></div>
+		      </div>
+		  	</div>
+		  	<div class="select-img-again set-animation">重新选择</div>
+		  	<div class="tailoring-content-r in-block">
+		  		<div class="hr-m"></div>
+	        <div class="circular previewImg">
+	          <img id="finalImg" src="../public/images/avatar.png" width="100" height="100">
+	        </div>
+	        <div class="circular-desc">当前图像</div>
+		  	</div>
+		  </div>
+		  <p class="sureCut-decs">请选择图片上传：大于180*180像素支持JPG、PNG等格式，图片需小于2M</p>
+		  <div class="sureCut" id="sureCut">更新</div>
+		</div>
+	</div>
+
 	<div class="more-recommended-wrapper">
 		<div class="global-title-wrapper">
 			<h3 class="global-title-h3">商品推荐</h3>
@@ -1103,6 +1142,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="../base/cropper/cropper.min.js"></script>
 	<script src="../public/js/public.js"></script>
 	<script src="../user-center/user.js"></script>
 	<script src="./user-info.js"></script>

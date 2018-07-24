@@ -210,6 +210,84 @@ function inputFocus () {
 		}
 	})
 }
+function changeAvatar () {
+	$('#change-avatar-btn').on('click', function () {
+		$('#change-user-avatar-win').fadeIn();
+		vmCon('not-an');
+	})
+	$('.user-cpm-close-btn').on('click', function () {
+		$('#change-user-avatar-win').fadeOut();
+	})
+}
+
+
+function selectImg(file) {
+  if (!file.files || !file.files[0]){
+  	$('.select-img-btn').show();
+  	$('.select-img-again').hide();
+    $('.sureCut').removeClass('global-btn-styl');
+    $('.circular-desc').html('当前头像');
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function (evt) {
+    var replaceSrc = evt.target.result;
+    $('#tailoringImg').cropper('replace', replaceSrc, false);
+    $('.select-img-btn').hide();
+    $('.select-img-again').show();
+    $('.sureCut').addClass('global-btn-styl');
+    $('.circular-desc').html('头像预览');
+  }
+  reader.readAsDataURL(file.files[0]);
+}
+
+function cropperImg () {
+	$('#tailoringImg').cropper({
+	  aspectRatio: 1/1,
+	  preview: '.previewImg',
+	  guides: false,
+	  autoCropArea: 0.5,
+	  movable: false,
+	  dragCrop: true,
+	  movable: true,
+	  resizable: true,
+	  zoomable: false,
+	  mouseWheelZoom: false,
+	  touchDragZoom: true,
+	  rotatable: true,
+	  crop: function(e) {
+	    console.log(e);
+	  }
+	});
+
+	$("#sureCut").on("click",function () {
+		if (!$(this).hasClass('global-btn-styl')) {
+			return;
+		}
+		if ($("#tailoringImg").attr("src") == null ){
+		  return false;
+		} else {
+		  var cas = $('#tailoringImg').cropper('getCroppedCanvas');
+		  var base64url = cas.toDataURL('image/png');
+		  $(".urio-avatar-img").prop("src", base64url);
+		  $('.urio-avatar-desc').html('更新成功！')
+		  setTimeout(function () {
+		  	$('#change-user-avatar-win').fadeOut();
+		  	$('.urio-avatar-desc').html('');
+		  }, 1000)
+		}
+	});
+
+	$(".select-img-again, .select-img-btn").on('click', function () {
+		return $('#chooseImg').click();
+	})
+
+	var avatarSrc = $('.urio-avatar-img').attr('src');
+	$('#finalImg').attr('src', avatarSrc);
+}
+
+
+
 $(function () {
 	changeUserInfo();
 	selectSex();
@@ -221,4 +299,6 @@ $(function () {
 	submitMobile();
 	changePassword();
 	inputFocus();
+	changeAvatar();
+	cropperImg();
 })

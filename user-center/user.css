@@ -99,7 +99,6 @@
 	letter-spacing: 2px;
 }
 .side-path-item {
-	padding-right: 3px;
 	font-size: 15px;
 	font-weight: bold;
 	cursor: pointer;
@@ -259,6 +258,7 @@
 
 
 .user-cpm-wrapper {
+	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -307,5 +307,6 @@
 	cursor: pointer;
 }
 .user-cpm-ft {
+	position: relative;
 	border-top: 3px solid #393939;
 }

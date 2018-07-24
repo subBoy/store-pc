@@ -86,12 +86,13 @@
 	top: 50%;
 	width: 100%;
 	text-align: center;
-	
 }
 .io-vw {
+	display: block;
 	padding: 0 10px 0px 11px;
 	font-size: 12px;
 	letter-spacing: 1px;
+	word-wrap: break-word;
 }
 .uras-io-vw {
 	text-align: left;
@@ -276,8 +277,25 @@
 	background-image: url(../public/images/essential-icon.png);
 	letter-spacing: 2px;
 }
+.user-cpm-input-name.not-ic {
+	background-image: none;
+}
 .user-cpm-content-group {
 	padding: 0 50px;
+}
+.user-cpm-error {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	right: 0;
+	padding-left: 2px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #b04347;
+	text-align: center;
+	letter-spacing: 2px;
+
 }
 .user-cpm-desc {
 	line-height: 22px;
@@ -288,12 +306,13 @@
 }
 .user-cpm-input-ctr {
 	line-height: 22px;
+	width: 100%;
 	height: 22px;
 	letter-spacing: 2px;
 }
 .user-cpm-set-default {
 	position: relative;
-	padding: 10px 0 10px 50px;
+	padding: 10px 0 10px 35px;
 	line-height: 40px;
 	font-size: 14px;
 	font-weight: bold;
@@ -320,7 +339,7 @@
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
-	opacity: 0.1;
+	opacity: 0;
 	filter: alpha(opacity=0);
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
@@ -352,18 +371,19 @@
 .trigeminy-address-box {
 	position: relative;
 	float: left;
-	margin-right: 50px;
-	width: 110px;
+	margin-right: 40px;
 }
 .trigeminy-address-view {
 	display: block;
 	line-height: 22px;
+	width: 130px;
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-image: url(../public/images/pull-down-2.png);
 	cursor: pointer;
 }
 .trigeminy-address-list {
+	display: none;
 	position: absolute;
 	top: 22px;
 	right: 0;
@@ -413,4 +433,8 @@
 	background-color: #a11f24;
 	border-left: 1px solid #a11f24;
   border-right: 1px solid #a11f24;
+}
+.user-address-wrapper {
+	max-height: 650px;
+	overflow: hidden;
 }
