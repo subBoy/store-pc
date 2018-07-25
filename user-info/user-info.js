@@ -91,7 +91,7 @@ function submitEmail () {
 				res.find('.urio-sign-txt').html($('#emailInput').val());
 				_this.parent().parent().slideUp();
 				$('#email-input-err').fadeOut();
-			}, 300,);
+			}, 300);
 		}
 	})
 }
@@ -148,7 +148,7 @@ function submitMobile () {
 				res.find('.urio-sign-txt').html($('#mobileInput').val());
 				_this.parent().parent().slideUp();
 				$('#mobile-input-err').fadeOut();
-			}, 300,);
+			}, 300);
 		}
 	})
 }

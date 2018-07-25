@@ -403,7 +403,7 @@
 	font-size: 0;
 }
 .sureCut {
-	margin: 0 auto;
+	margin: 0 auto 60px;
 	padding-left: 2px;
 	line-height: 36px;
 	width: 110px;
@@ -470,7 +470,7 @@
 	background-color: #e8e8e8;
 }
 .user-cpm-content {
-	padding-bottom: 80px;
+	padding-bottom: 1px;
 }
 .urio-avatar-desc {
 	padding-left: 2px;
