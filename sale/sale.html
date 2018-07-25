@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./user-center.css">
+<link rel="stylesheet" href="./sale.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -137,27 +137,27 @@
 									<p class="user-module-desc">个人信息</p>
 									<ul class="user-module-list">
 										<li class="user-module-item">
-											<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-module-link">我的账号面板</a>
+											<a href="" class="user-module-link">我的账号面板</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="user-module-link">我的个人信息</a>
+											<a href="" class="user-module-link">我的个人信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../user-address/user-address.html?sideIdent=userAddress" class="user-module-link">我的配送地址簿</a>
+											<a href="" class="user-module-link">我的配送地址簿</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="user-module-link">我的优惠信息</a>
+											<a href="" class="user-module-link">我的优惠信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../intergral/intergral.html?sideIdent=intergral" class="user-module-link">我的积分信息</a>
+											<a href="" class="user-module-link">我的积分信息</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-module-link">我的收藏</a>
+											<a href="" class="user-module-link">我的收藏</a>
 											<span class="user-module-indent"></span>
 										</li>
 									</ul>
@@ -166,31 +166,29 @@
 									<p class="user-module-desc">订单信息</p>
 									<ul class="user-module-list">
 										<li class="user-module-item">
-											<a href="../order/order.html?sideIdent=orderOk&ident=ok" class="user-module-link">我的订单</a>
+											<a href="" class="user-module-link">我的订单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../order/order.html?sideIdent=orderClose&ident=close" class="user-module-link">我的退单</a>
+											<a href="" class="user-module-link">我的退单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../arrival-remind/arrival-remind.html?sideIdent=arrivalRemind" class="user-module-link">到货提醒</a>
+											<a href="" class="user-module-link">到货提醒</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="user-module-link">退货说明</a>
+											<a href="" class="user-module-link">退货说明</a>
 											<span class="user-module-indent"></span>
 										</li>
 									</ul>
 								</div>
 								<div class="user-module-recommend">
-									<a href="../home-of/home-of.html">
-										<p class="recommend-module-tle">野派资料馆</p>
-										<div class="recommend-module-info in-block">
-											<img src="../public/images/home-of.png"  class="home-of-img">
-											<p class="recommend-module-name">HOME OF ®</p>
-										</div>
-									</a>
+									<p class="recommend-module-tle">野派资料馆</p>
+									<div class="recommend-module-info in-block">
+										<img src="../public/images/home-of.png"  class="home-of-img">
+										<p class="recommend-module-name">HOME OF ®</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -202,7 +200,7 @@
 							<!-- 购物车为空的状态 -->
 							<div class="sp-air-cart-wrapper" style="display: none">
 								<img src="../public/images/air-cart.png" class="air-cart-img">
-								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="../goods-list/goods-list.html" class="sp-list-link">逛逛</a>！</p>
+								<p class="air-cart-desc">您的购物车还没有商品，去商城<a href="" class="sp-list-link">逛逛</a>！</p>
 							</div>
 							<!-- 购物车非空的状态 -->
 							<div class="nav-sp-cart-group">
@@ -714,7 +712,7 @@
 				<div class="user-side-path">
 					<a onclick="goBack()" class="side-path-item in-block">返回 /</a>
 					<a href="../index/index.html" class="side-path-item in-block">首页 /</a>
-					<a href="../user-center/user-center.html?sideIdent=userCenter" class="side-path-item in-block">我的账号面板</a>
+					<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="side-path-item in-block">我的优惠信息</a>
 				</div>
 				<div class="user-link-wrapper">
 					<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link-main-tle">我的账户</a>
@@ -792,100 +790,430 @@
 				</div>
 			</div>
 		</div>
-		<div class="user-content-wrapper">
-			<!-- 已设置用户名用户显示 -->
-			<div class="user-greetings-real">
-				<h3 class="user-greetings-name">
-					<span class="user-name">你好！邱帆</span>
-					<span class="user-sign-out">退出</span>
-					<span class="user-sign-out-desc">不是邱帆？</span>
-				</h3>
-				<p class="user-greetings-desc">在我的账号面板，您可以查看最近会员更新状态、账号和订单信息。选择下面的链接查看或修改内容。</p>
+		<div class="user-content-wrapper sale-wrapper">
+			<div class="ucw-title-wrapper">我的优惠信息</div>
+			<div class="ucw-tab-wrapper">
+				<a class="ucw-tab-item item-br in-block ident" ident="allKy">全部优惠券<span class="kity-num">6</span></a>
+				<a class="ucw-tab-item item-br in-block" ident="canKy">未使用<span class="kity-num">2</span></a>
+				<a class="ucw-tab-item item-br in-block" ident="usedKy">已使用<span class="kity-num">2</span></a>
+				<a class="ucw-tab-item in-block" ident="ocerKy">已过期<span class="kity-num">2</span></a>
+				<a href="../intergral/intergral.html?sideIdent=intergral" class="ucw-tab-item convert-kity in-block">兑换优惠券</a>
 			</div>
-			<!-- 未设置用户名用户显示 -->
-			<div class="user-greetings-new" style="display: none;">
-				<h3 class="user-greetings-name">
-					<span class="user-name">你好！新用户！</span>
-					<span class="user-sign-out">退出</span>
-				</h3>
-				<p class="user-greetings-desc">为方便您更好的体验浏览本站内容，请前往我的个人信息面板补全个人信息！</p>
-			</div>
-			<!-- 
-				新标 vip-mass-grade
-				铜 vip-bronze-grade
-				银 vip-silver-grade
-				金 vip-gold-grade
-			 -->
-			<div class="vip-grade-ident vip-mass-grade">
-				<div class="vip-grade-ident-box">
-					<div class="vip-name">
-						<p class="vip-name-txt">新标会员</p>
-						<p class="vip-code">编号：00001</p>
-					</div>
-					<div class="vip-logo">
-						<div class="vip-logo-img">
-							<!-- 新标 -->
-							<img src="../vip/images/v-logo-f.png" width="100%">
-							<!-- 铜 银 金 -->
-							<img src="../vip/images/v-logo-b.png" width="100%" style="display: none;">
+			<!-- 全部优惠券 -->
+			<div class="ucw-tab-content" ident="allKy">
+				<div class="sc-has-goods-wrapper">
+					<ul class="sc-goods-list-wrapper">
+						<li class="sale-kity-box un-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">待使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box un-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">待使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-due">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已过期</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-due">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已过期</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="sc-goods-total-oper">
+						<!-- 只有一页 -->
+						<div class="global-paging" style="display: none;">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
-						<div class="vip-brand-box">
-							<p class="vip-brand">© RACK ROD</p>
-							<p class="vip-brand-desc">
-								<span class="vip-brand-desc-txt in-block">Design lllustration 2017 All Rights Reserved</span>
-								<span class="vip-brand-desc-ident in-block">TM</span>
-							</p>
+						<!-- 两页以上 -->
+						<div class="global-paging">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<a href="../vip/vip.html#hygz" class="vip-rule ju-silde-item">会员规则</a>
-					<div class="vip-intergral">
-						<p class="vip-intergral-box">
-							<span class="vip-intergral-txt in-block">积分：</span>
-							<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
-						</p>
-						<p class="vip-intergral-box">
-							<span class="vip-intergral-txt in-block">优惠券：</span>
-							<span class="vip-intergral-txt in-block vip-intergral-num">0</span>
-						</p>
+				</div>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/not-sale.png" class="not-air-img">
+						<p class="not-air-desc">您还没有优惠信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
 					</div>
 				</div>
 			</div>
-			<div class="user-center-content">
-				<div class="ucc-box">
-					<div class="ucc-item ucc-item-br">
-						<h3 class="ucc-item-name">更新个人信息</h3>
-						<div class="ucc-item-list">
-							<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="ucc-item-link in-block br-r">我的个人信息</a>
-							<a href="../user-address/user-address.html?sideIdent=userAddress" class="ucc-item-link in-block">我的配送地址簿</a>
+			<!-- 未使用 -->
+			<div class="ucw-tab-content" ident="canKy">
+				<div class="sc-has-goods-wrapper">
+					<ul class="sc-goods-list-wrapper">
+						<li class="sale-kity-box un-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">待使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box un-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">待使用</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="sc-goods-total-oper">
+						<!-- 只有一页 -->
+						<div class="global-paging">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
-					</div>
-					<div class="ucc-item">
-						<h3 class="ucc-item-name">我的历史订单</h3>
-						<div class="ucc-item-list">
-							<a href="../order/order.html?sideIdent=orderOk&ident=ok" class="ucc-item-link in-block br-r">我的订单</a>
-							<a href="../order/order.html?sideIdent=orderClose&ident=close" class="ucc-item-link in-block">我的退单</a>
+						<!-- 两页以上 -->
+						<div class="global-paging" style="display: none;">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="ucc-box">
-					<div class="ucc-item">
-						<h3 class="ucc-item-name">我的收藏</h3>
-						<div class="ucc-item-list ucc-3rd">
-							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="ucc-item-link in-block br-r">商品收藏</a>
-							<a href="../collect/collect.html?sideIdent=collect&ident=designer" class="ucc-item-link in-block br-r">设计师收藏</a>
-							<a href="../home-of/home-of.html" class="ucc-item-link letp-1 in-block">HOME OF ®</a>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/not-sale.png" class="not-air-img">
+						<p class="not-air-desc">您还没有优惠信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
+					</div>
+				</div>
+			</div>
+			<!-- 已使用 -->
+			<div class="ucw-tab-content" ident="usedKy">
+				<div class="sc-has-goods-wrapper">
+					<ul class="sc-goods-list-wrapper">
+						<li class="sale-kity-box is-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已使用</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-used">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已使用</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="sc-goods-total-oper">
+						<!-- 只有一页 -->
+						<div class="global-paging">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging" style="display: none;">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<div class="ucc-help-wrapper">
-					<p class="ucc-help-tle ucc-help-desc">帮助</p>
-					<p class="ucc-help-desc">服务热线：13552709942</p>
-					<p class="ucc-help-desc">在线服务时间：</p>
-					<p class="ucc-help-desc">周一至周日上午9:00-下午6:00</p>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/not-sale.png" class="not-air-img">
+						<p class="not-air-desc">您还没有优惠信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
+					</div>
+				</div>
+			</div>
+			<!-- 已过期 -->
+			<div class="ucw-tab-content" ident="ocerKy">
+				<div class="sc-has-goods-wrapper">
+					<ul class="sc-goods-list-wrapper">
+						<li class="sale-kity-box is-due">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已过期</p>
+								</div>
+							</div>
+						</li>
+						<li class="sale-kity-box is-due">
+							<div class="sale-kity-item">
+								<div class="sale-kity-bg">
+									<span class="sale-kity-del"></span>
+									<div class="sale-kity-val">
+										<span class="sy-val-icon in-block">￥</span>
+										<span class="sy-val-num in-block">200</span>
+									</div>
+									<p class="sale-kity-name">购物优惠券</p>
+								</div>
+								<div class="sale-kity-info-wrapper">
+									<p class="sale-kity-info">优惠码：sdakhjkfhsdfjd</p>
+									<p class="sale-kity-info">日期：2017.09.01-2017.10.01</p>
+									<p class="sale-kity-status">已过期</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="sc-goods-total-oper">
+						<!-- 只有一页 -->
+						<div class="global-paging">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging" style="display: none;">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/not-sale.png" class="not-air-img">
+						<p class="not-air-desc">您还没有优惠信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="more-recommended-wrapper">
 		<div class="global-title-wrapper">
 			<h3 class="global-title-h3">商品推荐</h3>
@@ -898,7 +1226,7 @@
 						<div class="slide-goods-item">
 							<a href="" class="recommended-goods-link">
 								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+									<img src="../developerImg/sp-img.jpg" width="100%" class="slide-goods-img">
 								</span>
 								<span class="goods-name-wrapper">WILD FACTION 野派</span>
 								<span class="goods-price-wrapper">RMB:2200</span>
@@ -909,7 +1237,7 @@
 						<div class="slide-goods-item">
 							<a href="" class="recommended-goods-link">
 								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
+									<img src="../developerImg/sp-img.jpg" width="100%" class="slide-goods-img">
 								</span>
 								<span class="goods-name-wrapper">WILD FACTION 野派</span>
 								<span class="goods-price-wrapper">RMB:2200</span>
@@ -1003,5 +1331,6 @@
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../user-center/user.js"></script>
+	<script src="./sale.js"></script>
 </body>
 </html>

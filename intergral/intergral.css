@@ -1,0 +1,186 @@
+@charset"UTF-8";
+.intergral-wrapper {
+	padding: 0 4px;
+}
+.convert-intergral {
+	position: relative;
+	padding-bottom: 20px;
+	font-size: 0;
+}
+.cl-input-wrapper {
+	margin-right: 18px;
+	border: 1px solid #939091;
+}
+.cl-input-wrapper.add-styl, .cl-input-wrapper.add-styl .sale-itl-code {
+	border-bottom: 1px solid #000;
+}
+.sale-itl-code {
+	padding-left: 15px;
+	line-height: 30px;
+	width: 280px;
+	height: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #000;
+}
+.cl-button-wrapper {
+	font-size: 0;
+	width: 160px;
+	text-align: center;
+	cursor: pointer;
+}
+.sale-itl-btn {
+	line-height: 32px;
+	padding-left: 2px;
+	padding-right: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #e07a7e;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(../public/images/kity-ic-1.png);
+}
+.intergral-info-desc {
+	line-height: 24px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.vip-rule-link {
+	font-weight: bold;
+}
+.intergral-info-num {
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.convert-intergral-err {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 34px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #a11f24;
+	letter-spacing: 1px;
+}
+
+
+.vip-grade-ident {
+	margin: 18px auto 0;
+	width: 689px;
+	height: 198px;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.vip-grade-ident-box {
+	position: relative;
+	margin: 0 auto;
+	width: 685px;
+	height: 158px;
+}
+.vip-mass-grade, .vip-intergral-num {
+	color: #fff;
+}
+.vip-bronze-grade, .vip-silver-grade, .vip-gold-grade {
+	color: #000;
+}
+.vip-gold-grade .vip-intergral-num {
+	color: #e40202;
+}
+.vip-mass-grade .vip-rule {
+ color: #e97f83;
+}
+.vip-mass-grade.vip-grade-ident {
+	background-image: url(../vip/images/mass.png);
+}
+.vip-bronze-grade.vip-grade-ident {
+	background-image: url(../vip/images/bronze.png);
+}
+.vip-silver-grade.vip-grade-ident {
+	background-image: url(../vip/images/silver.png);
+}
+.vip-gold-grade.vip-grade-ident {
+	background-image: url(../vip/images/gold.png);
+}
+.vip-name {
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+}
+.vip-logo {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -40px;
+	width: 100%;
+	text-align: center;
+}
+.vip-logo-img {
+	margin: 0 auto;
+	width: 50px;
+}
+.vip-rule {
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	line-height: 24px;
+	color: #000;
+	font-size: 14px;
+}
+.vip-intergral {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}
+.vip-intergral-box {
+	text-align: right;
+}
+.vip-name-txt {
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.vip-code {
+	line-height: 22px;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.vip-intergral-box {
+	letter-spacing: 2px;
+	line-height: 22px;
+	font-size: 0;
+}
+.vip-intergral-txt {
+	font-size: 12px;
+	font-weight: bold;
+}
+.vip-brand {
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.vip-brand-box {
+	padding-top: 20px;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
+.vip-grade-desc {
+	padding: 22px 0px 52px 0px;
+	color: #000;
+}
+.vip-rule-tle {
+	padding: 60px 0 12px 2px;
+	line-height: 50px;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 2px;
+}

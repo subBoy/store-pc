@@ -62,7 +62,7 @@ function setInputFB () {
 	$('input.sign-input').each(function(){
 		$(this).focus(function () {
 			$(this).parent().addClass('add-styl');
-			$('#err-txt-wrapper').html('');
+			$('#err-txt-wrapper, .convert-intergral-err').html('');
 		}).blur(function () {
 			$(this).parent().removeClass('add-styl');
 		})

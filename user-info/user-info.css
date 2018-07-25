@@ -484,5 +484,31 @@
 	color: #b3494d;
 }
 .cropper-point, .cropper-line {
-	background-color: #fff;
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+.cropper-view-box {
+	outline: 1px solid #fff;
+}
+.cropper-point.point-ne {
+  right: -7px;
+  top: -7px;
+}
+.cropper-point.point-se {
+	bottom: -7px;
+	right: -7px;
+}
+.cropper-point.point-sw {
+  bottom: -7px;
+  left: -7px;
+}
+.cropper-point.point-nw {
+  left: -7px;
+  top: -7px;
+}
+.cropper-point.point-n, .cropper-point.point-s, .cropper-point.point-e, .cropper-point.point-w {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
 }

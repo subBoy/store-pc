@@ -220,7 +220,6 @@ function changeAvatar () {
 	})
 }
 
-
 function selectImg(file) {
   if (!file.files || !file.files[0]){
   	$('.select-img-btn').show();
@@ -228,6 +227,14 @@ function selectImg(file) {
     $('.sureCut').removeClass('global-btn-styl');
     $('.circular-desc').html('当前头像');
     return;
+  }
+  if (file.files[0].type !== 'image/jpeg' && file.files[0].type !== 'image/png') {
+  	$('.urio-avatar-desc').html('请上传JPG、PNG等格式的图片！')
+  	return;
+  }
+  if (file.files[0].size > 2 * 1024 * 1024) {
+  	$('.urio-avatar-desc').html('请上传小于2M的图片！')
+  	return;
   }
   var reader = new FileReader();
   reader.onload = function (evt) {
@@ -237,6 +244,7 @@ function selectImg(file) {
     $('.select-img-again').show();
     $('.sureCut').addClass('global-btn-styl');
     $('.circular-desc').html('头像预览');
+    $('.urio-avatar-desc').html('');
   }
   reader.readAsDataURL(file.files[0]);
 }
@@ -256,7 +264,7 @@ function cropperImg () {
 	  touchDragZoom: true,
 	  rotatable: true,
 	  crop: function(e) {
-	    console.log(e);
+	    // console.log(e);
 	  }
 	});
 

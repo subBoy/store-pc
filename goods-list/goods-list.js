@@ -74,6 +74,7 @@ function spItemSH () {
 	$('.gl-ct-tle-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-ct-tle-list').slideDown();
+		$('.gl-sort-styles').slideUp();
 		$(this).addClass('isShow');
 	})
 
@@ -81,12 +82,14 @@ function spItemSH () {
 	$('.gl-sort-view').on('click', function (e) {
 		e.stopPropagation();
 		$('.gl-sort-styles').slideDown();
+		$('.gl-ct-tle-list').slideUp();
 		$(this).addClass('isShow');
 	})
 	$('.gl-sort-item').on('click', function () {
 		var _val = $(this).html();
 		$('.gl-sort-view').html(_val);
 		$('.gl-sort-styles').slideUp();
+		$('.gl-sort-view').removeClass('isShow');
 	})
 }
 function manWoman () {
@@ -113,6 +116,7 @@ function manWoman () {
 		}
 		navHighlight();
 		$('.gl-ct-tle-list').slideUp();
+		$('.gl-ct-tle-view').removeClass('isShow');
 		manWoman();
 	})
 }
