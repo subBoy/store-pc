@@ -8,10 +8,9 @@
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
-<link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./user-address.css">
+<link rel="stylesheet" href="./hand-custom.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -24,7 +23,7 @@
 		</div>
 	</div>
 	<!-- 头部区域 -->
-	<input type="hidden" value="0" id="nav-item-index">
+	<input type="hidden" value="3" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
@@ -708,634 +707,106 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="user-wrapper">
-		<div class="user-side-wrapper">
-			<div class="user-side-group">
-				<div class="user-side-path">
-					<a onclick="goBack()" class="side-path-item in-block">返回 /</a>
-					<a href="../index/index.html" class="side-path-item in-block">首页 /</a>
-					<a href="../user-address/user-address.html?sideIdent=userAddress" class="side-path-item in-block">我的配送地址簿</a>
+	<div class="hand-custom-wrapper">
+		<div class="hc-banner-wrapper">
+			<div class="hc-banner-ct">
+				<div class="hc-banner-img">
+					<img src="./images/br-ic.png" width="100%">
 				</div>
-				<div class="user-link-wrapper">
-					<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link-main-tle">我的账户</a>
-					<h3 class="user-link-tle">个人信息</h3>
-					<ul class="user-link-box">
-						<li class="user-link-item now-page" sideIdent="userCenter">
-							<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link">
-								<span class="user-link-name">我的账号面板</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="userInfo">
-							<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="user-link">
-								<span class="user-link-name">我的个人信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="userAddress">
-							<a href="../user-address/user-address.html?sideIdent=userAddress" class="user-link">
-								<span class="user-link-name">我的配送地址簿</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="sale">
-							<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="user-link">
-								<span class="user-link-name">我的优惠信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="intergral">
-							<a href="../intergral/intergral.html?sideIdent=intergral" class="user-link">
-								<span class="user-link-name">我的积分信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="collect">
-							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-link">
-								<span class="user-link-name">我的收藏</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="user-link-wrapper">
-					<h3 class="user-link-tle">订单信息</h3>
-					<ul class="user-link-box">
-						<li class="user-link-item" sideIdent="orderOk">
-							<a href="../order/order.html?sideIdent=orderOk&ident=ok" class="user-link">
-								<span class="user-link-name">我的订单</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="orderClose">
-							<a href="../order/order.html?sideIdent=orderClose&ident=close" class="user-link">
-								<span class="user-link-name">我的退单</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="arrivalRemind">
-							<a href="../arrival-remind/arrival-remind.html?sideIdent=arrivalRemind" class="user-link">
-								<span class="user-link-name">到货提醒</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="returnPolicy">
-							<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="user-link">
-								<span class="user-link-name">退货说明</span>
-							</a>
-						</li>
-						<li class="user-link-item">
-							<a href="../home-of/home-of.html" class="user-link user-home-of-link">
-								<span class="user-home-of-pic">
-									<img src="../user-center/images/home-of.jpg" width="100%" class="user-home-of-bg">
-									<span class="user-home-of-shade set-animation">
-										<em class="user-home-of-shade-bg"></em>
-										<img src="../user-center/images/home-of-bg.png" class="user-home-of-shade-img">
-									</span>
-								</span>
-								<span class="user-link-name in-block">HOME OF ®</span>
-								<span class="user-link-desc">野派资料馆</span>
-							</a>
-						</li>
-					</ul>
+				<h3 class="hc-banner-tle">R&D STUDIO 野派定制工坊</h3>
+				<p class="hc-banner-desc">现在就联系客服，打造您的专属产品</p>
+			</div>
+		</div>
+		<div class="hand-custom-tle-wrapper">
+			<h3 class="hand-custom-tle">CUSTOM SHOP</h3>
+			<p class="hand-custom-tle-desc">现在我们支持以下产品定制</p>
+		</div>
+		<div class="hand-custom-product">
+			<img src="./images/sd-bg.jpg" width="100%">
+			<div class="hcpt-ctr">
+				<div class="hcpt-wrapper">
+					<div class="hcpt-box">
+						<span class="img-prev-btn"></span>
+						<span class="img-next-btn"></span>
+						<div class="hcpt-slide-wrapper">
+							<ul class="hcpt-slide-ctr">
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/11.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/22.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/33.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/44.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/55.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/11.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/22.png" class="hcpt-slide-img">
+									</a>
+								</li>
+								<li class="hcpt-slide">
+									<a class="hcpt-slide-link">
+										<img src="./images/33.png" class="hcpt-slide-img">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="user-content-wrapper">
-			<!-- 已有配送地址 -->
-			<div class="has-address-wrapper">
-				<div class="ucw-title-wrapper">配送地址<span class="ucw-title-btn set-animation add-address-btn-ctr">新增地址》</span></div>
-				<div class="user-address-info-tle-wrapper">
-					<ul class="uras-info-tles">
-						<li class="uras-info-tle wd-li-1">
-							<span class="in-block uras-info-tle-txt">收货人</span>
-						</li>
-						<li class="uras-info-tle wd-li-2">
-							<span class="in-block uras-info-tle-txt">所在地区</span>
-						</li>
-						<li class="uras-info-tle wd-li-3">
-							<span class="in-block uras-info-tle-txt">详细地址</span>
-						</li>
-						<li class="uras-info-tle wd-li-4">
-							<span class="in-block uras-info-tle-txt">邮编</span>
-						</li>
-						<li class="uras-info-tle wd-li-5">
-							<span class="in-block uras-info-tle-txt">电话/手机号</span>
-						</li>
-						<li class="uras-info-tle wd-li-6">
-							<span class="in-block uras-info-tle-txt">操作</span>
-						</li>
-					</ul>
+		<div class="hand-custom-tle-wrapper reflectShop">
+			<h3 class="hand-custom-tle">LIVE EXPERIENCE</h3>
+			<p class="hand-custom-tle-desc">门店预约，定制您的专属</p>
+		</div>
+		<div class="hc-reflect-shop beijing">
+			<div class="hc-rp-wrapper">
+				<div class="hc-rp-img">
+					<img src="./images/sp-poster.jpg" width="100%">
 				</div>
-				<div class="user-address-wrapper">
-					<div class="user-address-info">
-						<ul class="uras-info-list">
-							<li class="uras-info-item wd-li-1">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">邱帆</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-2">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-io-vw">
-										<span class="in-block">北京</span>
-										<span class="in-block">北京市</span>
-										<span class="in-block">通州区</span>
-									</div>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-3">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">新华联家园42号311</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-4">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">10118</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-5">
-								<div class="uras-info-view cr-info-vm">
-								<span class="io-vw in-block">135****9924</span>
-							</div>
-							</li>
-							<li class="uras-info-item wd-li-6">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-info-item-btns">
-										<span class="uras-info-item-btn cg-btn in-block">修改</span>
-										<span class="uras-info-item-btn del-btn in-block">删除</span>
-									</div>
-									<span class="default-address-btn set-animation in-block">默认地址</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="user-address-info">
-						<ul class="uras-info-list">
-							<li class="uras-info-item wd-li-1">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">邱帆</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-2">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-io-vw">
-										<span class="in-block">北京</span>
-										<span class="in-block">北京市</span>
-										<span class="in-block">通州区</span>
-									</div>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-3">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">新华联家园42号311</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-4">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">10118</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-5">
-								<div class="uras-info-view cr-info-vm">
-								<span class="io-vw in-block">135****9924</span>
-							</div>
-							</li>
-							<li class="uras-info-item wd-li-6">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-info-item-btns">
-										<span class="uras-info-item-btn cg-btn in-block">修改</span>
-										<span class="uras-info-item-btn del-btn in-block">删除</span>
-									</div>
-									<span class="set-default-address-btn set-animation in-block">默认地址</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="user-address-info">
-						<ul class="uras-info-list">
-							<li class="uras-info-item wd-li-1">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">邱帆</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-2">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-io-vw">
-										<span class="in-block">北京</span>
-										<span class="in-block">北京市</span>
-										<span class="in-block">通州区</span>
-									</div>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-3">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">新华联家园42号311</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-4">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">10118</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-5">
-								<div class="uras-info-view cr-info-vm">
-								<span class="io-vw in-block">135****9924</span>
-							</div>
-							</li>
-							<li class="uras-info-item wd-li-6">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-info-item-btns">
-										<span class="uras-info-item-btn cg-btn in-block">修改</span>
-										<span class="uras-info-item-btn del-btn in-block">删除</span>
-									</div>
-									<span class="set-default-address-btn set-animation in-block">默认地址</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="user-address-info">
-						<ul class="uras-info-list">
-							<li class="uras-info-item wd-li-1">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">邱帆</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-2">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-io-vw">
-										<span class="in-block">北京</span>
-										<span class="in-block">北京市</span>
-										<span class="in-block">通州区</span>
-									</div>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-3">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">新华联家园42号311</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-4">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">10118</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-5">
-								<div class="uras-info-view cr-info-vm">
-								<span class="io-vw in-block">135****9924</span>
-							</div>
-							</li>
-							<li class="uras-info-item wd-li-6">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-info-item-btns">
-										<span class="uras-info-item-btn cg-btn in-block">修改</span>
-										<span class="uras-info-item-btn del-btn in-block">删除</span>
-									</div>
-									<span class="set-default-address-btn set-animation in-block">默认地址</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="user-address-info">
-						<ul class="uras-info-list">
-							<li class="uras-info-item wd-li-1">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">邱帆</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-2">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-io-vw">
-										<span class="in-block">北京</span>
-										<span class="in-block">北京市</span>
-										<span class="in-block">通州区</span>
-									</div>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-3">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">新华联家园42号311</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-4">
-								<div class="uras-info-view cr-info-vm">
-									<span class="io-vw in-block">10118</span>
-								</div>
-							</li>
-							<li class="uras-info-item wd-li-5">
-								<div class="uras-info-view cr-info-vm">
-								<span class="io-vw in-block">135****9924</span>
-							</div>
-							</li>
-							<li class="uras-info-item wd-li-6">
-								<div class="uras-info-view cr-info-vm">
-									<div class="uras-info-item-btns">
-										<span class="uras-info-item-btn cg-btn in-block">修改</span>
-										<span class="uras-info-item-btn del-btn in-block">删除</span>
-									</div>
-									<span class="set-default-address-btn set-animation in-block">默认地址</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- 分页 -->
-				<div class="sc-goods-total-oper">
-					<div class="sc-goods-oper-sel">您已创建<span class="address-list-num">5</span>个收货地址，最多可创建<span class="address-list-num">10</span>个！</div>
-					<!-- 只有一页 -->
-					<div class="global-paging">
-						<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
-						<ul class="global-paging-ctr">
-							<li class="global-paging-item prev-next-wrapper">
-								<a href="" class="global-paging-item-link prev-next">下一页</a>
-							</li>
-						</ul>
-					</div>
-					<!-- 两页以上 -->
-					<div class="global-paging" style="display: none;">
-						<ul class="global-paging-ctr">
-							<li class="global-paging-item">
-								<a href="" class="global-paging-item-link">上一页</a>
-							</li>
-							<li class="global-paging-item">
-								<a href="" class="global-paging-item-link">1</a>
-							</li>
-							<li class="global-paging-item now-page">
-								<a href="" class="global-paging-item-link">2</a>
-							</li>
-							<li class="global-paging-item prev-next-wrapper">
-								<a href="" class="global-paging-item-link prev-next">下一页</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- 没有配送地址 -->
-			<div class="not-address-wrapper" style="display: none;">
-				<div class="ucw-title-wrapper">配送地址</div>
-				<div class="not-address-box">
-					<div class="not-address-icon">
-						<img src="../public/images/not-address.png" class="not-address-img">
-					</div>
-					<p class="not-address-desc">您还没有添加收货地址</p>
-					<div class="not-address-btn global-btn-styl add-address-btn-ctr">新赠收货地址</div>
+				<div class="hc-rp-info">
+					<h3 class="hcrp-tle">北京</h3>
+					<p class="hcrp-txt">北京市通州区怡乐北街506</p>
+					<p class="hcrp-txt">010-××××××××</p>
+					<p class="hcrp-txt">bj@rackrod.com</p>
+					<span class="hcrp-btn global-btn-styl">预约门店</span>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- 弹窗区域 -->
-	<!-- 修改 -->
-	<div class="user-cpm-wrapper" id="change-user-address-win">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">修改收获地址</div>
-			<span class="user-cpm-close-btn"></span>
-			<div class="user-cpm-content-group">
-				<ul class="user-cpm-input-wrapper">
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">收货人姓名：</span>
-							<input type="text" class="user-cpm-input-ctr as-us-name" value="邱帆">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">地址：</span>
-							<div class="trigeminy-address">
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-shen" grade="1">北京</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-shi" grade="2">北京</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-xian" grade="3">通州区</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">街道地址：</span>
-							<input type="text" class="user-cpm-input-ctr as-jiedao" value="新华联家园42号311">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name not-ic">邮政编号：</span>
-							<input type="text" class="user-cpm-input-ctr as-youbian" value="101118">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">手机号/电话：</span>
-							<input type="text" class="user-cpm-input-ctr as-tel" value="13552709924">
-						</div>
-					</li>
-				</ul>
-				<div class="user-cpm-set-default">
-					<span class="cpm-set-dt-btn">
-						<input type="checkbox" class="set-dt-checkbox">
-					</span>
-					设为默认地址
+		<div class="hc-reflect-shop shenzhen">
+			<div class="hc-rp-wrapper">
+				<div class="hc-rp-img">
+					<img src="./images/sp-poster.jpg" width="100%">
+				</div>
+				<div class="hc-rp-info">
+					<h3 class="hcrp-tle">深圳</h3>
+					<p class="hcrp-txt">深圳市龙岗区龙岗街道506号</p>
+					<p class="hcrp-txt">0755-××××××××</p>
+					<p class="hcrp-txt">sz@rackrod.com</p>
+					<span class="hcrp-btn global-btn-styl">预约门店</span>
 				</div>
 			</div>
-			<div class="user-cpm-ft">
-				<p class="user-cpm-error"></p>
-				<p class="user-cpm-desc">若订单出现错误，出于隐私考虑我们将仅与您联系。请务必填写所有信息！</p>
-				<div class="user-cpm-btns">
-					<span class="user-cpm-btn submit-cg-btn global-btn-styl in-block">保存到地址簿</span>
-					<span class="user-cpm-btn close-cg-btn in-block">取消</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 新增 -->
-	<div class="user-cpm-wrapper" id="add-user-address-win">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">新增收获地址</div>
-			<span class="user-cpm-close-btn"></span>
-			<div class="user-cpm-content-group">
-				<ul class="user-cpm-input-wrapper">
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">收货人姓名：</span>
-							<input type="text" class="user-cpm-input-ctr as-us-name" value="">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">地址：</span>
-							<div class="trigeminy-address">
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-shen" grade="1">请选择地区、省份</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-shi" grade="2">请选择城市</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-								<div class="trigeminy-address-box">
-									<span class="trigeminy-address-view as-xian" grade="3">请选择区</span>
-									<ul class="trigeminy-address-list">
-										<li class="trigeminy-address-item air-item">请选择</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-										<li class="trigeminy-address-item">北京</li>
-										<li class="trigeminy-address-item">上海</li>
-										<li class="trigeminy-address-item">广州</li>
-										<li class="trigeminy-address-item">深圳</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">街道地址：</span>
-							<input type="text" class="user-cpm-input-ctr as-jiedao" value="" placeholder="(不要重新填写省/市/区)">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name not-ic">邮政编号：</span>
-							<input type="text" class="user-cpm-input-ctr as-youbian" value="">
-						</div>
-					</li>
-					<li class="user-cpm-input-item">
-						<div class="user-cpm-input-box">
-							<span class="user-cpm-input-name">手机号/电话：</span>
-							<input type="text" class="user-cpm-input-ctr as-tel" value="">
-						</div>
-					</li>
-				</ul>
-				<div class="user-cpm-set-default">
-					<span class="cpm-set-dt-btn">
-						<input type="checkbox" class="set-dt-checkbox">
-					</span>
-					设为默认地址
-				</div>
-			</div>
-			<div class="user-cpm-ft">
-				<p class="user-cpm-error"></p>
-				<p class="user-cpm-desc">若订单出现错误，出于隐私考虑我们将仅与您联系。请务必填写所有信息！</p>
-				<div class="user-cpm-btns">
-					<span class="user-cpm-btn submit-add-btn global-btn-styl in-block">保存到地址簿</span>
-					<span class="user-cpm-btn close-cg-btn in-block">取消</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="more-recommended-wrapper">
-		<div class="global-title-wrapper">
-			<h3 class="global-title-h3">商品推荐</h3>
-			<p class="global-title-english">MORE RECOMMENDED</p>
-		</div>
-		<div class="more-recommended">
-			<div class="recommended-goods">
-				<ul class="recommended-goods-list">
-					<li class="recommended-goods-item">
-						<div class="slide-goods-item">
-							<a href="" class="recommended-goods-link">
-								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-								</span>
-								<span class="goods-name-wrapper">WILD FACTION 野派</span>
-								<span class="goods-price-wrapper">RMB:2200</span>
-							</a>
-						</div>
-					</li>
-					<li class="recommended-goods-item">
-						<div class="slide-goods-item">
-							<a href="" class="recommended-goods-link">
-								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-								</span>
-								<span class="goods-name-wrapper">WILD FACTION 野派</span>
-								<span class="goods-price-wrapper">RMB:2200</span>
-							</a>
-						</div>
-					</li>
-					<li class="recommended-goods-item">
-						<div class="slide-goods-item">
-							<a href="" class="recommended-goods-link">
-								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-								</span>
-								<span class="goods-name-wrapper">WILD FACTION 野派</span>
-								<span class="goods-price-wrapper">RMB:2200</span>
-							</a>
-						</div>
-					</li>
-					<li class="recommended-goods-item">
-						<div class="slide-goods-item">
-							<a href="" class="recommended-goods-link">
-								<span class="goods-img-wrapper">
-									<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-								</span>
-								<span class="goods-name-wrapper">WILD FACTION 野派</span>
-								<span class="goods-price-wrapper">RMB:2200</span>
-							</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="yws-i-am-bg-r">
-		<div class="yws-i-am-wrapper">
-			<h3 class="yws-i-am-tle">Yes i am</h3>
-			<p class="yws-i-am-desc">恶党、野派、魔巫、铁皮人、冰血暴、凝明潮体、法外之徒、野性难驯！</p>
-			<p class="yws-i-am-desc">这是一次独立，关于我们的品牌和文化！</p>
-			<img src="../public/images/dl-png.png" class="yws-i-am-img">
 		</div>
 	</div>
 	<!-- 底部区域 -->
@@ -1390,7 +861,6 @@
 		</div>
 	</div>
 	<script src="../public/js/public.js"></script>
-	<script src="../user-center/user.js"></script>
-	<script src="./user-address.js"></script>
+	<script src="./hand-custom.js"></script>
 </body>
 </html>

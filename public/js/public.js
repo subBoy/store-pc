@@ -174,13 +174,13 @@ function levelNav () {
 			(function (i) {
 				var _levelName = navlist.eq(i).attr('levelName');
 				if (_levelName && levelName === _levelName) {
-					navlist.eq(i).find('.nav-item-link').addClass('now-link');
+					navlist.eq(i).find('.nav-item-link').addClass('hover-now-link');
 				}
 			})(i)
 		}
 	}, function () {
 		$(this).removeClass('fade-In');
-		$('.nav-item-link').removeClass('now-link');
+		$('.nav-item-link').removeClass('hover-now-link');
 		sh = setTimeout(function () {
 			$('.header-nav-list-ctr, .header-nav-list-info').hide();
 		}, 300);

@@ -35,7 +35,25 @@ function selectSex () {
 }
 function changeSignInfo () {
 	$('.urio-sign-btn.oper-btn').on('click', function () {
-		$(this).parent().siblings('.urio-sign-oper-box').slideDown();
+		var _thisVal = $(this).html();
+
+		if (!$(this).hasClass('esp')) {
+			if (_thisVal === '修改') {
+				$(this).html('关闭修改');
+			} else {
+				$(this).html('关闭认证');
+			}
+			$(this).parent().siblings('.urio-sign-oper-box').slideDown();
+			$(this).addClass('esp');
+		} else {
+			if (_thisVal === '关闭修改') {
+				$(this).html('修改');
+			} else {
+				$(this).html('去认证');
+			}
+			$(this).parent().siblings('.urio-sign-oper-box').slideUp();
+			$(this).removeClass('esp');
+		}
 	})
 }
 function emailVerify () {

@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 70px;
 }
 .header-nav-wrapper {
-  margin-left: -50px; 
+  padding-left: 36px; 
 }
 .header-wrapper.win-nav .header-nav-wrapper {
   padding-top: 20px;
@@ -286,14 +286,14 @@ h1, h2, h3, h4, h5, h6, p {
 .header-nav-item.spl-styl .nav-item-link {
   letter-spacing: 0;
 }
-.nav-item-link:hover, .nav-item-link.now-link {
+.nav-item-link:hover, .nav-item-link.now-link, .nav-item-link.hover-now-link{
   color: #b3494d;
   font-weight: bold;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.nav-item-link:hover:before, .nav-item-link.now-link:before{
+.nav-item-link:hover:before, .nav-item-link.now-link:before, .nav-item-link.hover-now-link:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
        -moz-transform: scaleX(1);
@@ -327,7 +327,7 @@ h1, h2, h3, h4, h5, h6, p {
        background-size: 19px 10px;
   background-image: url(./images/home-of-icon-b.gif);
 }
-.nav-item-link.home-of:hover, .nav-item-link.now-link.home-of {
+.nav-item-link.home-of:hover, .nav-item-link.now-link.home-of, .nav-item-link.hover-now-link.home-of {
   background-image: url(./images/home-of-icon-r.gif);
 }
 .header-nav-list-ctr {

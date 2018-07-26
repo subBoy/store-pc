@@ -120,11 +120,21 @@ function manWoman () {
 		manWoman();
 	})
 }
+function mwInit () {
+	var cmd = GetQueryString('cmd');
+	if (cmd === 'woman') {
+		$('#nav-item-index').val(2);
+	} else {
+		$('#nav-item-index').val(1);
+	}
+	manWoman();
+	navHighlight();
+}
 $(function () {
 	range(); // 价格区间
 	slideSH(); // 侧边显隐
 	spItemSH(); // 切换商品
-	manWoman(); //切换男女装
+	mwInit(); //切换男女装
 	checkedItem(); // 复选框状态改变处理
 	var hr;
 	$(window).resize(function () {
