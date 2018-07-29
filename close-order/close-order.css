@@ -1,0 +1,200 @@
+@charset"UTF-8";
+.close-order-code-query {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 10px;
+	line-height: 0;
+	padding-right: 40px;
+}
+.close-order-code-btn {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -10px;
+	width: 40px;
+	height: 38px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../public/images/search-icon.png);
+	cursor: pointer;
+}
+.close-order-code-input {
+	line-height: 20px;
+	padding-right: 10px;
+	height: 20px;
+	text-align: right;
+	letter-spacing: 2px;
+	border-right: 1px solid #000;
+	font-size: 14px;
+}
+.ucw-title-desc {
+	display: block;
+	padding-bottom: 15px;
+	line-height: 14px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.rnpy-link {
+	font-weight: bold;
+}
+.rnpy-link:hover {
+	color: #b3494d;
+}
+
+.ceor-tle {
+	position: relative;
+	line-height: 14px;
+	padding: 20px 0 14px 14px;
+	font-size: 0;
+}
+.ceor-tle-txt {
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.bor-rig {
+	border-right: 1px solid #000;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+.ceor-detail {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 150px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-align: center;
+	cursor: pointer;
+}
+.ceor-detail:hover {
+	color: #b3494d;
+}
+.ceor-info {
+	position: relative;
+	padding: 15px 150px 15px 15px;
+	height: 70px;
+	border: 1px solid #d7d7d7;
+}
+.close-order-list-wrapper {
+	padding-bottom: 30px;
+}
+.ceor-imio-box {
+	float: left;
+	position: relative;
+	padding-left: 90px;
+	width: 220px;
+	overflow: hidden;
+}
+.ceor-imio-img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+}
+.ceor-imio-num {
+	float: left;
+	line-height: 70px;
+	width: 50px;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.ceor-imio-price {
+	float: left;
+	line-height: 70px;
+	width: 140px;
+	font-size: 12px;
+	color: #494a4a;
+	text-align: center;
+	letter-spacing: 2px;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ceor-imio-name, .ceor-imio-tab {
+	line-height: 22px;
+	font-size: 0;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ceor-imio-tle {
+	padding-right: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.ceor-imio-desc {
+	line-height: 26px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	color: #494a4a;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ceor-imio-table {
+	padding-right: 10px;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+.ceor-info-oper-wrapper {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 150px;
+	height: 100%;
+	border-left: 1px solid #d7d7d7;
+}
+.ceor-imio-oper {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
+}
+.ceor-imio-oper-txt {
+	padding-left: 2px;
+	line-height: 18px;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.ceor-imio-operlink, .ceor-imio-oper-delbtn {
+	display: block;
+	line-height: 18px;
+	padding-left: 2px;
+	letter-spacing: 2px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.ceor-imio-operlink:hover, .ceor-imio-oper-delbtn:hover {
+	color: #b3494d;
+}
+.ceor-imio-oper-btn, .ceor-imio-oper-link {
+	display: block;
+	margin: 0 auto 5px;
+	line-height: 30px;
+	padding-left: 2px;
+	width: 98px;
+	height: 30px;
+	letter-spacing: 2px;
+	font-size: 12px;
+	cursor: pointer;
+	color: #e97f83;
+	font-weight: bold;
+}
+.ceor-imio-status {
+	line-height: 32px;
+	padding-left: 2px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}

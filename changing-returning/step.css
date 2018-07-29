@@ -1,0 +1,270 @@
+@charset"UTF-8";
+.cr-step-wrapper {
+	margin:  0 auto;
+	width: 1000px;
+}
+.cr-step-header-wrapper {
+	padding: 30px 0 20px;
+	overflow: hidden;
+}
+.cr-step-tle {
+	line-height: 54px;
+	padding-left: 4px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-align: center;
+}
+.cr-step-tle-eg {
+	line-height: 38px;
+	padding-left: 2px;
+	font-size: 14px;
+	color: #8d8d8d;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.cr-step-list {
+	position: relative;
+	margin: 0 40px;
+	height: 130px;
+}
+.cr-step-hr {
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	z-index: 1;
+}
+.cr-step-item {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	margin-left: -80px;
+	width: 160px;
+	text-align: center;
+	z-index: 2;
+}
+.cr-order-status {
+	top: 13px;
+	left: 0%; 
+}
+.cr-order-issue {
+	top: 26px;
+}
+.cr-order-stated {
+	margin-left: -85px;
+	top: -8px;
+	left: 100%;
+}
+.cr-step-icon {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.cr-order-status .cr-step-icon {
+	height: 34px;
+	background-image: url(../public/images/ordered.png);
+}
+.cr-order-issue .cr-step-icon {
+	height: 55px;
+	background-image: url(../public/images/go.png);
+}
+.cr-order-stated .cr-step-icon {
+	height: 39px;
+	background-image: url(../public/images/n-over.png);
+}
+.cr-order-stated.finish-order-stated .cr-step-icon {
+	background-image: url(../public/images/y-over.png);
+}
+.cr-step-txt {
+	display: block;
+	line-height: 56px;
+	padding-left: 2px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.cr-order-stated .cr-step-txt {
+	color: #8d8d8d;
+}
+.cr-order-stated.finish-order-stated .cr-step-txt {
+	color: #010101;
+}
+.cr-order-info {
+	position: relative;
+	padding-bottom: 20px;
+	border-top: 3px solid #000;
+}
+.cr-step-info {
+	border-bottom: 1px solid #6f6f6f;
+}
+.cr-step-level-tle {
+	padding-top: 20px; 
+	line-height: 44px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.cr-step-info-txt {
+	line-height: 34px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.cr-step-info-issue-desc {
+	position: absolute;
+	right: -2px;
+	top: 50%;
+	margin-top: -15px;
+	line-height: 30px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #b3494d;
+}
+.cr-sp-info-txt {
+	line-height: 36px;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+.return-policy-link {
+	font-weight: bold;
+}
+.return-policy-link:hover {
+	color: #b3494d;
+}
+.ceor-info-item-wrapper {
+	overflow: hidden;
+}
+.ceor-imio-box {
+	float: left;
+	position: relative;
+	padding-left: 130px;
+	width: 420px;
+	overflow: hidden;
+}
+.ceor-imio-img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+}
+.ceor-imio-num {
+	float: left;
+	line-height: 90px;
+	width: 150px;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+.ceor-imio-price {
+	float: right;
+	line-height: 90px;
+	padding-right: 40px;
+	width: 240px;
+	font-size: 18px;
+	color: #010101;
+	text-align: right;
+	letter-spacing: 2px;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.ceor-imio-name, .ceor-imio-tab {
+	line-height: 30px;
+	font-size: 0;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ceor-imio-tle {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.ceor-imio-hr {
+	margin: 0 10px;
+	width: 3px;
+	height: 3px;
+	background-color: #000;
+}
+.ceor-imio-desc {
+	line-height: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: #494a4a;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.ceor-imio-table {
+	padding-right: 20px;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.clostyl {
+	color: #494a4a;
+}
+.cr-sp-item {
+	padding: 30px 0;
+	border-top: 1px dashed #dbdbdb;
+}
+.cr-sp-item:first-child {
+	border-top: none;
+	padding-top: 20px;
+}
+.cr-step-info-btns {
+	padding: 20px 0 35px;
+	font-size: 0;
+}
+.cr-step-btn {
+	padding-left: 2px;
+	margin-right: 90px;
+	line-height: 50px;
+	width: 230px;
+	height: 50px;
+	text-align: center;
+	letter-spacing: 2px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #7f7e7e;
+}
+.cr-step-btn.seled {
+	background-color: #000;
+	color: #ff8c90;
+}
+.refund-type-desc {
+	line-height: 26px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+.cr-step-btn.global-btn-styl {
+	background-color: #000;
+}
+.cr-step-btn.global-btn-styl:hover {
+	background-color: #262626;
+}
+.cr-step-issue-tta-wrapper {
+	padding: 0;
+	padding: 5px 15px;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+.cr-step-issue-tta {
+	line-height: 22px;
+	width: 100%;
+	border: none;
+	background-color: #f9f9f9;
+	font-size: 14px;
+	resize:none
+}

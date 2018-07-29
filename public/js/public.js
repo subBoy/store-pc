@@ -254,6 +254,30 @@ function setFooterStyle () {
 		$('.gl-content-wrapper').find('.footer-omit-wrapper').addClass('ft-2');
 	}
 }
+function checkedItem () {
+	$(".global-select-input").change(function() {
+		var status = $(this).is(':checked');
+		if (status) {
+			$(this).parent().addClass('checked-item');
+		} else {
+			$(this).parent().removeClass('checked-item');
+			var _thisPar = $(this).parent().parent().parent().parent().find('.global-all-select-input');
+			_thisPar.prop('checked', false).change();
+			_thisPar.parent().removeClass('checked-item')
+		}
+	});
+	$('.global-all-select-input').on('click', function () {
+		var status = $(this).is(':checked');
+		var _thisPar = $(this).parent().parent().parent().siblings('.gl-condition-item-threelevel').find('.global-select-input');
+		if (status) {
+			$(this).parent().addClass('checked-item');
+			_thisPar.prop('checked', 'checked').change();
+		} else {
+			$(this).parent().removeClass('checked-item');
+			_thisPar.prop('checked', false).change();
+		}
+	});
+}
 $(function () {
 	setFooterStyle();
 	initNav(); // 判断悬浮导航出现的时机
@@ -268,6 +292,7 @@ $(function () {
 	headerNavR(); // 头部右侧下拉菜单显隐操作
 	delCartSp(); // 头部删除购物车里面的商品操作
 	navHighlight(); // 设置导航高亮
+	checkedItem();
 	$('.global-body').on('click', function () {
 		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list').slideUp();
 		$('.is-show').removeClass('is-show');

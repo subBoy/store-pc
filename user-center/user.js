@@ -17,6 +17,7 @@ function switchTab () {
 				var _ident = $(this).attr('ident');
 				if (ident === _ident) {
 					$(this).fadeIn().siblings('.ucw-tab-content').hide();
+					vmCon('not-an');
 				}
 			})
 		}
@@ -35,6 +36,7 @@ function urlTab () {
 			var _ident = $(this).attr('ident');
 			if (ident === _ident) {
 				$(this).fadeIn().siblings('.ucw-tab-content').hide();
+				vmCon('not-an');
 			}
 		})
 	}
