@@ -102,11 +102,22 @@
 	border-bottom: 1px solid #6f6f6f;
 }
 .cr-step-level-tle {
+	position: relative;
 	padding-top: 20px; 
 	line-height: 44px;
 	font-size: 24px;
 	font-weight: bold;
 	letter-spacing: 2px;
+}
+.cr-step-info-err, .cr-step-info-tel-err {
+	display: none;
+	display: block;
+	position: absolute;
+	line-height: 20px;
+	left: 130px;
+	top: 36px;
+	font-size: 16px;
+	color: #b3494d;
 }
 .cr-step-info-txt {
 	line-height: 34px;
@@ -256,16 +267,16 @@
 }
 .cr-step-issue-tta-wrapper {
 	position: relative;
-	padding: 0;
+	margin-top: 10px;
 	padding: 5px 15px;
 	border-radius: 5px;
-	background-color: #ccc;
+	background-color: #f5f5f5;
 }
 .cr-step-issue-tta {
 	line-height: 22px;
 	width: 100%;
 	border: none;
-	background-color: #f9f9f9;
+	background-color: #f5f5f5;
 	font-size: 14px;
 	resize:none
 }
@@ -333,7 +344,7 @@
 	border: none;
 }
 .cr-post-data-btn {
-	margin: 35 auto 70px;
+	margin: 35px auto 70px;
 	line-height: 60px;
 	padding-left: 2px;
 	width: 420px;

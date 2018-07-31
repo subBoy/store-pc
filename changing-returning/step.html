@@ -784,11 +784,11 @@
 		<div class="cr-step-info">
 			<h3 class="cr-step-level-tle">服务类型</h3>
 			<div class="cr-step-info-btns">
-				<span class="cr-step-btn seled in-block">退货</span>
-				<span class="cr-step-btn in-block">换货</span>
+				<span class="cr-step-btn seled in-block" serverType='0'>退货</span>
+				<span class="cr-step-btn in-block" serverType='1'>换货</span>
 			</div>
 		</div>
-		<div class="cr-step-info">
+		<div class="cr-step-info" id="isReturnType">
 			<h3 class="cr-step-level-tle">退款方式</h3>
 			<p class="refund-type-desc">经售后组确认允许退货后，１５工作日内由财务为您退款！</p>
 			<div class="cr-step-info-btns">
@@ -796,9 +796,9 @@
 			</div>
 		</div>
 		<div class="cr-step-info">
-			<h3 class="cr-step-level-tle">问题描述</h3>
+			<h3 class="cr-step-level-tle">问题描述<span class="cr-step-info-err">您所填写的文字已超过上限，请删除相应的文字！</span></h3>
 			<div class="cr-step-issue-tta-wrapper">
-				<textarea name="" class="cr-step-issue-tta" id="" cols="30" rows="10"></textarea>
+				<textarea name="" class="cr-step-issue-tta" id="cr-step-issue-box" cols="30" rows="10"></textarea>
 				<span class="cr-step-issue-font-num">0/500</span>
 			</div>
 			<h3 class="cr-step-level-tle has-tle-icon">上传照片<span class="cr-step-le-desc">（质量不超过１Ｍ，图片不超过５张）</span></h3>
@@ -814,7 +814,7 @@
 			</div>
 		</div>
 		<div class="cr-step-info border-none">
-			<h3 class="cr-step-level-tle">联系方式</h3>
+			<h3 class="cr-step-level-tle">联系方式<span class="cr-step-info-tel-err">请输入11位数字的手机号！</span></h3>
 			<div class="cr-step-contact-type">
 				<span class="cr-step-contact-type-name">手机号 :</span>
 				<input type="text" class="cr-step-contact-input">
