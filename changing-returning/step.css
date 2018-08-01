@@ -416,6 +416,9 @@
 #up-load-img-win .cr-step-win-content {
 	margin-top: -260px;
 }
+#look-big-img-win .cr-step-win-content {
+	margin-top: -286px;
+}
 .cr-step-win-tle {
 	line-height: 96px;
 	padding-left: 2px;
@@ -532,4 +535,67 @@
 }
 .upload-files-del-btn {
 	cursor: pointer;
+}
+.big-img-wrapper {
+	position: relative;
+	height: 400px; 
+	overflow: hidden;
+}
+.big-img-list {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: 1;
+}
+.big-img-item {
+	float: left;
+	width: 750px;
+	height: 100%;
+	text-align: center;
+}
+.big-img-item img {
+	margin: 0 auto;
+}
+.big-img-prev {
+	display: block;
+	position: absolute;
+	left: 50px;
+	top: 50%;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../hand-custom/images/prev-n.png);
+	z-index: 10;
+}
+.big-img-next {
+	display: block;
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../hand-custom/images/next-n.png);
+	z-index: 10;
+}
+.big-img-prev.has-more {
+	background-image: url(../hand-custom/images/prev-y.png);
+	cursor: pointer;
+}
+.big-img-next.has-more {
+	background-image: url(../hand-custom/images/next-y.png);
+	cursor: pointer;
+}
+.curent-index-num {
+	display: block;
+	padding-left: 2px;
+	line-height: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
 }

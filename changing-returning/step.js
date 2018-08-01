@@ -90,9 +90,76 @@ function lookBigImg () {
 	})
 }
 
+var cutNav = {
+	len: $('.big-img-list').find('.big-img-item').length,
+	idx: 0,
+	_h: 750,
+	basics: function () {
+		cutNav.btnStatus();
+		var _h = 750;
+		$(".big-img-list").animate({
+			left: '-' + cutNav.idx * cutNav._h + 'px'
+		}, 500);
+	},
+	initStatus: function () {
+		var _h = 750;
+		$(".big-img-list").animate({
+			'width': cutNav.len * cutNav._h + 'px'
+		});
+	},
+	prev: function () {
+		cutNav.idx--;
+		if (cutNav.idx <= 0) {
+			cutNav.idx = 0;
+		}
+		cutNav.basics();
+	},
+	next: function () {
+		cutNav.idx++;
+		if (cutNav.idx >= cutNav.len - 1) {
+			cutNav.idx = cutNav.len - 1;
+		}
+		cutNav.basics();
+	},
+	btnStatus: function () {
+		var curIdx = '0' + (cutNav.idx - 0 + 1);
+		var zIdx = '0' + cutNav.len;
+		$('.curent-index-num').html(curIdx + '/' + zIdx);
+		$('.big-img-prev, .big-img-next').addClass('has-more');
+		if (cutNav.idx <= 0) {
+			$('.big-img-prev, .big-img-next').removeClass('has-more');
+			if (cutNav.len > 1) {
+				$('.big-img-next').addClass('has-more');
+			}
+		}
+		if (cutNav.idx >= cutNav.len - 1) {
+			$('.big-img-prev, .big-img-next').removeClass('has-more');
+			if (cutNav.len > 1) {
+				$('.big-img-prev').addClass('has-more');
+			}
+		}
+	}
+};
+function cutImgNav () {
+	// 切换索引图
+	$('.big-img-prev').on('click', cutNav.prev);
+	$('.big-img-next').on('click', cutNav.next);
+	var hr;
+	cutNav.basics();
+	cutNav.initStatus();
+}
+
+function goToSlide (num) {
+	cutNav.idx = num;
+	cutNav.basics();
+	cutNav.initStatus();
+}
+
 $(function () {
 	selType();
 	setIssue();
 	telVerity();
 	lookBigImg();
+	cutImgNav();
+	goToSlide(3);
 })
