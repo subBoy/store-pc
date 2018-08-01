@@ -81,8 +81,18 @@ function autoHide () {
 	sh = setInterval(to, 1000);
 }
 
+function lookBigImg () {
+	$('.look-big-img-btn').on('click', function () {
+		$('#look-big-img-win').fadeIn();
+	})
+	$('.win-close-btn').on('click', function () {
+		$('#look-big-img-win').fadeOut();
+	})
+}
+
 $(function () {
 	selType();
 	setIssue();
 	telVerity();
+	lookBigImg();
 })

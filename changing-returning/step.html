@@ -801,16 +801,16 @@
 				<textarea name="" class="cr-step-issue-tta" id="cr-step-issue-box" cols="30" rows="10"></textarea>
 				<span class="cr-step-issue-font-num">0/500</span>
 			</div>
-			<h3 class="cr-step-level-tle has-tle-icon">上传照片<span class="cr-step-le-desc">（质量不超过１Ｍ，图片不超过５张）</span></h3>
+			<h3 class="cr-step-level-tle has-tle-icon">上传照片<span class="cr-step-le-desc">（质量不超过１Ｍ，图片不超过５张）</span><span class="look-big-img-btn set-animation in-block">查看大图</span><span class="up-load-img-err-txt">您已上传5张图片，不能再多了！</span></h3>
 			<ul class="up-load-img-list">
-				<li class="up-load-img-item"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+				<li class="up-load-img-item" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+				<li class="up-load-img-item" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+				<li class="up-load-img-item" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+				<li class="up-load-img-item" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+				<li class="up-load-img-item" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
 			</ul>
 			<div class="cr-step-info-btns">
-				<span class="cr-step-btn in-block global-btn-styl">开始上传</span>
+				<span class="cr-step-btn in-block global-btn-styl" id="start-uploading-btn">开始上传</span>
 			</div>
 		</div>
 		<div class="cr-step-info border-none">
@@ -877,12 +877,12 @@
 	</div>
 	<!-- 弹窗区域 -->
 	<!-- 上传图片弹窗 -->
-	<div class="cr-step-win" style="display: block;" id="up-load-img-win">
+	<div class="cr-step-win" id="up-load-img-win">
 		<em class="win-bg"></em>
 		<div class="cr-step-win-content">
-			<div class="cr-step-win-tle">上传图片</div>
+			<div class="cr-step-win-tle">上传图片<span class="cr-step-win-err"></span></div>
 			<span class="win-close-btn"></span>
-			<div class="up-load-img-ct-wrapper">
+			<div class="up-load-img-ct-wrapper" id="up-load-area">
 				<div class="not-img-wrapper">
 					<div class="cr-step-win-icon">
 						<img src="../public/images/uploadimg-win.png" width="100%">
@@ -900,6 +900,15 @@
 		</div>
 	</div>
 	<!-- 查看大图弹窗 -->
+	<div class="cr-step-win" id="look-big-img-win">
+		<em class="win-bg"></em>
+		<div class="cr-step-win-content">
+			<div class="cr-step-win-tle">查看大图</div>
+			<span class="win-close-btn"></span>
+			
+			<div class="up-load-img-btn-wrapper"></div>
+		</div>
+	</div>
 	<!-- 提交资料成功弹窗 -->
 	<div class="cr-step-win" id="submit-success-win">
 		<em class="win-bg"></em>
@@ -916,5 +925,6 @@
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="./step.js"></script>
+	<script src="../base/dragToUpload/drag.js"></script>
 </body>
 </html>

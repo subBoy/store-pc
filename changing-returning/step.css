@@ -109,6 +109,34 @@
 	font-weight: bold;
 	letter-spacing: 2px;
 }
+.look-big-img-btn {
+	display: none;
+	position: absolute;
+	left: 155px;
+	top: 35px;
+	padding: 0 10px 0 12px;
+	line-height: 16px;
+	border: 1px solid #8d8d8d;
+	border-radius: 8px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.up-load-img-err-txt {
+	display: none;
+	position: absolute;
+	left: 255px;
+	top: 35px;
+	line-height: 16px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	color: #b3494d;
+}
+.look-big-img-btn:hover {
+	color: #b3494d;
+	border-color: #b3494d;
+}
 .cr-step-info-err, .cr-step-info-tel-err {
 	display: none;
 	position: absolute;
@@ -308,7 +336,9 @@
 	margin: 25px 20px 0 0;
 	width: 60px;
 	height: 60px;
+	background-color: #eff2f7;
 	overflow: hidden;
+	cursor: pointer;
 }
 .cr-step-contact-type {
 	position: relative;
@@ -395,9 +425,20 @@
 	text-align: center;
 	border-bottom: 3px solid #393939;
 }
-#up-load-img-win .cr-step-win-tle {
+#up-load-img-win .cr-step-win-tle, #look-big-img-win .cr-step-win-tle {
+	position: relative;
 	text-align: left;
 	padding-left: 50px;
+}
+.cr-step-win-err {
+	display: none;
+	position: absolute;
+	left: 190px;
+	top: 42px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #b3494d;
+	letter-spacing: 2px;
 }
 .cr-step-win-icon {
 	margin: 40px auto 20px;
@@ -440,7 +481,11 @@
 	text-align: center;
 }
 .up-load-img-btn.global-btn-styl {
+	background-color: #000;
 	cursor: pointer;
+}
+.up-load-img-btn.global-btn-styl:hover {
+	background-color: #262626;
 }
 .win-close-btn {
 	display: block;
@@ -452,5 +497,39 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-image: url(../public/images/close.png);
+	cursor: pointer;
+}
+.has-img-wrapper {
+	display: none;
+	padding-top: 20px;
+}
+.has-img-wrapper p {
+	padding: 5px 10px;
+	font-size: 0;
+}
+.upload-files-name, .upload-files-time, .upload-files-size, .upload-files-del-btn {
+	line-height: 20px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center
+}
+.upload-files-name {
+	width: 30%;
+	text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.upload-files-time {
+	width: 30%;
+}
+.upload-files-size {
+	width: 20%;
+}
+.upload-files-del-btn {
+	width: 20%;
+}
+.upload-files-del-btn:hover {
+	color: #b3494d;
+}
+.upload-files-del-btn {
 	cursor: pointer;
 }
