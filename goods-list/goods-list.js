@@ -61,7 +61,8 @@ function spItemSH () {
 		$('.gl-ct-tle-list').slideUp();
 		$(this).addClass('isShow');
 	})
-	$('.gl-sort-item').on('click', function () {
+	$('.gl-sort-item').on('click', function (e) {
+		e.stopPropagation();
 		var _val = $(this).html();
 		$('.gl-sort-view').html(_val);
 		$('.gl-sort-styles').slideUp();

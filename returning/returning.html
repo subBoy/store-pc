@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../public/reset.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./step.css">
+<link rel="stylesheet" href="../changing-returning/step.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -719,11 +719,11 @@
 				</span>
 				<span class="cr-step-item cr-order-issue">
 					<span class="cr-step-icon"></span>
-					<span class="cr-step-txt" id="cr-step-name">1.问题描述</span>
+					<span class="cr-step-txt" id="cr-step-name"></span>
 				</span>
 				<span class="cr-step-item cr-order-stated">
 					<span class="cr-step-icon"></span>
-					<span class="cr-step-txt">完成退换货</span>
+					<span class="cr-step-txt" id="cr-order-status-txt">完成退换货</span>
 				</span>
 			</div>
 		</div>
@@ -731,7 +731,64 @@
 			<h3 class="cr-step-level-tle">已完成订单：A10001</h3>
 			<p class="cr-step-info-txt">下单时间：2017-09-11 17:17:54</p>
 			<p class="cr-step-info-txt">商品金额：¥2560.00</p>
-			<div class="cr-step-info-issue-desc" id="step-issue-desc">问题描述信息填写</div>
+			<div class="cr-step-info-issue-desc" id="step-issue-desc"></div>
+		</div>
+		<div class="cr-step-info" id="step-3-reject">
+			<h3 class="cr-step-level-tle styl-clr">在线审核驳回理由<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="return-policy-link">退换货条款</a></h3>
+			<p class="cr-stepes-desc-issue">根据退货规定第一项，第一条规定：大多发生的发达时的发达司法所大是大非大苏打，图1~图2不符合规定，驳回退换货，订单关闭</p>
+			<h3 class="cr-step-level-tle styl-psn has-tle-icon">照片<span class="look-big-img-btn set-animation in-block" style="display: block;">查看大图</span></h3>
+			<ul class="up-load-img-list str-bb">
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-1.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-2.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-3.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-4.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/sp-img-1.jpg" width="100%"></li>
+			</ul>
+		</div>
+		<div class="cr-step-info" id="step-3-pass">
+			<h3 class="cr-step-level-tle styl-clr">退货地址</h3>
+			<p class="stpps-3-desc styl-fwb">请将退货或换货商品与退换货清单一起邮寄到以下地址</p>
+			<p class="stpps-3-desc">本公司拒收以平邮、挂号信及到付形式的快递所寄回的退件，</p>
+			<p class="stpps-3-desc">敬请谅解！</p>
+			<div class="stpps-3-close-address">
+				<p class="stpps-3-ceas">
+					<span class="stpps-3-ceas-name in-block">收货人：</span>
+					<span class="stpps-3-ceas-txt in-block">邱帆  <span class="stpps-3-ceas-tel">13552709924</span></span>
+				</p>
+				<p class="stpps-3-ceas">
+					<span class="stpps-3-ceas-name in-block">邮编：</span>
+					<span class="stpps-3-ceas-txt in-block">101111</span>
+				</p>
+				<p class="stpps-3-ceas">
+					<span class="stpps-3-ceas-name in-block">配送地址：</span>
+					<span class="stpps-3-ceas-txt in-block">北京市通州区果园新华联家园42号311</span>
+				</p>
+			</div>
+		</div>
+		<div class="cr-step-info" id="step-3-pass-2">
+			<h3 class="cr-step-level-tle styl-clr">填写物流</h3>
+			<div class="stpps-3-input-wrapper">
+				<div class="stpps-3-select-box">
+					<span class="stpps-3-select-view">物流选择</span>
+					<ul class="stpps-3-select-list">
+						<li class="stpps-3-select-item">请选择</li>
+						<li class="stpps-3-select-item">顺丰快递</li>
+						<li class="stpps-3-select-item">中通快递</li>
+						<li class="stpps-3-select-item">天天快递</li>
+						<li class="stpps-3-select-item">顺丰快递</li>
+						<li class="stpps-3-select-item">中通快递</li>
+						<li class="stpps-3-select-item">天天快递</li>
+						<li class="stpps-3-select-item">顺丰快递</li>
+						<li class="stpps-3-select-item">中通快递</li>
+						<li class="stpps-3-select-item">天天快递</li>
+					</ul>
+				</div>
+				<div class="stpps-3-input-box">
+					<span class="stpps-3-input-name">物流单号 :</span>
+					<input type="text" class="stpps-3-input-ctr">
+				</div>
+				<p class="stpps-3-input-desc">商品退回验货组审核后，我们将于一周内为您重新发货！</p>
+			</div>
 		</div>
 		<div class="cr-step-info cr-sp-info">
 			<h3 class="cr-step-level-tle">商品信息</h3>
@@ -783,46 +840,29 @@
 		</div>
 		<div class="cr-step-info">
 			<h3 class="cr-step-level-tle">服务类型</h3>
-			<div class="cr-step-info-btns">
-				<span class="cr-step-btn sel-server-type-btn seled in-block" serverType='0'>退货</span>
-				<span class="cr-step-btn sel-server-type-btn in-block" serverType='1'>换货</span>
-			</div>
+			<p class="cr-stepes-desc">退货</p>
 		</div>
 		<div class="cr-step-info" id="isReturnType">
 			<h3 class="cr-step-level-tle">退款方式</h3>
-			<p class="refund-type-desc">经售后组确认允许退货后，１５工作日内由财务为您退款！</p>
-			<div class="cr-step-info-btns">
-				<span class="cr-step-btn seled in-block">原支付地返还</span>
-			</div>
+			<p class="cr-stepes-desc">原支付地返还</p>
 		</div>
-		<div class="cr-step-info">
+		<div class="cr-step-info" id="look-my-submit">
 			<h3 class="cr-step-level-tle">问题描述<span class="cr-step-info-err">您所填写的文字已超过上限，请删除相应的文字！</span></h3>
-			<div class="cr-step-issue-tta-wrapper">
-				<textarea name="" class="cr-step-issue-tta" id="cr-step-issue-box" cols="30" rows="10"></textarea>
-				<span class="cr-step-issue-font-num">0/500</span>
-			</div>
-			<h3 class="cr-step-level-tle has-tle-icon">上传照片<span class="cr-step-le-desc">（质量不超过１Ｍ，图片不超过５张）</span><span class="look-big-img-btn set-animation in-block">查看大图</span><span class="up-load-img-err-txt">您已上传5张图片，不能再多了！</span></h3>
-			<ul class="up-load-img-list">
-				<li class="up-load-img-item up-load-unit-img" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item up-load-unit-img" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item up-load-unit-img" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item up-load-unit-img" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
-				<li class="up-load-img-item up-load-unit-img" status="0"><img src="../public/images/uploadimg-bg.png" width="100%"></li>
+			<p class="cr-stepes-desc-issue">详情如图，巴拉巴拉万事达卡撒谎的合法速读法二二热热额外观温柔给我如果微软二万人热热人物额外情如图，巴拉巴拉万事达卡撒谎的合法速读法二二热热额外观温柔给我如果微软二万人热热人物额外</p>
+			<h3 class="cr-step-level-tle styl-psn has-tle-icon">照片<span class="look-big-img-btn set-animation in-block" style="display: block;">查看大图</span></h3>
+			<ul class="up-load-img-list str-bb">
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-1.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-1.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-3.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/dl-img-4.jpg" width="100%"></li>
+				<li class="up-load-img-item up-load-small-img" status="1"><img src="../developerImg/sp-img-1.jpg" width="100%"></li>
 			</ul>
-			<div class="cr-step-info-btns">
-				<span class="cr-step-btn in-block global-btn-styl" id="start-uploading-btn">开始上传</span>
-			</div>
 		</div>
 		<div class="cr-step-info border-none">
-			<h3 class="cr-step-level-tle">联系方式<span class="cr-step-info-tel-err">请输入11位数字的手机号！</span></h3>
-			<div class="cr-step-contact-type">
-				<span class="cr-step-contact-type-name">手机号 :</span>
-				<input type="text" class="cr-step-contact-input">
-			</div>
-			<p class="contact-type-desc">RACK ROD售后验货组会针对您提交的资料进行判定，符号退换货要求的，</p>
-			<p class="contact-type-desc">我们客服会电话联系您安排退换货！</p>
-			<div class="cr-post-data-btn global-btn-styl" id="cr-post-data-btn">提交资料</div>
+			<h3 class="cr-step-level-tle">联系方式</h3>
+			<p class="cr-stepes-desc">手机号 :13000000000</p>
 		</div>
+		<div style="height: 80px;"></div>
 	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
@@ -876,29 +916,6 @@
 		</div>
 	</div>
 	<!-- 弹窗区域 -->
-	<!-- 上传图片弹窗 -->
-	<div class="cr-step-win" id="up-load-img-win">
-		<em class="win-bg"></em>
-		<div class="cr-step-win-content">
-			<div class="cr-step-win-tle">上传图片<span class="cr-step-win-err"></span></div>
-			<span class="win-close-btn" id="close-up-load-img-btn"></span>
-			<div class="up-load-img-ct-wrapper" id="up-load-area">
-				<div class="not-img-wrapper">
-					<div class="cr-step-win-icon">
-						<img src="../public/images/uploadimg-win.png" width="100%">
-					</div>
-					<div class="cr-step-win-desc-wrapper">
-						<p class="cr-step-win-desc">将文件拖放到此窗口即可上传</p>
-						<p class="cr-step-win-desc">仅支持1M以内jpg、jpeg、gif、png格式图片上传</p>
-					</div>
-				</div>
-				<div class="has-img-wrapper">
-					
-				</div>
-			</div>
-			<div class="up-load-img-btn-wrapper"><span class="up-load-img-btn">确认上传</span></div>
-		</div>
-	</div>
 	<!-- 查看大图弹窗 -->
 	<div class="cr-step-win" id="look-big-img-win">
 		<em class="win-bg"></em>
@@ -908,27 +925,39 @@
 			<div class="big-img-wrapper">
 				<span class="big-img-prev"></span>
 				<span class="big-img-next"></span>
-				<ul class="big-img-list"></ul>
+				<ul class="big-img-list">
+					<li class="big-img-item"><img src="../developerImg/dl-img-1.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-1.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-3.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-4.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/sp-img-1.jpg" height="100%"></li>
+				</ul>
 			</div>
 			<div class="up-load-img-btn-wrapper"><span class="curent-index-num">01/05</span></div>
 		</div>
 	</div>
-	<!-- 提交资料成功弹窗 -->
-	<div class="cr-step-win" id="submit-success-win">
+	<!-- 驳回大图弹窗 -->
+	<div class="cr-step-win" id="reject-big-img-win">
 		<em class="win-bg"></em>
 		<div class="cr-step-win-content">
-			<div class="cr-step-win-tle">资料提交成功！</div>
-			<div class="cr-step-win-icon">
-				<img src="../public/images/note.png" width="100%">
+			<div class="cr-step-win-tle">查看大图</div>
+			<span class="win-close-btn"></span>
+			<div class="big-img-wrapper">
+				<span class="big-img-prev"></span>
+				<span class="big-img-next"></span>
+				<ul class="big-img-list">
+					<li class="big-img-item"><img src="../developerImg/dl-img-1.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-2.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-3.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/dl-img-4.jpg" height="100%"></li>
+					<li class="big-img-item"><img src="../developerImg/sp-img-1.jpg" height="100%"></li>
+				</ul>
 			</div>
-			<div class="cr-step-win-desc-wrapper">
-				<p class="cr-step-win-desc">资料提交成功后，售后组3个工作日内处理结果！</p>
-				<p class="cr-step-win-desc"><span class="cr-step-win-time">3</span>s后返回个人中心页面！</p>
-			</div>
+			<div class="up-load-img-btn-wrapper"><span class="curent-index-num">01/05</span></div>
 		</div>
 	</div>
 	<script src="../public/js/public.js"></script>
-	<script src="./step.js"></script>
-	<script src="../base/dragUpload/drag.js"></script>
+	<script src="../changing-returning/step.js"></script>
+	<script src="./stepes.js"></script>
 </body>
 </html>

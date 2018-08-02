@@ -294,7 +294,7 @@ $(function () {
 	navHighlight(); // 设置导航高亮
 	checkedItem();
 	$('.global-body').on('click', function () {
-		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list').slideUp();
+		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list').slideUp();
 		$('.is-show').removeClass('is-show');
 	})
 })
