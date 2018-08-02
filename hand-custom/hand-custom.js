@@ -44,13 +44,6 @@ var cutNav = {
 	basics: function () {
 		cutNav.btnStatus();
 		var _h = $('.hcpt-slide-wrapper').width();
-		// var boxlen = Math.ceil(cutNav.len / 5);
-		// $(".hcpt-slide-ctr").animate({
-		// 	'width': boxlen * _h + 'px'
-		// });
-		// $(".hcpt-slide").animate({
-		// 	'width': _h / 5 + 'px'
-		// });
 		$(".hcpt-slide-ctr").animate({
 			left: '-' + cutNav.idx * _h + 'px'
 		}, 500);

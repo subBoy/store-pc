@@ -100,8 +100,17 @@ function lookBigImg () {
 		$('#reject-big-img-win').fadeIn();
 		goToSlide2(idx);
 	})
+	$('#step-5-pass').find('.look-big-img-btn').on('click', function () {
+		$('#step-5-pass-win').fadeIn();
+		goToSlide3(0);
+	})
+	$('#step-5-pass').find('.up-load-small-img').on('click', function () {
+		var idx = $(this).index();
+		$('#step-5-pass-win').fadeIn();
+		goToSlide3(idx);
+	})
 	$('.win-close-btn').on('click', function () {
-		$('#look-big-img-win, #reject-big-img-win').fadeOut();
+		$('#look-big-img-win, #reject-big-img-win, #step-5-pass-win').fadeOut();
 	})
 }
 
@@ -198,6 +207,24 @@ function goToSlide2 (num) {
 	cutNav.basics($('#reject-big-img-win'), true);
 	cutNav.initStatus();
 }
+
+function cutImgNav3 () {
+	// 切换退款截图索引图
+	$('#step-5-pass-win').find('.big-img-prev').on('click', function () {
+		cutNav.prev($('#step-5-pass-win'));
+	});
+	$('#step-5-pass-win').find('.big-img-next').on('click', function () {
+		cutNav.next($('#step-5-pass-win'));
+	});
+	cutNav.basics($('#step-5-pass-win'));
+	cutNav.initStatus();
+}
+
+function goToSlide3 (num) {
+	cutNav.idx = num;
+	cutNav.basics($('#step-5-pass-win'), true);
+	cutNav.initStatus();
+}
 $(function () {
 	selType();
 	setIssue();
@@ -205,4 +232,5 @@ $(function () {
 	lookBigImg();
 	cutImgNav();
 	cutImgNav2();
+	cutImgNav3();
 })
