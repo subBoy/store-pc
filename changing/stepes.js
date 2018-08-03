@@ -27,15 +27,15 @@ function stepes () {
 	}
 	if (step == '4') {
 		$('#cr-step-name').html('4.实物审核中');
-		$('#step-issue-desc').html('退货组：审核中');
+		$('#step-issue-desc').html('换货组：审核中');
 		$('#step-4-pass').show();
 		return;
 	}
 	if (step == '5') {
-		$('#cr-step-name').html('5.退款中');
-		$('#step-issue-desc').html('已审核，退款中');
+		$('#cr-step-name').html('5.换货中');
+		$('#step-issue-desc').html('已审核，换货中');
 		$('.step-6-pass-only').remove();
-		$('#step-4-pass, #step-5-pass').show();
+		$('#step-4-pass, #step-changing-5-pass').show();
 		return;
 	}
 	if (step == '01') {
@@ -53,10 +53,8 @@ function stepes () {
 		$('#cr-order-status-txt').parent().addClass('finish-order-stated');
 		$('#step-6-pass').addClass('step-6-pass');
 		$('#step-6-pass').removeClass('border-none');
-		$('#step-5-pass').remove();
-		$('#step-5-pass, #step-4-pass').show();
-		lookBigImg();
-		cutImgNav3();
+		$('#step-changing-5-pass').remove();
+		$('#step-changing-5-pass, #step-4-pass').show();
 		return;
 	}
 }
@@ -105,7 +103,7 @@ function submitWl () {
 
 	$('.step-5-pass-btn').on('click', function () {
 		$('#success-win-txt').html('确认成功！');
-		$('#success-win-desc').html('您的退单已完成，为您造成不便我们深感歉意！');
+		$('#success-win-desc').html('您的换单已完成，为您造成不便我们深感歉意！');
 		$('#submit-success-win').fadeIn();
 		setTimeout(function () {
 			autoHide();

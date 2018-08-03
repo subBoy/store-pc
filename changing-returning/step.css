@@ -641,7 +641,7 @@
 .stpps-3-desc {
 	line-height: 32px;
 	font-size: 16px;
-	letter-spacing: 2px; 
+	letter-spacing: 1px; 
 }
 .stpps-4-desc {
 	line-height: 30px;
@@ -813,4 +813,13 @@
 }
 .step-5-desc {
 	padding: 12px 0 25px;
+}
+.step-6-pass {
+	padding-bottom: 15px;
+}
+.step-changing-5 {
+	padding-bottom: 10px;
+}
+#step-changing-5-pass {
+	display: none;
 }

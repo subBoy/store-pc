@@ -14,9 +14,12 @@ function operBtn () {
 
 function confirmCollection () {
 	$('.ceor-imio-oper-btn').on('click', function () {
-		console.log(0);
 		var _this = $(this);
 		var thisPar = _this.parent();
+		var hrefBox = _this.parent().parent().parent().parent().find('.ceor-detail');
+		var _href = hrefBox.attr('href');
+		_href = _href.substr(0, _href.length - 1) + '6';
+		hrefBox.attr('href', _href);
 		thisPar.siblings('.ceor-imio-oper').each(function () {
 			var imioStep = $(this).attr('step');
 			if (imioStep === '6') {
