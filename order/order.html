@@ -9,9 +9,10 @@
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
 <link rel="stylesheet" href="../user-center/user.css">
+<link rel="stylesheet" href="../close-order/close-order.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./close-order.css">
+<link rel="stylesheet" href="./order.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -793,36 +794,34 @@
 			</div>
 		</div>
 		<div class="user-content-wrapper">
-			<div class="ucw-title-wrapper">我的退单
-				<span class="ucw-title-desc">注：退货前请仔细阅读<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="rnpy-link">退货说明</a>，不在条款内我们拒绝接受退货！</span>
-			</div>
+			<div class="ucw-title-wrapper">我的订单</div>
 			<div class="ucw-tab-wrapper">
 				<a class="ucw-tab-item item-br in-block ident" ident="allOrderC">全部订单<span class="kity-num">6</span></a>
-				<a class="ucw-tab-item item-br in-block" ident="cleOrder">退货单<span class="kity-num">2</span></a>
-				<a class="ucw-tab-item in-block" ident="exchangeOrder">换货单<span class="kity-num">0</span></a>
+				<a class="ucw-tab-item item-br in-block" ident="cleOrder">待付款<span class="kity-num">2</span></a>
+				<a class="ucw-tab-item in-block" ident="exchangeOrder">待收货<span class="kity-num">0</span></a>
 				<span class="close-order-code-query">
 					<input type="text" class="close-order-code-input fb" value="输入订单号">
 					<span class="close-order-code-btn"></span>
 				</span>
 			</div>
 			<!-- step:
-					00 驳回 > 在线审核不通过
-					01 驳回 > 退货组审核不通过
-					2 在线审核中
-					3 物流信息填写
-					4 退换货中
-					5 已审核，退款中，已换货
-					6 已完成
+					1 待付款
+					2 待发货
+					3 待收货
+					4 已签收
+					5 已完成
+					6 支付过期
+					7 订单取消
 			-->
 			<!-- 全部订单 -->
 			<div class="ucw-tab-content" ident="allOrderC">
 				<div class="sc-has-goods-wrapper">
 					<ul class="sc-goods-list-wrapper close-order-list-wrapper">
-						<li class="ceor-item" step="2">
+						<li class="ceor-item" step="1">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=2" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=1" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -865,171 +864,54 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="2">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=2" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
+										<h3 class="ceor-imio-status">待收货</h3>
 										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤4 -->
+									<div class="ceor-imio-oper cr-info-vm" step="4">
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤5 -->
+									<div class="ceor-imio-oper cr-info-vm" step="5">
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
-					</ul>
-					<div class="sc-goods-total-oper">
-						<!-- 只有一页 -->
-						<div class="global-paging">
-							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-						<!-- 两页以上 -->
-						<div class="global-paging" style="display: none;">
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">上一页</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">1</a>
-								</li>
-								<li class="global-paging-item now-page">
-									<a href="" class="global-paging-item-link">2</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">3</a>
-								</li>
-								<!-- 中间省略模块 -->
-								<li class="global-paging-item">
-									<a href="#" class="global-paging-item-link omit-wrapper"></a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">12</a>
-								</li>
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="sc-not-goods-wrapper" style="display: none;">
-					<div class="not-air-box">
-						<img src="../public/images/air-cart.png" class="not-air-img">
-						<p class="not-air-desc">您还没有退、换单信息</p>
-						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
-					</div>
-				</div>
-			</div>
-			<!-- 退货单 -->
-			<div class="ucw-tab-content" ident="cleOrder" style="display: none;">
-				<div class="sc-has-goods-wrapper">
-					<ul class="sc-goods-list-wrapper close-order-list-wrapper">
 						<li class="ceor-item" step="2">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=2" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=2" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1051,53 +933,75 @@
 									<div class="ceor-imio-num">1</div>
 									<div class="ceor-imio-price">RMB:225</div>
 								</div>
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li class="ceor-item" step="3">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=3" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=3" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1119,72 +1023,56 @@
 									<div class="ceor-imio-num">1</div>
 									<div class="ceor-imio-price">RMB:225</div>
 								</div>
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li class="ceor-item" step="4">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=4" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=4" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1208,51 +1096,54 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li class="ceor-item" step="5">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=5" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=5" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1276,51 +1167,54 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li class="ceor-item" step="6">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=6" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=6" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1344,51 +1238,54 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li class="ceor-item" step="00">
+						<li class="ceor-item" step="7">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=00" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=7" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1412,110 +1309,45 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="01">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../returning/returning.html?step=01" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../returning/returning.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">退货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">退货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已退款</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收款</span>
-										<a href="../returning/returning.html?step=5&site=dkjl" class="ceor-imio-operlink">打款记录</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">退货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">退货已驳回</h3>
-										<a href="../returning/returning.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
@@ -1563,20 +1395,20 @@
 				<div class="sc-not-goods-wrapper" style="display: none;">
 					<div class="not-air-box">
 						<img src="../public/images/air-cart.png" class="not-air-img">
-						<p class="not-air-desc">您还没有退单信息</p>
+						<p class="not-air-desc">您还没有订单信息</p>
 						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
 					</div>
 				</div>
 			</div>
-			<!-- 换货单 -->
-			<div class="ucw-tab-content" ident="exchangeOrder" style="display: none;">
+			<!-- 待付款 -->
+			<div class="ucw-tab-content" ident="cleOrder" style="display: none">
 				<div class="sc-has-goods-wrapper">
 					<ul class="sc-goods-list-wrapper close-order-list-wrapper">
-						<li class="ceor-item" step="2">
+						<li class="ceor-item" step="1">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=2" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=1" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1598,53 +1430,307 @@
 									<div class="ceor-imio-num">1</div>
 									<div class="ceor-imio-price">RMB:225</div>
 								</div>
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+								</div>
+							</div>
+						</li>
+						<li class="ceor-item" step="1">
+							<div class="ceor-tle">
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
+								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
+								<a href="../order-detail/order-detail.html?step=2" class="ceor-detail in-block">订单详情</a>
+							</div>
+							<div class="ceor-info">
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
+								<div class="ceor-info-oper-wrapper">
+									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
+									<!-- 步骤2 -->
+									<div class="ceor-imio-oper cr-info-vm" step="2">
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
+									</div>
+									<!-- 步骤3 -->
+									<div class="ceor-imio-oper cr-info-vm" step="3">
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤4 -->
+									<div class="ceor-imio-oper cr-info-vm" step="4">
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤5 -->
+									<div class="ceor-imio-oper cr-info-vm" step="5">
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
+									</div>
+									<!-- 步骤6 -->
+									<div class="ceor-imio-oper cr-info-vm" step="6">
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
+									</div>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="sc-goods-total-oper">
+						<!-- 只有一页 -->
+						<div class="global-paging">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging" style="display: none;">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/air-cart.png" class="not-air-img">
+						<p class="not-air-desc">您还没有待付款订单信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
+					</div>
+				</div>
+			</div>
+			<!-- 待收货 -->
+			<div class="ucw-tab-content" ident="exchangeOrder" style="display: none">
+				<div class="sc-has-goods-wrapper">
+					<ul class="sc-goods-list-wrapper close-order-list-wrapper">
+						<li class="ceor-item" step="3">
+							<div class="ceor-tle">
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
+								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
+								<a href="../order-detail/order-detail.html?step=1" class="ceor-detail in-block">订单详情</a>
+							</div>
+							<div class="ceor-info">
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
+								<div class="ceor-info-item-wrapper">
+									<div class="ceor-imio-box">
+										<a class="ceor-imio-img">
+											<img src="../developerImg/sp-img.jpg" width="100%">
+										</a>
+										<p class="ceor-imio-name">
+											<span class="ceor-imio-tle in-block">短袖</span>
+											<span class="ceor-imio-hr in-block"></span>
+											<span class="ceor-imio-tle in-block">RACK ROD</span>
+										</p>
+										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+										<p class="ceor-imio-tab">
+											<span class="ceor-imio-table in-block">S / 白色</span>
+											<span class="ceor-imio-table in-block">货号：A100001</span>
+										</p>
+									</div>
+									<div class="ceor-imio-num">1</div>
+									<div class="ceor-imio-price">RMB:225</div>
+								</div>
+								<div class="ceor-info-oper-wrapper">
+									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
+									<!-- 步骤2 -->
+									<div class="ceor-imio-oper cr-info-vm" step="2">
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
+									</div>
+									<!-- 步骤3 -->
+									<div class="ceor-imio-oper cr-info-vm" step="3">
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤4 -->
+									<div class="ceor-imio-oper cr-info-vm" step="4">
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+									</div>
+									<!-- 步骤5 -->
+									<div class="ceor-imio-oper cr-info-vm" step="5">
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
+									</div>
+									<!-- 步骤6 -->
+									<div class="ceor-imio-oper cr-info-vm" step="6">
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
+									</div>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<li class="ceor-item" step="3">
 							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
+								<span class="ceor-tle-txt bor-rig in-block">订单号：201812132123</span>
 								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=3" class="ceor-detail in-block">订单详情</a>
+								<a href="../order-detail/order-detail.html?step=2" class="ceor-detail in-block">订单详情</a>
 							</div>
 							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
@@ -1666,55 +1752,6 @@
 									<div class="ceor-imio-num">1</div>
 									<div class="ceor-imio-price">RMB:225</div>
 								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="4">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=4" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
 								<div class="ceor-info-item-wrapper">
 									<div class="ceor-imio-box">
 										<a class="ceor-imio-img">
@@ -1736,314 +1773,45 @@
 								</div>
 								<div class="ceor-info-oper-wrapper">
 									<!-- 正常流程 -->
+									<!-- 步骤1 -->
+									<div class="ceor-imio-oper cr-info-vm" step="1">
+										<h3 class="ceor-imio-status">待付款</h3>
+										<a href="../order-detail/order-detail.html?step=113" class="ceor-imio-oper-link global-btn-styl">前去付款</a>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+									</div>
 									<!-- 步骤2 -->
 									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
+										<h3 class="ceor-imio-status">待发货</h3>
+										<a class="ceor-imio-operlink">已付款</a>
 									</div>
 									<!-- 步骤3 -->
 									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
+										<h3 class="ceor-imio-status">待收货</h3>
+										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤4 -->
 									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
+										<h3 class="ceor-imio-status">已签收</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
 									</div>
 									<!-- 步骤5 -->
 									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
+										<h3 class="ceor-imio-status">已完成</h3>
+										<a class="ceor-imio-operlink order-wuliu">查看物流</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 									<!-- 步骤6 -->
 									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+										<h3 class="ceor-imio-status">支付过期</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="5">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=5" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="6">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=6" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="00">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=00" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="ceor-item" step="01">
-							<div class="ceor-tle">
-								<span class="ceor-tle-txt bor-rig in-block">退单号：201812132123</span>
-								<span class="ceor-tle-txt in-block">下单时间：2017/06/08 15:00 </span>
-								<a href="../changing/changing.html?step=01" class="ceor-detail in-block">订单详情</a>
-							</div>
-							<div class="ceor-info">
-								<div class="ceor-info-item-wrapper">
-									<div class="ceor-imio-box">
-										<a class="ceor-imio-img">
-											<img src="../developerImg/sp-img.jpg" width="100%">
-										</a>
-										<p class="ceor-imio-name">
-											<span class="ceor-imio-tle in-block">短袖</span>
-											<span class="ceor-imio-hr in-block"></span>
-											<span class="ceor-imio-tle in-block">RACK ROD</span>
-										</p>
-										<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-										<p class="ceor-imio-tab">
-											<span class="ceor-imio-table in-block">S / 白色</span>
-											<span class="ceor-imio-table in-block">货号：A100001</span>
-										</p>
-									</div>
-									<div class="ceor-imio-num">1</div>
-									<div class="ceor-imio-price">RMB:225</div>
-								</div>
-								<div class="ceor-info-oper-wrapper">
-									<!-- 正常流程 -->
-									<!-- 步骤2 -->
-									<div class="ceor-imio-oper cr-info-vm" step="2">
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤3 -->
-									<div class="ceor-imio-oper cr-info-vm" step="3">
-										<a href="../changing/changing.html?step=3&site=txwl" class="ceor-imio-oper-link global-btn-styl">填写物流</a>
-										<p class="ceor-imio-oper-txt">换货组审核通过</p>
-									</div>
-									<!-- 步骤4 -->
-									<div class="ceor-imio-oper cr-info-vm" step="4">
-										<h3 class="ceor-imio-status">已收货</h3>
-										<p class="ceor-imio-oper-txt">换货组审核中</p>
-									</div>
-									<!-- 步骤5 -->
-									<div class="ceor-imio-oper cr-info-vm" step="5">
-										<h3 class="ceor-imio-status">已换货</h3>
-										<span class="ceor-imio-oper-btn global-btn-styl">确认收货</span>
-										<a href="../changing/changing.html?step=5&site=ckwl" class="ceor-imio-operlink">查看物流</a>
-									</div>
-									<!-- 步骤6 -->
-									<div class="ceor-imio-oper cr-info-vm" step="6">
-										<h3 class="ceor-imio-status">换货已完成</h3>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="00">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=00&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
-									</div>
-									<!-- 驳回流程 -->
-									<div class="ceor-imio-oper cr-info-vm" step="01">
-										<h3 class="ceor-imio-status">换货已驳回</h3>
-										<a href="../changing/changing.html?step=01&site=ckyy" class="ceor-imio-operlink">查看原因</a>
-										<span class="ceor-imio-oper-delbtn">删除订单</span>
+									<!-- 步骤7 -->
+									<div class="ceor-imio-oper cr-info-vm" step="7">
+										<h3 class="ceor-imio-status">订单取消</h3>
+										<a href="../goods-list/goods-list.html" class="ceor-imio-operlink">再逛逛</a>
+										<span class="ceor-imio-oper-delbtn">订单删除</span>
 									</div>
 								</div>
 							</div>
@@ -2091,7 +1859,7 @@
 				<div class="sc-not-goods-wrapper" style="display: none;">
 					<div class="not-air-box">
 						<img src="../public/images/air-cart.png" class="not-air-img">
-						<p class="not-air-desc">您还没有换单信息</p>
+						<p class="not-air-desc">您还没有待收货订单信息</p>
 						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
 					</div>
 				</div>
@@ -2216,6 +1984,6 @@
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../user-center/user.js"></script>
-	<script src="./close-order.js"></script>
+	<script src="../close-order/close-order.js"></script>
 </body>
 </html>

@@ -594,16 +594,44 @@
 	background-color: #fff;
 }
 .win-drop-down-item {
+	position: relative;
 	line-height: 40px;
-	padding-left: 50px;
-	font-size: 24px;
+	padding-left: 66px;
+	font-size: 18px;
 	border-bottom: 1px solid #b7b7b7;
+}
+.win-drop-down-item .in-block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 66px;
+	height: 40px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .win-drop-down-item:hover {
 	background-color: #b3494d;
 	color: #fff;
 }
-
+.man-icon {
+	background-image: url(../goods-details/images/man.png);
+}
+.woman-icon {
+	background-image: url(../goods-details/images/woman.png);
+}
+.womanandman-icon {
+	background-image: url(../goods-details/images/womanandman.png);
+}
+.win-drop-down-item:hover .man-icon {
+	background-image: url(../goods-details/images/man-1.png);
+}
+.win-drop-down-item:hover .woman-icon {
+	background-image: url(../goods-details/images/woman-1.png);
+}
+.win-drop-down-item:hover .womanandman-icon {
+	background-image: url(../goods-details/images/womanandman-1.png);
+}
 .store-reserve-win-tle-wrapper {
 	position: relative;
 	padding: 20px 0 10px;

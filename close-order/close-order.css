@@ -50,7 +50,7 @@
 }
 .ceor-tle-txt {
 	font-size: 12px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .bor-rig {
 	border-right: 1px solid #000;
@@ -73,9 +73,13 @@
 }
 .ceor-info {
 	position: relative;
-	padding: 15px 150px 15px 15px;
-	height: 70px;
+	padding: 15px 150px 0px 15px;
 	border: 1px solid #d7d7d7;
+}
+.ceor-info-item-wrapper {
+	padding-bottom: 15px;
+	height: 70px;
+	overflow: hidden;
 }
 .close-order-list-wrapper {
 	padding-bottom: 30px;
@@ -111,7 +115,7 @@
 	font-size: 12px;
 	color: #494a4a;
 	text-align: center;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
@@ -124,15 +128,20 @@
   white-space: nowrap;
 }
 .ceor-imio-tle {
-	padding-right: 10px;
 	font-size: 12px;
 	font-weight: bold;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+}
+.ceor-imio-hr {
+	margin: 0 5px;
+	width: 3px;
+	height: 3px;
+	background-color: #000;
 }
 .ceor-imio-desc {
 	line-height: 26px;
 	font-size: 12px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	color: #494a4a;
 	overflow: hidden;
   text-overflow:ellipsis;
@@ -141,7 +150,7 @@
 .ceor-imio-table {
 	padding-right: 10px;
 	font-size: 12px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .ceor-info-oper-wrapper {
