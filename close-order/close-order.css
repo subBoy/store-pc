@@ -109,6 +109,7 @@
 	letter-spacing: 1px;
 }
 .ceor-imio-price {
+	position: relative;
 	float: left;
 	line-height: 70px;
 	width: 140px;
@@ -119,6 +120,19 @@
 	overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
+}
+.changing-returning-btn {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	line-height: 30px;
+	margin-top: 5px;
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+}
+.changing-returning-btn:hover {
+	color: #b3494d;
 }
 .ceor-imio-name, .ceor-imio-tab {
 	line-height: 22px;
