@@ -159,7 +159,54 @@ $.extend(window, {
 			return  unescape(r[2]);
 		} 
 		return null;
-	}
+	},
+	countDown: function () {
+		var _obj = $('.count-time-group');
+		var _this = this;
+		_obj.each(function () {
+			var date = $(this).attr('endTime');
+			var txt = '', _html = '', _d, _h, _m, _s;
+			var _date = new Date(date).getTime();
+			var _now = new Date().getTime();
+			var _differ = parseInt(_now - _date);
+			if (_differ >= 0) {
+				_d = '00';
+				_h = '00';
+				_m = '00';
+				_s = '00';
+				$(".timeBox").hide();
+				$(".overP1").show();
+				$(".investBtn").addClass("overBtn");
+				// $(".buyBtn").addClass("overBtn1");
+			} else {
+				_differ = -parseInt(_differ / 1000);
+				_d = parseInt(_differ / 24 / 3600);
+				_h = parseInt((_differ % (24 * 3600)) / 3600);
+				_m = parseInt(((_differ % (24 * 3600)) % 3600) / 60);
+				_s = parseInt(((_differ % (24 * 3600)) % 3600) % 60);
+				_d = _this.padLeftZero(_d + '');
+				_h = _this.padLeftZero(_h + '');
+				_m = _this.padLeftZero(_m + '');
+				_s = _this.padLeftZero(_s + '');
+			}
+
+			txt = _h + _m + _s + '';
+			var arr = txt.split('');
+			_html += '<span class="c-all">' + arr[0] + '</span>'
+				    +'<span class="c-all">' + arr[1] + '</span>'
+				    +'<span class="c-all c-styl">:</span>'
+				    +'<span class="c-all">' + arr[2] + '</span>'
+				    +'<span class="c-all">' + arr[3] + '</span>'
+				    +'<span class="c-all c-styl">:</span>'
+				    +'<span class="c-all">' + arr[4] + '</span>'
+				    +'<span class="c-all">' + arr[5] + '</span>';
+
+			$(this).html(_html);
+		});
+	},
+	padLeftZero: function (str) {
+	  return ('00' + str).substr(str.length);
+	},
 })
 $(function () {
 	globalLoading();

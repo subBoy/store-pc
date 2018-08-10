@@ -1,4 +1,87 @@
 @charset"UTF-8";
+.global-title-wrapper {
+	padding: 30px 0px 32px;
+	text-align: center;
+}
+.global-title-h3 {
+	line-height: 40px;
+	padding-left: 4px;
+	letter-spacing: 4px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.global-title-english {
+	line-height: 30px;
+	padding-left: 2px;
+	font-size: 14px;
+	color: #808080;
+	letter-spacing: 2px;
+}
+
+.more-recommended {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+}
+.recommended-goods {
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 320px;
+	overflow: hidden;
+}
+.recommended-goods-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.recommended-goods-item {
+	float: left;
+	width: 275px;
+}
+.slide-goods-item {
+	margin: 0 auto;
+	width: 250px;
+}
+.recommended-goods-link {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.goods-img-wrapper {
+	display: block;
+	margin-bottom: 20px;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+}
+.goods-name-wrapper {
+	display: block;
+	line-height: 24px;
+	padding: 0 10px 0 12px;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #494a4a;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.goods-price-wrapper {
+	display: block;
+	line-height: 24px;
+	padding-left: 4px;
+	letter-spacing: 4px;
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: bold;
+}
+.yws-i-am-wrapper {
+	padding-top: 60px;
+}
+
+
 .cr-step-wrapper {
 	margin:  0 auto;
 	width: 1000px;
@@ -680,21 +763,36 @@
 }
 .stpps-3-close-address {
 	position: relative;
-	margin: 20px 0 30px;
-	padding: 15px 0;
-	width: 700px;
-	background-color: #f7f7f7;
+	padding: 5px 0 15px;
 }
 .stpps-3-ceas {
 	line-height: 26px;
 	font-size: 0;
 }
-.stpps-3-ceas-name {
-	padding-left: 15px;
-	width: 80px;
+.styl-pag {
+	padding: 5px 0 15px;
+}
+.is-stpps-fp {
+	padding-right: 30px;
 	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: 1px;
+}
+.stpps-fp-txt {
+	padding-right: 15px;
+	font-size: 14px;
+}
+.stpps-3-ceas-name {
+	height: 26px;
+	width: 60px;
+	font-size: 14px;
+	text-align: justify;
+	overflow: hidden;
+}
+.just-i {
+	width: 100%;
+}
+.stpps-mh {
+	font-size: 14px;
+	padding: 0 15px 0 5px;
 }
 .stpps-3-ceas-txt {
 	font-size: 14px;
