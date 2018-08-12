@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../public/reset.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="../public/broadside.css">
+<link rel="stylesheet" href="./payment-process.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -23,11 +23,11 @@
 		</div>
 	</div>
 	<!-- 头部区域 -->
-	<input type="hidden" value="6" id="nav-item-index">
+	<input type="hidden" value="0" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -129,7 +129,7 @@
 						<div class="sign-input-wrapper" style="display: none;">
 							<div class="user-info-wrapper">
 								<span class="nav-user-name-greet in-block">你好！秋帆</span>
-								<span class="nav-sign-out-btn in-block">退出</span>
+								<span class="nav-sign-out-btn in-block">换出</span>
 							</div>
 							<div class="user-module-wrapper">
 								<div class="user-module-group">
@@ -169,7 +169,7 @@
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的退单</a>
+											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的换单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
@@ -707,168 +707,570 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="join-us-wrapper">
-		<div class="join-us-banner">
-			<div class="join-us-banner-txt">
-				<p class="ju-bt-tle">
-					<span class="in-block ju-bt-title">野性难训<span class="ju-bt-icon">®</span></span>
-				</p>
-				<p class="ju-bt-desc">相信曾经相信过的自己！</p>
-				<div class="join-us-logo-wrapper">
-					<span class="join-us-logo">
-						<img class="join-us-logo-img" src="../public/images/logo-f.png">
-					</span>
-					<span class="join-us-logo-txt">RACK ROD</span>
+	<div class="payment-process-wrapper">
+		<div class="ppw-box-l">
+			<div class="ppw-l-ct">
+				<h3 class="ppw-l-tle">订单生成</h3>
+				<div class="ppw-l-nav-ctr">
+					<span class="ppw-l-nav-item ppw-l-nav-1 clo-0-1 in-block">订单信息填写</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-2 clo-0-1 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-3 in-block">开始付款</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-4 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-5 in-block">付款成功</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-6 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-7 in-block">出库配送</span>
+				</div>
+				<!-- 地址列表 -->
+				<div class="user-address-wrapper ppw-step-wrapper" step="1" id="ppw-user-address-list">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-1 in-block"></span>
+						<span class="ppw-info-item-name in-block">配送信息</span>
+						<a href="../user-address/user-address.html?sideIdent=userAddress" class="ppw-info-item-btn set-animation in-block">新增地址》</a>
+					</div>
+					<div class="user-address-info">
+						<span class="ppw-sel-address-btn seled">
+							<input type="radio" name="ppwSelAds" class="ppw-sel-address-ctr" checked="checked">
+						</span>
+						<ul class="uras-info-list">
+							<li class="uras-info-item wd-li-1">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">邱帆</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-2">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-io-vw">
+										<span class="in-block">北京</span>
+										<span class="in-block">北京市</span>
+										<span class="in-block">通州区</span>
+									</div>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-3">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">新华联家园42号311</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-4">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">10118</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-5">
+								<div class="uras-info-view cr-info-vm">
+								<span class="io-vw in-block">135****9924</span>
+							</div>
+							</li>
+							<li class="uras-info-item wd-li-6">
+								<div class="uras-info-view cr-info-vm">
+									<a href="../user-address/user-address.html?sideIdent=userAddress" class="uras-info-item-btns">修改</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="user-address-info">
+						<span class="ppw-sel-address-btn">
+							<input type="radio" name="ppwSelAds" class="ppw-sel-address-ctr">
+						</span>
+						<ul class="uras-info-list">
+							<li class="uras-info-item wd-li-1">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">邱帆</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-2">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-io-vw">
+										<span class="in-block">北京</span>
+										<span class="in-block">北京市</span>
+										<span class="in-block">通州区</span>
+									</div>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-3">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">新华联家园42号311</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-4">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">10118</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-5">
+								<div class="uras-info-view cr-info-vm">
+								<span class="io-vw in-block">135****9924</span>
+							</div>
+							</li>
+							<li class="uras-info-item wd-li-6">
+								<div class="uras-info-view cr-info-vm">
+									<a href="../user-address/user-address.html?sideIdent=userAddress" class="uras-info-item-btns">修改</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<p class="ppw-uads-more">...</p>
+				</div>
+				<!-- 已登录新增地址 -->
+				<div class="user-cpm-content ppw-step-wrapper" step="2" id="ppw-add-user-address">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-1 in-block"></span>
+						<span class="ppw-info-item-name in-block">配送信息</span>
+						<p class="user-cpm-error"></p>
+					</div>
+					<div class="user-cpm-content-group">
+						<ul class="user-cpm-input-wrapper">
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">收货人姓名：</span>
+									<input type="text" class="user-cpm-input-ctr as-us-name" placeholder="请输入真实收件人的姓名" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">收货地址：</span>
+									<div class="trigeminy-address">
+										<div class="trigeminy-address-box">
+											<span class="trigeminy-address-view as-shen" grade="1">省</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+										<div class="trigeminy-address-box">
+											<span class="trigeminy-address-view as-shi" grade="2">市</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+										<div class="trigeminy-address-box not-mg">
+											<span class="trigeminy-address-view as-xian" grade="3">县/区</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">街道地址：</span>
+									<input type="text" class="user-cpm-input-ctr as-jiedao" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box not-ic">
+									<span class="user-cpm-input-name">邮政编号：</span>
+									<input type="text" class="user-cpm-input-ctr as-youbian" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">手机号/电话：</span>
+									<input type="text" class="user-cpm-input-ctr as-tel" value="">
+								</div>
+							</li>
+						</ul>
+						<div class="user-cpm-set-default">
+							<span class="cpm-set-dt-btn">
+								<input type="checkbox" class="set-dt-checkbox">
+							</span>
+							设为默认地址
+						</div>
+						<div class="user-cpm-ft">
+							<div class="user-cpm-btns">
+								<span class="user-cpm-btn submit-add-btn global-btn-styl in-block">保存到地址簿</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 游客新增地址 -->
+				<div class="user-cpm-content ppw-step-wrapper" step="3" id="ppw-random-user-address">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-1 in-block"></span>
+						<span class="ppw-info-item-name in-block">配送信息</span>
+						<p class="user-cpm-error"></p>
+					</div>
+					<div class="user-cpm-content-group">
+						<ul class="user-cpm-input-wrapper">
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">收货人姓名：</span>
+									<input type="text" class="user-cpm-input-ctr as-us-name" placeholder="请输入真实收件人的姓名" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">收货地址：</span>
+									<div class="trigeminy-address">
+										<div class="trigeminy-address-box">
+											<span class="trigeminy-address-view as-shen" grade="1">省</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+										<div class="trigeminy-address-box">
+											<span class="trigeminy-address-view as-shi" grade="2">市</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+										<div class="trigeminy-address-box not-mg">
+											<span class="trigeminy-address-view as-xian" grade="3">县/区</span>
+											<ul class="trigeminy-address-list">
+												<li class="trigeminy-address-item air-item">请选择</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+												<li class="trigeminy-address-item">北京</li>
+												<li class="trigeminy-address-item">上海</li>
+												<li class="trigeminy-address-item">广州</li>
+												<li class="trigeminy-address-item">深圳</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">街道地址：</span>
+									<input type="text" class="user-cpm-input-ctr as-jiedao" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box not-ic">
+									<span class="user-cpm-input-name">邮政编号：</span>
+									<input type="text" class="user-cpm-input-ctr as-youbian" value="">
+								</div>
+							</li>
+							<li class="user-cpm-input-item">
+								<div class="user-cpm-input-box">
+									<span class="user-cpm-input-name">手机号/电话：</span>
+									<input type="text" class="user-cpm-input-ctr as-tel" value="">
+								</div>
+							</li>
+						</ul>
+						<p class="random-user-desc">若订单出现错误，出于隐私考虑我们将仅与您联系。请务必填写所有信息！</p>
+					</div>
+				</div>
+				<!-- 支付方式 -->
+				<div class="ppw-type-wrapper">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-2 in-block"></span>
+						<span class="ppw-info-item-name in-block">支付方式选择</span>
+					</div>
+					<div class="ppw-type-list">
+						<span class="ppw-type-item seled in-block">
+							<input type="radio" name="selPayType" class="sel-pay-type-ctr" checked="checked">
+							<img src="../payment-process/images/zfb.png" height="100%">
+						</span>
+						<span class="ppw-type-item ppw-type-wx in-block">
+							<input type="radio" name="selPayType" class="sel-pay-type-ctr">
+							<img src="../payment-process/images/wx.png" height="100%">
+						</span>
+					</div>
+					<p class="ppw-type-desc">
+						<span class="ppw-type-desc-strb">注：</span>订单提交前，请再次确认配送信息、账单信息和已选购商品。请确保您的浏览器中“屏蔽弹、出窗口”的功能已经关闭，以正常浏览本网站的支付弹出窗口。
+					</p>
+				</div>
+				<!-- 游客注册会员 -->
+				<div class="random-user-sign-up ppw-step-wrapper" step="3">
+					<p class="random-user-sign-up-desc">
+						<span class="sel-vip-btn-wrapper">
+							<input type="checkbox" class="sel-vip-input">
+						</span>
+						成为<a class="rr-vip">RACK ROD</a>会员，即可享受首单免费配送服务！已是会员，请点击<a href="../sign-in/sign-in.html" class="rr-vip random-sign-btn">这里</a>登录！
+					</p>
+					<div class="random-user-sup">
+						<div class="random-user-sup-item">
+							<div class="random-user-sup-item-wrapper">
+								<span class="random-user-sup-name ic-1"><i class="icon"></i>手机/邮箱：</span>
+								<input type="text" class="random-user-sup-input" placeholder="请输入您的邮箱或手机号" id="account-input-ctr">
+							</div>
+						</div>
+						<div class="random-user-sup-item spc-styl">
+							<div class="random-user-sup-item-wrapper not-ic">
+								<span class="random-user-sup-name ic-2"><i class="icon"></i>验 证 码：</span>
+								<input type="text" class="random-user-sup-input" id="code-input-ctr">
+							</div>
+							<span class="get-ip-code-btn" id="getCode">获取验证码</span>
+						</div>
+						<div class="random-user-sup-item">
+							<div class="random-user-sup-item-wrapper">
+								<span class="random-user-sup-name ic-3"><i class="icon"></i>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+								<input type="password" class="random-user-sup-input" id="passward-input-ctr" placeholder="请输入密码">
+							</div>
+						</div>
+						<div class="random-user-sup-item">
+							<div class="random-user-sup-item-wrapper">
+								<span class="random-user-sup-name ic-4"><i class="icon"></i>确认密码：</span>
+								<input type="password" class="random-user-sup-input" id="passward-input-ctr-2" placeholder="请确认密码">
+							</div>
+						</div>
+						<div class="random-user-sup-item urio-styl">
+							<span class="in-block random-user-sup-bri-name">出生年月：</span>
+							<span class="urio-item-select-box in-block">
+								<select class="urio-item-select urio-years" onmousedown="this.size=7" onblur="this.size=0" onchange="this.size=0" id="select-year">
+									<option value=""></option>
+									<option value="1990">1990</option>
+									<option value="1991">1991</option>
+									<option value="1992">1992</option>
+									<option value="1993">1993</option>
+									<option value="1994">1994</option>
+									<option value="1995">1995</option>
+									<option value="1996">1996</option>
+								</select>
+							</span>
+							<span class="urio-item-select-box in-block">
+								<select class="urio-item-select" onmousedown="this.size=7" onblur="this.size=0" onchange="this.size=0" id="select-month">
+									<option value=""></option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+							</span>
+							<span class="urio-item-select-box in-block">
+								<select class="urio-item-select" onmousedown="this.size=7" onblur="this.size=0" onchange="this.size=0" id="select-day">
+									<option value=""></option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+								</select>
+							</span>
+						</div>
+						<div class="random-user-sup-item spc-styl-1 urio-styl">
+							<span class="urio-item-tle in-block">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+							<span class="urio-item-radio-box in-block">
+								<input type="radio" name="userSex" value="0" class="urio-item-radio">女
+							</span>
+							<span class="urio-item-radio-box in-block">
+								<input type="radio" name="userSex" value="1" class="urio-item-radio">男
+							</span>
+						</div>
+						<p class="random-user-sup-desc">点击“确认注册”，即表示您已阅读并同意<a href="../service-reguations/service-reguations.html#sytk" target="_blank" class="go-to-service-reguations">《RACK ROD使用条款与隐私声明》</a></p>
+						<div class="ppw-sign-up-btn-wrapper">
+							<span class="ppw-sign-up-btn global-btn-styl">确认注册</span>
+							<p class="ppw-sign-up-err"></p>
+						</div>
+					</div>
+				</div>
+				<div class="ppw-submit-order-btn-wrapper">
+					<span id="ppw-submit-order-btn" class="ppw-submit-order-btn global-btn-styl in-block">提交订单</span>
 				</div>
 			</div>
 		</div>
-		<div class="join-us-group">
-			<div class="join-us-box">
-				<div class="ju-silde-wrapper">
-					<ul class="ju-silde-list">
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#gwly" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>官网礼遇</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#xdby" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>下单包邮</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#zysh" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>专业售后</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#dhtx" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>到货提醒</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../FAQ/FAQ.html#cjwt" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>常见问题</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../intellectual-property/intellectual-property.html#zscq" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>知识产权</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../service-reguations/service-reguations.html#sytk" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>使用条款</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../privacy-statement/privacy-statement.html#yssm" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>隐私声明</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../business-cooperation/business.html#syhz" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>商业合作</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../business-cooperation/business.html#lxwm" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>联系我们</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../join-us/join-us.html#sjsrz" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>设计师入驻</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../join-us/join-us.html#csgzs" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>厂商&工作室</a>
-						</li>
-					</ul>
+		<div class="ppw-box-r">
+			<div class="ppw-box-r-ct">
+				<div class="ppw-box-r-tle">
+					<span class="in-block ppw-sp-info-name">商品信息</span>
+					<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="in-block ppw-sp-info-yh">查看优惠券</a>
 				</div>
-				<div class="ju-content-wrapper">
-					<div class="privacy-statement-wrapper intellectual-property gwly">
-						<div class="ju-content-tle ju-tle-bb">官网礼遇</div> 
-						<div class="website-boon-wrapper">
-							<ul class="website-boon-list">
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-1"></span>
-									<p class="website-boon-txt">1）会员制</p>
-									<p class="website-boon-txt">注册成功后即可获得官网新标会员，在官网消费任意商品即可获得积分，根据积分的积累达到一定数量即可升级为铜标会员。以此类推最高可升为金标会员，会员等级越高，可获得越多优惠。</p>
-								</li>
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-2"></span>
-									<p class="website-boon-txt">2）购物优惠</p>
-									<p class="website-boon-txt">注册成功后在官网购物，消费任意商品即可获得积分（消费1元=1积分），满500积分即可换取价值50的优惠券。优惠券仅适用于普通商品，不适用定制商品或特惠商品。</p>
-								</li>
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-3"></span>
-									<p class="website-boon-txt">3）生日礼券</p>
-									<p class="website-boon-txt">注册成功后在官网购物，消费任意商品即可获得积分（消费1元=1积分），满500积分即可换取价值50的优惠券。优惠券仅适用于普通商品，不适用定制商品或特惠商品。</p>
-								</li>
-								<li class="website-boon-item li-btb xdby">
-									<span class="website-boon-icon boon-icon-4"></span>
-									<p class="website-boon-txt">4）会员购物包运费</p>
-									<p class="website-boon-txt">会员注册成功后，既送你一张免运费券，铜标以上会员按等级不同，每月都送你不同的免运费券。免运费券全国通用（新疆,西藏,内蒙,青海,海南,宁夏除外）</p>
-								</li>
-								<li class="website-boon-item li-btb zysh">
-									<span class="website-boon-icon boon-icon-5"></span>
-									<p class="website-boon-txt">5）专业售后服务</p>
-									<p class="website-boon-txt">注册会员后，如果您对商品不满意，我们在网站后端开发了完整的售后服务程序，从个人中心提交退货或换货申请后，我们专业的售后人员会以最快的速度解决您所遇到的问题。</p>
-								</li>
-								<li class="website-boon-item li-btb dhtx">
-									<span class="website-boon-icon boon-icon-6"></span>
-									<p class="website-boon-txt">6）到货为您提醒</p>
-									<p class="website-boon-txt">我们会将新品优先发布在官网上，缺货或缺尺码的商品您可以在商品详情页进行免费预定，商品上架后我们会会以短信或邮件的形式通知您，并优先供货给您。</p>
-								</li>
-							</ul>
+				<div class="ceor-info">
+					<div class="ceor-info-item-wrapper">
+						<div class="ceor-imio-box">
+							<a class="ceor-imio-img">
+								<img src="../developerImg/sp-img.jpg" width="100%">
+							</a>
+							<p class="ceor-imio-name">
+								<span class="ceor-imio-tle in-block">短袖</span>
+								<span class="ceor-imio-hr in-block"></span>
+								<span class="ceor-imio-tle in-block">RACK ROD</span>
+							</p>
+							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+							<p class="ceor-imio-tab">
+								<span class="ceor-imio-table in-block">S / 白色</span>
+								<span class="ceor-imio-table in-block">￥：225</span>
+							</p>
 						</div>
-						<p class="website-boon-desc">更多详细官网优惠信息，请点击查看RACK ROD官网<a href="" class="website-boon-vip-link">会员制度</a>！</p>
+						<div class="ceor-imio-num">x1</div>
+					</div>
+					<div class="ceor-info-item-wrapper">
+						<div class="ceor-imio-box">
+							<a class="ceor-imio-img">
+								<img src="../developerImg/sp-img.jpg" width="100%">
+							</a>
+							<p class="ceor-imio-name">
+								<span class="ceor-imio-tle in-block">短袖</span>
+								<span class="ceor-imio-hr in-block"></span>
+								<span class="ceor-imio-tle in-block">RACK ROD</span>
+							</p>
+							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+							<p class="ceor-imio-tab">
+								<span class="ceor-imio-table in-block">S / 白色</span>
+								<span class="ceor-imio-table in-block">￥：225</span>
+							</p>
+						</div>
+						<div class="ceor-imio-num">x1</div>
+					</div>	
+				</div>
+				<div class="ppw-use-yh-wrapper">
+					<input type="text" class="ppw-use-yh-input in-block" placeholder="输入您的优惠码或选择优惠券">
+					<span class="ppw-use-yh-btn global-btn-styl in-block">使用</span>
+					<div class="ppw-use-yh-list-wrapper">
+						<!-- 有券 -->
+						<ul class="ppw-use-yh-list" style="display: none;">
+							<li class="ppw-use-yh-item" kityCode="2312345436477">
+								<span class="ppw-use-yh-name in-block">100<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+							<li class="ppw-use-yh-item" kityCode="2312fsdfss477">
+								<span class="ppw-use-yh-name in-block">50<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+							<li class="ppw-use-yh-item" kityCode="23123423f6477">
+								<span class="ppw-use-yh-name in-block">30<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+						</ul>
+						<!-- 没券 -->
+						<ul class="ppw-use-yh-list">
+							<li class="ppw-use-yh-item">
+								<span class="ppw-use-yh-air-icon"></span>
+								<p class="ppw-use-yh-air-txt">很抱歉，您没有可以使用的优惠券！</p>
+							</li>
+						</ul>
 					</div>
 				</div>
+				<div class="order-details-total-wrapper">
+					<p class="od-total-items">
+						<span class="in-block od-total-name">订单商品总额：</span>
+						<span class="in-block od-total-txt">￥：299.00</span>
+					</p>
+					<p class="od-total-items">
+						<span class="in-block od-total-name">商品数量：</span>
+						<span class="in-block od-total-txt">3</span>
+					</p>
+					<p class="od-total-items styl-cr">
+						<span class="in-block od-total-name">优惠金额：</span>
+						<span class="in-block od-total-txt">-￥0.00</span>
+					</p>
+					<p class="od-total-items">
+						<span class="in-block od-total-name">订单运费总额：</span>
+						<span class="in-block od-total-txt">￥0.00</span>
+					</p>
+					<p class="od-total-items od-total-wpp">
+						<span class="in-block od-total-name fwb">总计：</span>
+						<span class="in-block od-total-txt fwb">￥：299.00</span>
+					</p>
+				</div>
 			</div>
+			<div class="ppw-use-yh-b-img"></div>
 		</div>
 	</div>
 	<!-- 底部区域 -->
-	<div class="about-footer-controller">
-		<div class="join-us-logo-wrapper">
-			<span class="join-us-logo">
-				<img class="join-us-logo-img" src="../public/images/logo-f.png">
-			</span>
-			<span class="join-us-logo-txt">RACK ROD</span>
+	<div class="footer-controller">
+		<div class="gl-content-wrapper">
+			<div class="footer-logo-wrapper">
+				<img src="../public/images/logo.png" alt="" class="footer-logo-img">
+				<p class="footer-logo-txt">RACK ROD</p>
+			</div>
+			<div class="footer-search-wrapper">
+				<input type="text" class="footer-search" placeholder="EMAIL">
+				<button class="footer-search-btn">订阅</button>
+			</div>
+			<div class="footer-omit-wrapper">
+				<a href="" class="footer-moit-link in-block">订阅RACK ROD最新动态</a>
+			</div>
+			<div class="footer-nav-wrapper">
+				<ul class="footer-nav-list in-block">
+					<li class="footer-nav-item"><a class="footer-nav-link not-link in-block">Copyright © 2017 <span class="spl-styl">RACK ROD</span>.com</a></li>
+					<li class="footer-nav-item"><a href="../FAQ/FAQ.html#cjwt" class="footer-nav-link in-block">常见问题</a></li>
+					<li class="footer-nav-item"><a href="../privacy-statement/privacy-statement.html#yssm" class="footer-nav-link in-block">隐私说明</a></li>
+					<li class="footer-nav-item"><a href="../business-cooperation/business.html#syhz" class="footer-nav-link in-block">商用合作</a></li>
+					<li class="footer-nav-item"><a href="../business-cooperation/business.html#lxwm" class="footer-nav-link in-block">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="footer-recommend-wrapper">
+				<ul class="footer-recommend-list">
+					<li class="footer-recommend-item">
+						<a class="footer-recommend-link">更多我们 :</a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wx-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tm-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yh-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yk-link"></a>
+					</li>
+				</ul>
+				<p class="footer-recommend-desc">粤ICP备17111534号-2</p>
+			</div>
 		</div>
 	</div>
-	<div class="scroll-bottom"></div>
 	<script src="../public/js/public.js"></script>
-	<script src="../public/js/broadside.js"></script>
-	<script>
-		function scrollSideStyle () {
-			var sH = $(window).height();
-			var sTop = $(window).scrollTop();
-			var sTop1 = $('.gwly').offset().top;
-			var sTop2 = $('.xdby').offset().top;
-			var sTop3 = $('.zysh').offset().top;
-			var sTop4 = $('.dhtx').offset().top;
-			var sBottom = $('.scroll-bottom').offset().top;
-			var limitTop = sTop - 0 + sH / 3;
-			var limitTop1 = sTop - 0 + sH / 2;
-			var slide = $('.ju-silde-item');
-			if (limitTop >= sTop1) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'gwly') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop >= sTop2) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'xdby') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop >= sTop3) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'zysh') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop1 >= sTop4 || limitTop1 >= sBottom) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'dhtx') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-		}
-		$(function () {
-			$(window).bind("scroll", function () {
-				showSlide(scrollSideStyle);
-			});
-		})
-	</script>
+	<script src="./payment-process.js"></script>
 </body>
 </html>

@@ -718,7 +718,7 @@
 					<span class="cr-step-txt">已下单</span>
 				</span>
 				<span class="cr-step-item cr-order-issue">
-					<span class="cr-step-icon"></span>
+					<span class="cr-step-icon thanks"></span>
 					<span class="cr-step-txt" id="cr-step-name"></span>
 				</span>
 				<span class="cr-step-item cr-order-stated">
@@ -730,14 +730,45 @@
 		<div class="cr-step-info cr-order-info">
 			<h3 class="cr-step-level-tle">订单号：2018278432879</h3>
 			<p class="cr-step-info-txt">下单时间：2017-09-11 17:17:54</p>
-			<p class="cr-step-info-txt" startTime="2017-09-11 17:17:54" endTime="2017-09-12 17:17:54" id="cr-step-info-txt-ctr">您还剩下<span class="count-time" id="count-time-ctr">24：00：00</span>时间完成付款，否则订单将过期!</p>
+			<p class="cr-step-info-txt" id="cr-step-info-txt-ctr">您还剩下<span class="count-time count-time-group" id="count-time-ctr" endTime="2018-08-14 12:27:54"></span>时间完成付款，否则订单将过期!</p>
 			<div class="cr-step-info-issue-desc">
-				<div class="pay-step-issue" step="1">
+				<div class="pay-step-issue">
 					<span class="issue-desc-tle" id="step-issue-desc">待发货</span>
-					<p class="issue-pay-btn-wrapper">
-						<a href="" class="issue-pay-btn global-btn-styl">前去付款</a>
+					<p class="issue-pay-btn-wrapper" step="1">
+						<a href="../payment-process/start-payment.html" class="issue-pay-btn global-btn-styl">前去付款</a>
+					</p>
+					<p class="issue-pay-btn-wrapper" step="2">已付款</p>
+					<p class="issue-pay-btn-wrapper" step="3">
+						<span class="issue-pay-btn global-btn-styl confirm-receipt-btn">确认收货</span>
+					</p>
+					<p class="issue-pay-btn-wrapper" step="4">
+						<a href="../changing-returning/step.html" class="go-to-cr-step">退换货</a>
+					</p>
+					<p class="issue-pay-btn-wrapper" step="5">
+						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
+					</p>
+					<p class="issue-pay-btn-wrapper" step="6">
+						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
+					</p>
+					<p class="issue-pay-btn-wrapper" step="7">
+						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
 					</p>
 					<p class="pay-total-price">订单总计：¥2560.00</p>
+				</div>
+			</div>
+			<div class="cr-step-info bt-pt" id="od-step-3">
+				<h3 class="cr-step-level-tle">发货物流</h3>
+				<div class="stpps-3-close-address">
+					<p class="stpps-3-ceas">
+						<span class="stpps-3-ceas-name in-block">配送方式<i class="just-i in-block"></i></span>
+						<span class="stpps-mh in-block">:</span>
+						<span class="stpps-3-ceas-txt in-block">顺丰快递</span>
+					</p>
+					<p class="stpps-3-ceas">
+						<span class="stpps-3-ceas-name in-block">物流单号<i class="just-i in-block"></i></span>
+						<span class="stpps-mh in-block">:</span>
+						<span class="stpps-3-ceas-txt in-block">A22342342342323</span>
+					</p>
 				</div>
 			</div>
 			<h3 class="cr-step-level-tle">下单方式</h3>
@@ -745,7 +776,6 @@
 		</div>
 		<div class="cr-step-info">
 			<h3 class="cr-step-level-tle">配送信息</h3>
-			<p class="stpps-3-desc styl-fwb">
 			<div class="stpps-3-close-address">
 				<p class="stpps-3-ceas">
 					<span class="stpps-3-ceas-name in-block">收货人<i class="just-i in-block"></i></span>
@@ -837,7 +867,28 @@
 				</li>
 			</ul>
 		</div>
-		<div style="height: 80px;"></div>
+		<div class="order-details-total-wrapper">
+			<p class="od-total-items">
+				<span class="in-block od-total-name">订单商品总额：</span>
+				<span class="in-block od-total-txt">￥：299.00</span>
+			</p>
+			<p class="od-total-items">
+				<span class="in-block od-total-name">商品数量：</span>
+				<span class="in-block od-total-txt">3</span>
+			</p>
+			<p class="od-total-items styl-cr">
+				<span class="in-block od-total-name">优惠金额：</span>
+				<span class="in-block od-total-txt">-￥0.00</span>
+			</p>
+			<p class="od-total-items">
+				<span class="in-block od-total-name">订单运费总额：</span>
+				<span class="in-block od-total-txt">￥0.00</span>
+			</p>
+			<p class="od-total-items od-total-wpp">
+				<span class="in-block od-total-name">总计：</span>
+				<span class="in-block od-total-txt">￥：299.00</span>
+			</p>
+		</div>
 	</div>
 	
 	<div class="more-recommended-wrapper">

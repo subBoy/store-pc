@@ -2,10 +2,8 @@ function showSlide (callback) {
 	var sTop = $(window).scrollTop();
 	if (sTop >= 350) {
 		$('.ju-silde-wrapper').addClass('fixed-slide');
-		// $('.ju-silde-wrapper').fadeIn();
 	} else {
 		$('.ju-silde-wrapper').removeClass('fixed-slide')
-		// $('.ju-silde-wrapper').hide();
 	}
 	if (callback) {
 		callback();
@@ -26,7 +24,7 @@ function scrollToId (status) {
 	var targetId = $('.' + id);
 	if (id && targetId.length) {
 		var sTop = targetId.offset().top;
-		$("html,body").animate({
+		$("html, body").animate({
 			scrollTop: sTop - 110 - status + 'px'
 		}, 500);
 		var slide = $('.ju-silde-item');

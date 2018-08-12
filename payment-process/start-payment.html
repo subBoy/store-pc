@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../public/reset.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="../public/broadside.css">
+<link rel="stylesheet" href="./payment-process.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -23,11 +23,11 @@
 		</div>
 	</div>
 	<!-- 头部区域 -->
-	<input type="hidden" value="6" id="nav-item-index">
+	<input type="hidden" value="0" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -129,7 +129,7 @@
 						<div class="sign-input-wrapper" style="display: none;">
 							<div class="user-info-wrapper">
 								<span class="nav-user-name-greet in-block">你好！秋帆</span>
-								<span class="nav-sign-out-btn in-block">退出</span>
+								<span class="nav-sign-out-btn in-block">换出</span>
 							</div>
 							<div class="user-module-wrapper">
 								<div class="user-module-group">
@@ -169,7 +169,7 @@
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的退单</a>
+											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的换单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
@@ -707,168 +707,253 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="join-us-wrapper">
-		<div class="join-us-banner">
-			<div class="join-us-banner-txt">
-				<p class="ju-bt-tle">
-					<span class="in-block ju-bt-title">野性难训<span class="ju-bt-icon">®</span></span>
-				</p>
-				<p class="ju-bt-desc">相信曾经相信过的自己！</p>
-				<div class="join-us-logo-wrapper">
-					<span class="join-us-logo">
-						<img class="join-us-logo-img" src="../public/images/logo-f.png">
-					</span>
-					<span class="join-us-logo-txt">RACK ROD</span>
+	<div class="payment-process-wrapper">
+		<div class="ppw-box-l">
+			<div class="ppw-l-ct">
+				<h3 class="ppw-l-tle">订单生成</h3>
+				<div class="ppw-l-nav-ctr">
+					<span class="ppw-l-nav-item ppw-l-nav-1 clo-0-1 in-block">订单信息填写</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-2 clo-0-1 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-3 clo-0-1 in-block">开始付款</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-4 clo-0-1 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-5 in-block">付款成功</span>
+					<span class="ppw-l-nav-arrows ppw-l-nav-6 in-block">></span>
+					<span class="ppw-l-nav-item ppw-l-nav-7 in-block">出库配送</span>
+				</div>
+				<!-- 地址列表 -->
+				<div class="user-address-wrapper" id="ppw-user-address-list">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-1 in-block"></span>
+						<span class="ppw-info-item-name in-block">配送信息</span>
+					</div>
+					<div class="user-address-info start-payment-address">
+						<ul class="uras-info-list">
+							<li class="uras-info-item wd-li-1">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">邱帆</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-2">
+								<div class="uras-info-view cr-info-vm">
+									<div class="uras-io-vw">
+										<span class="in-block">北京</span>
+										<span class="in-block">北京市</span>
+										<span class="in-block">通州区</span>
+									</div>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-3">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">新华联家园42号311</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-4">
+								<div class="uras-info-view cr-info-vm">
+									<span class="io-vw in-block">10118</span>
+								</div>
+							</li>
+							<li class="uras-info-item wd-li-5">
+								<div class="uras-info-view cr-info-vm">
+								<span class="io-vw in-block">13552709924</span>
+							</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 支付方式 -->
+				<div class="ppw-type-wrapper">
+					<div class="ppw-info-item-tle-wrapper">
+						<span class="ppw-info-item-ic pii-ic-2 in-block"></span>
+						<span class="ppw-info-item-name in-block">支付方式</span>
+					</div>
+					<!-- 支付宝 -->
+					<div class="ppw-type-order" style="display: none;">
+						<div class="ppw-type-order-tle">
+							<img src="../payment-process/images/zfb.png" height="33px">
+						</div>
+						<div class="ppw-type-order-ct">
+							<img src="../payment-process/images/p-ic.png" width="144px" height="80px" class="ppw-type-order-ct-img">
+							<p class="ppw-type-order-desc">注：请您确认订单各项信息是否有误！</p>
+							<p class="ppw-type-order-desc">按下【开始付款】后，您将被连接到支付宝的安全结账页面！</p>
+						</div>
+					</div>
+					<!-- 微信 -->
+					<div class="ppw-type-order">
+						<div class="ppw-type-order-tle">
+							<img src="../payment-process/images/wx.png" height="33px">
+						</div>
+						<div class="ppw-type-order-ct">
+							<img src="../payment-process/images/p-ic.png" width="144px" height="80px" class="ppw-type-order-ct-img">
+							<p class="ppw-type-order-desc">注：请您确认订单各项信息是否有误！</p>
+							<p class="ppw-type-order-desc">按下【开始付款】后，您将被连接到微信支付的安全结账页面！</p>
+						</div>
+					</div>
+				</div>
+				<div class="ppw-submit-order-btn-wrapper">
+					<a class="ppw-go-to-back-btn in-block">返回上一页</a>
+					<a href="./payment-result.html" class="ppw-submit-order-btn global-btn-styl in-block">开始付款</a>
 				</div>
 			</div>
 		</div>
-		<div class="join-us-group">
-			<div class="join-us-box">
-				<div class="ju-silde-wrapper">
-					<ul class="ju-silde-list">
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#gwly" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>官网礼遇</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#xdby" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>下单包邮</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#zysh" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>专业售后</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../website-boon/website-boon.html#dhtx" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>到货提醒</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../FAQ/FAQ.html#cjwt" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>常见问题</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../intellectual-property/intellectual-property.html#zscq" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>知识产权</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../service-reguations/service-reguations.html#sytk" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>使用条款</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../privacy-statement/privacy-statement.html#yssm" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>隐私声明</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../business-cooperation/business.html#syhz" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>商业合作</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../business-cooperation/business.html#lxwm" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>联系我们</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../join-us/join-us.html#sjsrz" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>设计师入驻</a>
-						</li>
-						<li class="ju-silde-item">
-							<a href="../join-us/join-us.html#csgzs" class="ju-silde-link"><span class="ju-slide-icon in-block set-animation"></span>厂商&工作室</a>
-						</li>
-					</ul>
+		<div class="ppw-box-r">
+			<div class="ppw-box-r-ct">
+				<div class="ppw-box-r-tle">
+					<span class="in-block ppw-sp-info-name">商品信息</span>
+					<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="in-block ppw-sp-info-yh">查看优惠券</a>
 				</div>
-				<div class="ju-content-wrapper">
-					<div class="privacy-statement-wrapper intellectual-property gwly">
-						<div class="ju-content-tle ju-tle-bb">官网礼遇</div> 
-						<div class="website-boon-wrapper">
-							<ul class="website-boon-list">
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-1"></span>
-									<p class="website-boon-txt">1）会员制</p>
-									<p class="website-boon-txt">注册成功后即可获得官网新标会员，在官网消费任意商品即可获得积分，根据积分的积累达到一定数量即可升级为铜标会员。以此类推最高可升为金标会员，会员等级越高，可获得越多优惠。</p>
-								</li>
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-2"></span>
-									<p class="website-boon-txt">2）购物优惠</p>
-									<p class="website-boon-txt">注册成功后在官网购物，消费任意商品即可获得积分（消费1元=1积分），满500积分即可换取价值50的优惠券。优惠券仅适用于普通商品，不适用定制商品或特惠商品。</p>
-								</li>
-								<li class="website-boon-item li-btb">
-									<span class="website-boon-icon boon-icon-3"></span>
-									<p class="website-boon-txt">3）生日礼券</p>
-									<p class="website-boon-txt">注册成功后在官网购物，消费任意商品即可获得积分（消费1元=1积分），满500积分即可换取价值50的优惠券。优惠券仅适用于普通商品，不适用定制商品或特惠商品。</p>
-								</li>
-								<li class="website-boon-item li-btb xdby">
-									<span class="website-boon-icon boon-icon-4"></span>
-									<p class="website-boon-txt">4）会员购物包运费</p>
-									<p class="website-boon-txt">会员注册成功后，既送你一张免运费券，铜标以上会员按等级不同，每月都送你不同的免运费券。免运费券全国通用（新疆,西藏,内蒙,青海,海南,宁夏除外）</p>
-								</li>
-								<li class="website-boon-item li-btb zysh">
-									<span class="website-boon-icon boon-icon-5"></span>
-									<p class="website-boon-txt">5）专业售后服务</p>
-									<p class="website-boon-txt">注册会员后，如果您对商品不满意，我们在网站后端开发了完整的售后服务程序，从个人中心提交退货或换货申请后，我们专业的售后人员会以最快的速度解决您所遇到的问题。</p>
-								</li>
-								<li class="website-boon-item li-btb dhtx">
-									<span class="website-boon-icon boon-icon-6"></span>
-									<p class="website-boon-txt">6）到货为您提醒</p>
-									<p class="website-boon-txt">我们会将新品优先发布在官网上，缺货或缺尺码的商品您可以在商品详情页进行免费预定，商品上架后我们会会以短信或邮件的形式通知您，并优先供货给您。</p>
-								</li>
-							</ul>
+				<div class="ceor-info">
+					<div class="ceor-info-item-wrapper">
+						<div class="ceor-imio-box">
+							<a class="ceor-imio-img">
+								<img src="../developerImg/sp-img.jpg" width="100%">
+							</a>
+							<p class="ceor-imio-name">
+								<span class="ceor-imio-tle in-block">短袖</span>
+								<span class="ceor-imio-hr in-block"></span>
+								<span class="ceor-imio-tle in-block">RACK ROD</span>
+							</p>
+							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+							<p class="ceor-imio-tab">
+								<span class="ceor-imio-table in-block">S / 白色</span>
+								<span class="ceor-imio-table in-block">￥：225</span>
+							</p>
 						</div>
-						<p class="website-boon-desc">更多详细官网优惠信息，请点击查看RACK ROD官网<a href="" class="website-boon-vip-link">会员制度</a>！</p>
+						<div class="ceor-imio-num">x1</div>
+					</div>
+					<div class="ceor-info-item-wrapper">
+						<div class="ceor-imio-box">
+							<a class="ceor-imio-img">
+								<img src="../developerImg/sp-img.jpg" width="100%">
+							</a>
+							<p class="ceor-imio-name">
+								<span class="ceor-imio-tle in-block">短袖</span>
+								<span class="ceor-imio-hr in-block"></span>
+								<span class="ceor-imio-tle in-block">RACK ROD</span>
+							</p>
+							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
+							<p class="ceor-imio-tab">
+								<span class="ceor-imio-table in-block">S / 白色</span>
+								<span class="ceor-imio-table in-block">￥：225</span>
+							</p>
+						</div>
+						<div class="ceor-imio-num">x1</div>
+					</div>	
+				</div>
+				<div class="ppw-use-yh-wrapper">
+					<input type="text" class="ppw-use-yh-input in-block" placeholder="输入您的优惠码或选择优惠券">
+					<span class="ppw-use-yh-btn global-btn-styl in-block">使用</span>
+					<div class="ppw-use-yh-list-wrapper">
+						<!-- 有券 -->
+						<ul class="ppw-use-yh-list" style="display: none;">
+							<li class="ppw-use-yh-item" kityCode="2312345436477">
+								<span class="ppw-use-yh-name in-block">100<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+							<li class="ppw-use-yh-item" kityCode="2312fsdfss477">
+								<span class="ppw-use-yh-name in-block">50<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+							<li class="ppw-use-yh-item" kityCode="23123423f6477">
+								<span class="ppw-use-yh-name in-block">30<i class="ppw-use-yh-unit">元</i></span>
+								<span class="ppw-use-yh-kity in-block">
+									<span class="ppw-use-yh-kity-name">购物优惠券</span>
+									<span class="ppw-use-yh-kity-time">有效期至2018-8-31</span>
+								</span>
+							</li>
+						</ul>
+						<!-- 没券 -->
+						<ul class="ppw-use-yh-list">
+							<li class="ppw-use-yh-item">
+								<span class="ppw-use-yh-air-icon"></span>
+								<p class="ppw-use-yh-air-txt">很抱歉，您没有可以使用的优惠券！</p>
+							</li>
+						</ul>
 					</div>
 				</div>
+				<div class="order-details-total-wrapper">
+					<p class="od-total-items">
+						<span class="in-block od-total-name">订单商品总额：</span>
+						<span class="in-block od-total-txt">￥：299.00</span>
+					</p>
+					<p class="od-total-items">
+						<span class="in-block od-total-name">商品数量：</span>
+						<span class="in-block od-total-txt">3</span>
+					</p>
+					<p class="od-total-items styl-cr">
+						<span class="in-block od-total-name">优惠金额：</span>
+						<span class="in-block od-total-txt">-￥0.00</span>
+					</p>
+					<p class="od-total-items">
+						<span class="in-block od-total-name">订单运费总额：</span>
+						<span class="in-block od-total-txt">￥0.00</span>
+					</p>
+					<p class="od-total-items od-total-wpp">
+						<span class="in-block od-total-name fwb">总计：</span>
+						<span class="in-block od-total-txt fwb">￥：299.00</span>
+					</p>
+				</div>
 			</div>
+			<div class="ppw-use-yh-b-img"></div>
 		</div>
 	</div>
 	<!-- 底部区域 -->
-	<div class="about-footer-controller">
-		<div class="join-us-logo-wrapper">
-			<span class="join-us-logo">
-				<img class="join-us-logo-img" src="../public/images/logo-f.png">
-			</span>
-			<span class="join-us-logo-txt">RACK ROD</span>
+	<div class="footer-controller">
+		<div class="gl-content-wrapper">
+			<div class="footer-logo-wrapper">
+				<img src="../public/images/logo.png" alt="" class="footer-logo-img">
+				<p class="footer-logo-txt">RACK ROD</p>
+			</div>
+			<div class="footer-search-wrapper">
+				<input type="text" class="footer-search" placeholder="EMAIL">
+				<button class="footer-search-btn">订阅</button>
+			</div>
+			<div class="footer-omit-wrapper">
+				<a href="" class="footer-moit-link in-block">订阅RACK ROD最新动态</a>
+			</div>
+			<div class="footer-nav-wrapper">
+				<ul class="footer-nav-list in-block">
+					<li class="footer-nav-item"><a class="footer-nav-link not-link in-block">Copyright © 2017 <span class="spl-styl">RACK ROD</span>.com</a></li>
+					<li class="footer-nav-item"><a href="../FAQ/FAQ.html#cjwt" class="footer-nav-link in-block">常见问题</a></li>
+					<li class="footer-nav-item"><a href="../privacy-statement/privacy-statement.html#yssm" class="footer-nav-link in-block">隐私说明</a></li>
+					<li class="footer-nav-item"><a href="../business-cooperation/business.html#syhz" class="footer-nav-link in-block">商用合作</a></li>
+					<li class="footer-nav-item"><a href="../business-cooperation/business.html#lxwm" class="footer-nav-link in-block">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="footer-recommend-wrapper">
+				<ul class="footer-recommend-list">
+					<li class="footer-recommend-item">
+						<a class="footer-recommend-link">更多我们 :</a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wx-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link wb-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link tm-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yh-link"></a>
+					</li>
+					<li class="footer-recommend-item">
+						<a href="" class="footer-recommend-link yk-link"></a>
+					</li>
+				</ul>
+				<p class="footer-recommend-desc">粤ICP备17111534号-2</p>
+			</div>
 		</div>
 	</div>
-	<div class="scroll-bottom"></div>
 	<script src="../public/js/public.js"></script>
-	<script src="../public/js/broadside.js"></script>
-	<script>
-		function scrollSideStyle () {
-			var sH = $(window).height();
-			var sTop = $(window).scrollTop();
-			var sTop1 = $('.gwly').offset().top;
-			var sTop2 = $('.xdby').offset().top;
-			var sTop3 = $('.zysh').offset().top;
-			var sTop4 = $('.dhtx').offset().top;
-			var sBottom = $('.scroll-bottom').offset().top;
-			var limitTop = sTop - 0 + sH / 3;
-			var limitTop1 = sTop - 0 + sH / 2;
-			var slide = $('.ju-silde-item');
-			if (limitTop >= sTop1) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'gwly') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop >= sTop2) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'xdby') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop >= sTop3) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'zysh') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-			if (limitTop1 >= sTop4 || limitTop1 >= sBottom) {
-				$.each(slide, function () {
-					var slideId = $(this).find('.ju-silde-link').attr('href').split('#')[1];
-					if (slideId === 'dhtx') {
-						$(this).addClass('now-station').siblings().removeClass('now-station');
-					}
-				})
-			}
-		}
-		$(function () {
-			$(window).bind("scroll", function () {
-				showSlide(scrollSideStyle);
-			});
-		})
-	</script>
+	<script src="./payment-process.js"></script>
 </body>
 </html>

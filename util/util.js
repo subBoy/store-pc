@@ -7,16 +7,28 @@ $.extend(window, {
 	  };
 		if (!account) {
 		  obj.status = false;
-	  	obj.msg = '账号不能为空！'
+	  	obj.msg = '账号不能为空！';
 		  return obj;
 		}
 		var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
 	  var reg1 = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
 	  if(!reg.test(account) && !reg1.test(account)){
 	  	obj.status = false;
-	  	obj.msg = '账号格式错误！'
+	  	obj.msg = '账号格式错误！';
 	  	return obj;
 	  }
+	  if(reg.test(account)){
+	  	obj.status = true;
+	  	obj.type = 'mobile';
+	  	obj.msg = '';
+	  	return obj;
+	  }
+	  if(reg1.test(account)){
+	  	obj.status = true;
+	  	obj.type = 'email';
+	  	obj.msg = '';
+	  	return obj;
+	  } 
 	  return obj;
 	},
 	passwordVerify: function (password) {
@@ -139,9 +151,9 @@ $.extend(window, {
   	$('.cr-info-vm').each(function () {
   		var _h = $(this).height();
   		if (str === 'not-an') {
-  			$(this).css({
+  			$(this).animate({
 					'margin-top': '-' + _h / 2 + 'px'
-				});
+				}, 0)
 				return;
   		}
 			$(this).animate({
@@ -162,7 +174,6 @@ $.extend(window, {
 	},
 	countDown: function () {
 		var _obj = $('.count-time-group');
-		var _this = this;
 		_obj.each(function () {
 			var date = $(this).attr('endTime');
 			var txt = '', _html = '', _d, _h, _m, _s;
@@ -174,32 +185,28 @@ $.extend(window, {
 				_h = '00';
 				_m = '00';
 				_s = '00';
-				$(".timeBox").hide();
-				$(".overP1").show();
-				$(".investBtn").addClass("overBtn");
-				// $(".buyBtn").addClass("overBtn1");
 			} else {
 				_differ = -parseInt(_differ / 1000);
 				_d = parseInt(_differ / 24 / 3600);
 				_h = parseInt((_differ % (24 * 3600)) / 3600);
 				_m = parseInt(((_differ % (24 * 3600)) % 3600) / 60);
 				_s = parseInt(((_differ % (24 * 3600)) % 3600) % 60);
-				_d = _this.padLeftZero(_d + '');
-				_h = _this.padLeftZero(_h + '');
-				_m = _this.padLeftZero(_m + '');
-				_s = _this.padLeftZero(_s + '');
+				_d = padLeftZero(_d + '');
+				_h = padLeftZero(_h + '');
+				_m = padLeftZero(_m + '');
+				_s = padLeftZero(_s + '');
 			}
 
 			txt = _h + _m + _s + '';
 			var arr = txt.split('');
-			_html += '<span class="c-all">' + arr[0] + '</span>'
-				    +'<span class="c-all">' + arr[1] + '</span>'
-				    +'<span class="c-all c-styl">:</span>'
-				    +'<span class="c-all">' + arr[2] + '</span>'
-				    +'<span class="c-all">' + arr[3] + '</span>'
-				    +'<span class="c-all c-styl">:</span>'
-				    +'<span class="c-all">' + arr[4] + '</span>'
-				    +'<span class="c-all">' + arr[5] + '</span>';
+			_html += '<span class="c-all in-block">' + arr[0] + '</span>'
+				    +'<span class="c-all in-block">' + arr[1] + '</span>'
+				    +'<span class="c-all in-block c-styl">:</span>'
+				    +'<span class="c-all in-block">' + arr[2] + '</span>'
+				    +'<span class="c-all in-block">' + arr[3] + '</span>'
+				    +'<span class="c-all in-block c-styl">:</span>'
+				    +'<span class="c-all in-block">' + arr[4] + '</span>'
+				    +'<span class="c-all in-block">' + arr[5] + '</span>';
 
 			$(this).html(_html);
 		});

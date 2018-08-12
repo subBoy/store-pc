@@ -154,6 +154,18 @@
 	height: 34px;
 	background-image: url(../public/images/ordered.png);
 }
+.cr-order-issue .cr-step-icon.thanks {
+	height: 55px;
+	background-image: url(../public/images/thanks.png);
+}
+.cr-order-issue .cr-step-icon.closed {
+	height: 55px;
+	background-image: url(../public/images/closed.png);
+}
+.cr-order-issue .cr-step-icon.air-icon {
+	height: 55px;
+	background-image: url(../public/images/air-icon.png);
+}
 .cr-order-issue .cr-step-icon {
 	height: 55px;
 	background-image: url(../public/images/go.png);
@@ -168,6 +180,9 @@
 .cr-order-stated.close-order-icon .cr-step-icon {
 	background-image: url(../public/images/ordernt.png);
 }
+.cr-order-stated.od-over-icon .cr-step-icon {
+	background-image: url(../public/images/y-over.png);
+}
 .cr-step-txt {
 	display: block;
 	line-height: 56px;
@@ -179,12 +194,15 @@
 .cr-order-stated .cr-step-txt {
 	color: #8d8d8d;
 }
-.cr-order-stated.finish-order-stated .cr-step-txt, .cr-order-stated.close-order-icon .cr-step-txt {
+.cr-order-stated.finish-order-stated .cr-step-txt, .cr-order-stated.close-order-icon .cr-step-txt, .cr-order-stated.od-over-icon .cr-step-txt {
 	color: #010101;
 }
 .cr-order-info {
 	position: relative;
 	border-top: 4px solid #595959;
+}
+.go-to-cr-step:hover {
+	color: #b3494d;
 }
 .count-time {
 	color: #b3494d;
@@ -192,9 +210,16 @@
 .cr-step-info {
 	border-bottom: 1px solid #6f6f6f;
 }
+.cr-step-info.bt-pt {
+	margin-top: 15px;
+	border-top: 1px solid #6f6f6f;
+}
 .issue-desc-tle {
 	display: block;
 	text-align: right;
+}
+#od-step-3 {
+	display: none;
 }
 .pay-total-price {
 	line-height: 20px;
@@ -208,6 +233,10 @@
 	text-align: right;
 	font-size: 14px;
 }
+.issue-pay-btn-wrapper.esp {
+	line-height: 44px;
+	color: #010101;
+}
 .issue-pay-btn {
 	float: right;
 	display: block;
@@ -218,78 +247,42 @@
 	text-align: center;
 	font-size: 16px;
 	color: #ff8c90;
+	cursor: pointer;
 }
 .cr-step-level-tle {
 	position: relative;
-	padding-top: 20px; 
+	padding-top: 15px; 
 	line-height: 44px;
 	font-size: 24px;
 	font-weight: bold;
-	letter-spacing: 2px;
-}
-.look-big-img-btn {
-	display: none;
-	position: absolute;
-	left: 160px;
-	top: 35px;
-	padding: 0 10px 0 12px;
-	line-height: 16px;
-	border: 1px solid #8d8d8d;
-	border-radius: 8px;
-	font-size: 12px;
-	letter-spacing: 2px;
-	cursor: pointer;
-}
-.up-load-img-err-txt {
-	display: none;
-	position: absolute;
-	left: 255px;
-	top: 35px;
-	line-height: 16px;
-	font-size: 12px;
-	letter-spacing: 2px;
-	cursor: pointer;
-	color: #b3494d;
-}
-.look-big-img-btn:hover {
-	color: #b3494d;
-	border-color: #b3494d;
-}
-.cr-step-info-err, .cr-step-info-tel-err {
-	display: none;
-	position: absolute;
-	line-height: 20px;
-	left: 130px;
-	top: 36px;
-	font-size: 16px;
-	color: #b3494d;
+	letter-spacing: 1px;
 }
 .cr-step-info-txt {
 	line-height: 34px;
 	font-size: 14px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
+}
+.cr-shop-desc {
+	font-weight: bold;
+}
+.cr-shop-desc:hover {
+	color: #b3494d;
+}
+.ob-fwb {
+	font-weight: bold;
 }
 .cr-step-info-issue-desc {
 	position: absolute;
 	right: -2px;
-	top: 30px;
+	top: 26px;
 	line-height: 30px;
 	font-size: 24px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	color: #b3494d;
 }
-.cr-sp-info-txt {
-	line-height: 36px;
-	font-size: 16px;
-	letter-spacing: 2px;
-}
-.return-policy-link {
-	font-weight: bold;
-}
-.return-policy-link:hover {
-	color: #b3494d;
-}
+
+
 .ceor-info-item-wrapper {
 	overflow: hidden;
 }
@@ -947,4 +940,33 @@
 }
 #step-changing-5-pass {
 	display: none;
+}
+.order-details-total-wrapper {
+	padding: 20px 0 30px;
+}
+.od-total-items {
+	line-height: 38px;
+	text-align: right;
+	font-size: 0px;
+}
+.od-total-name {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.od-total-txt {
+	width: 190px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.od-total-items.styl-cr .od-total-txt {
+	color: #b3494d;
+}
+.od-total-items.od-total-wpp .od-total-name {
+	font-size: 24px;
+}
+.od-total-items.od-total-wpp .od-total-txt {
+	font-size: 24px;
+	width: 188px;
 }
