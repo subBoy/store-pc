@@ -212,6 +212,12 @@ function collectGoods () {
 		}
 	})
 }
+function bindMobile () {
+
+}
+function bindEmail () {
+	
+}
 $(function () {
 	selectColor('.goods-color-item', '.goods-color-name');
 	selectSize('.goods-size-list', '.goods-size-view', '.goods-size-item-num')
@@ -222,4 +228,6 @@ $(function () {
 	goodsSizeTable();
 	outOfStore();
 	collectGoods();
+	bindMobile();
+	bindEmail();
 })

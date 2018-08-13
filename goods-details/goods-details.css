@@ -496,7 +496,7 @@
 }
 
 .gd-win-wrapper {
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -514,8 +514,8 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }
-.gd-win-content, .store-reserve-win, .reserve-success-win {
-	display: none;
+.gd-win-content, .store-reserve-win, .reserve-success-win, .bind-mobile-email-wrapper {
+	display: block;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -525,10 +525,101 @@
 	border: 1px solid #b7b7b7; 
 	background-color: #fff;
 	overflow: hidden;
+	z-index: 1;
 }
-.gd-win-ct-tle {
+.bind-mobile-email-wrapper {
+	z-index: 10;
+}
+.gd-win-ct-tle, .bmew-tle {
 	position: relative;
 	border-bottom: 3px solid #393939;
+}
+.bmew-tle-txt {
+	display: block;
+	padding: 40px 0 26px 5px;
+	line-height: 62px;
+	font-size: 42px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-align: center;
+}
+.bmew-close-btn {
+	position: absolute;
+	top: 60px;
+	right: 50px;
+	padding-left: 2px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.bmew-ct-item-code {
+	margin-top: 15px;
+}
+.bmew-ct-item-gp {
+	line-height: 32px;
+	margin-right: 20px;
+	width: 300px;
+	border: 1px solid #d3d3d3;
+	text-align: left;
+}
+.bmew-ct-item-code .bmew-ct-item-gp {
+	margin-right: 100px;
+	width: 220px;
+}
+.bmew-ct-item-btn {
+	line-height: 30px;
+	padding-left: 1px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	cursor: pointer;
+	color: #ff8c90;
+}
+.bmew-confirm-btn {
+	width: 90px;
+}
+.bmew-code-btn {
+	width: 134px;
+}
+.bmew-ct-item-name {
+	padding-left: 30px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	background-repeat: no-repeat;
+}
+.bmew-ic-1 {
+	background-image: url(../public/images/mb.png);
+	background-position: 12px center;
+}
+.bmew-ic-2 {
+	background-image: url(../public/images/code-icon.png);
+	background-position: 10px center;
+}
+.bmew-ic-3 {
+	background-image: url(../public/images/email.png);
+	background-position: 9px center;
+}
+.bind-mobile-wrapper {
+	padding: 100px 0 120px;
+	font-size: 0;
+	text-align: center;
+	border-bottom: 3px solid #393939;
+}
+.bmew-ct-item-input {
+	padding: 5px 0;
+	width: 170px;
+	height: 22px;
+}
+.bmew-ct-item-code .bmew-ct-item-input {
+	width: 90px;
+}
+.bind-mobile-input, .bind-code-input {
+	line-height: 22px;
+	width: 100%;
+	height: 22px;
+	font-size: 14px;
 }
 .gd-win-ct-tle-txt {
 	display: block;
