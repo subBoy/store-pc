@@ -213,7 +213,14 @@ function collectGoods () {
 	})
 }
 function bindMobile () {
-
+	$('#bind-mobile-btn').on('click', function () {
+		var valIf = $(this).html();
+		if (valIf === '无') {
+			$('#bind-mobile-email-tle').html('手机号绑定');
+			$('.bind-mobile-wrapper .bmew-ct-item-name').html('输入手机号：');
+		}
+		$('.bind-mobile-email-wrapper').show();
+	})
 }
 function bindEmail () {
 	
