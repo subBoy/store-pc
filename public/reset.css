@@ -1371,6 +1371,7 @@ h1, h2, h3, h4, h5, h6, p {
 .prev-next {
   font-size: 14px;
   color: #ff8c90;
+  font-weight: bold;
   background-color: #000;
 }
 .prev-next-wrapper {

@@ -496,7 +496,7 @@
 }
 
 .gd-win-wrapper {
-	/*display: none;*/
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -515,7 +515,7 @@
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }
 .gd-win-content, .store-reserve-win, .reserve-success-win, .bind-mobile-email-wrapper {
-	display: block;
+	display: none;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -529,6 +529,17 @@
 }
 .bind-mobile-email-wrapper {
 	z-index: 10;
+}
+.bind-mobile-email-err {
+	position: absolute;
+	left: 0px;
+	top: 160px;
+	line-height: 30px;
+	width: 100%;
+	font-size: 12px;
+	color: #b3494d;
+	text-align: center;
+	z-index: 1;
 }
 .gd-win-ct-tle, .bmew-tle {
 	position: relative;
@@ -584,6 +595,13 @@
 .bmew-code-btn {
 	width: 134px;
 }
+.bmew-code-btn.not-click {
+	cursor: default;
+	background-color: #ccc;
+}
+.cr-step-win-time {
+	color: #b3494d;
+}
 .bmew-ct-item-name {
 	padding-left: 30px;
 	font-size: 14px;
@@ -602,7 +620,8 @@
 	background-image: url(../public/images/email.png);
 	background-position: 9px center;
 }
-.bind-mobile-wrapper {
+.bind-mobile-wrapper, .bind-email-wrapper {
+	display: none;
 	padding: 100px 0 120px;
 	font-size: 0;
 	text-align: center;

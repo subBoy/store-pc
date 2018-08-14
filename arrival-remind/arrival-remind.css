@@ -187,3 +187,10 @@
 	color: #ff8c90;
 	letter-spacing: 2px;
 }
+
+.arrival-remind-desc {
+	padding-left: 20px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
