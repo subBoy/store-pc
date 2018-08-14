@@ -1,22 +1,23 @@
 @charset"UTF-8";
-.sc-goods-list {
-	padding: 25px 0;
-	height: 50px;
+.sc-goods-list-wrapper {
 	border-bottom: 1px solid #ccc;
+}
+.sc-goods-list {
+	padding: 12.5px 0;
+	margin-bottom: 20px;
+	height: 75px;
 	overflow: hidden;
+	background-color: #f4f6f5;
 }
 .sc-goods-item {
 	float: left;
 	text-align: center;
 }
 .sc-goods-item.v-center {
-	padding-right: 20px;
 	text-align: right;
-	line-height: 50px;
-	color: #494a4a;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	line-height: 75px;
+	font-size: 14px;
+	text-align: center;
 }
 .sc-goods-item.del-btn {
 	cursor: pointer;
@@ -24,38 +25,57 @@
 .sc-goods-item.del-btn:hover {
 	color: #b3494d;
 }
-.wh-71 {
-	width: 71%;
+.wh-60 {
+	width: 60%;
 	text-align: left;
 }
-.wh-25 {
-	float: right;
+.wh-20 {
+	float: left;
 	width: 20%;
+}
+.arrival-remind-tle-wrapper {
+	font-size: 0;
+	text-align: center;
+}
+.artw-txt {
+	display: block;
+	line-height: 40px;
+	padding-left: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.artw-item.wh-60 .artw-txt {
+	padding-left: 44px;
+}
+.artw-item.wh-20 {
+	float: none;
 }
 .reserve-win-goods-info {
 	position: relative;
-	padding: 0px 0 0 120px;
+	padding: 0px 0 0 135px;
 }
 .reserve-win-goods-img {
 	display: block;
 	position: absolute;
-	left: 50px;
+	left: 44px;
 	top: 0;
-	width: 50px;
-	height: 50px;
+	width: 75px;
+	height: 75px;
 	overflow: hidden;
 	z-index: 1;
 }
 .select-input-wrapper {
 	display: block;
 	position: absolute;
-	top: 0;
+	top: -12.5px;
 	left: 0;
-	width: 50px;
-	height: 50px;
+	width: 44px;
+	height: 100px;
 	background-repeat: no-repeat;
-	background-position: 15px center;
+	background-position: center;
 	background-image: url(../public/images/select-icon-1.png);
+	background-color: #fff;
 }
 .select-input-wrapper.checked-item, .sc-all-sel.checked-item {
 	background-image: url(../public/images/selected-icon-1.png);
@@ -81,7 +101,7 @@
 	white-space: nowrap; 
 }
 .reserve-win-goods-name .goods-name-txt {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 2px;
 }
@@ -89,22 +109,31 @@
 	font-size: 18px;
 }
 .reserve-win-goods-name .goods-name-hr {
-	margin: 0 6px;
-	width: 2px;
-	height: 2px;
+	margin: 0 7px 0 6px;
+	width: 3px;
+	height: 3px;
 	background-color: #000;
 }
 .reserve-win-goods-desc {
 	font-size: 0;
 }
 .sc-goods-info {
-	line-height: 22px;
-	font-size: 12px;
+	line-height: 24px;
+	font-size: 14px;
 	color: #494a4a;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap; 
 	letter-spacing: 1px;
+}
+.sc-goods-info-size-clo {
+	margin-right: 15px;
+	line-height: 24px;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.sc-goods-info-price {
+	font-size: 12px;
 }
 .goods-name-hr {
 	margin: 0 10px;
@@ -116,13 +145,15 @@
 	overflow: hidden;
 }
 .sc-goods-oper-sel {
+	position: relative;
 	float: left;
 	font-size: 0;
+	z-index: 10;
 }
 .sc-all-sel-wrapper {
 	position: relative;
 	line-height: 22px;
-	padding-left: 50px;
+	padding-left: 44px;
 	font-size: 14px;
 	letter-spacing: 2px;
 	font-weight: bold;
@@ -132,11 +163,38 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 50px;
+	width: 44px;
 	height: 22px;
 	background-repeat: no-repeat;
-	background-position: 15px center;
+	background-position: center;
 	background-image: url(../public/images/select-icon-1.png);
+}
+.aretw-btn {
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+.aretw-item-status {
+	display: block;
+	line-height: 24px;
+	font-size: 14px;
+}
+.aretw-goto-list-btn {
+	display: block;
+	line-height: 22px;
+	font-size: 12px;
+}
+.aretw-goto-list-btn:hover {
+	color: #b3494d;
+}
+.aretw-pay-btn {
+	display: block;
+	padding-left: 2px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff8c90;
+	letter-spacing: 2px;
 }
 .sc-all-sel-input {
 	position: absolute;

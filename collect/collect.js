@@ -45,8 +45,9 @@ function selSp () {
 }
 function delSel () {
 	$('.collect-gooods .sc-all-del-btn').on('click', function () {
+		console.log(0);
 		$.each($('.collect-gooods .sp-select-input'), function () {
-	    if(this.checked){
+	    if($(this).is(':checked')){
 	    	$(this).parent().parent().parent().parent().remove();
 	    	showNotGoods();
 	    }
@@ -54,7 +55,7 @@ function delSel () {
 	})
 	$('.collect-der-singer .sc-all-del-btn').on('click', function () {
 		$.each($('.collect-der-singer .sp-select-input'), function () {
-	    if(this.checked){
+	    if($(this).is(':checked')){
 	    	$(this).parent().parent().parent().parent().remove();
 	    	showNotGoods();
 	    }
@@ -69,8 +70,6 @@ function showNotGoods () {
 	} else {
 		$('.collect-gooods .sc-has-goods-wrapper').fadeIn();
 		$('.collect-gooods .sc-not-goods-wrapper').hide();
-		selSp(); // 选择商品
-		delSel(); // 删除已选商品
 	}
 
 	var len2 = $('.collect-der-singer .sc-goods-list').length;
@@ -80,10 +79,10 @@ function showNotGoods () {
 	} else {
 		$('.collect-der-singer .sc-has-goods-wrapper').fadeIn();
 		$('.collect-der-singer .sc-not-goods-wrapper').hide();
-		selSp(); // 选择商品
-		delSel(); // 删除已选商品
 	}
 }
 $(function () {
-	showNotGoods(); // 是否有商品显示
+	showNotGoods();
+	selSp();
+	delSel();
 })

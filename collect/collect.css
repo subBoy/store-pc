@@ -116,8 +116,10 @@
 	overflow: hidden;
 }
 .sc-goods-oper-sel {
+	position: relative;
 	float: left;
 	font-size: 0;
+	z-index: 10;
 }
 .sc-all-sel-wrapper {
 	position: relative;
