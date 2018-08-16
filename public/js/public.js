@@ -2,7 +2,8 @@ var sh, hr, st;
 function initNav () { 
   var sTop = $(window).scrollTop();
   var sWidth = $(window).width(); 
-  if (sTop >= 100) {
+  var sHeight = $(window).height(); 
+  if (sTop > sHeight) {
   	$('.go-to-top-btn').fadeIn();
   } else {
   	$('.go-to-top-btn').fadeOut();
@@ -278,6 +279,62 @@ function checkedItem () {
 		}
 	});
 }
+var recommend = {
+	len: $('.recommended-goods-list').find('.recommended-goods-item').length,
+	idx: 0,
+	basics: function () {
+		recommend.btnStatus();
+		var _h = $('.recommended-goods-item').width();
+		var sTop = _h * 4;
+		$(".recommended-goods-list").animate({
+			left: '-' + recommend.idx * sTop + 'px'
+		}, 500);
+	},
+	prev: function () {
+		recommend.idx--;
+		if (recommend.idx <= 0) {
+			recommend.idx = 0;
+		}
+		recommend.basics();
+	},
+	next: function () {
+		var _len = Math.ceil(recommend.len / 4) - 1;
+		recommend.idx++;
+		if (recommend.idx >= _len) {
+			recommend.idx = _len;
+		}
+		recommend.basics();
+	},
+	btnStatus: function () {
+		$('.recommend-prev, .recommend-next').addClass('has-more');
+		var _len = Math.ceil(recommend.len / 4) - 1;
+		if (recommend.idx <= 0) {
+			$('.recommend-prev, .recommend-next').removeClass('has-more');
+			if (_len > 0) {
+				$('.recommend-next').addClass('has-more');
+			}
+		}
+		if (recommend.idx >= _len) {
+			$('.recommend-prev, .recommend-next').removeClass('has-more');
+			if (_len > 0) {
+				$('.recommend-prev').addClass('has-more');
+			}
+		}
+	},
+	init: function () {
+		var _h = $('.recommended-goods-item').width();
+		$(".recommended-goods-list").animate({
+			left: 0,
+			width: recommend.len * _h + 'px'
+		});
+	}
+};
+function cutRecommend () {
+	// 切换推荐商品
+	recommend.init();
+	$('.recommend-prev').on('click', recommend.prev);
+	$('.recommend-next').on('click', recommend.next);
+}
 $(function () {
 	setFooterStyle();
 	initNav(); // 判断悬浮导航出现的时机
@@ -293,6 +350,7 @@ $(function () {
 	delCartSp(); // 头部删除购物车里面的商品操作
 	navHighlight(); // 设置导航高亮
 	checkedItem();
+	cutRecommend();
 	$('.global-body').on('click', function () {
 		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list').slideUp();
 		$('.is-show').removeClass('is-show');

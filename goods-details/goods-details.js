@@ -98,62 +98,6 @@ function cutImgNav () {
 		}, 500);
 	})
 }
-var recommend = {
-	len: $('.recommended-goods-list').find('.recommended-goods-item').length,
-	idx: 0,
-	basics: function () {
-		recommend.btnStatus();
-		var _h = $('.recommended-goods-item').width();
-		var sTop = _h * 4;
-		$(".recommended-goods-list").animate({
-			left: '-' + recommend.idx * sTop + 'px'
-		}, 500);
-	},
-	prev: function () {
-		recommend.idx--;
-		if (recommend.idx <= 0) {
-			recommend.idx = 0;
-		}
-		recommend.basics();
-	},
-	next: function () {
-		var _len = Math.ceil(recommend.len / 4) - 1;
-		recommend.idx++;
-		if (recommend.idx >= _len) {
-			recommend.idx = _len;
-		}
-		recommend.basics();
-	},
-	btnStatus: function () {
-		$('.recommend-prev, .recommend-next').addClass('has-more');
-		var _len = Math.ceil(recommend.len / 4) - 1;
-		if (recommend.idx <= 0) {
-			$('.recommend-prev, .recommend-next').removeClass('has-more');
-			if (_len > 0) {
-				$('.recommend-next').addClass('has-more');
-			}
-		}
-		if (recommend.idx >= _len) {
-			$('.recommend-prev, .recommend-next').removeClass('has-more');
-			if (_len > 0) {
-				$('.recommend-prev').addClass('has-more');
-			}
-		}
-	},
-	init: function () {
-		var _h = $('.recommended-goods-item').width();
-		$(".recommended-goods-list").animate({
-			left: 0,
-			width: recommend.len * _h + 'px'
-		});
-	}
-};
-function cutRecommend () {
-	// 切换推荐商品
-	recommend.init();
-	$('.recommend-prev').on('click', recommend.prev);
-	$('.recommend-next').on('click', recommend.next);
-}
 function goodsSizeTable () {
 	// 尺寸对照表弹窗
 	$('.size-table-btn').on('click', function (){

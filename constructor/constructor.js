@@ -66,6 +66,229 @@ function spItemSH () {
 		_li.eq(_index).fadeIn();
 	})
 }
+function bindMobile () {
+	$('#bind-mobile-btn').on('click', function () {
+		var valIf = $(this).siblings('.inform-name-txt').html();
+		if (valIf === '无') {
+			$('#bind-mobile-email-tle').html('手机号绑定');
+			$('.bind-mobile-wrapper .bmew-ct-item-name.bmew-ic-1').html('输入手机号：');
+		} else {
+			$('#bind-mobile-email-tle').html('手机号修改');
+			$('.bind-mobile-wrapper .bmew-ct-item-name.bmew-ic-1').html('新的手机号：');
+		}
+		$('.bind-email-wrapper').hide();
+		$('.bind-mobile-email-wrapper').show();
+		$('.bind-mobile-wrapper').fadeIn();
+	})
+	$('.bmew-close-btn').on('click', function () {
+		$('.bind-mobile-email-err').html('');
+		$('.bmew-ct-item-input input').val('');
+		$('.bind-mobile-wrapper, .bind-email-wrapper').hide();
+		$('.bind-mobile-email-wrapper').fadeOut();
+	})
+	submitMobile();
+}
+function bindEmail () {
+	$('#bind-eamil-btn').on('click', function () {
+		var valIf = $(this).siblings('.inform-name-txt').html();
+		if (valIf === '无') {
+			$('#bind-mobile-email-tle').html('邮箱地址绑定');
+			$('.bind-email-wrapper .bmew-ct-item-name.bmew-ic-3').html('输入邮箱：');
+		} else {
+			$('#bind-mobile-email-tle').html('邮箱地址修改');
+			$('.bind-email-wrapper .bmew-ct-item-name.bmew-ic-3').html('新的邮箱：');
+		}
+		$('.bind-mobile-wrapper').hide();
+		$('.bind-mobile-email-wrapper').show();
+		$('.bind-email-wrapper').fadeIn();
+	})
+	submitEmail();
+}
+function ipEmVer () {
+	$('.bmew-ct-item-input input').focus(function () {
+		$('.bind-mobile-email-err').html('');
+	})
+}
+function emailVerify () {
+	var emailVal = $('#emailInput').val();
+	var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+	if (!reg.test(emailVal)) {
+		$('.bind-mobile-email-err').html('邮箱有误，请重新输入！');
+		return false;
+	}
+	return true;
+}
+function submitEmail () {
+	var times = 60;
+	var codeBtnTxt = '';
+	var codeClick = true;
+	var timer;
+	if (status) {
+		clearInterval(timer);
+		return;
+	}
+	var setval = function () {
+	  times--;
+	  codeBtnTxt = times + 's后重试';
+	  $('#getEmailCode').addClass('not-click').html(codeBtnTxt);
+	  if (times < 1) {
+	    clearInterval(timer);
+	    times = 60;
+	    codeBtnTxt = '重新发送';
+	    codeClick = true;
+	    $('#getEmailCode').removeClass('not-click').html(codeBtnTxt);
+	  }
+	};
+	$('#getEmailCode').on('click', function () {
+		if (!codeClick) {
+			return;
+		}
+		if (emailVerify()) {
+			codeClick = false;
+			timer = setInterval(setval, 1000)
+		}
+	})
+	$('#submitEmail').on('click', function () {
+		if (emailVerify()) {
+			var code = $(this).siblings('.bmew-ct-item-gp').find('.bind-code-input').val();
+			if (!code) {
+				$('.bind-mobile-email-err').html('验证码有误，请重新输入！');
+				return;
+			}
+			var txt = $('#bind-eamil-btn').html();
+			if (txt !== '修改') {
+				$('.bind-mobile-email-err').html('认证成功！');
+			} else {
+				$('.bind-mobile-email-err').html('修改成功！');
+			}
+			var _this = $(this);
+			var res =$(this).parent().parent().siblings('.urio-sign-group');
+			setTimeout(function() {
+				$('#bind-eamil-btn').html('修改');
+				$('#bind-eamil-btn').siblings('.inform-name-txt').html($('#emailInput').val());
+				$('.bind-mobile-email-wrapper').slideUp();
+				$('.bind-mobile-email-err').html('');
+				$('#emailInput').val('');
+				$('.bind-code-input').val('');
+				clearInterval(timer);
+				times = 60;
+				codeClick = true;
+	    	$('#getEmailCode').removeClass('not-click').html('发送邮箱验证码');
+	    	$('#bind-eamil-btn').parent().siblings('.inform-style-btn').show();
+			}, 300);
+		}
+	})
+	$('.bmew-close-btn').on('click', function () {
+		$('.bind-mobile-email-err').html('');
+		$('.bmew-ct-item-input input').val('');
+		$('.bind-mobile-wrapper, .bind-email-wrapper').hide();
+		$('.bind-mobile-email-wrapper').fadeOut();
+		clearInterval(timer);
+		times = 60;
+		codeClick = true;
+  	$('#getEmailCode').removeClass('not-click').html('发送邮箱验证码');
+  	$('#getMobileCode').removeClass('not-click').html('发送手机验证码');
+	})
+}
+function mobileVerify () {
+	var emailVal = $('#mobileInput').val();
+	var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+	if (!reg.test(emailVal)) {
+		$('.bind-mobile-email-err').html('手机号有误，请重新输入！');
+		return false;
+	}
+	return true;
+}
+function submitMobile () {
+	var times = 60;
+	var codeBtnTxt = '';
+	var codeClick = true;
+	var timer;
+	var setval = function () {
+	  times--;
+	  codeBtnTxt = times + 's后重试';
+	  $('#getMobileCode').addClass('not-click').html(codeBtnTxt);
+	  if (times < 1) {
+	    clearInterval(timer);
+	    times = 60;
+	    codeBtnTxt = '重新发送';
+	    codeClick = true;
+	    $('#getMobileCode').removeClass('not-click').html(codeBtnTxt);
+	  }
+	};
+	$('#getMobileCode').on('click', function () {
+		if (!codeClick) {
+			return;
+		}
+		if (mobileVerify()) {
+			codeClick = false;
+			timer = setInterval(setval, 1000)
+		}
+	})
+	$('#submitMobile').on('click', function () {
+		if (mobileVerify()) {
+			var code = $(this).siblings('.bmew-ct-item-gp').find('.bind-code-input').val();
+			if (!code) {
+				$('.bind-mobile-email-err').html('验证码有误，请重新输入！');
+				return;
+			}
+			var txt = $('#bind-mobile-btn').html();
+			if (txt !== '修改') {
+				$('.bind-mobile-email-err').html('认证成功！');
+			} else {
+				$('.bind-mobile-email-err').html('修改成功！');
+			}
+			setTimeout(function() {
+				$('#bind-mobile-btn').html('修改');
+				$('#bind-mobile-btn').siblings('.inform-name-txt').html($('#mobileInput').val());
+				$('.bind-mobile-email-wrapper').slideUp();
+				$('.bind-mobile-email-err').html('');
+				$('#mobileInput').val('');
+				$('.bind-code-input').val('');
+				$('#bind-mobile-btn').parent().siblings('.inform-style-btn').show();
+				clearInterval(timer);
+				times = 60;
+				codeClick = true;
+	    	$('#getMobileCode').removeClass('not-click').html('发送手机验证码');
+			}, 300);
+		}
+	})
+	$('.bmew-close-btn').on('click', function () {
+		$('.bind-mobile-email-err').html('');
+		$('.bmew-ct-item-input input').val('');
+		$('.bind-mobile-wrapper, .bind-email-wrapper').hide();
+		$('.bind-mobile-email-wrapper').fadeOut();
+		clearInterval(timer);
+		times = 60;
+		codeClick = true;
+  	$('#getEmailCode').removeClass('not-click').html('发送邮箱验证码');
+  	$('#getMobileCode').removeClass('not-click').html('发送手机验证码');
+	})
+}
+function autoHide () {
+	var tNUum = 3;
+	var sh;
+	var to = function () {
+		tNUum--;
+		if (tNUum < 1) {
+			tNUum = 1;
+			$('.cr-step-win-time').html(tNUum);
+			clearInterval(sh);
+			location.href="../user-center/user-center.html";
+			$('#submit-success-win').fadeOut();
+		}
+		$('.cr-step-win-time').html(tNUum);
+	}
+	sh = setInterval(to, 1000);
+}
+function seserveSubmit () {
+	$('#reserve-submit-self').on('click', function () {
+		$('#submit-success-win').fadeIn();
+		setTimeout(function () {
+			autoHide();
+		}, 50);
+	})
+}
 $(function () {
 	spItemSH();
 	selectColor('.goods-color-item', '.goods-color-name');
@@ -73,4 +296,8 @@ $(function () {
 	outOfStore();
 	collectGoods();
 	$('.go-to-top-btn').on('click', goToTop);
+	bindMobile();
+	bindEmail();
+	ipEmVer();
+	seserveSubmit();
 })

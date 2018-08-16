@@ -70,7 +70,6 @@ upLoadArea.ondrop = function (e) {
 	e.stopPropagation();
 	$('.cr-step-win-err').html(' ').hide();
 	var files = e.dataTransfer.files;
-	console.log(e);
 	if (!files) {
 		$('.cr-step-win-err').html('您使用的浏览器不支持拖拽上传图片, 请更换浏览器再来使用！').fadeIn();
 		return;

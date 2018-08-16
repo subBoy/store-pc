@@ -14,14 +14,123 @@
 }
 
 .abus-ct-item {
+	padding-top: 90px;
 	font-size: 0;
 }
 .abus-ct-item-wrapper {
 	width: 50%;
+	text-align: center
 }
 .abus-im-wpr-l {
 	padding-right: 20px; 
 }
 .abus-im-wpr-r {
 	padding-left: 20px; 
+}
+.abus-im-wpr-tle {
+	line-height: 56px;
+	padding-left: 2px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #b3494d;
+}
+.abus-im-wpr-desc {
+	line-height: 40px;
+	padding-left: 2px;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.fwb {
+	font-weight: bold;
+}
+.abus-im-wpr-link {
+	display: block;
+	margin: 15px auto;
+	padding-left: 2px;
+	line-height: 40px;
+	width: 230px;
+	font-size: 18px;
+	color: #ff8c90;
+	letter-spacing: 2px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.abus-constructor {
+	border: 1px solid #000;
+	background-color: #000;
+	overflow: hidden;
+}
+.abus-constructor-list {
+	width: 100%;
+}
+.abus-constructor-item {
+	float: left;
+	width: 33.33333%;
+}
+.abus-constructor-link {
+	position: relative;
+	display: block;
+	padding-top: 104.2%;
+	height: 0;
+	overflow: hidden;
+}
+.abus-constructor-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 99%;
+	height: 99%;
+	z-index: 1;
+}
+.abus-ci-1 .abus-constructor-img {
+	top: 0;
+	left: 0;
+}
+.abus-ci-2 .abus-constructor-img {
+	left: 0.5%;
+	top: 0;
+}
+.abus-ci-3 .abus-constructor-img {
+	left: auto;
+	right: 0;
+	top: 0;
+}
+.abus-ci-4 .abus-constructor-img {
+	left: 0;
+	top: auto;
+	bottom: 0;
+}
+.abus-ci-5 .abus-constructor-img {
+	left: 0.5%;
+	top: auto;
+	bottom: 0;
+}
+.abus-ci-6 .abus-constructor-img {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+
+.abus-shade {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+	z-index: 10;
+}
+
+.abus-constructor-link:hover .abus-shade {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
 }

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../public/reset.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./order-detail.css">
+<link rel="stylesheet" href="./constructor-list.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -23,11 +23,11 @@
 		</div>
 	</div>
 	<!-- 头部区域 -->
-	<input type="hidden" value="0" id="nav-item-index">
+	<input type="hidden" value="6" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -129,7 +129,7 @@
 						<div class="sign-input-wrapper" style="display: none;">
 							<div class="user-info-wrapper">
 								<span class="nav-user-name-greet in-block">你好！秋帆</span>
-								<span class="nav-sign-out-btn in-block">换出</span>
+								<span class="nav-sign-out-btn in-block">退出</span>
 							</div>
 							<div class="user-module-wrapper">
 								<div class="user-module-group">
@@ -169,7 +169,7 @@
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的换单</a>
+											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的退单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
@@ -707,275 +707,60 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="cr-step-wrapper">
-		<div class="cr-step-header-wrapper">
-			<h3 class="cr-step-tle">订单详情</h3>
-			<p class="cr-step-tle-eg">Order details</p>
-			<div class="cr-step-list">
-				<div class="cr-step-hr"></div>
-				<span class="cr-step-item cr-order-status">
-					<span class="cr-step-icon"></span>
-					<span class="cr-step-txt">已下单</span>
-				</span>
-				<span class="cr-step-item cr-order-issue">
-					<span class="cr-step-icon thanks"></span>
-					<span class="cr-step-txt" id="cr-step-name"></span>
-				</span>
-				<span class="cr-step-item cr-order-stated">
-					<span class="cr-step-icon"></span>
-					<span class="cr-step-txt" id="cr-order-status-txt">出库配送</span>
-				</span>
-			</div>
+	<div class="constructor-list-wrapper">
+		<div class="ctlt-banner-ctr"></div>
+		<div class="ctlt-im-wpr">
+			<h3 class="ctlt-im-wpr-tle">设计师</h3>
+			<p class="ctlt-im-wpr-desc"><span class="fwb">RACK ROD</span>的设计者以<span class="fwb">匠人与著名纹身师</span>为主</p>
+			<p class="ctlt-im-wpr-desc">在所有的图文作品里，以纹身师的手绘最具有生命的热度</p>
+			<p class="ctlt-im-wpr-desc">一副愿意铭刻肉体并<span class="fwb">携带一生</span>的图文誓言</p>
+			<p class="ctlt-im-wpr-desc">我们将它的故事付诸于产品</p>
+			<p class="ctlt-im-wpr-desc">从此这不再仅仅是一件件服装或者饰品</p>
+			<p class="ctlt-im-wpr-desc">而是一群人的生活</p>
+			<p class="ctlt-im-wpr-desc">和他们追逐自由一生的态度</p>
 		</div>
-		<div class="cr-step-info cr-order-info">
-			<h3 class="cr-step-level-tle">订单号：2018278432879</h3>
-			<p class="cr-step-info-txt">下单时间：2017-09-11 17:17:54</p>
-			<p class="cr-step-info-txt" id="cr-step-info-txt-ctr">您还剩下<span class="count-time count-time-group" id="count-time-ctr" endTime="2018-08-14 12:27:54"></span>时间完成付款，否则订单将过期!</p>
-			<div class="cr-step-info-issue-desc">
-				<div class="pay-step-issue">
-					<span class="issue-desc-tle" id="step-issue-desc">待发货</span>
-					<p class="issue-pay-btn-wrapper" step="1">
-						<a href="../payment-process/start-payment.html" class="issue-pay-btn global-btn-styl">前去付款</a>
-					</p>
-					<p class="issue-pay-btn-wrapper" step="2">已付款</p>
-					<p class="issue-pay-btn-wrapper" step="3">
-						<span class="issue-pay-btn global-btn-styl confirm-receipt-btn">确认收货</span>
-					</p>
-					<p class="issue-pay-btn-wrapper" step="4">
-						<a href="../changing-returning/step.html" class="go-to-cr-step">退换货</a>
-					</p>
-					<p class="issue-pay-btn-wrapper" step="5">
-						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
-					</p>
-					<p class="issue-pay-btn-wrapper" step="6">
-						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
-					</p>
-					<p class="issue-pay-btn-wrapper" step="7">
-						<a href="../goods-list/goods-list.html?cmd=man" class="go-to-cr-step">再逛逛</a>
-					</p>
-					<p class="pay-total-price">订单总计：¥2560.00</p>
-				</div>
-			</div>
-			<div class="cr-step-info bt-pt" id="od-step-3">
-				<h3 class="cr-step-level-tle">发货物流</h3>
-				<div class="stpps-3-close-address">
-					<p class="stpps-3-ceas">
-						<span class="stpps-3-ceas-name in-block">配送方式<i class="just-i in-block"></i></span>
-						<span class="stpps-mh in-block">:</span>
-						<span class="stpps-3-ceas-txt in-block">顺丰快递</span>
-					</p>
-					<p class="stpps-3-ceas">
-						<span class="stpps-3-ceas-name in-block">物流单号<i class="just-i in-block"></i></span>
-						<span class="stpps-mh in-block">:</span>
-						<span class="stpps-3-ceas-txt in-block">A22342342342323</span>
-					</p>
-				</div>
-			</div>
-			<h3 class="cr-step-level-tle">下单方式</h3>
-			<p class="cr-stepes-desc">会员下单</p>
-		</div>
-		<div class="cr-step-info">
-			<h3 class="cr-step-level-tle">配送信息</h3>
-			<div class="stpps-3-close-address">
-				<p class="stpps-3-ceas">
-					<span class="stpps-3-ceas-name in-block">收货人<i class="just-i in-block"></i></span>
-					<span class="stpps-mh in-block">:</span>
-					<span class="stpps-3-ceas-txt in-block">邱帆  <span class="stpps-3-ceas-tel">13552709924</span></span>
-				</p>
-				<p class="stpps-3-ceas">
-					<span class="stpps-3-ceas-name in-block">配送地址<i class="just-i in-block"></i></span>
-					<span class="stpps-mh in-block">:</span>
-					<span class="stpps-3-ceas-txt in-block">北京市通州区果园新华联家园42号311</span>
-				</p>
-				<p class="stpps-3-ceas">
-					<span class="stpps-3-ceas-name in-block">邮编<i class="just-i in-block"></i></span>
-					<span class="stpps-mh in-block">:</span>
-					<span class="stpps-3-ceas-txt in-block">101111</span>
-				</p>
-				<p class="stpps-3-ceas">
-					<span class="stpps-3-ceas-name in-block">配送方式<i class="just-i in-block"></i></span>
-					<span class="stpps-mh in-block">:</span>
-					<span class="stpps-3-ceas-txt in-block">顺丰快递</span>
-				</p>
-			</div>
-		</div>
-		<div class="cr-step-info">
-			<h3 class="cr-step-level-tle">支付信息</h3>
-			<p class="stpps-3-desc styl-fwb">
-			<div class="stpps-3-close-address">
-				<p class="stpps-3-ceas">
-					<span class="stpps-3-ceas-name in-block">支付方式<i class="just-i in-block"></i></span>
-					<span class="stpps-mh in-block">:</span>
-					<span class="stpps-3-ceas-txt in-block">微信支付</span>
-				</p>
-			</div>
-		</div>
-		<div class="cr-step-info">
-			<h3 class="cr-step-level-tle">是否开票</h3>
-			<p class="stpps-3-ceas styl-pag">
-				<span class="is-stpps-fp in-block">是</span>
-				<span class="stpps-fp-txt in-block">企业普通发票</span>
-				<span class="stpps-fp-txt in-block">北京查查有限公司</span>
-				<span class="stpps-fp-txt in-block">SDADADFSDFD</span>
-			</p>
-		</div>
-		<!-- 商品信息 -->
-		<div class="cr-step-info cr-sp-info">
-			<h3 class="cr-step-level-tle">商品信息</h3>
-			<ul class="cr-sp-list">
-				<li class="cr-sp-item">
-					<div class="ceor-info-item-wrapper">
-						<div class="ceor-imio-box">
-							<a class="ceor-imio-img">
-								<img src="../developerImg/sp-img.jpg" width="100%">
-							</a>
-							<p class="ceor-imio-name">
-								<span class="ceor-imio-tle in-block">短袖</span>
-								<span class="ceor-imio-hr in-block"></span>
-								<span class="ceor-imio-tle in-block">RACK ROD</span>
-							</p>
-							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-							<p class="ceor-imio-tab">
-								<span class="ceor-imio-table in-block">S / 白色</span>
-								<span class="ceor-imio-table clostyl in-block">货号：A100001</span>
-							</p>
-						</div>
-						<div class="ceor-imio-num">1</div>
-						<div class="ceor-imio-price">￥:225.00</div>
+		<div class="constructor-list-group">
+			<ul class="constructor-list-box ctlt-1">
+				<li class="constructor-item ctlt-im-1">
+					<div class="constructor-info in-block">
+						<h3 class="constructor-name">菜菜</h3>
+						<p class="constructor-desc">独立服师装设计师</p>
+						<p class="constructor-desc">毕业于北京服装学院</p>
+						<p class="constructor-desc">08年至今，手工服装作室</p>
+						<p class="constructor-desc">从事服装设计十年有余</p>
+						<p class="constructor-desc">微博大v推荐卖家</p>
+						<p class="constructor-desc">淘宝推荐金牌卖家</p>
+					</div>
+					<div class="constructor-img in-block">
+						<a href="../constructor/constructor.html" class="constructor-link">
+							<img src="../constructor-list/images/p-1.jpg" width="100%">
+						</a>
 					</div>
 				</li>
-				<li class="cr-sp-item">
-					<div class="ceor-info-item-wrapper">
-						<div class="ceor-imio-box">
-							<a class="ceor-imio-img">
-								<img src="../developerImg/sp-img.jpg" width="100%">
-							</a>
-							<p class="ceor-imio-name">
-								<span class="ceor-imio-tle in-block">短袖</span>
-								<span class="ceor-imio-hr in-block"></span>
-								<span class="ceor-imio-tle in-block">RACK ROD</span>
-							</p>
-							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-							<p class="ceor-imio-tab">
-								<span class="ceor-imio-table in-block">S / 白色</span>
-								<span class="ceor-imio-table clostyl in-block">货号：A100001</span>
-							</p>
-						</div>
-						<div class="ceor-imio-num">1</div>
-						<div class="ceor-imio-price">￥:225.00</div>
+				<li class="constructor-item ctlt-im-2">
+					<div class="constructor-info in-block">
+						<h3 class="constructor-name">菜菜</h3>
+						<p class="constructor-desc">独立服师装设计师</p>
+						<p class="constructor-desc">毕业于北京服装学院</p>
+						<p class="constructor-desc">08年至今，手工服装作室</p>
+						<p class="constructor-desc">从事服装设计十年有余</p>
+						<p class="constructor-desc">微博大v推荐卖家</p>
+						<p class="constructor-desc">淘宝推荐金牌卖家</p>
+					</div>
+					<div class="constructor-img in-block">
+						<a href="../constructor/constructor.html" class="constructor-link">
+							<img src="../constructor-list/images/p-1.jpg" width="100%">
+						</a>
 					</div>
 				</li>
 			</ul>
 		</div>
-		<div class="order-details-total-wrapper">
-			<p class="od-total-items">
-				<span class="in-block od-total-name">订单商品总额：</span>
-				<span class="in-block od-total-txt">￥：299.00</span>
-			</p>
-			<p class="od-total-items">
-				<span class="in-block od-total-name">商品数量：</span>
-				<span class="in-block od-total-txt">3</span>
-			</p>
-			<p class="od-total-items styl-cr">
-				<span class="in-block od-total-name">优惠金额：</span>
-				<span class="in-block od-total-txt">-￥0.00</span>
-			</p>
-			<p class="od-total-items">
-				<span class="in-block od-total-name">订单运费总额：</span>
-				<span class="in-block od-total-txt">￥0.00</span>
-			</p>
-			<p class="od-total-items od-total-wpp">
-				<span class="in-block od-total-name">总计：</span>
-				<span class="in-block od-total-txt">￥：299.00</span>
-			</p>
-		</div>
 	</div>
-	
-	<div class="more-recommended-wrapper">
-			<div class="global-title-wrapper">
-				<h3 class="global-title-h3">商品推荐</h3>
-				<p class="global-title-english">MORE RECOMMENDED</p>
-			</div>
-			<div class="more-recommended">
-				<span class="recommend-prev recommend-btn in-block"></span>
-				<div class="recommended-goods">
-					<ul class="recommended-goods-list">
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-3.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-4.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<span class="recommend-next recommend-btn in-block has-more"></span>
-			</div>
-		</div>
 	<div class="yws-i-am-bg-r">
 		<div class="yws-i-am-wrapper">
-			<h3 class="yws-i-am-tle">Yes i am</h3>
-			<p class="yws-i-am-desc">恶党、野派、魔巫、铁皮人、冰血暴、凝明潮体、法外之徒、野性难驯！</p>
-			<p class="yws-i-am-desc">这是一次独立，关于我们的品牌和文化！</p>
+			<h3 class="yws-i-am-tle">I see you!</h3>
+			<p class="yws-i-am-desc">她说：我们都是嘻嘻哈哈的外向孤独者，喝完这杯酒，我们没回头！</p>
+			<p class="yws-i-am-desc">人生如逆旅，我亦如行人！</p>
 			<img src="../public/images/dl-png.png" class="yws-i-am-img">
 		</div>
 	</div>
@@ -1030,23 +815,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- 弹窗区域 -->
-	<!-- 提交资料成功弹窗 -->
-	<div class="cr-step-win" id="submit-success-win">
-		<em class="win-bg"></em>
-		<div class="cr-step-win-content">
-			<div class="cr-step-win-tle" id="success-win-txt">资料提交成功！</div>
-			<div class="cr-step-win-icon">
-				<img src="../public/images/note.png" width="100%">
-			</div>
-			<div class="cr-step-win-desc-wrapper">
-				<p class="cr-step-win-desc" id="success-win-desc">资料提交成功后，售后组3个工作日内处理结果！</p>
-				<p class="cr-step-win-desc"><span class="cr-step-win-time">3</span>s后返回个人中心页面！</p>
-			</div>
-		</div>
-	</div>
 	<script src="../public/js/public.js"></script>
-	<script src="../changing-returning/step.js"></script>
-	<script src="./order-detail.js"></script>
+	<script src="./constructor-list.js"></script>
 </body>
 </html>
