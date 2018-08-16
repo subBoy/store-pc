@@ -34,25 +34,83 @@
 	max-width: 1350px;
 }
 .constructor-list-box {
+	padding: 40px 35px;
 	overflow: hidden;
-	border-bottom: 1px solid #d3d3d3;
+	border-top: 1px solid #d3d3d3;
+}
+.constructor-list-box:first-child {
+	border-top: none;
 }
 .constructor-item {
+	position: relative;
 	width: 48%;
 	font-size: 0;
 }
-.ctlt-im-1 {
+.ctlt-im-1, .ctlt-im-3, .ctlt-im-5 {
 	float: left;
 }
-.ctlt-im-2 {
+.ctlt-im-2, .ctlt-im-4, .ctlt-im-6 {
 	float: right;
 }
 .constructor-info {
-	position: relative;
+	text-align: right;
 }
 .constructor-desc {
 	line-height: 40px;
 	font-size: 18px;
-	text-align: right;
 	letter-spacing: 2px;
+}
+.constructor-name {
+	position: absolute;
+	right: 50%;
+	top: 0;
+	width: 50%;
+	line-height: 36px;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.constructor-link {
+	display: block;
+	padding-left: 14%;
+	width: 86%;
+}
+.constructor-info {
+	width: 50%;
+}
+.constructor-img {
+	width: 50%;
+}
+.ctlt-im-2 .constructor-info, .ctlt-im-4 .constructor-info, .ctlt-im-6 .constructor-info {
+	text-align: left;
+}
+.ctlt-im-2 .constructor-link {
+	padding-left: 0;
+	padding-right: 14%;
+}
+.ctlt-im-2 .constructor-name {
+	right: auto;
+	left: 50%;
+}
+.ctlt-im-4 .constructor-link {
+	padding-left: 0;
+	padding-right: 14%;
+}
+.ctlt-im-4 .constructor-name {
+	right: auto;
+	left: 0;
+}
+
+.ctlt-im-5 .constructor-name {
+	right: 0;
+	left: auto;
+}
+
+.ctlt-im-6 .constructor-link {
+	padding-left: 0;
+	padding-right: 14%;
+}
+.ctlt-im-6 .constructor-name {
+	right: auto;
+	left: 50%;
 }
