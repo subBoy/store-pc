@@ -36,14 +36,14 @@
 .constructor-list-box {
 	padding: 40px 35px;
 	overflow: hidden;
-	border-top: 1px solid #d3d3d3;
+	border-top: 1px solid #808080;
 }
 .constructor-list-box:first-child {
 	border-top: none;
 }
 .constructor-item {
 	position: relative;
-	width: 48%;
+	width: 47.5%;
 	font-size: 0;
 }
 .ctlt-im-1, .ctlt-im-3, .ctlt-im-5 {
@@ -113,4 +113,120 @@
 .ctlt-im-6 .constructor-name {
 	right: auto;
 	left: 50%;
+}
+
+.co-oper-wpr {
+	padding: 15px 0 20px 0;
+	text-align: center;
+}
+.co-oper-tle {
+	line-height: 50px;
+	padding-left: 2px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #b3494d;
+	letter-spacing: 2px;
+}
+.co-oper-txt {
+	line-height: 38px;
+	padding-left: 2px;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.co-operating-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1780px;
+}
+.co-operating-list {
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
+}
+.co-oper-list {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+.co-oper-prev {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../constructor-list/images/prev.png);
+}
+.co-oper-next {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../constructor-list/images/next.png);
+}
+.co-oper-next.has-more {
+	cursor: pointer;
+	background-image: url(../constructor-list/images/next-1.png);
+}
+.co-oper-prev.has-more {
+	cursor: pointer;
+	background-image: url(../constructor-list/images/prev-1.png);
+}
+.co-oper-item {
+	float: left;
+	padding: 0 5px;
+}
+.co-oper-link {
+	position: relative;
+	display: block;
+	background-color: #f6f6f6;
+}
+.co-oper-i-tle {
+	display: block;
+	padding: 0 5px 0 7px;
+	line-height: 28px;
+	letter-spacing: 2px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	color: #9f9f9f;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.co-oper-i-desc {
+	display: block;
+	padding: 0 5px 0 7px;
+	line-height: 25px;
+	letter-spacing: 2px;
+	font-size: 15px;
+	text-align: center;
+	color: #9f9f9f;
+	overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.co-oper-img-wrapper {
+	display: block;
+	overflow: hidden;
+}
+.co-oper-img {
+	margin: 0 auto;
+	height: 92%;
+}
+.co-oper-link-box {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 56%;
+	width: 100%;
 }
