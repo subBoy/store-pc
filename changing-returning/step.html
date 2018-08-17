@@ -826,6 +826,13 @@
 	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
+		<div class="scroll"></div>
+		<div class="go-to-top-btn set-animation">
+			<span class="go-to-top-desc set-animation">On start</span>
+			<span class="go-to-top-icon set-animation">
+				<span class="go-to-top-bor"></span>
+			</span>
+		</div>
 		<div class="gl-content-wrapper">
 			<div class="footer-logo-wrapper">
 				<img src="../public/images/logo.png" alt="" class="footer-logo-img">
@@ -882,13 +889,14 @@
 		<div class="cr-step-win-content">
 			<div class="cr-step-win-tle">上传图片<span class="cr-step-win-err"></span></div>
 			<span class="win-close-btn" id="close-up-load-img-btn"></span>
+			<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" onChange="selectImg(this)" multiple />
 			<div class="up-load-img-ct-wrapper" id="up-load-area">
 				<div class="not-img-wrapper">
 					<div class="cr-step-win-icon">
 						<img src="../public/images/uploadimg-win.png" width="100%">
 					</div>
 					<div class="cr-step-win-desc-wrapper">
-						<p class="cr-step-win-desc">将文件拖放到此窗口即可上传</p>
+						<p class="cr-step-win-desc">点击或将文件拖放到此窗口即可上传</p>
 						<p class="cr-step-win-desc">仅支持1M以内jpg、jpeg、gif、png格式图片上传</p>
 					</div>
 				</div>

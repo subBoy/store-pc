@@ -125,14 +125,16 @@ $.extend(window, {
 					$('body').removeClass('not-scroll');
 				}, 300);
 			})
+			initNav();
 		}
 	},
 	goToTop: function () {
 		var sTop = $(window).scrollTop();
+		console.log(sTop);
 		var cardinal = 0;
     var _to = function () {
 			cardinal = (sTop - cardinal) / 20;
-      if (cardinal < 100) {
+      if (cardinal < 300) {
       	if (sh) {
         	clearInterval(sh);
       	}
@@ -214,6 +216,44 @@ $.extend(window, {
 	padLeftZero: function (str) {
 	  return ('00' + str).substr(str.length);
 	},
+	initNav: function () { 
+	  var sTop = $(window).scrollTop();
+	  var sWidth = $(window).width(); 
+	  var sHeight = $(window).height(); 
+	  var bH = $('body').height();
+	  if (bH > sHeight * 2) {
+	  	$('.scroll').show();
+	  } else {
+	  	$('.scroll').hide();
+	  }
+	  if (sTop > sHeight) {
+	  	$('.go-to-top-btn').fadeIn();
+	  	$('.scroll').hide();
+	  } else {
+	  	$('.go-to-top-btn').fadeOut();
+	  	if (bH > sHeight * 2) {
+		  	$('.scroll').show();
+		  }
+	  }
+	  if (sWidth < 1340) {
+	  	$(".global-body, .header-wrapper").removeClass('win-nav');
+	  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
+	  	return;
+	  }
+	  sTop = parseInt(sTop);
+	  var timer = '';
+	  if (sTop >= 10) {
+	  	clearTimeout(timer);
+	  	$(".global-body, .header-wrapper").addClass('win-nav');
+	  	$(".header-logo").addClass('win-nav-top');
+	  	timer = setTimeout(function () {
+	  		$(".header-logo").addClass('win-nav set-animation');
+	  	}, 500);
+	  } else {
+	  	$(".global-body, .header-wrapper").removeClass('win-nav');
+	  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
+	  }
+	}
 })
 $(function () {
 	globalLoading();

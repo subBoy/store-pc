@@ -295,7 +295,6 @@ $(function () {
 	selectSize('.goods-size-list', '.goods-size-view', '.goods-size-item-num')
 	outOfStore();
 	collectGoods();
-	$('.go-to-top-btn').on('click', goToTop);
 	bindMobile();
 	bindEmail();
 	ipEmVer();

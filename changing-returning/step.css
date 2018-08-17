@@ -37,6 +37,12 @@
 	background-color: #000;
 	z-index: 1;
 }
+#chooseImg {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
 .cr-step-item {
 	display: block;
 	position: absolute;
@@ -524,6 +530,7 @@
 }
 .upload-files-name {
 	width: 30%;
+	overflow: hidden;
 	text-overflow:ellipsis;
   white-space: nowrap;
 }

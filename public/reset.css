@@ -1317,14 +1317,55 @@ h1, h2, h3, h4, h5, h6, p {
 
 .go-to-top-btn {
   display: none;
-  position: fixed;
-  bottom: 10%;
+  position: absolute;
+  top: -70px;
   right: 30px;
-  width: 80px;
+  width: 65px;
+  height: 55px;
   cursor: pointer;
   z-index: 100;
+  cursor: pointer;
 }
-
+.go-to-top-icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url(../public/images/g-top-1.png);
+}
+.go-to-top-btn:hover .go-to-top-icon {
+  background-image: url(../public/images/g-top.png);
+}
+.go-to-top-bor {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  width: 1px;
+  height: 55px;
+  background-color: #b6b6b6;
+}
+.go-to-top-btn:hover .go-to-top-bor {
+  background-color: #000;
+}
+.go-to-top-desc {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  font-size: 12px;
+  color: #c6c6c6;
+  z-index: 1;
+}
+.go-to-top-btn:hover .go-to-top-desc {
+  bottom: 25px;
+  color: #000;
+}
 
 /* 分页 */
 .global-paging {

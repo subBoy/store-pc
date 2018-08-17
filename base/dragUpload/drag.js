@@ -127,6 +127,71 @@ upLoadArea.ondrop = function (e) {
 	}
 }
 
+function clickDrop () {
+	$('#up-load-area').on('click', function () {
+		return $('#chooseImg').click();
+	})
+}
+
+function selectImg(file) {
+	var files = file.files;
+	if (!files) {
+		$('.cr-step-win-err').html('您使用的浏览器不支持上传图片, 请更换浏览器再来使用！').fadeIn();
+		return;
+	}
+	gloLen = files.length;
+	var len = files.length - 0;
+	var xlen = $('.has-img-wrapper').find('p').length - 0;
+	var zLen = len + xlen;
+	var xxLen = len + autofiles.length;
+	var overNum = 5 - autofiles.length;
+	if (zLen > 5) {
+		$('.cr-step-win-err').html('最多只能上传5张图片！').fadeIn();
+		return;
+	}
+	if (xxLen > 5) {
+		$('.cr-step-win-err').html('最多只能上传5张图片, 您已上传' + autofiles.length + '张图片，还可上传' + overNum + '张图片！').fadeIn();
+		return;
+	}
+	var	i = 0;
+	var frag = document.createDocumentFragment();
+	var fileBox, time, size;
+	while (i < len) {
+		size = Math.round(files[i].size * 100 / 1024) / 100 + 'KB';
+		if (files[i].type.indexOf("image") == -1 || size > 1024) {
+			$('.cr-step-win-err').html('仅支持1M以内jpg、jpeg、gif、png格式图片上传！').fadeIn();
+			return;
+		}
+		fileBox = document.createElement('p');
+		time = files[i].lastModifiedDate.toLocaleDateString() + ' ' + files[i].lastModifiedDate.toTimeString().split(' ')[0];
+		fileBox.innerHTML = '<span class="upload-files-name in-block">' + files[i].name + '</span><span class="upload-files-time in-block">' + time + '</span><span class="upload-files-size in-block">' + size + '</span><span class="upload-files-del-btn in-block">删除</span>';
+		frag.appendChild(fileBox);
+		autofiles.push(files[i]);
+		i++;
+	}
+	$('.not-img-wrapper').hide();
+	$('.has-img-wrapper').fadeIn().append(frag);
+	$('.up-load-img-btn').addClass('global-btn-styl');
+	delOne();
+	var plen = $('.has-img-wrapper').find('p');
+	if (plen.length > 5) {
+		$('.cr-step-win-err').html('最多只能上传5张图片，请删除超出的图片！').fadeIn();
+		$('.up-load-img-btn').removeClass('global-btn-styl');
+		return;
+	}
+	var fnameArr = [];
+	plen.each(function () {
+		var fname = $(this).find('.upload-files-name').html();
+		fnameArr.push(fname);
+	})
+	var iqueArr = unique(fnameArr);
+	if (iqueArr.length !== fnameArr.length) {
+		$('.cr-step-win-err').html('请删除重复的图片！').fadeIn();
+		$('.up-load-img-btn').removeClass('global-btn-styl');
+		return;
+	}
+}
+
 function uploadFc () {
 	uploadImg = [];
 	for (var i = 0; i < autofiles.length; i++) {
@@ -180,7 +245,8 @@ function clearAll () {
 }
 
 function delOne () {
-	$(".upload-files-del-btn").on('click', function () {
+	$(".upload-files-del-btn").on('click', function (e) {
+		e.stopPropagation();
 		var _idx = $(this).siblings('.upload-files-name').html();
 		for (var i = 0; i < autofiles.length; i++) {
 			var forstate = (function (i) {
@@ -227,4 +293,5 @@ function delOne () {
 
 $(function () {
 	controlModal();
+	clickDrop();
 })

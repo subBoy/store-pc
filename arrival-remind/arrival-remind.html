@@ -794,7 +794,12 @@
 		</div>
 		<div class="user-content-wrapper">
 			<div class="ucw-title-wrapper">到货预定<span class="arrival-remind-desc">您已成功预定以下商品，商品到货后您将获得优先购买权！</span></div>
-			<div class="ucw-tab-content collect-gooods">
+			<div class="ucw-tab-wrapper">
+				<a class="ucw-tab-item item-br in-block ident" ident="oos">缺货预定<span class="kity-num">2</span></a>
+				<a class="ucw-tab-item in-block" ident="crNewSp">设计师新品预定<span class="kity-num">2</span></a>
+			</div>
+			<!-- 缺货预定 -->
+			<div class="ucw-tab-content" ident="oos">
 				<div class="sc-has-goods-wrapper">
 					<div class="arrival-remind-tle-wrapper">
 						<span class="artw-item in-block wh-60"><i class="artw-txt">预定信息</i></span>
@@ -859,6 +864,125 @@
 									<a href="../goods-list/goods-list.html" class="aretw-goto-list-btn">再逛逛</a>
 								</div>
 							</li>
+						</ul>
+					</div>
+					<div class="sc-goods-total-oper">
+						<div class="sc-goods-oper-sel in-block">
+							<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
+							<span class="sc-all-del-btn in-block">删除</span>
+						</div>
+						<!-- 只有一页 -->
+						<div class="global-paging">
+							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 两页以上 -->
+						<div class="global-paging" style="display: none;">
+							<ul class="global-paging-ctr">
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">上一页</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">1</a>
+								</li>
+								<li class="global-paging-item now-page">
+									<a href="" class="global-paging-item-link">2</a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">3</a>
+								</li>
+								<!-- 中间省略模块 -->
+								<li class="global-paging-item">
+									<a href="#" class="global-paging-item-link omit-wrapper"></a>
+								</li>
+								<li class="global-paging-item">
+									<a href="" class="global-paging-item-link">12</a>
+								</li>
+								<li class="global-paging-item prev-next-wrapper">
+									<a href="" class="global-paging-item-link prev-next">下一页</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sc-not-goods-wrapper" style="display: none;">
+					<div class="not-air-box">
+						<img src="../public/images/air-cart.png" class="not-air-img">
+						<p class="not-air-desc">您还没有到货预定信息</p>
+						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
+					</div>
+				</div>
+			</div>
+			<!-- 设计师新品预定 -->
+			<div class="ucw-tab-content" ident="crNewSp" style="display: none;">
+				<div class="sc-has-goods-wrapper">
+					<div class="arrival-remind-tle-wrapper">
+						<span class="artw-item in-block wh-60"><i class="artw-txt">预定信息</i></span>
+						<span class="artw-item in-block wh-20"><i class="artw-txt">通知方式</i></span>
+						<span class="artw-item in-block wh-20"><i class="artw-txt">商品状态</i></span>
+					</div>
+					<div class="sc-goods-list-wrapper collect-wrapper">
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-60">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
+										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-20">邮件、短信</li>
+							<li class="sc-goods-item v-center wh-20">
+								<div class="aretw-btn">
+									<span class="aretw-item-status">已到货</span>
+									<a href="../payment-process/start-payment.html" class="aretw-pay-btn global-btn-styl">前去付款</a>
+									<a href="../goods-list/goods-list.html" class="aretw-goto-list-btn">再逛逛</a>
+								</div>
+							</li>
+						</ul>
+						<ul class="sc-goods-list set-animation">
+							<li class="sc-goods-item wh-60">
+								<div class="reserve-win-goods-info">
+									<span class="select-input-wrapper">
+										<input type="checkbox" class="sp-select-input">
+									</span>
+									<span class="reserve-win-goods-img">
+										<img src="../developerImg/sp-img.jpg" width="100%">
+									</span>
+									<h4 class="reserve-win-goods-name">
+										<span class="goods-name-txt in-block">短袖</span>
+										<span class="goods-name-hr in-block"></span>
+										<span class="goods-name-txt in-block">RACK ROD</span>
+									</h4>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
+									</p>
+									<p class="reserve-win-goods-desc">
+										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
+										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
+									</p>
+								</div>
+							</li>
+							<li class="sc-goods-item v-center wh-20">邮件</li>
+							<li class="sc-goods-item v-center wh-20">未到货</li>
 						</ul>
 					</div>
 					<div class="sc-goods-total-oper">
@@ -1004,6 +1128,13 @@
 	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
+		<div class="scroll"></div>
+		<div class="go-to-top-btn set-animation">
+			<span class="go-to-top-desc set-animation">On start</span>
+			<span class="go-to-top-icon set-animation">
+				<span class="go-to-top-bor"></span>
+			</span>
+		</div>
 		<div class="gl-content-wrapper">
 			<div class="footer-logo-wrapper">
 				<img src="../public/images/logo.png" alt="" class="footer-logo-img">

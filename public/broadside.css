@@ -129,6 +129,9 @@
 	background-color: #b3494d;
 }
 /*底部*/
+.about-footer-controller {
+	position: relative;
+}
 .about-footer-controller .join-us-logo-wrapper {
 	padding: 12px 0; 
 	background-color: #000;
