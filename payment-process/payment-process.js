@@ -261,17 +261,17 @@ function signUp () {
 		var dayVal = $('#select-day').val();
 		var yearVer = nonNull(yearVal, '出生年月');
 		if (!yearVer.status) {
-			$(this).siblings('.ppw-sign-up-err').html(yearVer.msg);
+			$(this).siblings('.ppw-sign-up-err').html('请选择您的出生年月！');
 			return;
 		}
 		var monthVer = nonNull(monthVal, '出生年月');
 		if (!monthVer.status) {
-			$(this).siblings('.ppw-sign-up-err').html(monthVer.msg);
+			$(this).siblings('.ppw-sign-up-err').html('请选择您的出生年月！');
 			return;
 		}
 		var dayVer = nonNull(dayVal, '出生年月');
 		if (!dayVer.status) {
-			$(this).siblings('.ppw-sign-up-err').html(dayVer.msg);
+			$(this).siblings('.ppw-sign-up-err').html('请选择您的出生年月！');
 			return;
 		}
 		step = 2;

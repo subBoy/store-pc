@@ -35,7 +35,7 @@ function setInputFB () {
 	$('input.sign-input').each(function(){
 		$(this).focus(function () {
 			$(this).parent().addClass('add-styl');
-			$('#err-txt-wrapper, .convert-intergral-err').html('');
+			$('#err-txt-wrapper, .convert-intergral-err, #settle-err, #snwr-err').html('');
 		}).blur(function () {
 			$(this).parent().removeClass('add-styl');
 		})

@@ -3,6 +3,7 @@ function selSp () {
 		var status = $(this).is(':checked');
 		if (status) {
 			$(this).parent().addClass('checked-item');
+			$('#close-order-err').html('');
 		} else {
 			$(this).parent().removeClass('checked-item');
 			$('.sc-all-sel-input').prop('checked', false).change();
@@ -68,10 +69,21 @@ function showNotGoods () {
 		$('.sc-not-goods-wrapper').hide();
 	}
 }
+function settleFuc () {
+	$('#close-order-btn-ctr').on('click', function () {
+		var sledNum = $ ('.seled-sp-box .sel-num').html();
+		if (sledNum < 1) {
+			$('#close-order-err').html('请选择需要结算的商品！');
+			return;
+		}
+		location.href = '../change-pay-path/change-pay-path.html';
+	})
+}
 $(function () {
 	selSp(); // 选择商品
 	delOne(); // 删除单个商品
 	delSel(); // 删除已选商品
 	showNotGoods(); // 是否有商品显示
 	globalInputNum(allSel);// 数量控制 /util/util.js
+	settleFuc(); // 结算
 })

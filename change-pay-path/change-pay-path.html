@@ -8,10 +8,9 @@
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
-<link rel="stylesheet" href="../user-center/user.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./arrival-remind.css">
+<link rel="stylesheet" href="./change-pay-path.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
@@ -28,7 +27,7 @@
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -708,423 +707,117 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="user-wrapper">
-		<div class="user-side-wrapper">
-			<div class="user-side-group">
-				<div class="user-side-path">
-					<a onclick="goBack()" class="side-path-item in-block">返回 /</a>
-					<a href="../index/index.html" class="side-path-item in-block">首页 /</a>
-					<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="side-path-item in-block">我的收藏</a>
+	<div class="change-pay-path-wrapper">
+		<h3 class="cpp-tle">您希望以何种方式付款？</h3>
+		<div class="cppw-box">
+			<div class="cppw-box-l">
+				<div class="cpp-tle-wrapper">
+					<span class="cpp-tle-txt in-block">RACK ROD</span>
+					<span class="cpp-tle-desc in-block settle-err" id="settle-err"></span>
 				</div>
-				<div class="user-link-wrapper">
-					<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link-main-tle">我的账户</a>
-					<h3 class="user-link-tle">个人信息</h3>
-					<ul class="user-link-box">
-						<li class="user-link-item now-page" sideIdent="userCenter">
-							<a href="../user-center/user-center.html?sideIdent=userCenter" class="user-link">
-								<span class="user-link-name">我的账号面板</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="userInfo">
-							<a href="../user-info/user-info.html?sideIdent=userInfo&ident=info" class="user-link">
-								<span class="user-link-name">我的个人信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="userAddress">
-							<a href="../user-address/user-address.html?sideIdent=userAddress" class="user-link">
-								<span class="user-link-name">我的配送地址簿</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="sale">
-							<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="user-link">
-								<span class="user-link-name">我的优惠信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="intergral">
-							<a href="../intergral/intergral.html?sideIdent=intergral" class="user-link">
-								<span class="user-link-name">我的积分信息</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="collect">
-							<a href="../collect/collect.html?sideIdent=collect&ident=shop" class="user-link">
-								<span class="user-link-name">我的收藏</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="user-link-wrapper">
-					<h3 class="user-link-tle">订单信息</h3>
-					<ul class="user-link-box">
-						<li class="user-link-item" sideIdent="orderOk">
-							<a href="../order/order.html?sideIdent=orderOk" class="user-link">
-								<span class="user-link-name">我的订单</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="arrivalRemind">
-							<a href="../arrival-remind/arrival-remind.html?sideIdent=arrivalRemind" class="user-link">
-								<span class="user-link-name">到货提醒</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="orderClose">
-							<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-link">
-								<span class="user-link-name">我的退单</span>
-							</a>
-						</li>
-						<li class="user-link-item" sideIdent="returnPolicy">
-							<a href="../return-policy/return-policy.html?sideIdent=returnPolicy" class="user-link">
-								<span class="user-link-name">退换货说明</span>
-							</a>
-						</li>
-						<li class="user-link-item">
-							<a href="../home-of/home-of.html" class="user-link user-home-of-link">
-								<span class="user-home-of-pic">
-									<img src="../user-center/images/home-of.jpg" width="100%" class="user-home-of-bg">
-									<span class="user-home-of-shade set-animation">
-										<em class="user-home-of-shade-bg"></em>
-										<img src="../user-center/images/home-of-bg.png" class="user-home-of-shade-img">
-									</span>
+				<div class="sign-input-wrapper">
+					<div class="sign-input-group settle-input-group">
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr u-ic">
+								<span class="sign-input-tle in-block">手机/邮箱：</span>
+								<input type="text" class="sign-input global-input-focus settle-userAccount" value="">
+							</div>
+						</div>
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr p-ic">
+								<span class="sign-input-tle in-block">确认密码：</span>
+								<input type="password" class="sign-input in-block global-input-focus settle-userPassword" value="">
+							</div>
+						</div>
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr c-ic">
+								<span class="sign-input-tle in-block">验证码：</span>
+								<input type="text" class="sign-input global-input-focus settle-userCode" value="">
+								<span class="code-img-ctr in-block">
+									<img src="../developerImg/code.jpg" class="code-img">
 								</span>
-								<span class="user-link-name in-block">HOME OF ®</span>
-								<span class="user-link-desc">野派资料馆</span>
-							</a>
-						</li>
-					</ul>
+							</div>
+						</div>
+						<div class="rest-operation-wrapper">
+							<p class="remember-login-info">
+								<span class="global-select-wrapper in-block">
+									<input class="global-select-input" type="checkbox">
+								</span>
+								记住我的登录信息！
+							</p>
+							<p class="forget-pw-and-sign-up">
+								<a href="../sign-up/sign-up.html" class="fs-opertion-btn">新用户注册</a>
+								<a href="../forget-pw/forget-pw.html" class="fs-opertion-btn">忘记密码</a>
+							</p>
+						</div>
+						<div class="nav-sign-in-btn-ctr">
+							<button id="settle-psy-btn-ctr" class="nav-sign-in-btn global-btn-styl">结算</button>
+						</div>
+						<div class="third-party-sign-in">
+							<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
+							<div class="third-party-style-list in-block">
+								<a class="third-party-item tp-qq in-block">
+									<span class="tp-icon"></span>
+									<span class="tp-name">QQ</span>
+								</a>
+								<a class="third-party-item tp-wx in-block">
+									<span class="tp-icon"></span>
+									<span class="tp-name">微信</span>
+								</a>
+								<a class="third-party-item tp-wb in-block">
+									<span class="tp-icon"></span>
+									<span class="tp-name">微博</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<span class="cppw-box-hr"></span>
+			<div class="cppw-box-r">
+				<div class="cpp-tle-wrapper">
+					<span class="cpp-tle-txt in-block">RACK ROD</span>
+					<span class="cpp-tle-desc in-block">欢迎光临</span>
+				</div>
+				<div class="caller-psy-wrapper">
+					<p class="caller-psy-desc"><span class="caller-psy-icon"></span>提倡大家自助购物，尺寸、材质、注意事项，请阅读商品详情！</p>
+					<p class="caller-psy-desc"><span class="caller-psy-icon"></span>本品牌的产品以限量制作为主，若有尺码断货，欢迎您免费预订！</p>
+					<p class="caller-psy-desc"><span class="caller-psy-icon"></span>手匠定制商品需要较长工期，请您耐心等待，商品完成后，会第一时间发货给您！</p>
+				</div>
+				<div class="nav-sign-in-btn-ctr">
+					<button id="caller-psy-btn-ctr" class="nav-sign-in-btn global-btn-styl">已访客身份结算</button>
 				</div>
 			</div>
 		</div>
-		<div class="user-content-wrapper">
-			<div class="ucw-title-wrapper">到货预定<span class="arrival-remind-desc">您已成功预定以下商品，商品到货后您将获得优先购买权！</span></div>
-			<div class="ucw-tab-wrapper">
-				<a class="ucw-tab-item item-br in-block ident" ident="oos">缺货预定<span class="kity-num">2</span></a>
-				<a class="ucw-tab-item in-block" ident="crNewSp">设计师新品预定<span class="kity-num">2</span></a>
-			</div>
-			<!-- 缺货预定 -->
-			<div class="ucw-tab-content" ident="oos">
-				<div class="sc-has-goods-wrapper">
-					<div class="arrival-remind-tle-wrapper">
-						<span class="artw-item in-block wh-60"><i class="artw-txt">预定信息</i></span>
-						<span class="artw-item in-block wh-20"><i class="artw-txt">通知方式</i></span>
-						<span class="artw-item in-block wh-20"><i class="artw-txt">商品状态</i></span>
-					</div>
-					<div class="sc-goods-list-wrapper collect-wrapper">
-						<ul class="sc-goods-list set-animation">
-							<li class="sc-goods-item wh-60">
-								<div class="reserve-win-goods-info">
-									<span class="select-input-wrapper">
-										<input type="checkbox" class="sp-select-input">
-									</span>
-									<span class="reserve-win-goods-img">
-										<img src="../developerImg/sp-img.jpg" width="100%">
-									</span>
-									<h4 class="reserve-win-goods-name">
-										<span class="goods-name-txt in-block">短袖</span>
-										<span class="goods-name-hr in-block"></span>
-										<span class="goods-name-txt in-block">RACK ROD</span>
-									</h4>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-									</p>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
-										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
-									</p>
-								</div>
-							</li>
-							<li class="sc-goods-item v-center wh-20">邮件</li>
-							<li class="sc-goods-item v-center wh-20">未到货</li>
-						</ul>
-						<ul class="sc-goods-list set-animation">
-							<li class="sc-goods-item wh-60">
-								<div class="reserve-win-goods-info">
-									<span class="select-input-wrapper">
-										<input type="checkbox" class="sp-select-input">
-									</span>
-									<span class="reserve-win-goods-img">
-										<img src="../developerImg/sp-img.jpg" width="100%">
-									</span>
-									<h4 class="reserve-win-goods-name">
-										<span class="goods-name-txt in-block">短袖</span>
-										<span class="goods-name-hr in-block"></span>
-										<span class="goods-name-txt in-block">RACK ROD</span>
-									</h4>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-									</p>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
-										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
-									</p>
-								</div>
-							</li>
-							<li class="sc-goods-item v-center wh-20">邮件、短信</li>
-							<li class="sc-goods-item v-center wh-20">
-								<div class="aretw-btn">
-									<span class="aretw-item-status">已到货</span>
-									<a href="../payment-process/start-payment.html" class="aretw-pay-btn global-btn-styl">前去付款</a>
-									<a href="../goods-list/goods-list.html" class="aretw-goto-list-btn">再逛逛</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="sc-goods-total-oper">
-						<div class="sc-goods-oper-sel in-block">
-							<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
-							<span class="sc-all-del-btn in-block">删除</span>
-						</div>
-						<!-- 只有一页 -->
-						<div class="global-paging">
-							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-						<!-- 两页以上 -->
-						<div class="global-paging" style="display: none;">
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">上一页</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">1</a>
-								</li>
-								<li class="global-paging-item now-page">
-									<a href="" class="global-paging-item-link">2</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">3</a>
-								</li>
-								<!-- 中间省略模块 -->
-								<li class="global-paging-item">
-									<a href="#" class="global-paging-item-link omit-wrapper"></a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">12</a>
-								</li>
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="sc-not-goods-wrapper" style="display: none;">
-					<div class="not-air-box">
-						<img src="../public/images/air-cart.png" class="not-air-img">
-						<p class="not-air-desc">您还没有到货预定信息</p>
-						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
-					</div>
-				</div>
-			</div>
-			<!-- 设计师新品预定 -->
-			<div class="ucw-tab-content" ident="crNewSp" style="display: none;">
-				<div class="sc-has-goods-wrapper">
-					<div class="arrival-remind-tle-wrapper">
-						<span class="artw-item in-block wh-60"><i class="artw-txt">预定信息</i></span>
-						<span class="artw-item in-block wh-20"><i class="artw-txt">通知方式</i></span>
-						<span class="artw-item in-block wh-20"><i class="artw-txt">商品状态</i></span>
-					</div>
-					<div class="sc-goods-list-wrapper collect-wrapper">
-						<ul class="sc-goods-list set-animation">
-							<li class="sc-goods-item wh-60">
-								<div class="reserve-win-goods-info">
-									<span class="select-input-wrapper">
-										<input type="checkbox" class="sp-select-input">
-									</span>
-									<span class="reserve-win-goods-img">
-										<img src="../developerImg/sp-img.jpg" width="100%">
-									</span>
-									<h4 class="reserve-win-goods-name">
-										<span class="goods-name-txt in-block">短袖</span>
-										<span class="goods-name-hr in-block"></span>
-										<span class="goods-name-txt in-block">RACK ROD</span>
-									</h4>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-									</p>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
-										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
-									</p>
-								</div>
-							</li>
-							<li class="sc-goods-item v-center wh-20">邮件、短信</li>
-							<li class="sc-goods-item v-center wh-20">
-								<div class="aretw-btn">
-									<span class="aretw-item-status">已到货</span>
-									<a href="../payment-process/start-payment.html" class="aretw-pay-btn global-btn-styl">前去付款</a>
-									<a href="../goods-list/goods-list.html" class="aretw-goto-list-btn">再逛逛</a>
-								</div>
-							</li>
-						</ul>
-						<ul class="sc-goods-list set-animation">
-							<li class="sc-goods-item wh-60">
-								<div class="reserve-win-goods-info">
-									<span class="select-input-wrapper">
-										<input type="checkbox" class="sp-select-input">
-									</span>
-									<span class="reserve-win-goods-img">
-										<img src="../developerImg/sp-img.jpg" width="100%">
-									</span>
-									<h4 class="reserve-win-goods-name">
-										<span class="goods-name-txt in-block">短袖</span>
-										<span class="goods-name-hr in-block"></span>
-										<span class="goods-name-txt in-block">RACK ROD</span>
-									</h4>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info in-block">EVIL PARTY SERIES 恶党系列</span>
-									</p>
-									<p class="reserve-win-goods-desc">
-										<span class="sc-goods-info-size-clo in-block">黑色/M</span>
-										<span class="sc-goods-info-price in-block">¥：255 ×1</span>
-									</p>
-								</div>
-							</li>
-							<li class="sc-goods-item v-center wh-20">邮件</li>
-							<li class="sc-goods-item v-center wh-20">未到货</li>
-						</ul>
-					</div>
-					<div class="sc-goods-total-oper">
-						<div class="sc-goods-oper-sel in-block">
-							<span class="sc-all-sel-wrapper in-block"><span class="sc-all-sel"><input type="checkbox" class="sc-all-sel-input"></span>全选</span>
-							<span class="sc-all-del-btn in-block">删除</span>
-						</div>
-						<!-- 只有一页 -->
-						<div class="global-paging">
-							<p class="global-paging-desc">当前页数 <span class="global-paging-desc-num">1</span></p>
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-						<!-- 两页以上 -->
-						<div class="global-paging" style="display: none;">
-							<ul class="global-paging-ctr">
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">上一页</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">1</a>
-								</li>
-								<li class="global-paging-item now-page">
-									<a href="" class="global-paging-item-link">2</a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">3</a>
-								</li>
-								<!-- 中间省略模块 -->
-								<li class="global-paging-item">
-									<a href="#" class="global-paging-item-link omit-wrapper"></a>
-								</li>
-								<li class="global-paging-item">
-									<a href="" class="global-paging-item-link">12</a>
-								</li>
-								<li class="global-paging-item prev-next-wrapper">
-									<a href="" class="global-paging-item-link prev-next">下一页</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="sc-not-goods-wrapper" style="display: none;">
-					<div class="not-air-box">
-						<img src="../public/images/air-cart.png" class="not-air-img">
-						<p class="not-air-desc">您还没有到货预定信息</p>
-						<a href="../goods-list/goods-list.html" class="not-air-link global-btn-styl">继续逛逛</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<p class="cpp-desc">新用户建议您注册会员进行结算订单，预定到货或活动优惠我们将第一时间推送给您！</p>
 	</div>
-	<div class="more-recommended-wrapper">
-			<div class="global-title-wrapper">
-				<h3 class="global-title-h3">商品推荐</h3>
-				<p class="global-title-english">MORE RECOMMENDED</p>
-			</div>
-			<div class="more-recommended">
-				<span class="recommend-prev recommend-btn in-block"></span>
-				<div class="recommended-goods">
-					<ul class="recommended-goods-list">
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-1.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-2.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-3.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-						<li class="recommended-goods-item">
-							<div class="slide-goods-item">
-								<a href="../goods-details/goods-details.html" class="recommended-goods-link">
-									<span class="goods-img-wrapper">
-										<img src="../developerImg/dl-img-4.jpg" width="100%" class="slide-goods-img">
-									</span>
-									<span class="goods-name-wrapper">WILD FACTION 野派</span>
-									<span class="goods-price-wrapper">RMB:2200</span>
-								</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<span class="recommend-next recommend-btn in-block has-more"></span>
-			</div>
-		</div>
-	<div class="yws-i-am-bg-r">
-		<div class="yws-i-am-wrapper">
-			<h3 class="yws-i-am-tle">Yes i am</h3>
-			<p class="yws-i-am-desc">恶党、野派、魔巫、铁皮人、冰血暴、凝明潮体、法外之徒、野性难驯！</p>
-			<p class="yws-i-am-desc">这是一次独立，关于我们的品牌和文化！</p>
-			<img src="../public/images/dl-png.png" class="yws-i-am-img">
-		</div>
+	<div class="sc-hint-wrapper">
+		<ul class="sc-hint-list">
+			<li class="sc-hint-item">
+				<a href="../website-boon/website-boon.html#gwly" target="_blank" class="sc-hint-link">
+					<span class="sc-hint-icon hint-icon-1"></span>
+					<span class="sc-hint-name">专享官网礼遇</span>
+				</a>
+			</li>
+			<li class="sc-hint-item">
+				<a href="../website-boon/website-boon.html#xdby" target="_blank" class="sc-hint-link">
+					<span class="sc-hint-icon hint-icon-2"></span>
+					<span class="sc-hint-name">会员下单免运费</span>
+				</a>
+			</li>
+			<li class="sc-hint-item">
+				<a href="../website-boon/website-boon.html#zysh" target="_blank" class="sc-hint-link">
+					<span class="sc-hint-icon hint-icon-3"></span>
+					<span class="sc-hint-name">快速专业售后</span>
+				</a>
+			</li>
+			<li class="sc-hint-item">
+				<a href="../website-boon/website-boon.html#dhtx" target="_blank" class="sc-hint-link no-border">
+					<span class="sc-hint-icon hint-icon-4"></span>
+					<span class="sc-hint-name">到货为您提醒</span>
+				</a>
+			</li>
+		</ul>
 	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
@@ -1185,7 +878,6 @@
 		</div>
 	</div>
 	<script src="../public/js/public.js"></script>
-	<script src="../user-center/user.js"></script>
-	<script src="./arrival-remind.js"></script>
+	<script src="./change-pay-path.js"></script>
 </body>
 </html>

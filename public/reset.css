@@ -757,6 +757,9 @@ h1, h2, h3, h4, h5, h6, p {
   letter-spacing: 2px;
   text-align: right;
 }
+.fs-opertion-btn:hover {
+  color: #b3494d;
+}
 .nav-sign-in-btn-ctr {
   margin-top: 10px;
   height: 40px;

@@ -201,8 +201,19 @@
 	letter-spacing: 2px;
 }
 .sc-goods-oper-total {
+	position: relative;
 	float: right;
 	font-size: 0;
+}
+.close-order-err {
+	position: absolute;
+	right: 0;
+	top: -23px;
+	z-index: 1;
+	text-align: right;
+	width: 100%;
+	color: #b3494d;
+	font-size: 12px;
 }
 .seled-sp-box {
 	padding-right: 15px;
