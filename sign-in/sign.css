@@ -170,11 +170,12 @@
 	width: 190px;
 }
 .random-user-sup-item.urio-styl {
+	padding-left: 10px;
 	margin-bottom: 5px;
 	font-size: 0;
 	border: none;
   background-repeat: no-repeat;
-  background-position: 280px center;
+  background-position: 285px center;
   background-image: url(../public/images/essential-icon.png);
 }
 .get-ip-code-btn {
@@ -203,7 +204,7 @@
 	position: relative;
 	padding-left: 100px;
 	background-repeat: no-repeat;
-	background-position: 280px center;
+	background-position: 285px center;
 	background-image: url(../public/images/essential-icon.png);
 }
 .random-user-sup-item-wrapper.not-ic {
@@ -276,7 +277,7 @@
 	color: #222021;
 }
 .urio-item-select.urio-years {
-	padding: 0 0 0 3px;
+	padding: 0 0 0 2px;
 }
 
 .random-user-sup-item.spc-styl-1 {
@@ -314,6 +315,7 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .random-user-sup-desc {
+	margin-left: 10px;
 	padding-left: 26px;
 	line-height: 22px;
 	font-size: 12px;
@@ -321,6 +323,12 @@
 	background-repeat: no-repeat;
 	background-position: left 3px;
 	background-image: url(../payment-process/images/s-ic.png);
+}
+.sel-bri-desc {
+	margin-left: 10px;
+	line-height: 22px;
+	font-size: 12px;
+	letter-spacing: 1px;
 }
 .go-to-service-reguations {
 	display: block;

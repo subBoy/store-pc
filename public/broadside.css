@@ -133,7 +133,7 @@
 	position: relative;
 }
 .about-footer-controller .join-us-logo-wrapper {
-	padding: 12px 0; 
+	height: 25px; 
 	background-color: #000;
 	text-align: center;
 }
@@ -270,7 +270,6 @@
 }
 .contact-us-type {
 	padding-bottom: 70px;
-	border-bottom: 1px solid #000;
 	overflow: hidden;
 }
 .contact-us-item {
@@ -357,6 +356,9 @@
 	padding: 22px 20px;
 	border-bottom: 1px solid #000;
 }
+.intellectual-wrapper.bor-not {
+	border: none;
+}
 .intell-img-box {
 	position: relative;
 	height: 0;
@@ -395,6 +397,9 @@
 .faq-item {
 	padding: 20px;
 	border-bottom: 1px solid #000;
+}
+.faq-item.bor-not {
+	border: none;
 }
 .faq-item-txt {
 	line-height: 30px;

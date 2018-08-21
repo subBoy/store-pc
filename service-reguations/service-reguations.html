@@ -32,6 +32,9 @@
 			</div>
 			<div class="header-logo">
 				<img src="../public/images/logo.png" alt="RACK ROD" class="logo-img">
+			</div>
+			<div class="header-logo-l set-animation">
+				<img src="../public/images/logo.png" alt="RACK ROD" class="logo-img">
 				<p class="header-logo-name">RACK ROD</p>
 			</div>
 			<div class="header-r">
@@ -39,7 +42,12 @@
 					<span class="sp-cart-num in-block">9</span>
 				</span>
 				<span class="header-r-item user-info-btn-ctr in-block ft-right" unfold="用户中心">
-					<img src="../public/images/user-center-icon.png"  class="user-info-btn">
+					<!-- 未登录 -->
+					<img src="../public/images/user-center-icon.png" class="user-info-btn" style="display: none;">
+					<!-- 已登录 -->
+					<img src="../public/images/user-n.png" class="user-info-btn-1" style="display: none;">
+					<!-- 已登录有新消息 -->
+					<img src="../public/images/user-n.gif" class="user-info-btn-2">
 				</span>
 				<span class="header-r-item hd-search-btn-ctr in-block ft-right" unfold="搜索框">
 					<span class="hd-search-btn in-block">SEARCH</span>
@@ -183,7 +191,7 @@
 									</ul>
 								</div>
 								<div class="user-module-recommend">
-									<a href="../home-of/home-of.html">
+									<a href="../404/404.html">
 										<p class="recommend-module-tle">野派资料馆</p>
 										<div class="recommend-module-info in-block">
 											<img src="../public/images/home-of.png"  class="home-of-img">
@@ -334,7 +342,7 @@
 						<a href="../hand-custom/hand-custom.html#reflectShop" itemIdx="4" class="nav-item-link in-block">体验店</a>
 					</li>
 					<li class="header-nav-item ft-left spl-styl" levelName="home-of">
-						<a href="../home-of/home-of.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
+						<a href="../404/404.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
 					</li>
 					<li class="header-nav-item ft-left">
 						<a href="../about-us/about-us.html" itemIdx="6" class="nav-item-link in-block">关于我们</a>
@@ -708,20 +716,7 @@
 	</div>
 	<!-- 主题内容区域 -->
 	<div class="join-us-wrapper">
-		<div class="join-us-banner">
-			<div class="join-us-banner-txt">
-				<p class="ju-bt-tle">
-					<span class="in-block ju-bt-title">野性难训<span class="ju-bt-icon">®</span></span>
-				</p>
-				<p class="ju-bt-desc">相信曾经相信过的自己！</p>
-				<div class="join-us-logo-wrapper">
-					<span class="join-us-logo">
-						<img class="join-us-logo-img" src="../public/images/logo-f.png">
-					</span>
-					<span class="join-us-logo-txt">RACK ROD</span>
-				</div>
-			</div>
-		</div>
+		<div class="join-us-banner"></div>
 		<div class="join-us-group">
 			<div class="join-us-box">
 				<div class="ju-silde-wrapper">
@@ -865,12 +860,7 @@
 				<span class="go-to-top-bor"></span>
 			</span>
 		</div>
-		<div class="join-us-logo-wrapper">
-			<span class="join-us-logo">
-				<img class="join-us-logo-img" src="../public/images/logo-f.png">
-			</span>
-			<span class="join-us-logo-txt">RACK ROD</span>
-		</div>
+		<div class="join-us-logo-wrapper"></div>
 	</div>
 	<div class="scroll-bottom"></div>
 	<script src="../public/js/public.js"></script>

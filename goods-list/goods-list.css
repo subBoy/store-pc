@@ -177,10 +177,18 @@
 	background-image: url(./images/discount-bg.png);
 	z-index: 99;
 }
+.not-more .item-discount-wrapper {
+	background-image: url(./images/g.png);
+}
+.not-more .item-discount-num {
+	color: #656565;
+	font-size: 16px;
+	font-weight: bold;
+}
 .item-discount-num {
 	display: block;
 	position: absolute;
-	top: 13px;
+	top: 11px;
 	left: 15px;
 	color: #fff;
 	font-size: 18px;

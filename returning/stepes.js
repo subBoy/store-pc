@@ -1,6 +1,6 @@
 function stepes () {
 	var step = GetQueryString('step');
-	if (!step == null) {
+	if (step == null) {
 		step = 2;
 	}
 	if (step == '2') {

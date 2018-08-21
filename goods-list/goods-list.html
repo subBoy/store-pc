@@ -33,6 +33,9 @@
 			</div>
 			<div class="header-logo">
 				<img src="../public/images/logo.png" alt="RACK ROD" class="logo-img">
+			</div>
+			<div class="header-logo-l set-animation">
+				<img src="../public/images/logo.png" alt="RACK ROD" class="logo-img">
 				<p class="header-logo-name">RACK ROD</p>
 			</div>
 			<div class="header-r">
@@ -40,7 +43,12 @@
 					<span class="sp-cart-num in-block">9</span>
 				</span>
 				<span class="header-r-item user-info-btn-ctr in-block ft-right" unfold="用户中心">
-					<img src="../public/images/user-center-icon.png"  class="user-info-btn">
+					<!-- 未登录 -->
+					<img src="../public/images/user-center-icon.png" class="user-info-btn" style="display: none;">
+					<!-- 已登录 -->
+					<img src="../public/images/user-n.png" class="user-info-btn-1" style="display: none;">
+					<!-- 已登录有新消息 -->
+					<img src="../public/images/user-n.gif" class="user-info-btn-2">
 				</span>
 				<span class="header-r-item hd-search-btn-ctr in-block ft-right" unfold="搜索框">
 					<span class="hd-search-btn in-block">SEARCH</span>
@@ -184,7 +192,7 @@
 									</ul>
 								</div>
 								<div class="user-module-recommend">
-									<a href="../home-of/home-of.html">
+									<a href="../404/404.html">
 										<p class="recommend-module-tle">野派资料馆</p>
 										<div class="recommend-module-info in-block">
 											<img src="../public/images/home-of.png"  class="home-of-img">
@@ -335,7 +343,7 @@
 						<a href="../hand-custom/hand-custom.html#reflectShop" itemIdx="4" class="nav-item-link in-block">体验店</a>
 					</li>
 					<li class="header-nav-item ft-left spl-styl" levelName="home-of">
-						<a href="../home-of/home-of.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
+						<a href="../404/404.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
 					</li>
 					<li class="header-nav-item ft-left">
 						<a href="../about-us/about-us.html" itemIdx="6" class="nav-item-link in-block">关于我们</a>
@@ -1285,6 +1293,13 @@
 						</div>
 					</div>
 					<div class="gl-main-list-wrapper ft-left">
+						<!-- on load 状态 -->
+						<div class="global-on-load" style="display: none;">
+							<span class="g-on-load-img">
+								<img src="../public/images/onload.png" width="100%">
+							</span>
+							<span class="g-on-load-txt">Loading...</span>
+						</div>
 						<!-- 有商品 -->
 						<div class="gl-main-list-group">
 							<div class="gl-main-list">
@@ -1334,12 +1349,13 @@
 									</li>
 									<li class="gl-ct-list-item">
 										<ul class="gl-ct-item-list">
-											<li class="gl-ct-series-item">
+											<!-- 已售罄加上not-more -->
+											<li class="gl-ct-series-item not-more">
 												<div class="gl-ct-item-img-wrapper">
 													<div class="gl-ct-item-img-group">
 														<a class="gl-ct-item-link" href="">
 															<span class="item-discount-wrapper">
-																<span class="item-discount-num">50%</span>
+																<span class="item-discount-num">已售罄</span>
 															</span>
 															<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
 															<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
@@ -1356,7 +1372,7 @@
 													<div class="gl-ct-item-img-group">
 														<a class="gl-ct-item-link" href="">
 															<span class="item-discount-wrapper">
-																<span class="item-discount-num">50%</span>
+																<span class="item-discount-num">5折</span>
 															</span>
 															<img src="../developerImg/sp-img-1.jpg" alt="" class="gl-ct-item-img first-item-img">
 															<img src="../developerImg/sp-img-2.jpg" alt="" class="gl-ct-item-img last-item-img">
@@ -1588,13 +1604,18 @@
 						<a class="footer-recommend-link">更多我们 :</a>
 					</li>
 					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link tb-link"></a>
+						<a href="https://shop256639001.taobao.com" class="footer-recommend-link tb-link"></a>
 					</li>
 					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link wx-link"></a>
+						<a href="" class="footer-recommend-link wx-link">
+							<span class="wx-code-img">
+								<img src="../public/images/wx-code-img.jpg" width="100%">
+								<i class="wx-code-txt">微信公众号</i>
+							</span>
+						</a>
 					</li>
 					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link wb-link"></a>
+						<a href="https://weibo.com/rackrod" class="footer-recommend-link wb-link"></a>
 					</li>
 					<li class="footer-recommend-item">
 						<a href="" class="footer-recommend-link tm-link"></a>

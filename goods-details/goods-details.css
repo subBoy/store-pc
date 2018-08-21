@@ -245,7 +245,7 @@
 .not-size .goods-size-item-num {
 	color: #808080;
 }
-.store-reserve-btn {
+.store-reserve-btn, .not-pay-btn {
 	margin-top: 10px;
 	width: 357px;
 	line-height: 50px;
@@ -257,6 +257,9 @@
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
+}
+.not-pay-btn {
+	font-size: 18px;
 }
 .add-goods-btn {
 	position: relative;
