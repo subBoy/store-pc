@@ -140,31 +140,30 @@ h1, h2, h3, h4, h5, h6, p {
   width: 77px;
   z-index: 2;
 }
+.header-logo-l {
+  position: absolute;
+  top: -90px;
+  left: 30px;
+  padding-top: 12px;
+  width: 77px;
+  z-index: 2;
+}
 .logo-img {
   width: 100%;
 }
 .header-logo-name {
-  display: none;
   margin-left: -10px;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
 }
-.header-logo.win-nav-top {
-  margin-left: 0;
-  margin-top: -70px;
-  left: 30px;
+
+.header-logo-l.win-nav-top {
+  top: 2px;
 }
-.header-logo.win-nav-top.win-nav {
-  margin-top: 0;
-  padding-top: 12px;
-}
-.header-logo.win-nav-top .logo-img {
+.header-logo-l .logo-img {
   margin: 0 auto;
   width: 44px;
-}
-.header-logo.win-nav-top .header-logo-name {
-  display: block;
 }
 .header-l {
   position: absolute;

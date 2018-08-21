@@ -130,7 +130,6 @@ $.extend(window, {
 	},
 	goToTop: function () {
 		var sTop = $(window).scrollTop();
-		console.log(sTop);
 		var cardinal = 0;
     var _to = function () {
 			cardinal = (sTop - cardinal) / 20;
@@ -237,21 +236,21 @@ $.extend(window, {
 	  }
 	  if (sWidth < 1340) {
 	  	$(".global-body, .header-wrapper").removeClass('win-nav');
-	  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
+	  	$(".header-logo").fadeIn();
+	  	$(".header-logo-l").removeClass('win-nav-top set-animation');
 	  	return;
 	  }
 	  sTop = parseInt(sTop);
 	  var timer = '';
+	  var timer1 = '';
 	  if (sTop >= 10) {
-	  	clearTimeout(timer);
 	  	$(".global-body, .header-wrapper").addClass('win-nav');
-	  	$(".header-logo").addClass('win-nav-top');
-	  	timer = setTimeout(function () {
-	  		$(".header-logo").addClass('win-nav set-animation');
-	  	}, 500);
+	  	$(".header-logo").hide();
+	  	$(".header-logo-l").addClass('win-nav-top set-animation');
 	  } else {
 	  	$(".global-body, .header-wrapper").removeClass('win-nav');
-	  	$(".header-logo").removeClass('win-nav win-nav-top set-animation');
+	  	$(".header-logo").fadeIn();
+	  	$(".header-logo-l").removeClass('win-nav-top set-animation');
 	  }
 	}
 })
