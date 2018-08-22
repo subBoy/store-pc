@@ -35,7 +35,7 @@ function setInputFB () {
 	$('input.sign-input').each(function(){
 		$(this).focus(function () {
 			$(this).parent().addClass('add-styl');
-			$('#err-txt-wrapper, .convert-intergral-err, #settle-err, #snwr-err').html('');
+			$('#err-txt-wrapper, .convert-intergral-err, #settle-err, #snwr-err, #payment-sign-err').html('');
 		}).blur(function () {
 			$(this).parent().removeClass('add-styl');
 		})
@@ -79,30 +79,30 @@ function fromVerify () {
 	})
 }
 function login () {
-		var userAccount = $.trim($(".userAccount").val());
-		var  obj = nonNull(userAccount, '账号');
-		if (!obj.status) {
-			$('#err-txt-wrapper').html(obj.msg);
-      return;
-		}
+	var userAccount = $.trim($(".userAccount").val());
+	var  obj = nonNull(userAccount, '账号');
+	if (!obj.status) {
+		$('#err-txt-wrapper').html(obj.msg);
+    return;
+	}
 
-		var userPassword = $.trim($(".userPassword").val());
-		var  obj2 = nonNull(userPassword, '密码');
-		if (!obj2.status) {
-			$('#err-txt-wrapper').html(obj2.msg);
-      return;
-		}
+	var userPassword = $.trim($(".userPassword").val());
+	var  obj2 = nonNull(userPassword, '密码');
+	if (!obj2.status) {
+		$('#err-txt-wrapper').html(obj2.msg);
+    return;
+	}
 
-		var userCode = $.trim($(".userCode").val());
-		var  obj3 = nonNull(userCode, '验证码');
-		var imgCodeStatus = true;
-		// imgCodeStatus 此变量决定是否验证图片验证码
-		if (!obj3.status && imgCodeStatus) {
-			$('#err-txt-wrapper').html(obj3.msg);
-      return;
-		}
-    //在下面执行登录操作
-    // ...
+	var userCode = $.trim($(".userCode").val());
+	var  obj3 = nonNull(userCode, '验证码');
+	var imgCodeStatus = true;
+	// imgCodeStatus 此变量决定是否验证图片验证码
+	if (!obj3.status && imgCodeStatus) {
+		$('#err-txt-wrapper').html(obj3.msg);
+    return;
+	}
+  //在下面执行登录操作
+  // ...
 }
 function clearDefault () {
 	$('.nav-sp-cart-group').mouseover(function(e){

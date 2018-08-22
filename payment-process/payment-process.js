@@ -173,8 +173,10 @@ function getCode () {
 		timer = setInterval(setval, 1000)
 	})
 }
+var sexVal = 3;
 function selectSex () {
 	$('input[type=radio][name=userSex]').change(function() {
+		sexVal = $(this).val();
 		$(this).parent().siblings('.seled').removeClass('seled');
 		$(this).parent().addClass('seled');
 	});
@@ -274,11 +276,55 @@ function signUp () {
 			$(this).siblings('.ppw-sign-up-err').html('请选择您的出生年月！');
 			return;
 		}
+		if (sexVal === 3) {
+			$('#snwr-err').html('请选择您的性别！');
+			return;
+		}
 		step = 2;
 		showStep();
 		$("html, body").animate({
 			scrollTop: 0 + 'px'
 		}, 500);
+	})
+}
+function plogin () {
+	var userAccount = $.trim($(".payment-userAccount").val());
+	var  obj = nonNull(userAccount, '账号');
+	if (!obj.status) {
+		$('#payment-sign-err').html(obj.msg);
+    return;
+	}
+
+	var userPassword = $.trim($(".payment-userPassword").val());
+	var  obj2 = nonNull(userPassword, '密码');
+	if (!obj2.status) {
+		$('#payment-sign-err').html(obj2.msg);
+    return;
+	}
+
+	var userCode = $.trim($(".payment-userCode").val());
+	var  obj3 = nonNull(userCode, '验证码');
+	var imgCodeStatus = true;
+	// imgCodeStatus 此变量决定是否验证图片验证码
+	if (!obj3.status && imgCodeStatus) {
+		$('#payment-sign-err').html(obj3.msg);
+    return;
+	}
+  //在下面执行登录操作
+  // ...
+  $('#p-gd-win-wrapper').fadeOut();
+  step = 2;
+	showStep();
+	$("html, body").animate({
+		scrollTop: 0 + 'px'
+	}, 500);
+}
+function pwin () {
+	$('.gd-win-close-btn').on('click', function () {
+		$('#p-gd-win-wrapper').fadeOut();
+	})
+	$('#random-sign-btn').on('click', function () {
+		$('#p-gd-win-wrapper').fadeIn();
 	})
 }
 $(function () {
@@ -291,4 +337,6 @@ $(function () {
 	goBack();
 	showStep();
 	signUp();
+	$('#payment-login-btn-ctr').on('click', plogin);
+	pwin();
 })

@@ -540,6 +540,7 @@
 	letter-spacing: 1px;
 }
 .rr-vip {
+	cursor: pointer;
 	font-weight: bold;
 }
 .random-sign-btn:hover {
@@ -587,11 +588,12 @@
 	width: 190px;
 }
 .random-user-sup-item.urio-styl {
+	margin-left: 10px;
 	margin-bottom: 5px;
 	font-size: 0;
 	border: none;
   background-repeat: no-repeat;
-  background-position: 280px center;
+  background-position: 276px center;
   background-image: url(../public/images/essential-icon.png);
 }
 .get-ip-code-btn {
@@ -609,7 +611,7 @@
 	font-weight: bold;
 	letter-spacing: 2px;
 	font-size: 12px;
-	color: #fff;
+	color: #ff8c90;
 	cursor: pointer;
 }
 .get-ip-code-btn.not-click {
@@ -620,7 +622,7 @@
 	position: relative;
 	padding-left: 100px;
 	background-repeat: no-repeat;
-	background-position: 280px center;
+	background-position: 285px center;
 	background-image: url(../public/images/essential-icon.png);
 }
 .random-user-sup-item-wrapper.not-ic {
@@ -705,15 +707,15 @@
 .urio-item-radio-box {
 	position: relative;
 	line-height: 32px;
-	margin-right: 30px;
-	padding-left: 20px;
+	margin-right: 20px;
+	padding-left: 30px;
 	font-size: 12px;
 	background-repeat: no-repeat;
 	background-position: left center;
-	background-image: url(./images/radio.png);
+	background-image: url(../public/images/select-icon.png);
 }
 .urio-item-radio-box.seled {
-	background-image: url(./images/radioed.png);
+	background-image: url(../public/images/selected-icon.png);
 }
 .urio-item-radio {
 	position: absolute;
@@ -731,7 +733,13 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 
+.sel-bri-desc {
+	margin-left: 10px;
+	line-height: 22px;
+	font-size: 12px;
+}
 .random-user-sup-desc {
+	margin-left: 10px;
 	padding-left: 26px;
 	line-height: 22px;
 	font-size: 12px;
@@ -1081,4 +1089,78 @@
 	font-size: 12px;
 	color: #d3d3d3;
 	text-align: center;
+}
+
+
+.gd-win-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.gd-win-bg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+.store-reserve-win {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -265px 0 0 -475px;
+	width: 948px;
+	height: 530px;
+	border: 1px solid #b7b7b7; 
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 1;
+}
+.store-reserve-win-tle-wrapper {
+	position: relative;
+	padding: 20px 0 10px;
+	text-align: center;
+	border-bottom: 3px solid #393939;
+}
+.store-reserve-win-tle {
+	line-height: 62px;
+	font-size: 42px;
+	font-weight: bold;
+	padding-left: 4px;
+	letter-spacing: 4px;
+}
+.gd-win-close-btn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 84px;
+	height: 84px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../goods-details/images/close.png);
+	z-index: 1;
+	cursor: pointer;
+}
+
+.payment-sign {
+	margin: 0 auto;
+	width: 300px;
+}
+.payment-sign-err {
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #b3494d;
+}
+.payment-sign .sign-input-group {
+  padding: 0 12px;
 }

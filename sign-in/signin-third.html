@@ -10,24 +10,16 @@
 <link rel="stylesheet" href="../public/reset.css">
 <script src="../public/js/jquery-1.8.0.min.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./payment-process.css">
+<link rel="stylesheet" href="../sign-in/sign.css">
 <title>RACK ROD</title>
 </head>
 <body class="global-body set-animation not-scroll">
-	<!-- loading -->
-	<div id="loading-wrapper">
-		<div class="loading-bar"></div>
-		<div class="loading-box">
-			<img src="../public/images/loading.gif" class="img-responsive">
-			<p class="loading-txt">Loading...</p>
-		</div>
-	</div>
 	<!-- 头部区域 -->
 	<input type="hidden" value="0" id="nav-item-index">
 	<div class="header-controller">
 		<div class="header-wrapper">
 			<div class="header-l set-animation">
-				<p class="header-desc">Payment here : <a class="localtion-link" href="../index/index.html">RACK ROD</a>.com</p>
+				<p class="header-desc">Payment here : <a class="localtion-link" href="/">RACK ROD</a>.com</p>
 				<p class="header-desc">我们支持：支付宝/微信付款（¥）</p>
 			</div>
 			<div class="header-logo">
@@ -135,7 +127,7 @@
 						<div class="sign-input-wrapper" style="display: none;">
 							<div class="user-info-wrapper">
 								<span class="nav-user-name-greet in-block">你好！秋帆</span>
-								<span class="nav-sign-out-btn in-block">换出</span>
+								<span class="nav-sign-out-btn in-block">退出</span>
 							</div>
 							<div class="user-module-wrapper">
 								<div class="user-module-group">
@@ -175,7 +167,7 @@
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
-											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的换单</a>
+											<a href="../close-order/close-order.html?sideIdent=orderClose" class="user-module-link">我的退单</a>
 											<span class="user-module-indent"></span>
 										</li>
 										<li class="user-module-item">
@@ -713,186 +705,79 @@
 		</div>
 	</div>
 	<!-- 主题内容区域 -->
-	<div class="payment-process-wrapper">
-		<div class="ppw-box-l">
-			<div class="ppw-l-ct">
-				<h3 class="ppw-l-tle">订单生成</h3>
-				<!-- 成功 -->
-				<div class="payment-result-success">
-					<div class="ppw-l-nav-ctr">
-						<span class="ppw-l-nav-item ppw-l-nav-1 clo-0-1 in-block">订单信息填写</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-2 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-3 clo-0-1 in-block">开始付款</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-4 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-5 clo-0-1 in-block">付款成功</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-6 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-7 clo-0-1 in-block">出库配送</span>
-					</div>
-					<div class="payment-result-ct">
-						<div class="payment-result-img"></div>
-						<p class="payment-result-succ-my">您已成功付款：<span class="payment-result-my">¥：299.00</span></p>
-						<p class="payment-result-succ-desc">您的订单正在等待配送，1-2天内，将会有客服为您安排发货，<br/>详细物流信息请以发货物流订单号为主！</p>
-					</div>
-					<div class="ppw-submit-order-btn-wrapper payment-result-btn-wrapper">
-						<a href="../order-detail/order-detail.html?step=2" class="ppw-go-to-back-btn in-block">订单详情</a>
-						<a href="../goods-list/goods-list.html" class="ppw-submit-order-btn global-btn-styl in-block">返回继续购物</a>
-					</div>
+	<div class="sign-wrapper">
+		<!-- 绑定操作区域 -->
+		<div class="snwr-box" id="third-bind-oper">
+			<div class="snwr-box-l in-block">
+				<div class="snwr-box-img">
+					<img src="../sign-in/images/s-4.jpg" width="100%">
 				</div>
-				<!-- 失败 -->
-				<div class="payment-result-err" style="display: none;">
-					<div class="ppw-l-nav-ctr">
-						<span class="ppw-l-nav-item ppw-l-nav-1 clo-0-1 in-block">订单信息填写</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-2 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-3 clo-0-1 in-block">开始付款</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-4 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-5 clo-0-1 in-block">付款失败</span>
-						<span class="ppw-l-nav-arrows ppw-l-nav-6 clo-0-1 in-block">></span>
-						<span class="ppw-l-nav-item ppw-l-nav-7 in-block">出库配送</span>
-					</div>
-					<div class="payment-result-ct">
-						<div class="payment-result-img"></div>
-						<p class="payment-result-err-desc">注意：我们不会以订单异常、系统升级为由，<br/>要求您点击任何链接进行退款操作。</p>
-					</div>
-					<div class="ppw-submit-order-btn-wrapper payment-result-btn-wrapper">
-						<a href="../order-detail/order-detail.html" class="ppw-go-to-back-btn in-block">订单详情</a>
-						<a href="../payment-process/payment-result.html" class="ppw-submit-order-btn global-btn-styl in-block">重新付款</a>
+				<div class="snwr-box-dt">
+					<p class="snwr-box-desc">我要将心灵的嘶吼放到最大，从南到北，带给远方！</p>
+					<p class="snwr-box-m-tle">野性难驯-RACK ROD</p>
+				</div>
+			</div>
+			<div class="snwr-box-r in-block">
+				<div class="snw-tle-wrapper">
+					<span class="snw-tle-txt in-block">绑定登录</span>
+					<span class="snw-tle-desc in-block snwr-err" id="snwr-err"></span>
+				</div>
+				<div class="random-user-sign-up">
+					<div class="random-user-sup">
+						<div class="random-user-sup-item">
+							<div class="random-user-sup-item-wrapper">
+								<span class="random-user-sup-name ic-5"><i class="icon"></i>手机号：</span>
+								<input type="text" class="random-user-sup-input" id="third-account-input-ctr">
+							</div>
+						</div>
+						<div class="random-user-sup-item spc-styl">
+							<div class="random-user-sup-item-wrapper not-ic">
+								<span class="random-user-sup-name ic-2"><i class="icon"></i>验证码：</span>
+								<input type="text" class="random-user-sup-input" id="third-code-input-ctr">
+							</div>
+							<span class="get-ip-code-btn" id="third-getCode">获取验证码</span>
+						</div>
+						<div class="ppw-sign-up-btn-wrapper mall-pg">
+							<span class="ppw-third-btn global-btn-styl">完成</span>
+						</div>
+						<p class="random-user-sup-desc mall-pg">点击“完成”，即表示您已阅读并同意<a href="../privacy-statement/privacy-statement.html" target="_blank" class="go-to-service-reguations">《RACK ROD使用条款与隐私声明》</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="ppw-box-r">
-			<div class="ppw-box-r-ct">
-				<div class="ppw-box-r-tle">
-					<span class="in-block ppw-sp-info-name">商品信息</span>
-					<a href="../sale/sale.html?sideIdent=sale&ident=allKy" class="in-block ppw-sp-info-yh">查看优惠券</a>
-				</div>
-				<div class="ceor-info">
-					<div class="ceor-info-item-wrapper">
-						<div class="ceor-imio-box">
-							<a class="ceor-imio-img">
-								<img src="../developerImg/sp-img.jpg" width="100%">
-							</a>
-							<p class="ceor-imio-name">
-								<span class="ceor-imio-tle in-block">短袖</span>
-								<span class="ceor-imio-hr in-block"></span>
-								<span class="ceor-imio-tle in-block">RACK ROD</span>
-							</p>
-							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-							<p class="ceor-imio-tab">
-								<span class="ceor-imio-table in-block">S / 白色</span>
-								<span class="ceor-imio-table in-block">￥：225</span>
-							</p>
-						</div>
-						<div class="ceor-imio-num">x1</div>
-					</div>
-					<div class="ceor-info-item-wrapper">
-						<div class="ceor-imio-box">
-							<a class="ceor-imio-img">
-								<img src="../developerImg/sp-img.jpg" width="100%">
-							</a>
-							<p class="ceor-imio-name">
-								<span class="ceor-imio-tle in-block">短袖</span>
-								<span class="ceor-imio-hr in-block"></span>
-								<span class="ceor-imio-tle in-block">RACK ROD</span>
-							</p>
-							<p class="ceor-imio-desc">Evil Party series 恶党系列</p>
-							<p class="ceor-imio-tab">
-								<span class="ceor-imio-table in-block">S / 白色</span>
-								<span class="ceor-imio-table in-block">￥：225</span>
-							</p>
-						</div>
-						<div class="ceor-imio-num">x1</div>
-					</div>	
-				</div>
-				<div class="order-details-total-wrapper">
-					<p class="od-total-items">
-						<span class="in-block od-total-name">订单商品总额：</span>
-						<span class="in-block od-total-txt">￥：299.00</span>
-					</p>
-					<p class="od-total-items">
-						<span class="in-block od-total-name">商品数量：</span>
-						<span class="in-block od-total-txt">3</span>
-					</p>
-					<p class="od-total-items styl-cr">
-						<span class="in-block od-total-name">优惠金额：</span>
-						<span class="in-block od-total-txt">-￥0.00</span>
-					</p>
-					<p class="od-total-items">
-						<span class="in-block od-total-name">订单运费总额：</span>
-						<span class="in-block od-total-txt">￥0.00</span>
-					</p>
-					<p class="od-total-items od-total-wpp">
-						<span class="in-block od-total-name fwb">总计：</span>
-						<span class="in-block od-total-txt fwb">￥：299.00</span>
-					</p>
-				</div>
+		<!-- 绑定成功区域 -->
+		<div class="snwr-box" id="third-bind-succ" style="display: none;">
+			<div class="snwr-box-tle-sc">RACK ROD 绑定成功</div>
+			<p class="snwr-box-eg-tle">Binding successful</p>
+			<div class="snwr-box-img-sc">
+				<img src="../sign-in/images/s-5.jpg" width="100%">
 			</div>
-			<div class="ppw-use-yh-b-img"></div>
+			<p class="snwr-box-desc-sc">恭喜！您的号码已经绑定成功！</p>
+			<p class="snwr-box-desc-sc-1">（更多个人帐号信息补充，请在个人中心-<a class="ui-link" href="../user-info/user-info.html">我的个人信息</a>处修改）</p>
+			<a href="../goods-list/goods-list.html" class="third-gl-link global-btn-styl">立即购物</a>
 		</div>
 	</div>
 	<!-- 底部区域 -->
-	<div class="footer-controller">
-		<div class="go-to-top-btn set-animation">
-			<span class="go-to-top-desc set-animation">On start</span>
-			<span class="go-to-top-icon set-animation">
-				<span class="go-to-top-bor"></span>
-			</span>
-		</div>
-		<div class="gl-content-wrapper">
-			<div class="footer-logo-wrapper">
-				<img src="../public/images/logo.png" alt="" class="footer-logo-img">
-				<p class="footer-logo-txt">RACK ROD</p>
-			</div>
-			<div class="footer-search-wrapper">
-				<input type="text" class="footer-search" placeholder="EMAIL">
-				<button class="footer-search-btn">订阅</button>
-			</div>
-			<div class="footer-omit-wrapper">
-				<a href="" class="footer-moit-link in-block">订阅RACK ROD最新动态</a>
-			</div>
-			<div class="footer-nav-wrapper">
-				<ul class="footer-nav-list in-block">
-					<li class="footer-nav-item"><a class="footer-nav-link not-link in-block">Copyright © 2017 <span class="spl-styl">RACK ROD</span>.com</a></li>
-					<li class="footer-nav-item"><a href="../FAQ/FAQ.html#cjwt" class="footer-nav-link in-block" target="_blank">常见问题</a></li>
-					<li class="footer-nav-item"><a href="../privacy-statement/privacy-statement.html#yssm" class="footer-nav-link in-block" target="_blank">隐私说明</a></li>
-					<li class="footer-nav-item"><a href="../business-cooperation/business.html#syhz" class="footer-nav-link in-block" target="_blank">商用合作</a></li>
-					<li class="footer-nav-item"><a href="../business-cooperation/business.html#lxwm" class="footer-nav-link in-block" target="_blank">联系我们</a></li>
-				</ul>
-			</div>
-			<div class="footer-recommend-wrapper">
-				<ul class="footer-recommend-list">
-					<li class="footer-recommend-item">
-						<a class="footer-recommend-link">更多我们 :</a>
-					</li>
-					<li class="footer-recommend-item">
-						<a target="_blank" href="https://shop256639001.taobao.com" class="footer-recommend-link tb-link"></a>
-					</li>
-					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link wx-link">
-							<span class="wx-code-img">
-								<img src="../public/images/wx-code-img.jpg" width="100%">
-								<i class="wx-code-txt">微信公众号</i>
-							</span>
-						</a>
-					</li>
-					<li class="footer-recommend-item">
-						<a target="_blank" href="https://weibo.com/rackrod" class="footer-recommend-link wb-link"></a>
-					</li>
-					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link tm-link"></a>
-					</li>
-					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link yh-link"></a>
-					</li>
-					<li class="footer-recommend-item">
-						<a href="" class="footer-recommend-link yk-link"></a>
-					</li>
-				</ul>
-				<p class="footer-recommend-desc">粤ICP备17111534号-2</p>
+	<div class="sign-footer-controller">
+		<div class="s-ft-ctr">
+			<div class="s-ft-ctr-g">
+				<div class="s-ft-ctr-l">
+					<p class="s-ft-ctr-time">营业时间：9:00-22:00</p>
+				</div>
+				<div class="s-ft-ctr-r">
+					<p class="s-ft-ctr-link">
+						<a href="../FAQ/FAQ.html#cjwt" class="footer-nav-link in-block" target="_blank">常见问题</a>
+						<a href="../privacy-statement/privacy-statement.html#yssm" class="footer-nav-link in-block" target="_blank">隐私说明</a>
+						<a href="../business-cooperation/business.html#syhz" class="footer-nav-link in-block" target="_blank">商用合作</a>
+						<a href="../business-cooperation/business.html#lxwm" class="footer-nav-link in-block last-link" target="_blank">联系我们</a>
+					</p>
+					<p class="s-ft-ctr-desc">Copyright © 2017 rackrod.com Inc.All Rights Reserved</p>
+					<p class="s-ft-ctr-desc">成人绘屋艺术生活（深圳）有限公司   粤ICP备17111534号-2</p>
+				</div>
 			</div>
 		</div>
 	</div>
 	<script src="../public/js/public.js"></script>
-	<script src="./payment-process.js"></script>
+	<script src="../sign-in/sign.js"></script>
 </body>
 </html>

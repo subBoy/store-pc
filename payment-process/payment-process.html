@@ -45,9 +45,7 @@
 					<!-- 未登录 -->
 					<img src="../public/images/user-center-icon.png" class="user-info-btn" style="display: none;">
 					<!-- 已登录 -->
-					<img src="../public/images/user-n.png" class="user-info-btn-1" style="display: none;">
-					<!-- 已登录有新消息 -->
-					<img src="../public/images/user-n.gif" class="user-info-btn-2">
+					<img src="../public/images/user-n.png" class="user-info-btn-1">
 				</span>
 				<span class="header-r-item hd-search-btn-ctr in-block ft-right" unfold="搜索框">
 					<span class="hd-search-btn in-block">SEARCH</span>
@@ -342,7 +340,7 @@
 						<a href="../hand-custom/hand-custom.html#reflectShop" itemIdx="4" class="nav-item-link in-block">体验店</a>
 					</li>
 					<li class="header-nav-item ft-left spl-styl" levelName="home-of">
-						<a href="../404/404.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF Ⓡ</a>
+						<a href="../404/404.html" itemIdx="5" class="nav-item-link in-block home-of">HOME OF ®</a>
 					</li>
 					<li class="header-nav-item ft-left">
 						<a href="../about-us/about-us.html" itemIdx="6" class="nav-item-link in-block">关于我们</a>
@@ -665,7 +663,7 @@
 				</div>
 				<!-- home of 展开内容 -->
 				<div levelName="home-of" class="header-nav-list-info set-animation home-of-nav-list-ctr" style="display: none;">
-					<a href="" class="about-home-of-link">关于HOME OF Ⓡ</a>
+					<a href="" class="about-home-of-link">关于HOME OF ®</a>
 					<ul class="about-home-of-list in-block">
 						<li class="about-home-of-item">
 							<a href="" class="home-of-item-link">
@@ -706,7 +704,7 @@
 						<li class="about-home-of-item">
 							<a href="" class="home-of-item-link">
 								<span class="home-of-link-name">野派文化</span>
-								<span class="home-of-link-desc in-block">关于HOME OF Ⓡ</span>
+								<span class="home-of-link-desc in-block">关于HOME OF ®</span>
 							</a>
 						</li>
 					</ul>
@@ -1027,7 +1025,7 @@
 						<span class="sel-vip-btn-wrapper">
 							<input type="checkbox" class="sel-vip-input">
 						</span>
-						成为<a class="rr-vip">RACK ROD</a>会员，即可享受首单免费配送服务！已是会员，请点击<a href="../sign-in/sign-in.html" class="rr-vip random-sign-btn">这里</a>登录！
+						成为<a class="rr-vip">RACK ROD</a>会员，即可享受首单免费配送服务！已是会员，请点击这里<a id="random-sign-btn" class="rr-vip random-sign-btn">登录</a>！
 					</p>
 					<div class="random-user-sup">
 						<div class="random-user-sup-item">
@@ -1099,13 +1097,14 @@
 								</select>
 							</span>
 						</div>
-						<div class="random-user-sup-item spc-styl-1 urio-styl">
+						<p class="sel-bri-desc">注：生日设置只能填写一次，请谨慎选择</p>
+						<div class="random-user-sup-item urio-styl">
 							<span class="urio-item-tle in-block">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
 							<span class="urio-item-radio-box in-block">
-								<input type="radio" name="userSex" value="0" class="urio-item-radio">女
+								<input type="radio" name="userSex" value="0" class="urio-item-radio">男
 							</span>
 							<span class="urio-item-radio-box in-block">
-								<input type="radio" name="userSex" value="1" class="urio-item-radio">男
+								<input type="radio" name="userSex" value="1" class="urio-item-radio">女
 							</span>
 						</div>
 						<p class="random-user-sup-desc">点击“确认注册”，即表示您已阅读并同意<a href="../privacy-statement/privacy-statement.html" target="_blank" class="go-to-service-reguations">《RACK ROD使用条款与隐私声明》</a></p>
@@ -1227,6 +1226,74 @@
 			<div class="ppw-use-yh-b-img"></div>
 		</div>
 	</div>
+	<!-- 弹窗区域 -->
+	<div class="gd-win-wrapper" id="p-gd-win-wrapper">
+		<em class="gd-win-bg"></em>
+		<div class="store-reserve-win">
+			<div class="store-reserve-win-tle-wrapper">
+				<h3 class="store-reserve-win-tle">登录</h3>
+				<span class="gd-win-close-btn"></span>
+			</div>
+			<div class="sign-input-wrapper payment-sign">
+				<p class="payment-sign-err" id="payment-sign-err"></p>
+				<div class="sign-input-group">
+					<div class="sign-input-layout">
+						<div class="sign-input-ctr u-ic">
+							<span class="sign-input-tle in-block">手机/邮箱：</span>
+							<input type="text" class="sign-input global-input-focus payment-userAccount" value="">
+						</div>
+					</div>
+					<div class="sign-input-layout">
+						<div class="sign-input-ctr p-ic">
+							<span class="sign-input-tle in-block">确认密码：</span>
+							<input type="password" class="sign-input in-block global-input-focus payment-userPassword" value="">
+						</div>
+					</div>
+					<div class="sign-input-layout">
+						<div class="sign-input-ctr c-ic">
+							<span class="sign-input-tle in-block">验证码：</span>
+							<input type="text" class="sign-input global-input-focus payment-userCode" value="">
+							<span class="code-img-ctr in-block">
+								<img src="../developerImg/code.jpg" class="code-img">
+							</span>
+						</div>
+					</div>
+					<div class="rest-operation-wrapper">
+						<p class="remember-login-info">
+							<span class="global-select-wrapper in-block">
+								<input class="global-select-input" type="checkbox">
+							</span>
+							记住我的登录信息！
+						</p>
+						<p class="forget-pw-and-sign-up">
+							<a href="../sign-up/sign-up.html" target="_blank" class="fs-opertion-btn">新用户注册</a>
+							<a href="../forget-pw/forget-pw.html" target="_blank" class="fs-opertion-btn">忘记密码</a>
+						</p>
+					</div>
+					<div class="nav-sign-in-btn-ctr">
+						<button id="payment-login-btn-ctr" class="nav-sign-in-btn global-btn-styl">登录</button>
+					</div>
+					<div class="third-party-sign-in">
+						<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
+						<div class="third-party-style-list in-block">
+							<a class="third-party-item tp-qq in-block">
+								<span class="tp-icon"></span>
+								<span class="tp-name">QQ</span>
+							</a>
+							<a class="third-party-item tp-wx in-block">
+								<span class="tp-icon"></span>
+								<span class="tp-name">微信</span>
+							</a>
+							<a class="third-party-item tp-wb in-block">
+								<span class="tp-icon"></span>
+								<span class="tp-name">微博</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- 底部区域 -->
 	<div class="footer-controller">
 		<div class="go-to-top-btn set-animation">
@@ -1262,7 +1329,7 @@
 						<a class="footer-recommend-link">更多我们 :</a>
 					</li>
 					<li class="footer-recommend-item">
-						<a href="https://shop256639001.taobao.com" class="footer-recommend-link tb-link"></a>
+						<a target="_blank" href="https://shop256639001.taobao.com" class="footer-recommend-link tb-link"></a>
 					</li>
 					<li class="footer-recommend-item">
 						<a href="" class="footer-recommend-link wx-link">
@@ -1273,7 +1340,7 @@
 						</a>
 					</li>
 					<li class="footer-recommend-item">
-						<a href="https://weibo.com/rackrod" class="footer-recommend-link wb-link"></a>
+						<a target="_blank" href="https://weibo.com/rackrod" class="footer-recommend-link wb-link"></a>
 					</li>
 					<li class="footer-recommend-item">
 						<a href="" class="footer-recommend-link tm-link"></a>

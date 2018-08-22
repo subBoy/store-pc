@@ -135,9 +135,72 @@ function getCode () {
 		timer = setInterval(setval, 1000)
 	})
 }
+function thirdBind () {
+	$('.ppw-third-btn').on('click', function () {
+		var accountVal = $('#third-account-input-ctr').val();
+		var objVer = ipVerify(accountVal);
+		if (!objVer.status) {
+			$('#snwr-err').html(objVer.msg);
+			return;
+		}
+
+		var codeVal = $('#third-code-input-ctr').val();
+		var codeName = '';
+		if (objVer.type === 'mobile') {
+			codeName = '手机验证码';
+		}
+		var codeVer = nonNull(codeVal, codeName);
+		if (!codeVer.status) {
+			$('#snwr-err').html(codeVer.msg);
+			return;
+		}
+		// 手机号是否已绑定其他账户
+		if (false) {
+			$('#snwr-err').html('该手机号已绑定其他账户,请直接<a class="sign-in-link-btn" href="../sign-in/sign-in.html">登录</a>或更换其他手机号绑定！');
+		}
+		// 绑定操作
+		// ...
+
+		$('#third-bind-oper').hide();
+		$('#third-bind-succ').fadeIn();
+	})
+}
+function thirdGetCode () {
+	var times = 60;
+	var codeBtnTxt = '';
+	var codeClick = true;
+	var timer;
+	var setval = function () {
+	  times--;
+	  codeBtnTxt = times + 's后重试';
+	  $('#third-getCode').addClass('not-click').html(codeBtnTxt);
+	  if (times < 1) {
+	    clearInterval(timer);
+	    times = 60;
+	    codeBtnTxt = '重新发送';
+	    codeClick = true;
+	    $('#third-getCode').removeClass('not-click').html(codeBtnTxt);
+	  }
+	};
+	$('#third-getCode').on('click', function () {
+		if (!codeClick) {
+			return;
+		}
+		var accountVal = $('#third-account-input-ctr').val();
+		var objVer = ipVerify(accountVal);
+		if (!objVer.status) {
+			$('#snwr-err').html(objVer.msg);
+			return;
+		}
+		codeClick = false;
+		timer = setInterval(setval, 1000)
+	})
+}
 $(function () {
 	$("#signin-psy-btn-ctr").on('click', signIn); // 登录;
 	signUp(); // 注册;
 	selectSex(); // 选择性别
 	getCode(); // 获取手机或者邮箱验证码
+	thirdBind(); //第三方绑定
+	thirdGetCode(); //第三方绑定验证码
 })

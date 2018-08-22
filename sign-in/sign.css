@@ -7,7 +7,6 @@
 	margin:  0 auto;
 	padding-top: 100px;
 	width: 1080px;
-	overflow: hidden;
 	font-size: 0;
 }
 
@@ -37,6 +36,7 @@
 	font-weight: bold;
 }
 .snw-tle-wrapper {
+	position: relative;
 	line-height: 38px;
 	border-bottom: 4px solid #000;
 	font-size: 0;
@@ -47,9 +47,18 @@
 	font-weight: bold;
 }
 .snw-tle-desc {
+	display: block;
+	position: absolute;
+	left: 75px;
+	top: 3px;
+	width: 150%;
 	padding-left: 10px;
 	font-size: 15px;
 	letter-spacing: 1px;
+}
+.sign-in-link-btn {
+	font-weight: bold;
+	color: #000;
 }
 .snwr-err {
 	color: #b3494d;
@@ -244,6 +253,9 @@
 .ic-4 .icon {
 	background-image: url(../public/images/pw-icon.png);
 }
+.ic-5 .icon {
+	background-image: url(../public/images/mb.png);
+}
 .random-user-sup-input {
 	width: 100%;
 	line-height: 30px;
@@ -324,6 +336,9 @@
 	background-position: left 3px;
 	background-image: url(../payment-process/images/s-ic.png);
 }
+.random-user-sup-desc.mall-pg {
+	margin-left: 25px;
+}
 .sel-bri-desc {
 	margin-left: 10px;
 	line-height: 22px;
@@ -342,7 +357,10 @@
 	position: relative;
 	padding: 10px 0 40px 0;
 }
-.ppw-sign-up-btn {
+.ppw-sign-up-btn-wrapper.mall-pg {
+	padding: 10px 0;
+}
+.ppw-sign-up-btn, .ppw-third-btn {
 	display: block;
 	padding-left: 4px;
 	line-height: 40px;
@@ -354,4 +372,60 @@
 	color: #ff8c90;
 	letter-spacing: 4px;
 	cursor: pointer;
+}
+
+.snwr-box-tle-sc {
+	padding-left: 4px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-align: center;
+}
+.snwr-box-eg-tle {
+	padding-left: 2px;
+	line-height: 40px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.snwr-box-img-sc {
+	margin: 0 auto;
+	padding-bottom: 30px;
+	width: 240px;
+}
+.snwr-box-desc-sc {
+	line-height: 40px;
+	padding-left: 1px;
+	font-size: 16px;
+	color: #b3494d;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.snwr-box-desc-sc-1 {
+	line-height: 40px;
+	padding-left: 1px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.ui-link {
+	font-weight: bold;
+}
+.ui-link:hover {
+	color: #b3494d;
+}
+.third-gl-link {
+	display: block;
+	margin: 15px auto 0;
+	line-height: 46px;
+	padding-left: 2px;
+	width: 206px;
+	text-align: center;
+	color: #ff8c90;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+
 }

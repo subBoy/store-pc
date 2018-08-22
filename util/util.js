@@ -31,6 +31,31 @@ $.extend(window, {
 	  } 
 	  return obj;
 	},
+	ipVerify: function (account) {
+		// 手机验证
+		var obj = {
+	  	status: true,
+	  	msg: ''
+	  };
+		if (!account) {
+		  obj.status = false;
+	  	obj.msg = '手机号不能为空！';
+		  return obj;
+		}
+		var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+	  if(!reg.test(account)){
+	  	obj.status = false;
+	  	obj.msg = '手机号格式错误！';
+	  	return obj;
+	  }
+	  if(reg.test(account)){
+	  	obj.status = true;
+	  	obj.type = 'mobile';
+	  	obj.msg = '';
+	  	return obj;
+	  }
+	  return obj;
+	},
 	passwordVerify: function (password) {
 		// 密码验证
 		var obj = {
