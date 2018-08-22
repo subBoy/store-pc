@@ -1,1 +1,108 @@
 @charset"UTF-8";
+.gd-win-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.gd-win-bg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+.reserve-success-win, .look-logistics-win {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -250px 0 0 -375px;
+	width: 750px;
+	height: 500px;
+	border: 1px solid #b7b7b7; 
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 1;
+}
+.gd-win-ct-tle {
+	position: relative;
+	border-bottom: 3px solid #393939;
+}
+.gd-win-ct-tle-txt {
+	display: block;
+	padding-left: 5px;
+	line-height: 84px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-align: center;
+}
+.reserve-success-img {
+	height: 320px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../goods-details/images/note.png);
+}
+.store-reserve-win-desc {
+	line-height: 34px;
+	font-size: 14px;
+	text-align: center;
+}
+.cr-step-win-time {
+	color: #b3494d;
+}
+.gd-link-btn {
+	font-weight: bold;
+}
+.gd-link-btn:hover {
+	color: #b3494d;
+}
+.gd-win-close-btn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 84px;
+	height: 84px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../goods-details/images/close.png);
+	z-index: 1;
+	cursor: pointer;
+}
+.look-logistics-img {
+	height: 80px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-image: url(../public/images/wl.jpg);
+}
+.look-logistics-desc {
+	line-height: 60px;
+	font-size: 14px;
+	text-align: center;
+}
+.look-logistics-ct-txt {
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.look-logistics-link {
+	display: block;
+	margin: 15px auto;
+	width: 198px;
+	line-height: 42px;
+	padding-left: 2px;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff8c90;
+	text-align: center;
+}

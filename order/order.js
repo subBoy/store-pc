@@ -14,6 +14,9 @@ function operBtn () {
 
 function confirmCollection () {
 	$('.ceor-imio-oper-btn').on('click', function () {
+		$('.gd-win-wrapper').show();
+		$('.reserve-success-win').fadeIn();
+		autoHide();
 		var _this = $(this);
 		var thisPar = _this.parent();
 		var hrefBox = _this.parent().parent().parent().parent().find('.ceor-detail');
@@ -27,6 +30,15 @@ function confirmCollection () {
 				$(this).fadeIn();
 			}
 		})
+	})
+	$('.order-wuliu').on('click', function () {
+		$('.gd-win-wrapper').show();
+		$('.look-logistics-win').fadeIn();
+	})
+	$('.gd-win-close-btn').on('click', function () {
+		$('.gd-win-wrapper').fadeOut();
+		$('.look-logistics-win').hide();
+		$('.reserve-success-win').hide();
 	})
 }
 
@@ -42,6 +54,23 @@ function delOrder () {
 			thisPar.remove();
 		}, 300)
 	})
+}
+
+function autoHide () {
+	var tNUum = 3;
+	var sh;
+	var to = function () {
+		tNUum--;
+		if (tNUum < 1) {
+			tNUum = 1;
+			$('.cr-step-win-time').html(tNUum);
+			clearInterval(sh);
+			location.href="../user-center/user-center.html";
+			$('#submit-success-win').fadeOut();
+		}
+		$('.cr-step-win-time').html(tNUum);
+	}
+	sh = setInterval(to, 1000);
 }
 
 $(function () {

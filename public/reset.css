@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 0; 
 }
 .header-logo {
+  display: none;
   position: absolute;
   top: 0;
   left: 50%;

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="../sign-in/sign.css">
 <title>RACK ROD</title>
 </head>
-<body class="global-body set-animation not-scroll">
+<body class="global-body set-animation">
 	<!-- 头部区域 -->
 	<input type="hidden" value="0" id="nav-item-index">
 	<div class="header-controller">
@@ -706,7 +706,8 @@
 	</div>
 	<!-- 主题内容区域 -->
 	<div class="sign-wrapper">
-		<div class="snwr-box">
+		<!-- 注册操作区域 -->
+		<div class="snwr-box" id="sign-up-oper">
 			<div class="snwr-box-l in-block">
 				<div class="snwr-box-img">
 					<img src="../sign-in/images/s-2.jpg" width="100%">
@@ -809,6 +810,17 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<!-- 注册成功区域 -->
+		<div class="snwr-box" id="sign-up-succ" style="display: none;">
+			<div class="snwr-box-tle-sc">RACK ROD 注册成功！</div>
+			<p class="snwr-box-eg-tle">login was successful</p>
+			<div class="snwr-box-img-sc">
+				<img src="../sign-in/images/s-6.jpg" width="100%">
+			</div>
+			<p class="snwr-box-desc-sc">恭喜！您已成功注册成为<a href="../vip/vip.html" class="snwr-vip-link">RACK ROD会员</a>！</p>
+			<p class="snwr-box-desc-sc-1">（更多个人帐号信息补充，请在个人中心-<a class="ui-link" href="../user-info/user-info.html">我的个人信息</a>处修改）</p>
+			<a href="../goods-list/goods-list.html" class="third-gl-link global-btn-styl">立即购物</a>
 		</div>
 	</div>
 	<!-- 底部区域 -->

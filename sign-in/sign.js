@@ -93,6 +93,9 @@ function signUp () {
 
 		// 注册操作
 		// ...
+
+		$('#sign-up-oper').hide();
+		$('#sign-up-succ').fadeIn();
 	})
 }
 var sexVal = 3;
