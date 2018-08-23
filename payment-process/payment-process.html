@@ -731,7 +731,7 @@
 					<div class="ppw-info-item-tle-wrapper">
 						<span class="ppw-info-item-ic pii-ic-1 in-block"></span>
 						<span class="ppw-info-item-name in-block">配送信息</span>
-						<a href="../user-address/user-address.html?sideIdent=userAddress" class="ppw-info-item-btn set-animation in-block">新增地址》</a>
+						<a href="../user-address/user-address.html?sideIdent=userAddress" target="_blank" class="ppw-info-item-btn set-animation in-block">新增地址》</a>
 					</div>
 					<div class="user-address-info">
 						<span class="ppw-sel-address-btn seled">
@@ -769,7 +769,7 @@
 							</li>
 							<li class="uras-info-item wd-li-6">
 								<div class="uras-info-view cr-info-vm">
-									<a href="../user-address/user-address.html?sideIdent=userAddress" class="uras-info-item-btns">修改</a>
+									<a class="uras-info-item-btns pp-change-address-btn">修改</a>
 								</div>
 							</li>
 						</ul>
@@ -810,7 +810,7 @@
 							</li>
 							<li class="uras-info-item wd-li-6">
 								<div class="uras-info-view cr-info-vm">
-									<a href="../user-address/user-address.html?sideIdent=userAddress" class="uras-info-item-btns">修改</a>
+									<a class="uras-info-item-btns pp-change-address-btn">修改</a>
 								</div>
 							</li>
 						</ul>
@@ -1290,6 +1290,104 @@
 							</a>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="user-cpm-wrapper" id="change-user-address-win">
+		<em class="user-cpm-bg"></em>
+		<div class="user-cpm-content-pp cr-info-vm">
+			<div class="user-cpm-tle">修改收获地址</div>
+			<span class="user-cpm-close-btn"></span>
+			<div class="user-cpm-content-group">
+				<ul class="user-cpm-input-wrapper">
+					<li class="user-cpm-input-item-pp">
+						<div class="user-cpm-input-box-pp">
+							<span class="user-cpm-input-name-pp">收货人姓名：</span>
+							<input type="text" class="user-cpm-input-ctr-pp as-us-name" value="邱帆">
+						</div>
+					</li>
+					<li class="user-cpm-input-item-pp">
+						<div class="user-cpm-input-box-pp">
+							<span class="user-cpm-input-name-pp">地址：</span>
+							<div class="trigeminy-address-pp">
+								<div class="trigeminy-address-box-pp">
+									<span class="trigeminy-address-view-pp as-shen" grade="1">北京</span>
+									<ul class="trigeminy-address-list-pp">
+										<li class="trigeminy-address-item-pp air-item">请选择</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深圳</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深圳</li>
+									</ul>
+								</div>
+								<div class="trigeminy-address-box-pp">
+									<span class="trigeminy-address-view-pp as-shi" grade="2">北京</span>
+									<ul class="trigeminy-address-list-pp">
+										<li class="trigeminy-address-item-pp air-item">请选择</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深圳</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深-pp圳</li>
+									</ul>
+								</div>
+								<div class="trigeminy-address-box-pp">
+									<span class="trigeminy-address-view-pp as-xian" grade="3">通州区</span>
+									<ul class="trigeminy-address-list-pp">
+										<li class="trigeminy-address-item-pp air-item">请选择</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深圳</li>
+										<li class="trigeminy-address-item-pp">北京</li>
+										<li class="trigeminy-address-item-pp">上海</li>
+										<li class="trigeminy-address-item-pp">广州</li>
+										<li class="trigeminy-address-item-pp">深圳</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="user-cpm-input-item-pp">
+						<div class="user-cpm-input-box-pp">
+							<span class="user-cpm-input-name-pp">街道地址：</span>
+							<input type="text" class="user-cpm-input-ctr-pp as-jiedao" value="新华联家园42号311">
+						</div>
+					</li>
+					<li class="user-cpm-input-item-pp">
+						<div class="user-cpm-input-box-pp">
+							<span class="user-cpm-input-name-pp not-ic">邮政编号：</span>
+							<input type="text" class="user-cpm-input-ctr-pp as-youbian" value="101118">
+						</div>
+					</li>
+					<li class="user-cpm-input-item-pp">
+						<div class="user-cpm-input-box-pp">
+							<span class="user-cpm-input-name-pp">手机号/电话：</span>
+							<input type="text" class="user-cpm-input-ctr-pp as-tel" value="13552709924">
+						</div>
+					</li>
+				</ul>
+				<div class="user-cpm-set-default-pp">
+					<span class="cpm-set-dt-btn-pp">
+						<input type="checkbox" class="set-dt-checkbox-pp">
+					</span>
+					设为默认地址
+				</div>
+			</div>
+			<div class="user-cpm-ft-pp">
+				<p class="user-cpm-error user-cpm-error-pp"></p>
+				<p class="user-cpm-desc-pp">若订单出现错误，出于隐私考虑我们将仅与您联系。请务必填写所有信息！</p>
+				<div class="user-cpm-btns-pp">
+					<span class="user-cpm-btn-pp submit-cg-btn global-btn-styl in-block" id="submit-cg-btn-pp">保存到地址簿</span>
+					<span class="user-cpm-btn-pp close-cg-btn in-block">取消</span>
 				</div>
 			</div>
 		</div>

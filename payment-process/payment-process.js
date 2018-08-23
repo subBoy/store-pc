@@ -95,12 +95,11 @@ function getFromData (str) {
 	fromData.asYoubian = _this.find('.as-youbian').val();
 	fromData.asTel = _this.find('.as-tel').val();
 	fromData.asDefault = _this.find('.set-dt-checkbox').is(':checked');
-	console.log(fromData);
 	if (!fromData.name) {
 		_this.find('.user-cpm-error').html('请输入收货人姓名！').fadeIn();
 		return false;
 	}
-	if (fromData.asShen === '省' || fromData.asShi === '市' || fromData.asXian === '县/区') {
+	if (fromData.asShen === '省' || fromData.asShen.indexOf('请选择') !== -1 || fromData.asShi === '市' || fromData.asShi.indexOf('请选择') !== -1 || fromData.asXian === '县/区' || fromData.asXian.indexOf('请选择') !== -1) {
 		_this.find('.user-cpm-error').html('请选择地址！').fadeIn();
 		return false;
 	}
@@ -140,6 +139,12 @@ function submitFc () {
 			return
 		}
 		location.href = '../payment-process/start-payment.html';
+	})
+	$('#submit-cg-btn-pp').on('click', function () {
+		if(getFromData('#change-user-address-win')) {
+			// 保存到数据库操作
+			hideWin();
+		}
 	})
 }
 function getCode () {
@@ -323,13 +328,66 @@ function pwin () {
 	$('.gd-win-close-btn').on('click', function () {
 		$('#p-gd-win-wrapper').fadeOut();
 	})
+	$('.user-cpm-close-btn').on('click', function () {
+		$('#change-user-address-win').fadeOut();
+	})
+	$('.pp-change-address-btn').on('click', function () {
+		$('#change-user-address-win').fadeIn();
+		vmCon('not-an');
+	})
 	$('#random-sign-btn').on('click', function () {
 		$('#p-gd-win-wrapper').fadeIn();
 	})
 }
+function selTrigeminy1 () {
+	$('.trigeminy-address-view-pp').on('click', function (e) {
+		e.stopPropagation();
+		$('.trigeminy-address-list-pp').hide();
+		$(this).siblings('.trigeminy-address-list-pp').slideDown();
+	})
+	$('.trigeminy-address-item-pp').on('click', function () {
+		var thisPs = $(this).parent().siblings('.trigeminy-address-view-pp');
+		var thisGe = thisPs.attr('grade');
+		$('.trigeminy-address-list-pp').slideUp();
+		if ($(this).hasClass('air-item')) {
+			if (thisGe === '1') {
+				thisPs.html('请选择地区、省份');
+				return;
+			}
+			if (thisGe === '2') {
+				thisPs.html('请选择城市');
+				return;
+			}
+			if (thisGe === '3') {
+				thisPs.html('请选择区');
+				return;
+			}
+			return;
+		}
+		var _val = $(this).html();
+		thisPs.html(_val);
+		$('.user-cpm-error-pp').html('').fadeOut();
+	})
+	$('.set-dt-checkbox-pp').change(function () {
+		var status = $(this).is(':checked');
+		if (status) {
+			$(this).parent().addClass('selected');
+		} else {
+			$(this).parent().removeClass('selected');
+		}
+	})
+	$('.user-cpm-input-ctr-pp').focus(function () {
+		$('.user-cpm-error-pp').html('').fadeOut();
+	})
+}
+function hideWin () {
+	$('.user-cpm-wrapper').fadeOut();
+	$('.user-cpm-error').html('').fadeOut();
+}
 $(function () {
 	selTypeFuc();
 	selTrigeminy();
+	selTrigeminy1();
 	submitFc();
 	getCode();
 	selectSex();
@@ -338,5 +396,6 @@ $(function () {
 	showStep();
 	signUp();
 	$('#payment-login-btn-ctr').on('click', plogin);
+	$('.close-cg-btn').on('click', hideWin);
 	pwin();
 })

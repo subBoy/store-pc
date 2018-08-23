@@ -19,9 +19,9 @@ html, body {
   -ms-user-select: none; 
   user-select: none;
 }
-.not-scroll {
+/*.not-scroll {
   overflow-y: hidden;
-}
+}*/
 img {
   display: block;
   border: none;
@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   min-width: 950px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #fff;
   border-top: 8px solid #000;
   border-bottom: 1px solid #808080;
   z-index: 999;
@@ -1321,7 +1321,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 0;
   width: 0;
   height: 3px;
-  background-color: #ff0000;
+  background-color: #a11f24;
   z-index: 1;
 }
 .loading-box {
