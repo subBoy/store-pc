@@ -324,7 +324,7 @@ $(function () {
 	checkedItem();
 	cutRecommend();
 	$('.global-body').on('click', function () {
-		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list').slideUp();
+		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list, .hf-sy-nav-solt-list').slideUp();
 		$('.is-show').removeClass('is-show');
 	})
 	$('.stpps-3-select-list, .sp-cart-list-wrapper, .gl-condition-list-threelevel').bind("scroll", function (e) {
