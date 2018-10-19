@@ -143,5 +143,5 @@ $(function () {
 	islookDes();
 	sTop1 = $('.home-of-silder').offset().top;
 	$(window).resize(resetWwStatus);
-	$(window).bind("scroll", showSlide);
+	// $(window).bind("scroll", showSlide);
 })
