@@ -110,6 +110,9 @@
 .icon-4 {
 	background-image: url(../home-of/images/i-5.png);
 }
+.icon-6 {
+	background-image: url(../home-of/images/i-6.png);
+}
 .hf-icon-name {
 	line-height: 30px;
 	font-size: 18px;
@@ -126,6 +129,49 @@
 	background-position: right center;
 	background-repeat: no-repeat;
 	background-image: url(../home-of/images/dialog-box.png);
+}
+.groove-input {
+	position: relative;
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 30px;
+	height: 122px;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-image: url(../home-of/images/dialog-box.png);
+}
+#groove-ipt-ctr {
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	right: 30px;
+	width: 92%;
+	line-height: 20px;
+	font-size: 14px;
+	border: none;
+	resize: none;
+	background-color: transparent;
+	z-index: 2;
+}
+.groove-input-placeholder {
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	right: 30px;
+	line-height: 20px;
+}
+.gip-desc {
+	font-size: 14px;
+	color: #bababa;
+}
+.font-length {
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #bababa;
+	z-index: 3;
 }
 .hftle-ct-desc {
 	padding: 22px 0;
@@ -802,4 +848,45 @@
 }
 .hfsy-rsct-icon.wx-ic-10 {
 	background-image: url(../home-of/images/b-10.png);
+}
+.home-of-title-box.groove-title-box {
+	height: 190px;
+}
+.groove-title-box .home-of-title-icon {
+	top: 30px;
+}
+.groove-ctr {
+	position: absolute;
+	left: 185px;
+	right: 0;
+	bottom: 0;
+}
+.set-ge-btn {
+	padding: 5px;
+	border: 1px solid #f798a0;
+	border-radius: 2px;
+}
+.ge-btn {
+	font-size: 14px;
+	padding: 3px 4px;
+	border-radius: 2px;
+}
+.ge-btn.esp {
+	background-color: #f03e4d;
+	color: #fff;
+}
+.up-ge-img {
+	padding-left: 15px;
+	cursor: pointer;
+}
+.upimg-btn {
+	display: block;
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(../home-of/images/ul-img.png);
+}
+.tate-ic {
+	color: #f03e4d;
+	padding-right: 5px;
 }

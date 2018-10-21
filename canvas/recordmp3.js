@@ -29,7 +29,7 @@
                     realTimeWorker.postMessage({ cmd: 'encode', buf: array });
                 };
 
-                var realTimeWorker = new Worker('./worker-realtime.js');
+                var realTimeWorker = new Worker('worker-realtime.js');
                 realTimeWorker.onmessage = function (e) {
                     switch (e.data.cmd) {
                         case 'init':
