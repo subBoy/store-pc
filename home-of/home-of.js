@@ -134,6 +134,25 @@ function islookDes () {
 
 	// })
 }
+function sledItem () {
+	$('.hf-sy-nav-link').on('click', function () {
+		$('.hf-sy-nav-link').removeClass('seled');
+		$(this).addClass('seled');
+	})
+	$('.ge-btn').on('click', function () {
+		$('.ge-btn').removeClass('esp');
+		$(this).addClass('esp');
+		var _idx = $(this).index();
+		$('.uptle-btn').eq(_idx).show().siblings().hide();
+	})
+	$('.gm-colled-btn').on('click', function () {
+		if ($(this).hasClass('esp')) {
+			$(this).removeClass('esp');
+		} else {
+			$(this).addClass('esp');
+		}
+	})
+}
 $(function () {
 	hfPageNav();
 	resetWwStatus();
@@ -144,4 +163,5 @@ $(function () {
 	sTop1 = $('.home-of-silder').offset().top;
 	$(window).resize(resetWwStatus);
 	// $(window).bind("scroll", showSlide);
+	sledItem();
 })
