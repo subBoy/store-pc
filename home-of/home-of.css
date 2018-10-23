@@ -207,6 +207,14 @@
 	padding-right: 120px;
 	border-bottom: 1px solid #d9d9d9;
 }
+.groove-colled-sy-nav-box {
+	padding-right: 0;
+	padding-bottom: 15px;
+	border-bottom: 1px dashed #d9d9d9;
+}
+.gecd-table {
+	font-weight: bold;
+}
 .groove-sy-nav-box {
 	padding-right: 0;
 }
@@ -895,12 +903,101 @@
 	padding-left: 15px;
 	cursor: pointer;
 }
+.up-ge-img-view {
+	display: none;
+	position: absolute;
+	right: -20px;
+	top: 35px;
+	width: 110px;
+	height: 120px;
+	border: 1px solid #d3d3d3;
+	background-color: #fff;
+	border-radius: 3px;
+	z-index: 10;
+}
+.up-ge-tate-view {
+	display: none;
+	position: absolute;
+	left: 20px;
+	top: 35px;
+	width: 190px;
+	border: 1px solid #d3d3d3;
+	background-color: #fff;
+	border-radius: 3px;
+	z-index: 10;
+}
+.ge-tate-view {
+	padding: 10px 0 10px 10px;
+	font-size: 0;
+}
+.ge-tate-item {
+	padding-right: 15px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #777777;
+}
+.ge-tate-item:hover {
+	color: #f03e4d;
+}
+.up-ge-close {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../home-of/images/ic_x.png);
+}
+.up-ge-tate-view .up-ge-roow {
+	left: 30px;
+	right: auto;
+}
+.up-ge-roow {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 30px;
+	top: -20px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-image: url(../home-of/images/roow.png);
+}
+.ge-img-view {
+	width: 110px;
+	height: 120px;
+	overflow: hidden;
+}
+.ge-view-img {
+	display: block;
+	margin: 25px auto;
+	width: 70px;
+	height: 70px;
+}
 .upimg-btn {
+	position: relative;
 	display: block;
 	padding-left: 25px;
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-image: url(../home-of/images/ul-img.png);
+	overflow: hidden;
+	cursor: pointer;
+}
+#chooseImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+	cursor: pointer;
 }
 .tate-ic {
 	color: #f03e4d;
@@ -911,6 +1008,94 @@
 	right: 0;
 	top: 0;
 	font-size: 0;
+}
+.ge-record-desc {
+	display: none;
+	position: absolute;
+	right: 130px;
+	top: 0;
+	width: 400px;
+	line-height: 26px;
+	text-align: right;
+	font-size: 12px;
+	color: #b2b2b2;
+}
+.recording-time {
+	display: none;
+	position: absolute;
+	right: 130px;
+	top: 0;
+	width: 400px;
+	line-height: 26px;
+	text-align: right;
+	font-size: 0px;
+}
+#recordingslist {
+	display: none;
+}
+.recording-ctr {
+	display: none;
+	position: absolute;
+	right: 130px;
+	top: 0;
+	width: 400px;
+	line-height: 26px;
+	text-align: right;
+	font-size: 0px;
+}
+.recording-times {
+	font-size: 14px;
+	color: #f03e4d;
+}
+.recording-play-btn {
+	width: 30px;
+	height: 26px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../home-of/images/adio-4.png);
+}
+.recording-play-btn.isPlay {
+	background-image: url(../home-of/images/adio-5.png);
+}
+.recording-del-btn {
+	margin-left: 5px;
+	width: 30px;
+	height: 26px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../home-of/images/adio-3.png);
+}
+.recording-line-bar {
+	margin: 0 15px 0 0;
+	width: 70px;
+	height: 26px;
+}
+.an-icon {
+	width: 3px;
+	height: 3px;
+	background-color: #f03e4d;
+	border-radius: 100%;
+	-webkit-animation: twinkling 0.5s infinite ease-in-out;
+	-moz-animation: twinkling 0.5s infinite ease-in-out;
+	animation: twinkling 0.5s infinite ease-in-out;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.retime-wrapper {
+	padding-left: 10px;
+	font-size: 14px;
+}
+@-webkit-keyframes twinkling {
+	0% {opacity: 0.3;},
+	100% {opacity: 1;}
+}
+@keyframes twinkling {
+	0% {opacity: 0.3;},
+	100% {opacity: 1;}
+}
+@-moz-keyframes twinkling {
+	0%{opacity: 0.3;},
+	100%{opacity: 1;}
 }
 .sublime-btn {
 	line-height: 26px;
@@ -930,6 +1115,12 @@
 	background-position: center;
 	background-image: url(../home-of/images/adio.png);
 	cursor: pointer;
+}
+.ly-btn.start {
+	background-image: url(../home-of/images/adio-1.png);
+}
+.ly-btn.end {
+	background-image: url(../home-of/images/adio-2.png);
 }
 .groove-nav-wrapper {
 	padding: 30px 0;
@@ -1032,6 +1223,14 @@
 	overflow: hidden;
 	cursor: pointer;
 }
+.groove-table-item-img {
+	display: block;
+	position: relative;
+	width: 280px;
+	height: 280px;
+	overflow: hidden;
+	cursor: pointer;
+}
 .report-btn-wrapper {
 	display: block;
 	position: absolute;
@@ -1056,13 +1255,24 @@
 	padding: 100px 0 50px;
 	width: 400px;
 }
+.gnd-end-img {
+	display: block;
+	margin: 0 auto;
+	padding: 50px 0 20px;
+	width: 33px;
+}
+.gnd-end-txt {
+	font-size: 14px;
+	color: #777;
+}
 .gnd-txt {
 	font-size: 14px;
 }
 .gnd-txt a {
 	color: #f03e4d;
 }
-.groove-win-wrapper {
+.groove-win-wrapper, .groove-table-win-wrapper {
+	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -1099,3 +1309,118 @@
 	padding-left: 4px;
 	text-align: center;
 }
+.groove-win-close-btn, .groove-table-win-close-btn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../public/images/close.png);
+	-webkit-background-size: 20px;
+	background-size: 20px;
+	cursor: pointer;
+}
+.groove-win-remark {
+	padding: 30px 35px;
+	font-size: 16px;
+}
+.groove-win-remarks {
+	line-height: 20px;
+	padding-bottom: 35px;
+	font-size: 14px;
+	text-align: center;
+}
+.groove-win-remarks .groove-explain-link {
+	color: #f03e4d;
+}
+.groove-win-ct-list {
+	overflow: hidden;
+}
+.groove-win-ct-item {
+	float: left;
+	padding-bottom: 35px;
+	width: 33.33333%;
+	text-align: center;
+	font-size: 0;
+}
+.sel-geim-btn {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(../public/images/select-icon.png);
+}
+.sel-geim-btn.seled {
+	background-image: url(../public/images/selected-icon.png);
+}
+.sel-geim-checkbox {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+	z-index: 10;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+}
+.geim-desc {
+	line-height: 30px;
+	font-size: 14px;
+}
+.groove-win-sumbit-btn, .groove-table-win-sumbit-btn {
+	margin: 0 auto;
+	width: 150px;
+	line-height: 40px;
+	border-radius: 3px;
+	text-align: center;
+	color: #ff8c90;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #000;
+	cursor: pointer;
+}
+#groove-list-content {
+	display: none;
+}
+.getb-list-btn-wrapper {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	padding: 2px 5px;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #f03e4d;
+	border-radius: 3px;
+}
+.getb-num-btn-wrapper {
+	position: absolute;
+	left: 12px;
+	bottom: 12px;
+	padding: 2px 5px;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #f03e4d;
+	border-radius: 3px;
+}
+.getb-del-btn-wrapper {
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+	width: 26px;
+	height: 26px;
+	font-size: 14px;
+	color: #fff;
+	border: 1px solid #f03e4d;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../home-of/images/ge-del.png);
+	cursor: pointer;
+}
+.getb-list-btn-wrapper:hover, .getb-num-btn-wrapper:hover, .getb-del-btn-wrapper:hover {
+	background-color: #f03e4d;
+} 

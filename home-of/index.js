@@ -54,11 +54,11 @@ SiriWave.prototype = {
 
 		this.phase = (this.phase+this.speed)%(Math.PI*64);
 		this._clear();
-		this._drawLine(-2, 'rgba(240,62,77,0.1)');
-		this._drawLine(-6, 'rgba(240,62,77,0.2)');
-		this._drawLine(4, 'rgba(240,62,77,0.4)');
-		this._drawLine(2, 'rgba(240,62,77,0.6)');
-		this._drawLine(1, 'rgba(240,62,77,1)', 1.5);
+		this._drawLine(-2, 'rgba(255,255,255,0.1)');
+		this._drawLine(-6, 'rgba(255,255,255,0.2)');
+		this._drawLine(4, 'rgba(255,255,255,0.4)');
+		this._drawLine(2, 'rgba(255,255,255,0.6)');
+		this._drawLine(1, 'rgba(255,255,255,1)', 1.5);
 
 		requestAnimationFrame(this._draw.bind(this), 1000);
 	},
@@ -90,14 +90,13 @@ SiriWave.prototype = {
 };
 
 var SW = new SiriWave({
-  width: 70,
-  height: 50
+  width: 320,
+  height: 200
 });
 SW.setSpeed(0.3);
 SW.start();
 
 var range = document.getElementById('range');
 setInterval(function(){
-	console.log(range.value);
   SW.setNoise(range.value);
 }, 0);
