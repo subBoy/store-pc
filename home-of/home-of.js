@@ -135,7 +135,13 @@ function sledItem () {
 		$('.ge-btn').removeClass('esp');
 		$(this).addClass('esp');
 		var _idx = $(this).index();
+		console.log(_idx);
 		$('.uptle-btn').eq(_idx).show().siblings().hide();
+		if (_idx === 1) {
+			$('#groove-input-placeholder').html('该信息仅自己可见，并以匿名的形式随机推送给5位陌生人！');
+		} else {
+			$('#groove-input-placeholder').html('这一刻，你想说点啥？');
+		}
 	})
 	$('.gm-colled-btn').on('click', function () {
 		if ($(this).hasClass('esp')) {

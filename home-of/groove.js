@@ -292,6 +292,10 @@ var SW = new SiriWave({
 SW.setSpeed(0.2);
 SW.setNoise(0);
 SW.start();
+
+function sortFuc () {
+	$('.groove-table-itrm').arrangeable({dragSelector: '.groove-item-icon-bool'});
+}
 $(function () {
 	getNowTime();
 	setPl();
@@ -301,4 +305,5 @@ $(function () {
 	delImg();
 	addTate();
 	setRecordFuc();
+	sortFuc();
 })
