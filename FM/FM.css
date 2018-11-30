@@ -490,6 +490,12 @@
 	font-size: 0;
 	text-align: center;
 }
+.fm-nav-sec-wrapper {
+	margin-top: -20px;
+	padding: 0px 0 30px 0;
+	font-size: 0;
+	text-align: center;
+}
 .fm-nav-item {
 	line-height: 30px;
 	margin-right: 30px;
@@ -497,7 +503,13 @@
 	padding-left: 30px;
 	background-repeat: no-repeat;
 	background-position: left center;
-	color: #bababa;
+	color: #808080;
+}
+.fm-nav-sec-wrapper .fm-nav-item {
+	padding-left: 25px;
+}
+.fm-nav-sec-wrapper .fm-nav-item {
+	font-size: 12px;
 }
 .fm-nav-item:hover, .fm-nav-item.sled {
 	color: #000;
@@ -526,6 +538,24 @@
 }
 .fm-ni-4:hover, .fm-ni-4.sled {
 	background-image: url(../FM/serach-ed.png);
+}
+.fm-nav-sec-wrapper .fm-ni-1 {
+	background-image: url(../FM/c-s.png);
+}
+.fm-nav-sec-wrapper .fm-ni-1:hover, .fm-nav-sec-wrapper .fm-ni-1.sled {
+	background-image: url(../FM/c-s-ed.png);
+}
+.fm-nav-sec-wrapper .fm-ni-2 {
+	background-image: url(../FM/c-c.png);
+}
+.fm-nav-sec-wrapper .fm-ni-2:hover, .fm-nav-sec-wrapper .fm-ni-2.sled {
+	background-image: url(../FM/c-c-ed.png);
+}
+.fm-nav-sec-wrapper .fm-ni-3 {
+	background-image: url(../FM/s-my.png);
+}
+.fm-nav-sec-wrapper .fm-ni-3:hover, .fm-nav-sec-wrapper .fm-ni-3.sled {
+	background-image: url(../FM/s-my-ed.png);
 }
 .hm-sy-nav-solt-view {
   display: block;
@@ -746,6 +776,7 @@
 	padding-bottom: 50px;
 }
 .fm-serarch-box {
+	position: relative;
 	margin: 0 auto;
 	height: 50px;
 	width: 600px;
@@ -753,8 +784,27 @@
 	border-radius: 3px;
 }
 .fm-serarch-inp {
+	padding-left: 30px;
+	margin-top: 10px;
+	width: 500px;
 	height: 30px;
 	line-height: 30px;
 	font-size: 14px;
 	letter-spacing: 2px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(../FM/serach.png);
+}
+.fm-serarch-btn {
+	display: block;
+	position: absolute;
+	padding-left: 10px;
+	padding-right: 20px;
+	right: 0;
+	top: 17px;
+	border-left: 1px solid #808080;
+	line-height: 16px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	cursor: pointer;
 }
