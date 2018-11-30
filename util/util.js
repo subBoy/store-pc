@@ -1,3 +1,4 @@
+var isTimer;
 $.extend(window, {
   accountVerify: function (account) {
 		// 账号验证
@@ -268,15 +269,24 @@ $.extend(window, {
 	  sTop = parseInt(sTop);
 	  var timer = '';
 	  var timer1 = '';
-	  if (sTop >= 10) {
+	  if (sTop >= 70) {
 	  	$(".global-body, .header-wrapper").addClass('win-nav');
 	  	$(".header-logo").hide();
 	  	$(".header-logo-l").addClass('win-nav-top set-animation');
 	  } else {
 	  	$(".global-body, .header-wrapper").removeClass('win-nav');
-	  	$(".header-logo").fadeIn();
+	  	$(".header-logo").show();
 	  	$(".header-logo-l").removeClass('win-nav-top set-animation');
 	  }
+	},
+	showHintSign: function () {
+		if (isTimer) {
+			clearTimeout(isTimer);
+		}
+		$('.sign-hint-wrapper').fadeIn();
+		isTimer = setTimeout(function () {
+			$('.sign-hint-wrapper').fadeOut();
+		}, 1000)
 	}
 })
 $(function () {

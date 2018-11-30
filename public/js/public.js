@@ -332,4 +332,7 @@ $(function () {
 		e.stopPropagation();
 	});
 	$('.go-to-top-btn').on('click', goToTop);
+	$('.logo-img').on('click', function () {
+		location.href = '../index/index.html';
+	})
 })

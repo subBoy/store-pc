@@ -49,12 +49,12 @@ function resetWwStatus () {
 		$('.home-of-header-sl').fadeIn();
 	}
 }
-var sTop1 = $('.home-of-silder').offset().top;
+if ($('.home-of-sy-nav-box').length > 0) {
+	var sTop1 = $('.home-of-sy-nav-box').offset().top;
+}
 function showSlide () {
-	var sH = $(window).height();
 	var sTop = $(window).scrollTop();
-	var limitTop = sTop - 0 + sH / 2;
-	if (limitTop >= sTop1) {
+	if (sTop > sTop1 - 200) {
 		$('.home-of-silder').addClass('fixed-slider');
 	} else {
 		$('.home-of-silder').removeClass('fixed-slider');
@@ -135,7 +135,6 @@ function sledItem () {
 		$('.ge-btn').removeClass('esp');
 		$(this).addClass('esp');
 		var _idx = $(this).index();
-		console.log(_idx);
 		$('.uptle-btn').eq(_idx).show().siblings().hide();
 		if (_idx === 1) {
 			$('#groove-input-placeholder').html('该信息仅自己可见，并以匿名的形式随机推送给5位陌生人！');
@@ -167,7 +166,9 @@ $(function () {
 	soltFuc();
 	isDh();
 	islookDes();
-	sTop1 = $('.home-of-silder').offset().top;
+	if ($('.home-of-sy-nav-box').length > 0) {
+		sTop1 = $('.home-of-sy-nav-box').offset().top;
+	}
 	$(window).resize(resetWwStatus);
-	// $(window).bind("scroll", showSlide);
+	$(window).bind("scroll", showSlide);
 })

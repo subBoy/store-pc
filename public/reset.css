@@ -151,6 +151,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .logo-img {
   width: 100%;
+  cursor: pointer;
 }
 .header-logo-name {
   margin-left: -10px;
@@ -2070,4 +2071,23 @@ h1, h2, h3, h4, h5, h6, p {
     -moz-transform:translateY(0);
          transform:translateY(0)
   }
+}
+
+.sign-hint-wrapper {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 100px 0 15px 0;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 1px #ccc;
+  border-radius: 3px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center 24px;
+  background-image: url(../FM/lg.jpg);
+  z-index: 10000;
+  color: #f04452;
 }
