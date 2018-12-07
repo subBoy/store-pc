@@ -44,9 +44,9 @@ function hfPageNav () {
 function resetWwStatus () {
 	var ww = $(window).width();
 	if (ww < 1700) {
-		$('.home-of-header-sl').hide();
+		$('.home-of-header-sl, .home-of-silder').hide();
 	} else {
-		$('.home-of-header-sl').fadeIn();
+		$('.home-of-header-sl, .home-of-silder').fadeIn();
 	}
 }
 if ($('.home-of-sy-nav-box').length > 0) {

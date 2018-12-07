@@ -19,6 +19,12 @@ function setPl () {
 	})
 	$('#groove-ipt-ctr').on('input', function () {
 		var len = $(this).val().length;
+		var thisVal = $(this).val();
+		var len = thisVal.length;
+		if (len > 200) {
+			len = 200;
+			$(this).val(thisVal.substring(0, 200));
+		}
 		$('#font-length').html(len + '/200字');
 	})
 }
@@ -46,6 +52,8 @@ function isReport () {
 	})
 	$('.groove-win-close-btn, .groove-win-sumbit-btn').on('click', function () {
 		$('.groove-win-wrapper').fadeOut();
+		$('.sel-geim-checkbox').attr('checked', false);
+		$('.sel-geim-checkbox').parent().removeClass('seled');
 	})
 }
 function clickDrop () {
@@ -294,6 +302,9 @@ SW.setNoise(0);
 SW.start();
 
 function sortFuc () {
+	if ($('.groove-item-icon-bool').length < 1) {
+		return;
+	}
 	$('.groove-table-itrm').arrangeable({dragSelector: '.groove-item-icon-bool'});
 }
 $(function () {

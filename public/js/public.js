@@ -327,8 +327,11 @@ $(function () {
 		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list, .hf-sy-nav-solt-list').slideUp();
 		$('.up-ge-tate-view').fadeOut();
 		$('.is-show').removeClass('is-show');
+		$('.csliw-ct-txt-table').removeClass('seled');
+		$('.hm-sy-nav-solt-view').removeClass('seld');
+		$('.csliw-ct-txt-table-list-wrapper, .fm-more-table-wrapper, .emoji-img-wrapper').slideUp();
 	})
-	$('.stpps-3-select-list, .sp-cart-list-wrapper, .gl-condition-list-threelevel').bind("scroll", function (e) {
+	$('.stpps-3-select-list, .sp-cart-list-wrapper, .gl-condition-list-threelevel, .fsgl-list-box, .csliw-ct-txt-table-list-wrapper').bind("scroll", function (e) {
 		e.stopPropagation();
 	});
 	$('.go-to-top-btn').on('click', goToTop);

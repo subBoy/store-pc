@@ -8,12 +8,15 @@
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="../public/reset.css">
-<script src="../public/js/jquery-1.8.0.min.js"></script>
+<script src="../FM/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../FM/jquery-ui-1.8.17.custom.min.js"></script>
+<script src="../FM/jquery.lazyload.js"></script>
 <script src="../util/util.js"></script>
-<link rel="stylesheet" href="./home-of.css">
+<link rel="stylesheet" href="../home-of/home-of.css">
+<link rel="stylesheet" href="./FM.css">
 <title>RACK ROD</title>
 </head>
-<body class="global-body set-animation not-scroll" id="gtbtn">
+<body class="global-body set-animation not-scroll hf-body gm-song-body" id="gtbtn">
 	<!-- loading -->
 	<div id="loading-wrapper">
 		<div class="loading-bar"></div>
@@ -720,103 +723,228 @@
 			</div>
 		</div>
 	</div>
+	<!-- 提示登录弹窗 -->
+	<div class="sign-hint-wrapper">请先登录</div>
 	<!-- 主题内容区域 -->
-	<div class="home-of-wrapper-ctr">
-		<div class="home-of-wrapper">
-			<div class="home-of-header">
-				<div class="home-of-header-sl">
-					<h3 class="hfhd-sl">关于HOME OF ®</h3>
-					<p class="hfhd-sl-desc">野派文化资料馆</p>
+	<div class="fm-header-wrapper">
+		<div class="fm-wrapper-ctr-box">
+			<div class="home-of-wrapper">
+				<div class="home-of-header">
+					<div class="home-of-header-sl">
+						<h3 class="hfhd-sl">关于HOME OF ®</h3>
+						<p class="hfhd-sl-desc">野派文化资料馆</p>
+					</div>
+					<div class="home-of-header-box">
+						<span class="hfhd">文化馆：</span>
+						<ul class="home-of-nav">
+							<li class="hf-nav-item in-block">
+								<a href="../home-of/home-of.html" class="hf-nav-item-txt">机车</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a href="../home-of/rock.html" class="hf-nav-item-txt">摇滚</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a href="../home-of/tattoo.html" class="hf-nav-item-txt">纹身</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a href="../home-of/stakeboard.html" class="hf-nav-item-txt">滑板</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<span class="hf-nav-item-hr"></span>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a class="hf-nav-item-txt" href="../FM/FM.html">野派FM</a>
+								<div class="itm-wrapper in-block hf-nav-itm">
+									<div class="itm-box itm-1"></div>
+									<div class="itm-box itm-2"></div>
+									<div class="itm-box itm-3"></div>
+									<div class="itm-box itm-4"></div>
+									<div class="itm-box itm-5"></div>
+								</div>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a class="hf-nav-item-txt">影像馆</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a class="hf-nav-item-txt">活动</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a class="hf-nav-item-txt">投稿！</a>
+							</li>
+							<li class="hf-nav-item in-block">
+								<a href="../home-of/groove.html" class="hf-nav-item-txt">我有话说# <img src="../home-of/images/i-gif.gif" class="hf-gif"></a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="home-of-header-box">
-					<span class="hfhd">文化馆：</span>
-					<ul class="home-of-nav">
-						<li class="hf-nav-item in-block">
-							<a href="../home-of/home-of.html" class="hf-nav-item-txt">机车</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a href="../home-of/rock.html" class="hf-nav-item-txt">摇滚</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a href="../home-of/tattoo.html" class="hf-nav-item-txt">纹身</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a href="../home-of/stakeboard.html" class="hf-nav-item-txt">滑板</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<span class="hf-nav-item-hr"></span>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a class="hf-nav-item-txt" href="../FM/FM.html">野派FM</a>
-							<div class="itm-wrapper in-block hf-nav-itm">
+				<div class="fm-hd-txt-wrapper">
+					<span class="home-of-ft-item-tabimg">
+						<span class="home-of-ft-item-tle in-block">野派FM
+							<div class="itm-wrapper in-block">
 								<div class="itm-box itm-1"></div>
 								<div class="itm-box itm-2"></div>
 								<div class="itm-box itm-3"></div>
 								<div class="itm-box itm-4"></div>
 								<div class="itm-box itm-5"></div>
 							</div>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a class="hf-nav-item-txt">影像馆</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a class="hf-nav-item-txt">活动</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a class="hf-nav-item-txt">投稿！</a>
-						</li>
-						<li class="hf-nav-item in-block">
-							<a href="../home-of/groove.html" class="hf-nav-item-txt">我有话说# <img src="../home-of/images/i-gif.gif" class="hf-gif"></a>
-						</li>
-					</ul>
+						</span>
+						<span class="home-of-ft-item-desc">独立音乐、文献与原创分享</span>
+					</span>
 				</div>
 			</div>
-			<div class="home-of-title">
-				<div class="home-of-title-box">
-					<div class="home-of-title-icon">
-						<span class="hf-icon-box icon-3"></span>
-						<span class="hf-icon-name">滑板文化馆</span>
-					</div>
-					<div class="home-of-title-ct">
-						<div class="hftle-ct-desc">
-							<p class="hftle-ct-txt-txt">街头梦想，这是你报复平庸的方式！心底燃起耀眼的火，我有一块吱吱响的滑板！这jiu是我们认为的美好生活。</p>
-							<p class="hftle-ct-txt-txt">真正不羁的灵魂不会跟你计较什么高楼、三里屯、年薪百万，我们有自己的内心骄傲。</p>
-							<p class="hftle-ct-txt-txt">虽然滑板不是我们的一生，但我们却是滑板的一生。</p>
-						</div>
-						<div class="hftle-ct-er-code">
-							<span class="hftle-ct-er-code-img">
-								<img src="../home-of/images/ec.jpg" width="100%">
+		</div>
+		<div class="audio-controller">
+			<audio controls id="audio" src=""></audio>
+		</div>
+		<div class="fm-audio-wrapper">
+			<div class="fm-audio-group">
+				<span class="fm-auido-expand set-animation fm-auido-commend in-block"></span>
+				<span class="fm-auido-prev fm-auido-commend in-block"></span>
+				<span class="fm-auido-play fm-auido-commend in-block"></span>
+				<span class="fm-auido-next fm-auido-commend in-block"></span>
+				<span class="fm-auido-info in-block">
+					<span class="fm-auido-song in-block fm-auido-expand-btn-add"></span>
+					<span class="fm-auido-hr in-block">-</span>
+					<span class="fm-auido-songer in-block"></span>
+				</span>
+				<span class="fm-auido-hr in-block">-</span>
+				<span class="fm-auido-duration in-block"></span>
+				<span class="fm-auido-volume in-block">
+					<span class="fm-auido-min-volume in-block"></span>
+					<span class="fm-auido-volume-progress in-block">
+						<span class="fm-audio-volume-slider in-block">
+		          <span class="fm-audio-volume-pace in-block">
+		          	<span class="fm-audio-volume-nuil in-block"></span>
+		          </span>
+		        </span>
+					</span>
+					<span class="fm-auido-max-volume in-block"></span>
+				</span>
+				<span class="fm-auido-mode fm-auido-commend in-block"></span>
+				<a href="../FM/fm-collected-song.html" class="fm-auido-song-list fm-auido-commend in-block"></a>
+				<span class="fm-auido-collection fm-auido-commend in-block"></span>
+				<span class="fm-auido-share-wrapper in-block">
+					<span class="fm-auido-share fm-auido-commend in-block"></span>
+					<span class="fm-auido-share-type in-block">
+						<span class="fm-auido-weixin fm-auido-commend in-block">
+							<span class="fm-auido-weixin-code in-block">
+								<img class="weixin-code-img" src="../home-of/images/ec.jpg">
 							</span>
-							<span class="hftle-ct-er-txt">微信讨论群</span>
-						</div>
-					</div>
+						</span>
+						<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+						<span class="fm-auido-qq fm-auido-commend in-block"></span>
+						<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+					</span>
+				</span>
+			</div>
+			<div class="fm-audio-progress">
+        <div class="fm-audio-slider">
+          <div class="fm-audio-loaded"></div>
+          <div class="fm-audio-pace">
+          	<span class="fm-audio-nuil"></span>
+          </div>
+        </div>
+      </div>
+		</div>
+		<div class="fm-auido-expand-wrapper set-animation">
+			<div class="fm-auido-pack-up set-animation"></div>
+			<a href="../FM/fm-collected-song.html" class="music-group-name in-block">播放 : 我喜欢的单曲
+				<div class="itm-wrapper in-block">
+					<div class="itm-box itm-1"></div>
+					<div class="itm-box itm-2"></div>
+					<div class="itm-box itm-3"></div>
+					<div class="itm-box itm-4"></div>
 				</div>
+			</a>
+			<div class="music-group-cd"></div>
+			<div class="music-group-change-view">
+				<div class="music-group-avtatar-wrapper">
+					<div class="music-group-avtatar">
+						<a href="" class="music-group-link"></a>
+						<img src="../FM/images/song-img.jpg" width="100%" height="100%">
+					</div>
+					<img class="music-group-cd-img" src="../FM/images/cd.png">
+				</div>
+				<div class="lyric-wrapper-box">
+					<div class="lyric-wrapper" id="lyricWrapper">
+			      <div class="lyric-container set-animation" id="lyricContainer">
+			      </div>
+			    </div>
+			    <div class="close-lrc-btn">关闭歌词</div>
+				</div>
+			</div>
+			<div class="music-group-controller">
+				<a href="../FM/fm-collected-song.html" class="music-group-song fm-auido-song"></a>
+				<p class="music-group-songer fm-auido-songer"></p>
+				<p class="music-group-timer">
+					<span class="fm-auido-hr in-block">-</span>
+					<span class="fm-auido-duration in-block"></span>
+				</p>
+				<div class="music-group-controller-box">
+					<div class="fm-audio-group">
+						<span class="fm-auido-prev fm-auido-commend in-block"></span>
+						<span class="fm-auido-play fm-auido-commend in-block"></span>
+						<span class="fm-auido-next fm-auido-commend in-block"></span>
+						<span class="fm-auido-volume in-block">
+							<span class="fm-auido-min-volume in-block"></span>
+							<span class="fm-auido-volume-progress in-block">
+								<span class="fm-audio-volume-slider in-block">
+				          <span class="fm-audio-volume-pace in-block">
+				          	<span class="fm-audio-volume-nuil in-block"></span>
+				          </span>
+				        </span>
+							</span>
+							<span class="fm-auido-max-volume in-block"></span>
+						</span>
+						<span class="fm-auido-mode fm-auido-commend in-block"></span>
+						<span class="fm-auido-collection fm-auido-commend in-block"></span>
+						<span class="fm-auido-song-lrc fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<div class="fm-audio-progress">
+		        <div class="fm-audio-slider">
+		          <div class="fm-audio-loaded"></div>
+		          <div class="fm-audio-pace">
+		          </div>
+		        </div>
+		      </div>
+				</div>
+			</div>
+    </div>
+	</div>
+	<div class="fm-wrapper-ctr-box">
+		<div class="home-of-wrapper">
+			<div class="fm-nav-wrapper">
+				<a href="../FM/FM.html" class="fm-nav-item set-animation fm-ni-1 in-block">歌单推荐</a>
+				<a href="../FM/fm-collected-song.html" class="fm-nav-item set-animation fm-ni-2 in-block sled">我的收藏</a>
+				<a href="../home-of/rock.html" class="fm-nav-item set-animation fm-ni-3 in-block">摇滚文化</a>
+				<a href="../FM/fm-serarch.html" class="fm-nav-item set-animation fm-ni-4 in-block">搜索</a>
+			</div>
+			<div class="fm-nav-sec-wrapper">
+				<a href="../FM/fm-collected-song.html" class="fm-nav-item set-animation fm-ni-1 in-block">我喜欢的单曲</a>
+				<a href="../FM/fm-collected-song-list.html" class="fm-nav-item set-animation fm-ni-2 in-block sled">我收藏的歌单</a>
+				<a href="../FM/myself-song-list.html" class="fm-nav-item set-animation fm-ni-3 in-block">我建的歌单</a>
 			</div>
 			<div class="home-of-sy-nav">
 				<div class="home-of-sy-nav-box">
-					<ul class="hf-sy-nav-list">
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link seled">所有</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">滑板资讯</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">滑板起源</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">滑板学院</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">滑板人物</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">板女特辑</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">身边的板场</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-link">话题#</a></li>
-						<li class="hf-sy-nav-item in-block"><a class="hf-sy-nav-btn">活动召集 !</a></li>
+					<ul class="hf-sy-nav-list fm-song-list-group-tle">
+						<li class="hf-sy-nav-item in-block">选择 : 我收藏的歌单 (12)</li>
 					</ul>
 					<div class="hf-sy-nav-solt">
-						<span class="hf-sy-nav-solt-name">排序：</span>
 						<div class="hf-sy-nav-solt-box">
-							<span class="hf-sy-nav-solt-view">所有</span>
-							<ul class="hf-sy-nav-solt-list">
-								<li class="hf-sy-nav-solt-item">所有</li>
-								<li class="hf-sy-nav-solt-item">图集</li>
-								<li class="hf-sy-nav-solt-item">文章</li>
-								<li class="hf-sy-nav-solt-item">视频</li>
-								<li class="hf-sy-nav-solt-item has-ic">热度</li>
-								<li class="hf-sy-nav-solt-item has-ic">时间</li>
-							</ul>
+							<span class="hm-sy-nav-solt-view set-animation">更多标签</span>
 						</div>
 					</div>
 				</div>
@@ -832,121 +960,222 @@
 					<a class="hf-slider-item ic-5"></a>
 					<a href="#gbbtn" class="hf-slider-item ic-6">...</a>
 				</div>
-			</div>
-			<div class="home-of-ct-list">
-				<ul class="home-of-ct-list-box">
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">图集 : 机车壁纸</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg pic-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">文章 : 机车教学</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg txt-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">视频 : 机车教学</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg video-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">图集 : 机车壁纸</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg pic-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">文章 : 机车教学</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg txt-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-					<li class="home-of-home-of-ct-item">
-						<a class="home-of-ct-item-link">
-							<span class="home-of-ct-item-img">
-								<img class="hf-sp-pic set-animation" src="../home-of/images/i-1.jpg" width="100%">
-								<span class="home-of-ct-item-table">视频 : 机车教学</span>
-								<span class="home-of-ct-item-bold set-animation">
-									<em class="bold-bg"></em>
-									<span class="home-of-ct-item-tabimg video-box"></span>
-								</span>
-								<span class="collected-btn"></span>
-							</span>
-							<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
-							<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
-						</a>
-					</li>
-				</ul>
-				<div class="pagenav-wrapper">
-					<div class="pagenav-group set-animation in-block">
-						<a class="pagenav-prev in-block" id="pagenavPrevBtn">
-							<span class="pagenav-prev-btn"></span>
-						</a>
-						<ul class="pagenav-list in-block" id="pagenavList">
-							<li class="pagenav-item seled in-block">
-								<a class="pagenav-btn">1</a>
-							</li>
-							<li class="pagenav-item in-block">
-								<a class="pagenav-btn">2</a>
-							</li>
-							<li class="pagenav-item in-block">
-								<a class="pagenav-btn">3</a>
-							</li>
-						</ul>
-						<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
-							<span class="pagenav-next-btn"></span>
-						</a>
+				<div class="fm-more-table-wrapper">
+					<div class="fm-more-table-hr fm-thr-1"></div>
+					<div class="fm-more-table-hr fm-thr-2"></div>
+					<div class="fm-more-table-hr fm-thr-3"></div>
+					<div class="fm-more-table-item fm-tb-1">
+						<div class="fm-more-table-group">
+							<span class="fm-more-table-desc">标签：</span>
+							<span class="fm-more-table-tle">地域</span>
+							<div class="fm-more-table-list">
+								<span class="in-block fm-tb-txt set-animation">欧美</span>
+								<span class="in-block fm-tb-txt set-animation">日韩</span>
+								<span class="in-block fm-tb-txt set-animation">中国</span>
+								<span class="in-block fm-tb-txt set-animation">东南亚</span>
+							</div>
+						</div>
+					</div>
+					<div class="fm-more-table-item fm-tb-2">
+						<div class="fm-more-table-group">
+							<span class="fm-more-table-tle">氛围</span>
+							<div class="fm-more-table-list">
+								<span class="in-block fm-tb-txt set-animation">机车</span>
+								<span class="in-block fm-tb-txt set-animation">滑板</span>
+								<span class="in-block fm-tb-txt set-animation">纹身</span>
+							</div>
+						</div>
+					</div>
+					<div class="fm-more-table-item fm-tb-3">
+						<div class="fm-more-table-group">
+							<span class="fm-more-table-tle">属性</span>
+							<div class="fm-more-table-list">
+								<span class="in-block fm-tb-txt set-animation">金属柔情</span>
+								<span class="in-block fm-tb-txt set-animation">轻柔摇滚</span>
+								<span class="in-block fm-tb-txt set-animation">硬摇滚</span>
+								<span class="in-block fm-tb-txt set-animation">重金属</span>
+								<span class="in-block fm-tb-txt set-animation">艺术摇滚</span>
+								<span class="in-block fm-tb-txt set-animation">朋克摇滚</span>
+								<span class="in-block fm-tb-txt set-animation">雷鬼</span>
+								<span class="in-block fm-tb-txt set-animation">中国摇滚新势力</span>
+							</div>
+						</div>
+					</div>
+					<div class="fm-more-table-item fm-tb-4">
+						<div class="fm-more-table-submit">
+							<span class="fm-more-table-submit-btn">GO!</span>
+							<p class="fm-more-table-submit-desc">注：可单选也可多选！</p>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fm-ct-list fm-sl-ctr-wrapper">
+		<div class="fm-song-list-group-wrapper" id="collented-song-list-wrapper">
+			<ul class="fm-song-list-group-box">
+				<li class="fm-song-group-item">
+					<div class="fm-song-group-poster">
+						<a href="../FM/song-list-details.html" class="fm-song-group-link">
+							<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+							<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+						</a>
+					</div>
+					<h3 class="fm-song-group-name">
+						<a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a>
+					</h3>
+					<div class="fs-oper-wrapper">
+						<span class="fsbc-item-del fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
+				</li>
+				<li class="fm-song-group-item">
+					<div class="fm-song-group-poster">
+						<a href="../FM/song-list-details.html" class="fm-song-group-link">
+							<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+							<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+						</a>
+					</div>
+					<h3 class="fm-song-group-name">
+						<a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a>
+					</h3>
+					<div class="fs-oper-wrapper">
+						<span class="fsbc-item-del fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
+				</li>
+				<li class="fm-song-group-item">
+					<div class="fm-song-group-poster">
+						<a href="../FM/song-list-details.html" class="fm-song-group-link">
+							<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+							<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+						</a>
+					</div>
+					<h3 class="fm-song-group-name">
+						<a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a>
+					</h3>
+					<div class="fs-oper-wrapper">
+						<span class="fsbc-item-del fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
+				</li>
+				<li class="fm-song-group-item">
+					<div class="fm-song-group-poster">
+						<a href="../FM/song-list-details.html" class="fm-song-group-link">
+							<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+							<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+						</a>
+					</div>
+					<h3 class="fm-song-group-name">
+						<a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a>
+					</h3>
+					<div class="fs-oper-wrapper">
+						<span class="fsbc-item-del fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
+				</li>
+				<li class="fm-song-group-item">
+					<div class="fm-song-group-poster">
+						<a href="../FM/song-list-details.html" class="fm-song-group-link">
+							<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+							<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+						</a>
+					</div>
+					<h3 class="fm-song-group-name">
+						<a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a>
+					</h3>
+					<div class="fs-oper-wrapper">
+						<span class="fsbc-item-del fm-auido-commend in-block"></span>
+						<span class="fm-auido-share-wrapper in-block">
+							<span class="fm-auido-share fm-auido-commend in-block"></span>
+							<span class="fm-auido-share-type in-block">
+								<span class="fm-auido-weixin fm-auido-commend in-block">
+									<span class="fm-auido-weixin-code in-block">
+										<img class="weixin-code-img" src="../home-of/images/ec.jpg">
+									</span>
+								</span>
+								<span class="fm-auido-weibo fm-auido-commend in-block"></span>
+								<span class="fm-auido-qq fm-auido-commend in-block"></span>
+								<span class="fm-auido-duoban fm-auido-commend in-block"></span>
+							</span>
+						</span>
+					</div>
+					<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
+				</li>
+			</ul>
+			<div class="clear-both"></div>
+		</div>
+		<div class="pagenav-wrapper">
+			<div class="pagenav-group set-animation in-block">
+				<a class="pagenav-prev in-block" id="pagenavPrevBtn">
+					<span class="pagenav-prev-btn"></span>
+				</a>
+				<ul class="pagenav-list in-block" id="pagenavList">
+					<li class="pagenav-item seled in-block">
+						<a class="pagenav-btn">1</a>
+					</li>
+					<li class="pagenav-item in-block">
+						<a class="pagenav-btn">2</a>
+					</li>
+					<li class="pagenav-item in-block">
+						<a class="pagenav-btn">3</a>
+					</li>
+				</ul>
+				<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
+					<span class="pagenav-next-btn"></span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -1019,7 +1248,20 @@
 		</ul>
 		<div class="home-of-footer-hr"></div>
 	</div>
+	<div class="groove-table-win-wrapper">
+		<em class="win-bg"></em>
+		<div class="groove-win-ct">
+			<div class="groove-table-win-close-btn"></div>
+			<div class="groove-win-tle">注意</div>
+			<div class="groove-win-ct-wrapper">
+				<div class="groove-tab-win-remarks">您正在删除该话题下的所有收藏么! 删除后将<a class="groove-explain-link">不可复原</a>！</div>
+				<div class="groove-table-win-sumbit-btn">确认删除</div>
+			</div>
+		</div>
+	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../home-of/home-of.js"></script>
+	<script src="../FM/audio.js"></script>
+	<script src="../FM/fm.js"></script>
 </body>
 </html>
