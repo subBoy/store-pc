@@ -59,6 +59,11 @@ function showSlide () {
 	} else {
 		$('.home-of-silder').removeClass('fixed-slider');
 	}
+	if (sTop > sTop1 - 128) {
+		$('.essay-slide-wrapper').addClass('fixed-slider');
+	} else {
+		$('.essay-slide-wrapper').removeClass('fixed-slider');
+	}
 }
 function scollected () {
 	$('.collected-btn').on('click', function () {

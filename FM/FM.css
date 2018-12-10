@@ -19,7 +19,7 @@
 .fm-header-wrapper .hf-nav-item-hr {
 	background-color: #fff;
 }
-.fm-header-wrapper .itm-box {
+.fm-header-wrapper .itm-box, .fm-header-wrapper:hover .itm-box {
 	background-color: #fff;
 }
 .fm-hd-txt-wrapper .home-of-ft-item-tabimg {
@@ -391,6 +391,7 @@
 	width: 230px;
 }
 .music-group-cd {
+	display: none;
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -402,7 +403,7 @@
   background-image: url(../FM/images/cp.png);
   z-index: 100;
 }
-.music-group-cd.isPlaying {
+.music-group-cd-img.isPlaying {
 	animation: run 6s linear 0s infinite;
 	-moz-animation: run 6s linear 0s infinite;
 	-webkit-animation: run 6s linear 0s infinite;
@@ -1974,7 +1975,7 @@
 .song-list-commend-wrapper {
 	position: relative;
 	padding: 20px 20px 60px;
-	background-color: #f0f0f2;
+	background-color: #f9f9f9;
 }
 .emoji-wrapper {
 	position: relative;
@@ -2195,9 +2196,19 @@
 	background-image: url(../FM/images/jb.png);
 	background-position: 0 center;
 }
+.slcl-btn-4 {
+	padding: 0 10px 0 20px;
+	background-repeat: no-repeat;
+	background-image: url(../FM/images/del.png);
+	background-position: 0 center;
+}
+.slcl-btn-4:hover {
+	color: #f14553;
+	background-image: url(../FM/images/del-ed.png);
+}
 .replay-slcl-item-wrapper {
 	margin-top: 10px;
-	background-color: #f0f0f2;
+	background-color: #f9f9f9;
 }
 .replay-slcl-item {
 	padding: 5px 10px;
@@ -2217,4 +2228,214 @@
 }
 .commend-pagenav-wrapper {
 	padding-top: 60px;
+}
+
+.essay-header-wrapper {
+	height: 520px;
+	background-image: url(../FM/images/essay-banner.jpg);
+}
+.essay-header-wrapper .home-of-ft-item-tabimg {
+	width: 900px;
+	left: 110px;
+	top: 380px;
+}
+.essay-header-wrapper .home-of-ft-item-tle {
+	font-size: 48px;
+}
+.essay-header-wrapper .home-of-ft-item-desc {
+	font-size: 18px;
+	color: #a8a7aa;
+}
+.essay-nav-wrapper {
+	position: relative;
+	background-color: #f9f9f9;
+}
+.essay-nav-group {
+	margin: 0 auto;
+	max-width: 980px;
+}
+.essay-nav-box {
+	position: relative;
+	padding-left: 60px;
+	height: 78px;
+}
+.essay-user-name {
+	padding-top: 17px;
+	line-height: 22px;
+	color: #f14553;
+	font-size: 14px;
+}
+.essay-oper-btns {
+	font-size: 0;
+}
+.essay-btn {
+	line-height: 22px;
+	padding-left: 23px;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #666;
+	cursor: pointer;
+}
+.essay-btn:hover {
+	color: #f14553;
+}
+.essay-btn-1 {
+	background-image: url(../FM/images/essay-look.png);
+}
+.essay-btn-2, .essay-f-btn-2 {
+	background-image: url(../FM/images/ding-ed.png);
+}
+.essay-btn-2.seled, .essay-f-btn-2.seled {
+	color: #f14553;
+	background-image: url(../FM/images/ding-edes.png);
+}
+.essay-btn-3 {
+	background-image: url(../FM/images/comment.png);
+	-webkit-background-size: 15px auto;
+	background-size: 15px auto;
+}
+.essay-btn-desc {
+	padding-left: 5px;
+	font-size: 12px;
+}
+.essay-btn-hr {
+	margin: 0 15px;
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+}
+.essay-nav-box .slcl-item-user-avatar {
+	top: 17px;
+}
+.essay-btn-4 {
+	float: right;
+	background-image: url(../FM/images/del.png);
+}
+.essay-btn-4:hover {
+	background-image: url(../FM/images/del-ed.png);
+}
+.essay-btn-5 {
+	float: right;
+	background-image: url(../FM/images/jb.png);
+}
+.essay-txt-ctr {
+	line-height: 40px;
+	font-size: 16px;
+	padding: 15px 0;
+}
+.essay-footer-wrapper {
+	padding-top: 40px;
+	padding-bottom: 10px;
+	font-size: 0;
+	text-align: right;
+	border-bottom: 2px solid #d9d9d9;
+}
+.essay-footer-wrapper .essay-btn-3 {
+	margin-left: 15px;
+}
+.essay-txt-ct-header-img {
+	display: block;
+	width: 27px;
+	padding-top: 35px;
+	padding-bottom: 5px;
+	border-bottom: 2px dashed #666;
+}
+.essay-txt-ct-header.home-of-sy-nav-box {
+	padding: 0;
+	border: none;
+}
+.essay-nav-wrapper .home-of-silder {
+	margin-left: 600px;
+	top: 78px;
+}
+.essay-nav-wrapper .home-of-silder.fixed-slider {
+	top: 150px;
+}
+@media screen and (max-width: 1640px) {
+	.essay-nav-group {
+		margin: 0 auto 0 400px;
+		max-width: 800px;
+	}
+}
+.essay-txt-ct-wrapper {
+	position: relative;
+}
+.essay-slide-wrapper {
+	position: absolute;
+	left: 0;
+	top: 78px;
+	width: 310px;
+	border-right: 1px solid #e3e3e3;
+}
+pre {
+	display: none;
+}
+.essay-slide-wrapper.fixed-slider {
+	position: fixed;
+	top: 70px;
+	bottom: 0;
+	overflow: hidden;
+}
+.essay-slide-group {
+	padding: 0 35px 0 60px;
+}
+.essay-slide-tle {
+	padding-top: 20px;
+	border-bottom: 1px solid #666;
+	text-align: center;
+	font-family: 'yst-font';
+	font-size: 28px;
+	line-height: 56px;
+	color: #a11f24;
+}
+.essay-item {
+	padding: 6px 0;
+	border-bottom: 1px dashed #e3e3e3;
+}
+.essay-item-name {
+	display: block;
+	line-height: 28px;
+	font-size: 14px;
+	color: #666;
+	cursor: pointer;
+}
+.essay-item-name:hover {
+	color: #f14553;
+}
+.essay-item-time {
+	line-height: 24px;
+	font-size: 12px;
+	color: #808080;
+}
+.essay-list-wrapper {
+	padding-bottom: 40px;
+}
+#song-list-commend-wrapper {
+	padding-top: 40px;
+}
+.index-video-group {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 551px;
+	background-color: #000;
+}
+.video-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 551px;
+  z-index: 10;
+}
+.video-error-desc {
+	padding-top: 250px;
+	line-height: 30px;
+	text-align: center;
+	padding-left: 2px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #fff;
 }

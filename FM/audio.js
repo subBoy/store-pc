@@ -144,14 +144,14 @@ Selected.prototype = {
     $('.fm-auido-play').click(function () {
     	if (that.audio.paused) {
     		$('.fm-auido-play').addClass('playing');
-        $('.music-group-cd').addClass('isPlaying');
+        $('.music-group-cd-img').addClass('isPlaying');
     		that.audio.play();
         $('.fm-song-box-ctr').removeClass('isPlaying').eq(that.currentIndex).addClass('isPlaying');
     		return;
     	}
     	that.audio.pause();
     	$('.fm-auido-play').removeClass('playing');
-      $('.music-group-cd, .fm-song-box-ctr').removeClass('isPlaying');
+      $('.music-group-cd-img, .fm-song-box-ctr').removeClass('isPlaying');
     })
     $('.fm-auido-next').click(function () {
     	that.playNext(that);
@@ -376,14 +376,14 @@ function renderFuc (that) {
       if ($(this).parent().parent().hasClass('isPlaying')) {
         that.audio.pause();
         $('.fm-auido-play').removeClass('playing');
-        $('.music-group-cd').removeClass('isPlaying');
+        $('.music-group-cd-img').removeClass('isPlaying');
         $(this).parent().parent().removeClass('isPlaying')
         return;
       }
       var crtIdx = $(this).attr('crtIdx');
       that.playAssign(that, crtIdx);
       $('.fm-song-box-ctr').removeClass('isPlaying');
-      $('.music-group-cd').addClass('isPlaying');
+      $('.music-group-cd-img').addClass('isPlaying');
       $(this).parent().parent().addClass('isPlaying');
     }) 
     var idx;
@@ -454,14 +454,14 @@ function renderFuc2 (that) {
       if ($(this).parent().parent().hasClass('isPlaying')) {
         that.audio.pause();
         $('.fm-auido-play').removeClass('playing');
-        $('.music-group-cd').removeClass('isPlaying');
+        $('.music-group-cd-img').removeClass('isPlaying');
         $(this).parent().parent().removeClass('isPlaying')
         return;
       }
       var crtIdx = $(this).attr('crtIdx');
       that.playAssign(that, crtIdx);
       $('.fm-song-box-ctr').removeClass('isPlaying');
-      $('.music-group-cd').addClass('isPlaying');
+      $('.music-group-cd-img').addClass('isPlaying');
       $(this).parent().parent().addClass('isPlaying');
     }) 
     var idx;
@@ -597,7 +597,7 @@ function songlistDetailFuc (that) {
       return;
     }
     $('.fm-auido-play').addClass('playing');
-    $('.music-group-cd').addClass('isPlaying');
+    $('.music-group-cd-img').addClass('isPlaying');
     that.playAssign(that, 0);
     $('.fm-song-box-ctr').removeClass('isPlaying').eq(that.currentIndex).addClass('isPlaying');
   })

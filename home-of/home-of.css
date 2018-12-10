@@ -633,8 +633,10 @@
 	font-weight: bold;
 }
 .home-of-footer-hr {
+	position: relative;
 	height: 10px;
 	background-color: #000;
+	z-index: 1000;
 }
 
 .home-of-silder {
@@ -1516,4 +1518,36 @@
 	background-position: center;
 	background-image: url(../home-of/images/adio-14.png);
 	cursor: move;
+}
+.commend-icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../FM/images/comment-icon.png) no-repeat -3px -4px;
+	-webkit-background-size: auto 28px;
+	background-size: auto 28px;
+}
+.commend-icon:hover {
+	background: url(../FM/images/comment-icon.png) no-repeat -927px -4px;
+  -moz-animation: movetie 1000ms steps(33) forwards;
+  -webkit-animation: movetie 1000ms steps(33) forwards;
+  animation: movetie 1000ms steps(33) forwards;
+  -webkit-background-size: auto 28px;
+	background-size: auto 28px;
+}
+@-webkit-keyframes movetie {
+  0% {
+    background-position: -3px -4px;
+  }
+  100% {
+    background-position: -927px -4px;
+  }
+}
+@keyframes movetie {
+  0% {
+    background-position: -3px -4px;
+  }
+  100% {
+    background-position: -927px -4px;
+  }
 }

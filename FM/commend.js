@@ -117,7 +117,7 @@ function renderTextNode (txt) {
 }
 
 function isReport () {
-	$('.slcl-btn-1').on('click', function () {
+	$('.slcl-btn-1, .essay-btn-5').on('click', function () {
 		$('.groove-win-wrapper').fadeIn();
 	})
 	$('.groove-win-close-btn, .groove-win-sumbit-btn').on('click', function () {
@@ -148,23 +148,66 @@ function isReport () {
 		}
 		$(this).removeClass('not-zan').html('( ' + cdLen + ' )');
 	})
+	$('.slcl-btn-4').click(function () {
+		$(this).parent().parent().remove();
+	})
+	$('.essay-btn-2').click(function () {
+		var cdLen = $(this).attr('cdLen');
+		if ($(this).hasClass('seled')) {
+			cdLen = cdLen - 1;
+			$(this).removeClass('seled');
+			$('.essay-f-btn-2').removeClass('seled')
+		} else {
+			cdLen = cdLen - 0 + 1;
+			$(this).addClass('seled');
+			$('.essay-f-btn-2').addClass('seled');
+		}
+		$(this).attr('cdLen', cdLen);
+		$('.essay-f-btn-2').attr('cdLen', cdLen);
+		$(this).html('点赞<i class="essay-btn-desc">(' + cdLen + ')</i>');
+		$('.essay-f-btn-2').html('点个赞走<i class="essay-btn-desc">(' + cdLen + ')</i>');
+	})
+	$('.essay-f-btn-2').click(function () {
+		var cdLen = $(this).attr('cdLen');
+		if ($(this).hasClass('seled')) {
+			cdLen = cdLen - 1;
+			$(this).removeClass('seled');
+			$('.essay-btn-2').removeClass('seled');
+		} else {
+			cdLen = cdLen - 0 + 1;
+			$(this).addClass('seled');
+			$('.essay-btn-2').addClass('seled');
+		}
+		$(this).attr('cdLen', cdLen);
+		$('.essay-btn-2').attr('cdLen', cdLen);
+		$(this).html('点个赞走<i class="essay-btn-desc">(' + cdLen + ')</i>');
+		$('.essay-btn-2').html('点赞<i class="essay-btn-desc">(' + cdLen + ')</i>');
+	})
 }
 var replayId;
 var isCommend = 0;
 
 function isShowlistOrcommend () {
-	$('.hf-sy-nav-link').removeClass('seled');
+	$('.hf-sy-nav-link, .essay-btn').removeClass('seled');
 	if (isCommend === 1) {
-		$('.nav-item-2').addClass('seled');
+		$('.nav-item-2, essay-btn-3').addClass('seled');
 		$('#song-list-commend-wrapper').fadeIn();
-		$('#song-list-ctr-wrapper').hide();
+		$('#song-list-ctr-wrapper, #essay-wrapper').hide();
 	} else {
-		$('.nav-item-1').addClass('seled');
+		$('.nav-item-1, .essay-btn-1').addClass('seled');
 		$('#song-list-commend-wrapper').hide();
-		$('#song-list-ctr-wrapper').fadeIn();
+		$('#song-list-ctr-wrapper, #essay-wrapper').fadeIn();
 	}
 }
+function videoPlayer () {
+  if (!document.addEventListener || !1 in document.documentElement.style) {
+    $('#video').hide();
+  } else {
+    jsModern.video("#video");
+  }
+}
 $(function () {
+	videoPlayer();
 	isShowlistOrcommend();
 	isReport();
 	renderEmoji(imgClass);
@@ -223,7 +266,8 @@ $(function () {
 						+'<div class="replay-slcl-item-wrapper">' + xxHtml + '</div>'
 						+'<p class="slcl-item-time">2018年11月21日 12 : 23</p>'
 						+'<div class="slcl-item-opr-btn">'
-							+'<span class="in-block slcl-btn set-animation slcl-btn-1">举报</span>'
+							// +'<span class="in-block slcl-btn set-animation slcl-btn-1">举报</span>'
+							+'<span class="in-block slcl-btn set-animation slcl-btn-4">删除</span>'
 							+'<span class="in-block slcl-btn-hr"></span>'
 							+'<span class="in-block slcl-btn set-animation slcl-btn-2 not-zan" cdLen="0"></span>'
 							+'<span class="in-block slcl-btn-hr"></span>'
@@ -233,7 +277,7 @@ $(function () {
 		$('#latest-commend-list').prepend(reHtml);
 		$('#emoji-input-wrapper').html('');
 		$('.emoji-txt-len').html('0/120');
-		$('.slcl-btn-1, .slcl-btn-2, .slcl-btn-3').unbind();
+		$('.slcl-btn-1, .slcl-btn-2, .slcl-btn-3, .slcl-btn-4').unbind();
 		isReport();
 		$('.emoji-submit-err').html('评论成功！');
 		$('.emoji-submit-err').fadeIn();
@@ -241,11 +285,11 @@ $(function () {
 			$('.emoji-submit-err').fadeOut();
 		}, 2000);
 	})
-	$('.nav-item-2').click(function () {
+	$('.nav-item-2, .essay-btn-3').click(function () {
 		isCommend = 1;
 		isShowlistOrcommend();
 	})
-	$('.nav-item-1').click(function () {
+	$('.nav-item-1, .essay-btn-1').click(function () {
 		isCommend = 0;
 		isShowlistOrcommend();
 	})
