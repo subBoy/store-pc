@@ -207,7 +207,9 @@ function videoPlayer () {
   }
 }
 $(function () {
-	videoPlayer();
+	if (document.getElementById('video')) {
+		videoPlayer();
+	}
 	isShowlistOrcommend();
 	isReport();
 	renderEmoji(imgClass);
