@@ -1,0 +1,134 @@
+@charset"UTF-8";
+.home-of-wrapper.ptb1 {
+	padding: 1px 0
+}
+.home-of-wrapper-ctr.hasbg {
+	background-position: center;
+	background-image: url('../personal-center/images/bg.jpg');
+}
+.pc-user-info-wrapper {
+	margin: 0 auto;
+	width: 1200px;
+}
+.pc-user-info-group {
+	padding: 80px 16px;
+}
+.pc-user-info {
+	position: relative;
+	padding-left: 180px;
+}
+.pc-user-avatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.pc-user-name-wrapper {
+	margin-bottom: 15px;
+	font-size: 0;
+}
+.pc-user-name {
+	padding-bottom: ;
+	line-height: 30px;
+	font-size: 16px;
+	color: #010101;
+	width: 280px;
+}
+.change-u-info-btn {
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../personal-center/images/cg-ic.png');
+	cursor: pointer;
+}
+.pc-user-desc {
+	width: 680px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #8c8c8c;
+}
+.pc-user-txb {
+	margin-top: 30px;
+	font-size: 0;
+}
+.pcu-txb-item {
+	margin-right: 40px;
+}
+.im-num {
+	display: block;
+	line-height: 20px;
+	font-size: 14px;
+	color: #010101;
+	text-align: center;
+}
+.im-txt {
+	display: block;
+	line-height: 20px;
+	font-size: 12px;
+	color: #8c8c8c;
+	text-align: center;
+}
+
+.pc-user-model-wrapper {
+	border-bottom: 1px solid #ddd;
+}
+.pc-user-model-group {
+	margin: 0 auto;
+	width: 1168px;
+	font-size: 0;
+}
+.pcum-nav {
+	padding: 12px 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #8c8c8c;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.pcum-nav.seled, .pcum-nav:hover {
+	color: #010101
+}
+.pcumd-item {
+	padding-right: 30px;
+}
+.pcum-nav.pv-1 {
+	background-image: url('../personal-center/images/u-ic.png');
+	background-position: left 15px;
+}
+.pcum-nav.pv-2 {
+	background-image: url('../personal-center/images/d-ic.png');
+	background-position: left 20px;
+}
+.pc-user-mounted-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 15px 0;
+	width: 1168px;
+	font-size: 0;
+	border-bottom: 1px dashed #ddd;
+}
+.pcumd-item-te {
+	padding: 0 5px;
+	line-height: 30px;
+	color: #8c8c8c;
+	font-size: 14px;
+}
+.pcumd-item.seled .pcumd-item-te, .pcumd-item.seled .seled {
+	color: #f04452;
+}
+.pcumd-item-te:hover, .pcumd-item-txt:hover {
+	color: #f04452;
+}
+.pcumd-item-txt, .pcumd-item-num {
+	padding: 0 10px;
+	line-height: 30px;
+	color: #8c8c8c;
+	font-size: 12px;
+}
+.pcumd-item-num {
+	padding-left: 0;
+}

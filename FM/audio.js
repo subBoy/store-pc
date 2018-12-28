@@ -98,11 +98,11 @@ Selected.prototype = {
       currentSong, randomSong, isHasLrc;
      // this.currentIndex = Math.floor(Math.random() * allSongs.length);
     currentSong = allSongs[this.currentIndex];
-    this.playOne = allSongs[this.currentIndex];
     $('.fm-auido-song').html(currentSong.songName);
     $('.fm-auido-songer').html(currentSong.singer);
     this.audio.onended = function() {
     	if (that.mode === '1') {
+        that.playOne = allSongs[that.currentIndex];
     		that.play(that.playOne);
     		return;
     	}

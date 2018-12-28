@@ -2136,13 +2136,15 @@
 	font-size: 14px;
 }
 .slcl-item-user-avatar {
-	position: absolute;;
+	display: block;
+	position: absolute;
 	left: 0;
 	top: 20px;
 	width: 45px;
 	height: 45px;
 	overflow: hidden;
 	border-radius: 100%;
+	cursor: pointer;
 }
 .slcl-item-time {
 	padding-top: 10px;
