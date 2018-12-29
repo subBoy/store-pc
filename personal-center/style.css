@@ -93,6 +93,7 @@
 	color: #010101
 }
 .pcumd-item {
+	position: relative;
 	padding-right: 30px;
 }
 .pcum-nav.pv-1 {
@@ -116,6 +117,10 @@
 	line-height: 30px;
 	color: #8c8c8c;
 	font-size: 14px;
+	cursor: pointer;
+}
+.pcumd-item-txt {
+	cursor: pointer;
 }
 .pcumd-item.seled .pcumd-item-te, .pcumd-item.seled .seled {
 	color: #f04452;
@@ -131,4 +136,85 @@
 }
 .pcumd-item-num {
 	padding-left: 0;
+}
+.pcumd-item-tle .itm-wrapper {
+	position: relative;
+	left: -2px;
+	bottom: 0;
+}
+.pcumd-item-tle .itm-wrapper .itm-box {
+	background-color: #8c8c8c;
+}
+
+.seled .pcumd-item-tle .itm-wrapper .itm-box, .pcumd-item-tle:hover .itm-wrapper .itm-box {
+	background-color: #f04452;
+}
+.pcumd-item-list {
+	display: none;
+}
+.seled .pcumd-item-list {
+	display: inline-block;
+}
+.pc-user-air-group {
+	padding: 230px 0;
+}
+.pcum-air-img {
+	display: block;
+	margin: 0 auto;
+}
+.pc-user-air-txt {
+	padding-left: 90px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #8c8c8c;
+	text-align: center;
+}
+.pcumd-item-te {
+	position: relative;
+}
+.pcumd-item.seled .pcumd-item-te:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -16px;
+	height: 2px;
+	background-color: #000;
+}
+.pcum-ct-list {
+	margin: 0 auto;
+	width: 1200px;
+}
+.pc-del-btn {
+	display: block;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../personal-center/images/del-ic.png');
+	cursor: pointer;
+	z-index: 1000
+}
+.pc-change-btn {
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../personal-center/images/c-s-info.png');
+	cursor: pointer;
+	z-index: 1000
+}
+.pc-user-mounted-wrapper .hf-sy-nav-solt {
+	top: 15px;
 }

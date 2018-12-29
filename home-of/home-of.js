@@ -72,17 +72,19 @@ function scollected () {
 		} else {
 			$(this).addClass('seled');
 		}
+		return false
 	})
 }
 function soltFuc () {
 	$('.hf-sy-nav-solt-view').on('click', function (e) {
 		e.stopPropagation();
+		$(this).addClass('seled');
 		$(this).siblings('.hf-sy-nav-solt-list').slideDown();
 	})
 	$('.hf-sy-nav-solt-item').on('click', function (e) {
 		e.stopPropagation();
 		var thisVal = $(this).html();
-		$('.hf-sy-nav-solt-view').html(thisVal);
+		$('.hf-sy-nav-solt-view').removeClass('seled').html(thisVal);
 		$(this).parent().slideUp();
 	})
 }
