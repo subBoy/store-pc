@@ -778,15 +778,16 @@
 	</div>
 	<div class="pc-user-info-wrapper">
 		<div class="pc-user-info-group">
-			<div class="pc-user-info" id="pcUserInfo">
+			<div class="pc-user-info">
 				<div class="pc-user-avatar">
-					<img src="../FM/images/lazy.jpg" id="urio-avatar-img2" width="100%">
+					<img src="../FM/images/lazy.jpg" width="100%">
 				</div>
 				<div class="pc-user-name-wrapper">
-					<h3 class="pc-user-name in-block" id="urio-avatar-name">小黑不厚</h3>
-					<span class="change-u-info-btn in-block"></span>
+					<h3 class="pc-user-name in-block">小黑不厚</h3>
+					<span class="in-block set-animation qqh-btn-s">对他/她说</span>
+					<span class="in-block set-animation gz-btn-s">关注</span>
 				</div>
-				<div class="pc-user-desc" id="urio-avatar-desc">这是个还没有简介的Racker...</div>
+				<div class="pc-user-desc">这是个还没有简介的Racker...</div>
 				<ul class="pc-user-txb">
 					<li class="pcu-txb-item in-block" pageIdx="pageFx">
 						<span class="im-num">0</span>
@@ -802,23 +803,17 @@
 					</li>
 				</ul>
 			</div>
-			<div class="pc-user-info" id="changUserInfo" style="display: none;">
-				<div class="pc-user-avatar">
-					<img src="../FM/images/lazy.jpg" class="urio-avatar-img1" width="100%">
-				</div>
-				<span class="pc-chang-avatar-btn" id="change-avatar-btn">修改头像</span>
-				<div class="pc-user-name-wrapper">
-					<input type="text" class="urio-avatar-name">
-				</div>
-				<textarea class="urio-avatar-textarea" placeholder="几句话简单介绍下自己..."></textarea>
-				<div class="urio-avatar-submit-btn global-btn-styl">保存信息</div>
-			</div>
 		</div>
 	</div>
-	<div class="pc-user-model-wrapper">
+	<div class="pc-user-model-wrapper" id="pumw-nav-1">
 		<div class="pc-user-model-group">
-			<span class="in-block pcum-nav set-animation pv-1 seled" pageIdx="pageMain">我的主页</span>
+			<span class="in-block pcum-nav set-animation pv-1 seled" pageIdx="pageMain">TA的主页</span>
 			<span class="in-block pcum-nav set-animation pv-2" pageIdx="pageCommt">消息中心</span>
+		</div>
+	</div>
+	<div class="pc-user-model-wrapper" id="pumw-nav-2" style="display: none;">
+		<div class="pc-user-model-group">
+			<span class="in-block pcum-nav set-animation pv-3 seled">悄悄话</span>
 		</div>
 	</div>
 	<div class="pcum-nav-item" pageIdx="pageMain">
@@ -829,8 +824,8 @@
 					<span class="pcumd-item-num in-block">(0)</span>
 				</span>
 				<span class="pcumd-item-list in-block">
-					<span class="pcumd-item-txt set-animation seled in-block" loadPage="page1">我发布的</span>
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page2">我收藏的</span>
+					<span class="pcumd-item-txt set-animation seled in-block" loadPage="page1">TA发布的</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page2">TA收藏的</span>
 				</span>
 			</div>
 			<div class="pcumd-item in-block">
@@ -839,8 +834,8 @@
 					<span class="pcumd-item-num in-block">(0)</span>
 				</span>
 				<span class="pcumd-item-list in-block">
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page3">我发布的</span>
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page4">我收藏的</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page3">TA发布的</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page4">TA收藏的</span>
 				</span>
 			</div>
 			<div class="pcumd-item in-block">
@@ -856,9 +851,9 @@
 					<span class="pcumd-item-num in-block">(0)</span>
 				</span>
 				<span class="pcumd-item-list in-block">
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page5">我发布的FM</span>
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page6">我建的歌单</span>
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page7">我收藏的歌单</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page5">TA发布的FM</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page6">TA建的歌单</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page7">TA收藏的歌单</span>
 				</span>
 			</div>
 			<div class="pcumd-item in-block">
@@ -867,8 +862,8 @@
 					<span class="pcumd-item-num in-block">(0)</span>
 				</span>
 				<span class="pcumd-item-list in-block">
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page8">我发布的</span>
-					<span class="pcumd-item-txt set-animation in-block" loadPage="page8">我收藏的</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page8">TA发布的</span>
+					<span class="pcumd-item-txt set-animation in-block" loadPage="page8">TA收藏的</span>
 				</span>
 			</div>
 			<div class="hf-sy-nav-solt">
@@ -909,7 +904,7 @@
 				<p class="pc-user-air-txt">该栏目下还没有作品！</p>
 			</div>
 		</div>
-		<!-- 文化馆-我发布的 -->
+		<!-- 文化馆-Ta发布的 -->
 		<div class="home-of-ct-list pcum-ct-list pcuHw" loadPage="page1">
 			<ul class="home-of-ct-list-box">
 				<li class="home-of-home-of-ct-item">
@@ -921,8 +916,6 @@
 								<em class="bold-bg"></em>
 								<span class="home-of-ct-item-tabimg pic-box"></span>
 							</span>
-							<span class="pc-del-btn"></span>
-							<span class="pc-change-btn"></span>
 						</span>
 						<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
 						<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
@@ -937,8 +930,6 @@
 								<em class="bold-bg"></em>
 								<span class="home-of-ct-item-tabimg pic-box"></span>
 							</span>
-							<span class="pc-del-btn"></span>
-							<span class="pc-change-btn"></span>
 						</span>
 						<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
 						<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
@@ -953,8 +944,6 @@
 								<em class="bold-bg"></em>
 								<span class="home-of-ct-item-tabimg pic-box"></span>
 							</span>
-							<span class="pc-del-btn"></span>
-							<span class="pc-change-btn"></span>
 						</span>
 						<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
 						<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
@@ -969,8 +958,6 @@
 								<em class="bold-bg"></em>
 								<span class="home-of-ct-item-tabimg pic-box"></span>
 							</span>
-							<span class="pc-del-btn"></span>
-							<span class="pc-change-btn"></span>
 						</span>
 						<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
 						<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
@@ -999,7 +986,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- 文化馆-我收藏的 -->
+		<!-- 文化馆-Ta收藏的 -->
 		<div class="home-of-ct-list pcum-ct-list pcuHw" loadPage="page2" style="display: none;">
 			<ul class="home-of-ct-list-box">
 				<li class="home-of-home-of-ct-item">
@@ -1011,7 +998,6 @@
 								<em class="bold-bg"></em>
 								<span class="home-of-ct-item-tabimg pic-box"></span>
 							</span>
-							<span class="pc-del-btn"></span>
 						</span>
 						<span class="home-of-ct-item-tle">美国加州圣伯纳迪诺突发枪击案致8人死亡圣伯纳迪圣伯纳伯纳迪</span>
 						<span class="home-of-ct-item-desc">今天是2018年9月5日，星期三，Bob Marley 不止一次辩解自己勤洗头，脏辫很脏的错误印象依旧深深扎根在人们心底。</span>
@@ -1040,23 +1026,22 @@
 				</div>
 			</div>
 		</div>
-		<!-- 有屁就放-我发布的 -->
+		<!-- 有屁就放-Ta发布的 -->
 		<div class="groove-list-wrapper pcum-ct-list-1 pcuHw" loadPage="page3" style="display: none;">
 			<ul class="groove-list">
 				<li class="groove-item">
 					<div class="groove-item-ctr">
 						<span class="groove-item-img">
 							<img src="../home-of/images/pic-1.png" width="100%">
-							<span class="pc-change-btn"></span>
-							<span class="getb-list-btn-wrapper isfsde in-block">摇滚</span>
+							<span class="report-btn-wrapper"></span>
 						</span>
-						<p class="groove-item-txt">我，和千千万万的成都小朋友一样，都是绕着麻将桌长大的。印象里的小时候，几乎没怎么在家里吃过饭，总是跟几个小孩儿一起在街上扎堆吃饭，因为我们的妈妈都环境造就了我们自由散漫们自由散漫们自由散漫的生活状态，对，就是成都人常说的 —— 安逸。</p>
+						<p class="groove-item-txt">Ta，和千千万万的成都小朋友一样，都是绕着麻将桌长大的。印象里的小时候，几乎没怎么在家里吃过饭，总是跟几个小孩儿一起在街上扎堆吃饭，因为我们的妈妈都环境造就了我们自由散漫们自由散漫们自由散漫的生活状态，对，就是成都人常说的 —— 安逸。</p>
 						<div class="groove-item-user">
 							<a href="../personal-center/personal-center.html" class="groove-item-avatar in-block">
 								<img src="../home-of/images/avatar.png"  width="100%">
 							</a>
 							<span class="gm-name in-block">依露森</span>
-							<span class="pc-del-btn bg-im in-block"></span>
+							<span class="gm-colled-btn in-block"></span>
 						</div>
 					</div>
 				</li>
@@ -1084,14 +1069,14 @@
 				</div>
 			</div>
 		</div>
-		<!-- 有屁就放-我收藏的 -->
+		<!-- 有屁就放-Ta收藏的 -->
 		<div class="groove-list-wrapper pcum-ct-list-1 pcuHw" loadPage="page4" style="display: none;">
 			<ul class="groove-list">
 				<li class="groove-item">
 					<div class="groove-item-ctr">
 						<span class="groove-item-img">
 							<img src="../home-of/images/pic-1.png" width="100%">
-							<span class="getb-list-btn-wrapper isfsde in-block">摇滚</span>
+							<span class="report-btn-wrapper"></span>
 						</span>
 						<p class="groove-item-txt">我，和千千万万的成都小朋友一样，都是绕着麻将桌长大的。印象里的小时候，几乎没怎么在家里吃过饭，总是跟几个小孩儿一起在街上扎堆吃饭，因为我们的妈妈都环境造就了我们自由散漫们自由散漫们自由散漫的生活状态，对，就是成都人常说的 —— 安逸。</p>
 						<div class="groove-item-user">
@@ -1099,7 +1084,7 @@
 								<img src="../home-of/images/avatar.png"  width="100%">
 							</a>
 							<span class="gm-name in-block">依露森</span>
-							<span class="pc-del-btn bg-im in-block"></span>
+							<span class="gm-colled-btn in-block"></span>
 						</div>
 					</div>
 				</li>
@@ -1127,613 +1112,133 @@
 				</div>
 			</div>
 		</div>
-		<!-- 野派FM-我发布的FM -->
+		<!-- 野派FM-Ta发布的FM -->
 		<div class="fm-ct-list fm-sl-ctr-wrapper my-fabu-fm pcuHw" loadPage="page5" style="display: none;">
-			<div class="fm-song-list-group-wrapper myself-song-list-wrapper" id="myself-song-list-wrapper">
-				<ul class="fm-song-list-group-box">
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改FM信息</div>
-					</li>
-				</ul>
-				<div class="clear-both"></div>
-			</div>
-			<div class="pagenav-wrapper">
-				<div class="pagenav-group set-animation in-block">
-					<a class="pagenav-prev in-block" id="pagenavPrevBtn">
-						<span class="pagenav-prev-btn"></span>
-					</a>
-					<ul class="pagenav-list in-block" id="pagenavList">
-						<li class="pagenav-item seled in-block">
-							<a class="pagenav-btn">1</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">2</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">3</a>
+			<div class="fm-ct-list">
+				<div class="fm-song-group-wrapper">
+					<ul class="fm-song-group-list os-pc-list-g">
+						<li class="fm-song-group-item">
+							<div class="fm-song-group-poster">
+								<a href="../FM/song-list-details.html" class="fm-song-group-link">
+									<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+									<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+								</a>
+							</div>
+							<h3 class="fm-song-group-name"><a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a></h3>
+							<p class="fm-song-group-author">创立者：周周</p>
+							<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP专辑里渗透了宏大的主题。</p>
 						</li>
 					</ul>
-					<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
-						<span class="pagenav-next-btn"></span>
-					</a>
+				</div>
+				<div class="pagenav-wrapper">
+					<div class="pagenav-group set-animation in-block">
+						<a class="pagenav-prev in-block" id="pagenavPrevBtn">
+							<span class="pagenav-prev-btn"></span>
+						</a>
+						<ul class="pagenav-list in-block" id="pagenavList">
+							<li class="pagenav-item seled in-block">
+								<a class="pagenav-btn">1</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">2</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">3</a>
+							</li>
+						</ul>
+						<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
+							<span class="pagenav-next-btn"></span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 野派FM-我建的歌单 -->
+		<!-- 野派FM-Ta建的歌单 -->
 		<div class="fm-ct-list fm-sl-ctr-wrapper my-jian-gedan pcuHw" loadPage="page6" style="display: none;">
-			<div class="fm-song-list-group-wrapper myself-song-list-wrapper">
-				<ul class="fm-song-list-group-box">
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-						<div class="change-song-list-info-btn">修改歌单信息</div>
-					</li>
-				</ul>
-				<div class="clear-both"></div>
-			</div>
-			<div class="pagenav-wrapper">
-				<div class="pagenav-group set-animation in-block">
-					<a class="pagenav-prev in-block" id="pagenavPrevBtn">
-						<span class="pagenav-prev-btn"></span>
-					</a>
-					<ul class="pagenav-list in-block" id="pagenavList">
-						<li class="pagenav-item seled in-block">
-							<a class="pagenav-btn">1</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">2</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">3</a>
+			<div class="fm-ct-list">
+				<div class="fm-song-group-wrapper">
+					<ul class="fm-song-group-list os-pc-list-g">
+						<li class="fm-song-group-item">
+							<div class="fm-song-group-poster">
+								<a href="../FM/song-list-details.html" class="fm-song-group-link">
+									<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+									<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+								</a>
+							</div>
+							<h3 class="fm-song-group-name"><a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a></h3>
+							<p class="fm-song-group-author">创立者：周周</p>
+							<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP专辑里渗透了宏大的主题。</p>
 						</li>
 					</ul>
-					<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
-						<span class="pagenav-next-btn"></span>
-					</a>
+				</div>
+				<div class="pagenav-wrapper">
+					<div class="pagenav-group set-animation in-block">
+						<a class="pagenav-prev in-block" id="pagenavPrevBtn">
+							<span class="pagenav-prev-btn"></span>
+						</a>
+						<ul class="pagenav-list in-block" id="pagenavList">
+							<li class="pagenav-item seled in-block">
+								<a class="pagenav-btn">1</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">2</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">3</a>
+							</li>
+						</ul>
+						<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
+							<span class="pagenav-next-btn"></span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- 野派FM-我收藏的歌单 -->
+		<!-- 野派FM-Ta收藏的歌单 -->
 		<div class="fm-ct-list fm-sl-ctr-wrapper my-shoucang-gedan pcuHw" loadPage="page7" style="display: none;">
-			<div class="fm-song-list-group-wrapper myself-song-list-wrapper">
-				<ul class="fm-song-list-group-box">
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-					<li class="fm-song-group-item">
-						<div class="fm-song-group-poster">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-link">
-								<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
-								<img src="../FM/images/p-ic.png" class="fm-song-group-details">
-							</a>
-						</div>
-						<h3 class="fm-song-group-name">
-							<a href="../FM/song-list-details.html?isTor=1" class="fm-song-group-tle-link">光与盐</a>
-						</h3>
-						<div class="fs-oper-wrapper">
-							<span class="fsbc-item-del fm-auido-commend in-block"></span>
-							<span class="fm-auido-share-wrapper in-block">
-								<span class="fm-auido-share fm-auido-commend in-block"></span>
-								<span class="fm-auido-share-type in-block">
-									<span class="fm-auido-weixin fm-auido-commend in-block">
-										<span class="fm-auido-weixin-code in-block">
-											<img class="weixin-code-img" src="../home-of/images/ec.jpg">
-										</span>
-									</span>
-									<span class="fm-auido-weibo fm-auido-commend in-block"></span>
-									<span class="fm-auido-qq fm-auido-commend in-block"></span>
-									<span class="fm-auido-duoban fm-auido-commend in-block"></span>
-								</span>
-							</span>
-						</div>
-						<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP...</p>
-					</li>
-				</ul>
-				<div class="clear-both"></div>
-			</div>
-			<div class="pagenav-wrapper">
-				<div class="pagenav-group set-animation in-block">
-					<a class="pagenav-prev in-block" id="pagenavPrevBtn">
-						<span class="pagenav-prev-btn"></span>
-					</a>
-					<ul class="pagenav-list in-block" id="pagenavList">
-						<li class="pagenav-item seled in-block">
-							<a class="pagenav-btn">1</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">2</a>
-						</li>
-						<li class="pagenav-item in-block">
-							<a class="pagenav-btn">3</a>
+			<div class="fm-ct-list">
+				<div class="fm-song-group-wrapper">
+					<ul class="fm-song-group-list os-pc-list-g">
+						<li class="fm-song-group-item">
+							<div class="fm-song-group-poster">
+								<a href="../FM/song-list-details.html" class="fm-song-group-link">
+									<img data-original="../FM/images/song-poster.jpg" width="100%" width="100%" class="fm-song-group-img">
+									<img src="../FM/images/p-ic.png" class="fm-song-group-details">
+								</a>
+							</div>
+							<h3 class="fm-song-group-name"><a href="../FM/song-list-details.html" class="fm-song-group-tle-link">光与盐</a></h3>
+							<p class="fm-song-group-author">创立者：周周</p>
+							<p class="fm-song-group-desc">从圣经到安徒生，从视频到油彩。短小的EP专辑里渗透了宏大的主题。</p>
 						</li>
 					</ul>
-					<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
-						<span class="pagenav-next-btn"></span>
-					</a>
+				</div>
+				<div class="pagenav-wrapper">
+					<div class="pagenav-group set-animation in-block">
+						<a class="pagenav-prev in-block" id="pagenavPrevBtn">
+							<span class="pagenav-prev-btn"></span>
+						</a>
+						<ul class="pagenav-list in-block" id="pagenavList">
+							<li class="pagenav-item seled in-block">
+								<a class="pagenav-btn">1</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">2</a>
+							</li>
+							<li class="pagenav-item in-block">
+								<a class="pagenav-btn">3</a>
+							</li>
+						</ul>
+						<a class="pagenav-next ppisShow in-block" id="pagenavNextBtn">
+							<span class="pagenav-next-btn"></span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="pcum-nav-item" pageIdx="pageCommt" style="display: none;">
+	<div class="pcum-nav-item" pageIdx="pageCommt" id="pumw-nav-3" style="display: none;">
 		<div class="pcumni-nav-wrapper">
-			<ul class="pcumni-nav-list">
+			<ul class="pcumni-nav-list" id="pumw-nav-4">
 				<li class="in-block pcumni-table seled" pageIdx="p1">评价</li>
 				<li class="in-block pcumni-table" pageIdx="p2">喜欢</li>
 				<li class="in-block pcumni-table" pageIdx="p3">粉丝</li>
@@ -1977,11 +1482,11 @@
 				</li>
 			</ul>
 		</div>
-		<div class="pcumni-ct" id="gmBtn1" style="display: none;" pageIdx="p4">
+		<div class="pcumni-ct pumw-nav-5" id="gmBtn1" style="display: none;" pageIdx="p4">
 			<div class="fm-ct-list fm-ct-styl">
 				<div class="song-list-commend-box">
 					<div id="lg-dom1" style="display: none;"></div>
-					<ul class="sl-commend-list-wrapper">
+					<ul class="sl-commend-list-wrapper" id="pumw-nav-6">
 						<li class="slcl-item">
 							<div class="slcl-item-user-avatar">
 								<img src="../FM/images/song-poster.jpg" width="100%" height="100%">
@@ -2294,181 +1799,59 @@
 		</ul>
 		<div class="home-of-footer-hr"></div>
 	</div>
-	<div class="groove-table-win-wrapper">
+	<div class="groove-win-wrapper">
 		<em class="win-bg"></em>
 		<div class="groove-win-ct">
-			<div class="groove-table-win-close-btn"></div>
-			<div class="groove-win-tle">注意</div>
+			<div class="groove-win-close-btn"></div>
+			<div class="groove-win-tle">举报</div>
 			<div class="groove-win-ct-wrapper">
-				<div class="groove-tab-win-remarks">您正在删除该话题下的所有收藏么! 删除后将<a class="groove-explain-link">不可复原</a>！</div>
-				<div class="groove-table-win-sumbit-btn">确认删除</div>
+				<p class="groove-win-remark">举报原因：</p>
+				<ul class="groove-win-ct-list">
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">垃圾广告</span>
+					</li>
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">淫秽色情</span>
+					</li>
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">虚假中奖</span>
+					</li>
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">敏感信息</span>
+					</li>
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">人身攻击</span>
+					</li>
+					<li class="groove-win-ct-item">
+						<span class="sel-geim-btn in-block">
+							<input type="checkbox" class="sel-geim-checkbox">
+						</span>
+						<span class="geim-desc in-block">骚扰她人</span>
+					</li>
+				</ul>
+				<div class="groove-win-remarks">图片内容等存在侵权/知识产权问题？请按着<a class="groove-explain-link" href="#">该页面相关说明</a>进行举报/维权！</div>
+				<div class="groove-win-sumbit-btn">提交</div>
 			</div>
-		</div>
-	</div>
-	<!-- 修改歌单信息 -->
-	<div class="user-cpm-wrapper" id="change-song-list-info-win">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">修改歌单信息</div>
-			<span class="csliw-close-btn"></span>
-			<div class="csliw-ct-wrapper">
-				<div class="csliw-ct-box">
-					<div class="csliw-ct-img-wrapper">
-						<div class="fm-song-group-poster-ctr">
-							<span class="fm-song-group-poster-box">
-								<img width="100%" class="fm-song-group-poster-img" src="../FM/images/song-poster.jpg" style="display: block;">
-							</span>
-						</div>
-						<p class="chang-fsgp-btn">修改封面</p>
-					</div>
-					<div class="csliw-ct-txt-wrapper">
-						<ul class="csliw-ct-txt-list">
-							<li class="csliw-ct-txt-item csliw-im-1">
-								<span class="csliw-ct-txt-unitl in-block">歌单</span>
-								<input type="text" class="csliw-ct-name-inp" value="光与盐">
-							</li>
-							<li class="csliw-ct-txt-item csliw-im-2">
-								<span class="csliw-ct-txt-unitl">创立者 :</span>
-								<p class="csliw-ct-txt-at">
-									<span class="csliw-ct-txt-a in-block">周周</span><span class="csliw-ct-txt-t in-block">2018-02-23创立</span>
-								</p>
-							</li>
-							<li class="csliw-ct-txt-item csliw-im-3">
-								<span class="csliw-ct-txt-unitl">标签 :</span>
-								<span class="csliw-ct-txt-table in-block">日本/金属摇滚</span>
-								<div class="csliw-ct-txt-table-list-wrapper">
-									<div class="csliw-ct-txt-table-list-box">
-										<span class="fm-more-table-desc">标签：</span>
-										<div class="fm-more-table-item nt">
-											<div class="fm-more-table-group">
-												<span class="fm-more-table-tle">地域</span>
-												<div class="fm-more-table-list">
-													<span class="in-block fm-tb-txt set-animation">欧美</span>
-													<span class="in-block fm-tb-txt set-animation">日韩</span>
-													<span class="in-block fm-tb-txt set-animation">中国</span>
-													<span class="in-block fm-tb-txt set-animation">东南亚</span>
-												</div>
-											</div>
-										</div>
-										<div class="fm-more-table-item">
-											<div class="fm-more-table-group">
-												<span class="fm-more-table-tle">氛围</span>
-												<div class="fm-more-table-list">
-													<span class="in-block fm-tb-txt set-animation">机车</span>
-													<span class="in-block fm-tb-txt set-animation">滑板</span>
-													<span class="in-block fm-tb-txt set-animation">纹身</span>
-												</div>
-											</div>
-										</div>
-										<div class="fm-more-table-item">
-											<div class="fm-more-table-group">
-												<span class="fm-more-table-tle">属性</span>
-												<div class="fm-more-table-list">
-													<span class="in-block fm-tb-txt set-animation">金属柔情</span>
-													<span class="in-block fm-tb-txt set-animation">轻柔摇滚</span>
-													<span class="in-block fm-tb-txt set-animation">硬摇滚</span>
-													<span class="in-block fm-tb-txt set-animation">重金属</span>
-													<span class="in-block fm-tb-txt set-animation">艺术摇滚</span>
-													<span class="in-block fm-tb-txt set-animation">朋克摇滚</span>
-													<span class="in-block fm-tb-txt set-animation">雷鬼</span>
-													<span class="in-block fm-tb-txt set-animation">中国摇滚新势力</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="csliw-ct-txt-item csliw-im-4">
-								<span class="csliw-ct-txt-unitl">简介 :</span>
-								<div class="csliw-ct-txt-desc">
-									<textarea class="csliw-ct-desc-ttaa" id="csliw-ct-desc-ttaa" cols="30" rows="4">从圣经到安徒生，从视频到油彩。短小的EP专辑里渗透了宏大的主题。</textarea>
-									<span class="csliw-ct-desc-font-num">0/100</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="csliw-btn-wrapper">
-				<span class="csliw-btn-submit global-btn-styl in-block">保存</span>
-				<span class="csliw-btn-close in-block">取消</span>
-			</div>
-		</div>
-	</div>
-	<!-- 修改歌单海报 -->
-	<div class="user-cpm-wrapper" id="change-song-list-poster-win">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">修改歌单信息</div>
-			<span class="user-cpm-close-btn"></span>
-			<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" onChange="selectImg(this)">
-		  <div class="tailoring-content">
-		  	<p class="urio-avatar-desc"></p>
-		  	<div class="tailoring-content-l in-block">
-		      <div class="tailoring-box-parcel set-animation">
-	          <img id="tailoringImg">
-	          <div class="select-img-btn"></div>
-		      </div>
-		  		<div class="select-img-again set-animation">重新选择</div>
-		  	</div>
-		  	<div class="tailoring-content-r in-block">
-		  		<div class="hr-m"></div>
-	        <div class="circular">
-	        	<span class="finalImg-wrapper previewImg">
-	          	<img id="finalImg" src="../FM/images/song-poster.jpg" width="150" height="150">
-	        	</span>
-	        </div>
-	        <div class="circular-desc">当前封面</div>
-		  	</div>
-		  </div>
-		  <p class="sureCut-decs">请选择图片上传：大于300*300像素支持JPG、PNG等格式，图片需小于2M</p>
-		  <div class="sureCut" id="sureCut">更新</div>
-		</div>
-	</div>
-	<!-- 修改成功 -->
-	<div class="user-cpm-wrapper" id="change-song-list-info-success">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">修改歌单信息</div>
-			<span class="user-cpm-close-btn"></span>
-			<div class="cslis-ct">
-				<div class="cslis-ct-icon"></div>
-				<p class="cslis-ct-desc">歌单信息修改成功！</p>
-			</div>
-		</div>
-	</div>
-	<!-- 修改头像信息 -->
-	<div class="user-cpm-wrapper" id="change-user-avatar-win">
-		<em class="user-cpm-bg"></em>
-		<div class="user-cpm-content cr-info-vm">
-			<div class="user-cpm-tle">头像修改</div>
-			<span class="user-cpm-close-btn"></span>
-			<input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg1" onChange="selectImg2(this)">
-		  <div class="tailoring-content1">
-		  	<p class="urio-avatar-desc1"></p>
-		  	<div class="tailoring-content-l1 in-block">
-		      <div class="tailoring-box-parcel1 set-animation">
-	          <img id="tailoringImg1">
-	          <div class="select-img-btn1"></div>
-		      </div>
-		  	</div>
-		  	<div class="select-img-again1 set-animation">重新选择</div>
-		  	<div class="tailoring-content-r1 in-block">
-		  		<div class="hr-m1"></div>
-	        <div class="circular1 previewImg1">
-	          <img id="finalImg1" src="../public/images/avatar.png" width="100" height="100">
-	        </div>
-	        <div class="circular-desc1">当前图像</div>
-		  	</div>
-		  </div>
-		  <p class="sureCut-decs1">请选择图片上传：大于180*180像素支持JPG、PNG等格式，图片需小于2M</p>
-		  <div class="sureCut1" id="sureCut1">更新</div>
 		</div>
 	</div>
 	<script src="../public/js/public.js"></script>
 	<script src="../home-of/home-of.js"></script>
-	<script src="../FM/change.js"></script>
 	<script src="../FM/commend.js"></script>
-	<script src="../personal-center/pc.js"></script>
+	<script src="../personal-center/os-pc.js"></script>
 </body>
 </html>

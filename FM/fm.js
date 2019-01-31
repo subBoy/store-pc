@@ -1,4 +1,5 @@
 function setListBorder () {
+	$('.song-item-hr').remove();
 	var len = $('.fm-song-list-group-box').find('.fm-song-group-item').length;
 	if (len < 5) {
 		return;

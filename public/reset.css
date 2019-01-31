@@ -127,6 +127,7 @@ h1, h2, h3, h4, h5, h6, p {
 .header-wrapper {
   position: relative;
   padding: 70px 30px 0;
+  z-index: 20000;
 }
 .header-wrapper.win-nav {
   padding-top: 0; 
@@ -348,6 +349,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   background-color: #fff;
   border-bottom: 3px solid #000;
+  z-index: 10001;
 }
 .header-wrapper.win-nav .header-nav-list-ctr {
   top: 71px;
@@ -570,7 +572,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .global-input-desc {
   position: relative;
-  line-height: 36px;
+  height: 36px;
   padding: 0 15px;
   border-bottom: 1px solid #9e9e9e;
   font-size: 14px;
@@ -642,11 +644,23 @@ h1, h2, h3, h4, h5, h6, p {
 .sign-input-ctr.u-ic {
   background-position: 247px center;
 }
+.sign-input-ctr.ip-ic {
+  background-position: 260px center;
+}
+.sign-input-ctr.ip-ic.hd {
+  background-position: 240px center;
+}
 .sign-input-ctr.p-ic {
   background-position: 247px center;
 }
 .sign-input-ctr.c-ic {
   background-position: 147px center;
+}
+.sign-input-ctr.c-ic.add-ic {
+  background-position: 160px center;
+}
+.sign-input-ctr.c-ic.add-ic.hd {
+  background-position: 140px center;
 }
 .sign-input-ctr.add-styl {
   border-bottom: 2px solid #000;
@@ -676,6 +690,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding-left: 112px;
   width: 140px;
 }
+.ip-ic .sign-input {
+  padding-left: 150px;
+  width: 105px;
+}
 .p-ic .sign-input {
    padding-left: 105px;
    width: 140px;
@@ -684,8 +702,42 @@ h1, h2, h3, h4, h5, h6, p {
    padding-left: 91px;
    width: 62px;
 }
+.add-ic.c-ic .sign-input {
+   padding-left: 120px;
+   width: 35px;
+}
+.sign-input-group {
+  position: relative;
+}
+.sign-type-list {
+  position: absolute;
+  top: -30px;
+  left: 12px;
+  width: 100%;
+  font-size: 0;
+}
+.sign-type-tab {
+  line-height: 20px;
+  font-size: 12px;
+  color: #c8c8c8;
+  cursor: pointer;
+}
+.sign-type-tab.esp {
+  color: #000;
+  font: 14px;
+}
+.sign-type-tab-hr {
+  padding: 0 5px;
+  font-size: 12px;
+  color: #c8c8c8;
+}
 .u-ic .sign-input-tle {
   background-image: url(./images/ph-icon.png);
+}
+.ip-ic .sign-input-tle {
+  background-image: url(./images/mobile.png);
+  -webkit-background-size: 8px;
+  background-size: 8px;
 }
 .p-ic .sign-input-tle {
   background-image: url(./images/pw-icon.png);
@@ -701,6 +753,17 @@ h1, h2, h3, h4, h5, h6, p {
   height: 32px;
   z-index: 1;
 }
+.get-ipcode-btn {
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+.get-ipcode-btn.not-click, .get-ipcode-btn.not-click:hover {
+  background-color: #c8c8c8;
+  cursor: default;
+}
 .code-img {
   width: 100%;
   height: 100%;
@@ -712,7 +775,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   position: absolute;
   top: 0;
-  left: 85px;
+  right: 5px;
   line-height: 36px;
   font-size: 12px;
   color: #b3494d;
@@ -2089,5 +2152,82 @@ h1, h2, h3, h4, h5, h6, p {
   background-position: center 24px;
   background-image: url(../FM/images/lg.jpg);
   z-index: 10000;
+  color: #000;
+}
+.glbtn {
   color: #f04452;
+  cursor: pointer;
+}
+
+.gd-win-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.gd-win-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+}
+.store-reserve-win {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -265px 0 0 -475px;
+  width: 948px;
+  height: 530px;
+  border: 1px solid #b7b7b7; 
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+.store-reserve-win-tle-wrapper {
+  position: relative;
+  padding: 20px 0 10px;
+  text-align: center;
+  border-bottom: 3px solid #393939;
+}
+.store-reserve-win-tle {
+  line-height: 62px;
+  font-size: 42px;
+  font-weight: bold;
+  padding-left: 4px;
+  letter-spacing: 4px;
+}
+.gd-win-close-btn {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../goods-details/images/close.png);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.payment-sign {
+  margin: 0 auto;
+  width: 300px;
+}
+.payment-sign-err {
+  line-height: 40px;
+  height: 40px;
+  text-align: right;
+  font-size: 12px;
+  color: #b3494d;
+}
+.payment-sign .sign-input-group {
+  padding: 0 12px;
 }

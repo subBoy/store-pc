@@ -42,7 +42,7 @@ function setInputFB () {
 	})
 }
 function fromVerify () {
-	$(".userAccount").focus(function () {
+	$(".glo-userAccount").focus(function () {
 		clearTimeout(st);
 		var accmountList = $('.sign-accmount-wrapper .sign-accmount-item');
 		if (accmountList.length) {
@@ -217,8 +217,8 @@ function shotcut () {
 	$('.sign-accmount-item').on('click', function () {
 		clearTimeout(st);
 		var _thisVal = $(this).html();
-		$('.userAccount').val(_thisVal);
-		$(this).parent().parent().hide();
+		$('.glo-userAccount').val(_thisVal);
+		$('.sign-accmount-wrapper').hide();
 	})
 }
 function setFooterStyle () {
@@ -307,7 +307,69 @@ function cutRecommend () {
 	$('.recommend-prev').on('click', recommend.prev);
 	$('.recommend-next').on('click', recommend.next);
 }
+
+function getCodeFuc () {
+	var times = 60;
+	var codeBtnTxt = '';
+	var codeClick = true;
+	var timer;
+	var setval = function () {
+	  times--;
+	  codeBtnTxt = times + 's后重试';
+	  $('#getCodeBtn').addClass('not-click').html(codeBtnTxt);
+	  if (times < 1) {
+	    clearInterval(timer);
+	    times = 60;
+	    codeBtnTxt = '重新发送';
+	    codeClick = true;
+	    $('#getCodeBtn').removeClass('not-click').html(codeBtnTxt);
+	  }
+	};
+	$('#getCodeBtn').on('click', function () {
+		if (!codeClick) {
+			return;
+		}
+		// var accountVal = $('#account-input-ctr').val();
+		// var objVer = accountVerify(accountVal);
+		// if (!objVer.status) {
+		// 	$('.ppw-sign-up-btn-wrapper .ppw-sign-up-err').html(objVer.msg);
+		// 	return;
+		// }
+		codeClick = false;
+		timer = setInterval(setval, 1000)
+	})
+}
+function setSignTypeFuc () {
+	$('.sign-type-tab').on('click', function () {
+		$('.glo-userAccount').val('');
+		var bool = $(this).attr('isIp');
+		$(this).addClass('esp').siblings().removeClass('esp');
+		if (bool === 't') {
+			$('.singTabType1').show();
+			$('.singTabType2').hide();
+			return;
+		}
+		$('.singTabType1').hide();
+		$('.singTabType2').show();
+	})
+}
+
+function ploginFuc () {
+  $('#p-gd-win-wrapper').fadeOut();
+}
+function pwinFuc () {
+	$('.gd-win-close-btn').on('click', function () {
+		$('#p-gd-win-wrapper').fadeOut();
+	})
+	$('.glo-adu').on('click', function () {
+		$('#p-gd-win-wrapper').fadeIn();
+	})
+}
 $(function () {
+	pwinFuc();
+	ploginFuc();
+	setSignTypeFuc();
+	getCodeFuc();
 	setFooterStyle();
 	initNav(); // 判断悬浮导航出现的时机
 	winResize(); // 浏览器窗口变化做出处理
@@ -324,12 +386,12 @@ $(function () {
 	checkedItem();
 	cutRecommend();
 	$('.global-body').on('click', function () {
-		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list, .hf-sy-nav-solt-list').slideUp();
+		$('.gl-ct-tle-list, .gl-sort-styles, .goods-size-list, .win-drop-down-list, .trigeminy-address-list, .gl-ct-tle-list, .stpps-3-select-list, .hf-sy-nav-solt-list, .ypjf-table-list').slideUp();
 		$('.up-ge-tate-view').fadeOut();
 		$('.is-show').removeClass('is-show');
 		$('.csliw-ct-txt-table').removeClass('seled');
-		$('.hm-sy-nav-solt-view').removeClass('seld seled');
-		$('.csliw-ct-txt-table-list-wrapper, .fm-more-table-wrapper, .emoji-img-wrapper').slideUp();
+		$('.hm-sy-nav-solt-view, .hf-sy-nav-solt-view').removeClass('seld seled');
+		$('.csliw-ct-txt-table-list-wrapper, .fm-more-table-wrapper, .emoji-img-wrapper, .emoji-img-wrapper1').slideUp();
 	})
 	$('.stpps-3-select-list, .sp-cart-list-wrapper, .gl-condition-list-threelevel, .fsgl-list-box, .csliw-ct-txt-table-list-wrapper').bind("scroll", function (e) {
 		e.stopPropagation();

@@ -136,7 +136,7 @@ function soltFuc () {
 
 function loadXxFuc (obj, dom) {
 	obj.on('click', function () {
-		$('.pcu-txb-item, .pcum-nav').removeClass('seled');
+		$('.pcu-txb-item, .pcum-nav, .qqh-btn-s').removeClass('seled');
 		var pageIdx = $(this).attr('pageIdx');
 		$(this).addClass('seled').siblings().removeClass('seled');
 		dom.each(function () {
@@ -149,131 +149,28 @@ function loadXxFuc (obj, dom) {
 		})
 	})
 }
-var userNamePc = '';
-var userNameDesc = '';
-var userNameImg = '';
-function changePcInfo () {
-	$('.change-u-info-btn').on('click', function () {
-		userNamePc = $('#urio-avatar-name').html();
-		userNameDesc = $('#urio-avatar-desc').html();
-		if (userNameDesc === '这是个还没有简介的Racker...') {
-			userNameDesc = '';
-		}
-		userNameImg = $('#urio-avatar-img2').attr('src');
-		$('.urio-avatar-name').val(userNamePc);
-		$('.urio-avatar-textarea').val(userNameDesc);
-		$('.urio-avatar-img1').attr('src', userNameImg);
-		$('#pcUserInfo').hide();
-		$('#changUserInfo').fadeIn();
+
+function isReport2 () {
+	$('.report-btn-wrapper').on('click', function () {
+		$('.groove-win-wrapper').fadeIn();
+	})
+	$('.groove-win-close-btn, .groove-win-sumbit-btn').on('click', function () {
+		$('.groove-win-wrapper').fadeOut();
+		$('.sel-geim-checkbox').attr('checked', false);
+		$('.sel-geim-checkbox').parent().removeClass('seled');
 	})
 }
-
-function changeAvatar1 () {
-	$('#change-avatar-btn').on('click', function () {
-		$('#change-user-avatar-win').fadeIn();
-		vmCon('not-an');
-	})
-	$('.user-cpm-close-btn').on('click', function () {
-		$('#change-user-avatar-win').fadeOut();
-	})
-}
-
-function selectImg2(file) {
-  if (!file.files || !file.files[0]){
-  	$('.select-img-btn1').show();
-  	$('.select-img-again1').hide();
-    $('.sureCut1').removeClass('global-btn-styl');
-    $('.circular-desc1').html('当前头像');
-    return;
-  }
-  if (file.files[0].type !== 'image/jpeg' && file.files[0].type !== 'image/png') {
-  	$('.urio-avatar-desc1').html('请上传JPG、PNG等格式的图片！')
-  	return;
-  }
-  if (file.files[0].size > 2 * 1024 * 1024) {
-  	$('.urio-avatar-desc1').html('请上传小于2M的图片！')
-  	return;
-  }
-  var reader = new FileReader();
-  reader.onload = function (evt) {
-    var replaceSrc = evt.target.result;
-    $('#tailoringImg1').cropper('replace', replaceSrc, false);
-    $('.select-img-btn1').hide();
-    $('.select-img-again1').show();
-    $('.sureCut1').addClass('global-btn-styl');
-    $('.circular-desc1').html('头像预览');
-    $('.urio-avatar-desc1').html('');
-  }
-  reader.readAsDataURL(file.files[0]);
-}
-
-function cropperImg1 () {
-	$('#tailoringImg1').cropper({
-	  aspectRatio: 1/1,
-	  preview: '.previewImg1',
-	  guides: false,
-	  autoCropArea: 0.5,
-	  movable: false,
-	  dragCrop: true,
-	  movable: true,
-	  resizable: true,
-	  zoomable: false,
-	  mouseWheelZoom: false,
-	  touchDragZoom: true,
-	  rotatable: true,
-	  crop: function(e) {
-	    // console.log(e);
-	  }
-	});
-
-	$("#sureCut1").on("click",function () {
-		if (!$(this).hasClass('global-btn-styl')) {
-			return;
-		}
-		if ($("#tailoringImg1").attr("src") == null ){
-		  return false;
-		} else {
-		  var cas = $('#tailoringImg1').cropper('getCroppedCanvas');
-		  var base64url = cas.toDataURL('image/png');
-		  $(".urio-avatar-img1").prop("src", base64url);
-		  $('.urio-avatar-desc1').html('更新成功！')
-		  setTimeout(function () {
-		  	$('#change-user-avatar-win').fadeOut();
-		  	$('.urio-avatar-desc1').html('');
-		  }, 1000)
-		}
-	});
-
-	$(".select-img-again1, .select-img-btn1").on('click', function () {
-		return $('#chooseImg1').click();
-	})
-
-	var avatarSrc = $('.urio-avatar-img1').attr('src');
-	$('#finalImg1').attr('src', avatarSrc);
-
-	$('.urio-avatar-submit-btn').on('click', function () {
-		var thisInp = $('.urio-avatar-name').val();
-		var thisArea = $('.urio-avatar-textarea').val();
-		var thisImg = $('.urio-avatar-img1').attr('src');
-		if (thisInp) {
-			userNamePc = thisInp
-		}
-		if (thisArea) {
-			userNameDesc = thisArea;
-		} else {
-			userNameDesc === '这是个还没有简介的Racker...';
-		}
-		$('#urio-avatar-name').html(userNamePc);
-		$('#urio-avatar-desc').html(userNameDesc);
-		$('#urio-avatar-img2').attr('src', thisImg);
-		$('#pcUserInfo').fadeIn();
-		$('#changUserInfo').hide();
+function qqhFuc () {
+	$('.qqh-btn-s').on('click', function () {
+		$('.pcu-txb-item').removeClass('seled');
+		$(this).addClass('seled');
+		$('#pumw-nav-1, .pcum-nav-item, #pumw-nav-4, .pcumni-ct, #pumw-nav-6').hide();
+		$('#pumw-nav-2, #pumw-nav-3, .pumw-nav-5').fadeIn();
 	})
 }
 $(function () {
-	cropperImg1();
-	changeAvatar1();
-	changePcInfo();
+	qqhFuc();
+	isReport2();
 	soltFuc();
 	setListBorder();
 	setListBorder1();

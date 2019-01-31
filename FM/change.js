@@ -87,21 +87,23 @@ function changeAvatar () {
 	})
 	$('.change-song-list-info-btn, #span-btn-change').on('click', function () {
 		thisPidx = $(this).parent().index();
+		$(this).parent().parent().addClass('this_song_avatar');
 		getTTaaFontLen();
 		$('#change-song-list-info-win').fadeIn();
 		vmCon('not-an');
 	})
 	$('.csliw-close-btn, .csliw-btn-close').on('click', function () {
 		$('#change-song-list-info-win').fadeOut();
+		$('.this_song_avatar').removeClass('this_song_avatar');
 	})
 	$('.csliw-btn-submit').click(function () {
 		var thisDesc = $('#csliw-ct-desc-ttaa').val();
 		var thisPoster = $('.fm-song-group-poster-img').attr('src');
 		var thisName = $('.csliw-ct-name-inp').val();
 		var thisClass = $('.csliw-ct-txt-table').html();
-		$('.fm-song-group-item').eq(thisPidx).find('.fm-song-group-desc').html(thisDesc.substring(0, 20) + '...');
-		$('.fm-song-group-item').eq(thisPidx).find('.fm-song-group-img').attr('src', thisPoster);
-		$('.fm-song-group-item').eq(thisPidx).find('.fm-song-group-tle-link').html(thisName);
+		$('.this_song_avatar .fm-song-group-item').eq(thisPidx).find('.fm-song-group-desc').html(thisDesc.substring(0, 20) + '...');
+		$('.this_song_avatar .fm-song-group-item').eq(thisPidx).find('.fm-song-group-img').attr('src', thisPoster);
+		$('.this_song_avatar .fm-song-group-item').eq(thisPidx).find('.fm-song-group-tle-link').html(thisName);
 		$('#slgi-ct-desc').html(thisDesc);
 		$('#slgi-ct-poster').attr('src', thisPoster);
 		$('#slgi-ct-name').html(thisName);
@@ -111,6 +113,7 @@ function changeAvatar () {
 		$('#change-song-list-info-win').hide();
 		setTimeout(function () {
 			$('#change-song-list-info-success').fadeOut();
+			$('.this_song_avatar').removeClass('this_song_avatar');
 		}, 1000)
 	})
 	$('.csliw-ct-desc-ttaa').on('input', function () {

@@ -34,12 +34,25 @@ function delgeTab () {
 		idx = $(this).parent().parent().parent().index();
 		$('.groove-table-win-wrapper').fadeIn();
 	})
+	$('.pc-del-btn').on('click', function () {
+		idx = $(this).parent().parent().parent().index();
+		$(this).parent().parent().parent().parent().addClass('del_this_dom');
+		$('.groove-table-win-wrapper').fadeIn();
+	})
 	$('.groove-table-win-close-btn').on('click', function () {
 		$('.groove-table-win-wrapper').fadeOut();
+		$('.del_this_dom').removeClass('del_this_dom');
 	})
 	$('.groove-table-win-sumbit-btn').on('click', function () {
 		$('.groove-table-itrm').eq(idx).remove();
+		$('.del_this_dom .groove-item-js').eq(idx).remove();
 		$('.groove-table-win-wrapper').fadeOut();
+		var len = $('.del_this_dom').find('.groove-item-js').length;
+		if (len < 1) {
+			$('.del_this_dom').siblings('.groove-not-data').fadeIn();
+			$('.del_this_dom').hide();
+		}
+		$('.del_this_dom').removeClass('del_this_dom');
 	})
 	$('.groove-item-link').on('click', function () {
 		$('#groove-table-content').hide();

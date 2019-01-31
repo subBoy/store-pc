@@ -1,44 +1,44 @@
 var hfLen = 3
 function hfPageNav () {
-	$('#pagenavPrevBtn').on('click', function () {
-		var seledVal = $('.pagenav-item.seled').index();
-		$('#pagenavNextBtn').addClass('ppisShow');
-		$('.pagenav-item').removeClass('seled');
+	$('.pagenav-prev').on('click', function () {
+		var seledVal = $(this).siblings('.pagenav-list').find('.pagenav-item.seled').index();
+		$(this).siblings('.pagenav-next').addClass('ppisShow');
+		$(this).siblings('.pagenav-list').find('.pagenav-item').removeClass('seled');
 		seledVal = seledVal - 1;
 		if (seledVal <= 0) {
 			$(this).removeClass('ppisShow');
-			$('#pagenavList').find('.pagenav-item').eq(0).addClass('seled');
+			$(this).siblings('.pagenav-list').find('.pagenav-item').eq(0).addClass('seled');
 			return;
 		}
-		$('#pagenavList').find('.pagenav-item').eq(seledVal).addClass('seled');
+		$(this).siblings('.pagenav-list').find('.pagenav-item').eq(seledVal).addClass('seled');
 	})
-	$('#pagenavNextBtn').on('click', function () {
-		var seledVal = $('.pagenav-item.seled').index();
-		$('#pagenavPrevBtn').addClass('ppisShow');
-		$('.pagenav-item').removeClass('seled');
+	$('.pagenav-next').on('click', function () {
+		var seledVal = $(this).siblings('.pagenav-list').find('.pagenav-item.seled').index();
+		$(this).siblings('.pagenav-prev').addClass('ppisShow');
+		$(this).siblings('.pagenav-list').find('.pagenav-item').removeClass('seled');
 		seledVal = seledVal - 0 + 1;
 		if (seledVal >= hfLen - 1) {
 			$(this).removeClass('ppisShow');
-			$('#pagenavList').find('.pagenav-item').eq(hfLen - 1).addClass('seled');
+			$(this).siblings('.pagenav-list').find('.pagenav-item').eq(hfLen - 1).addClass('seled');
 			return;
 		}
-		$('#pagenavList').find('.pagenav-item').eq(seledVal).addClass('seled');
+		$(this).siblings('.pagenav-list').find('.pagenav-item').eq(seledVal).addClass('seled');
 	})
-	$('#pagenavList').on('click', '.pagenav-item', function () {
+	$('.pagenav-list').on('click', '.pagenav-item', function () {
 		var seledVal = $(this).index();
-		$('.pagenav-item').removeClass('seled');
-		$('#pagenavList').find('.pagenav-item').eq(seledVal).addClass('seled');
+		$(this).siblings('.pagenav-item').removeClass('seled');
+		$(this).addClass('seled');
 		if (seledVal <= 0) {
-			$('#pagenavPrevBtn').removeClass('ppisShow');
-			$('#pagenavNextBtn').addClass('ppisShow');
+			$(this).parent().siblings('.pagenav-prev').removeClass('ppisShow');
+			$(this).parent().siblings('.pagenav-next').addClass('ppisShow');
 			return;
 		}
-		$('#pagenavPrevBtn').addClass('ppisShow');
+		$(this).parent().siblings('.pagenav-prev').addClass('ppisShow');
 		if (seledVal >= hfLen - 1) {
-			$('#pagenavNextBtn').removeClass('ppisShow');
+			$(this).parent().siblings('.pagenav-next').removeClass('ppisShow');
 			return;
 		}
-		$('#pagenavNextBtn').addClass('ppisShow');
+		$(this).parent().siblings('.pagenav-next').addClass('ppisShow');
 	})
 }
 function resetWwStatus () {

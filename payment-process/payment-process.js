@@ -292,6 +292,7 @@ function signUp () {
 		}, 500);
 	})
 }
+var isIpLogin = true
 function plogin () {
 	var userAccount = $.trim($(".payment-userAccount").val());
 	var  obj = nonNull(userAccount, '账号');
@@ -299,12 +300,13 @@ function plogin () {
 		$('#payment-sign-err').html(obj.msg);
     return;
 	}
-
-	var userPassword = $.trim($(".payment-userPassword").val());
-	var  obj2 = nonNull(userPassword, '密码');
-	if (!obj2.status) {
-		$('#payment-sign-err').html(obj2.msg);
-    return;
+	if (!isIpLogin) {
+		var userPassword = $.trim($(".payment-userPassword").val());
+		var  obj2 = nonNull(userPassword, '密码');
+		if (!obj2.status) {
+			$('#payment-sign-err').html(obj2.msg);
+	    return;
+		}
 	}
 
 	var userCode = $.trim($(".payment-userCode").val());

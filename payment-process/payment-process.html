@@ -67,34 +67,65 @@
 					<div class="header-r-nav-unfold" unfold="用户中心" > 
 						<!-- 账号未登录状态 -->
 						<div class="sign-input-wrapper">
-							<p class="global-input-desc">账号登录<span id="err-txt-wrapper" class="err-txt-wrapper"></span></p>
+							<p class="global-input-desc"><span id="err-txt-wrapper" class="err-txt-wrapper"></span></p>
 							<div class="sign-input-group">
-								<div class="sign-input-layout">
-									<div class="sign-input-ctr u-ic">
-										<span class="sign-input-tle in-block">手机/邮箱：</span>
-										<input type="text" class="sign-input global-input-focus userAccount" value="">
+								<div class="sign-type-list">
+									<span class="sign-type-tab in-block esp" isIp="t">手机动态登录</span>
+									<span class="sign-type-tab-hr in-block">/</span>
+									<span class="sign-type-tab in-block" isIp="f">账号登录</span>
+								</div>
+								<!-- 手机动态登录 -->
+								<div class="sign-acc-wrapper singTabType1">
+									<div class="sign-input-layout">
+										<div class="sign-input-ctr ip-ic hd">
+											<span class="sign-input-tle in-block">输入您的手机号：</span>
+											<input type="text" class="sign-input global-input-focus payment-userAccount glo-userAccount" value="">
+										</div>
+										<div class="sign-accmount-wrapper" style="display: none;">
+											<ul class="sign-accmount-list">
+												<li class="sign-accmount-item">15212345678</li>
+												<li class="sign-accmount-item">15212345678@qq.com</li>
+												<li class="sign-accmount-item">15212345678@163.com</li>
+											</ul>
+										</div>
 									</div>
-									<div class="sign-accmount-wrapper" style="display: none;">
-										<ul class="sign-accmount-list">
-											<li class="sign-accmount-item">15212345678</li>
-											<li class="sign-accmount-item">15212345678@qq.com</li>
-											<li class="sign-accmount-item">15212345678@163.com</li>
-										</ul>
+									<div class="sign-input-layout">
+										<div class="sign-input-ctr c-ic add-ic hd">
+											<span class="sign-input-tle in-block">输入验证码：</span>
+											<input type="text" class="sign-input global-input-focus payment-userCode" value="">
+											<span class="code-img-ctr in-block get-ipcode-btn global-btn-styl" id="getCodeBtn">获 取</span>
+										</div>
 									</div>
 								</div>
-								<div class="sign-input-layout">
-									<div class="sign-input-ctr p-ic">
-										<span class="sign-input-tle in-block">确认密码：</span>
-										<input type="password" class="sign-input in-block global-input-focus userPassword" value="">
+								<!-- 账号登录 -->
+								<div class="sign-acc-wrapper singTabType2" style="display: none;">
+									<div class="sign-input-layout">
+										<div class="sign-input-ctr u-ic">
+											<span class="sign-input-tle in-block">手机/邮箱：</span>
+											<input type="text" class="sign-input global-input-focus payment-userAccount glo-userAccount" value="">
+										</div>
+										<div class="sign-accmount-wrapper" style="display: none;">
+											<ul class="sign-accmount-list">
+												<li class="sign-accmount-item">15212345678</li>
+												<li class="sign-accmount-item">15212345678@qq.com</li>
+												<li class="sign-accmount-item">15212345678@163.com</li>
+											</ul>
+										</div>
 									</div>
-								</div>
-								<div class="sign-input-layout">
-									<div class="sign-input-ctr c-ic">
-										<span class="sign-input-tle in-block">验证码：</span>
-										<input type="text" class="sign-input global-input-focus userCode" value="">
-										<span class="code-img-ctr in-block">
-											<img src="../developerImg/code.jpg" class="code-img">
-										</span>
+									<div class="sign-input-layout">
+										<div class="sign-input-ctr p-ic">
+											<span class="sign-input-tle in-block">确认密码：</span>
+											<input type="password" class="sign-input in-block global-input-focus payment-userPassword" value="">
+										</div>
+									</div>
+									<div class="sign-input-layout">
+										<div class="sign-input-ctr c-ic">
+											<span class="sign-input-tle in-block">验证码：</span>
+											<input type="text" class="sign-input global-input-focus payment-userCode" value="">
+											<span class="code-img-ctr in-block">
+												<img src="../developerImg/code.jpg" class="code-img">
+											</span>
+										</div>
 									</div>
 								</div>
 								<div class="rest-operation-wrapper">
@@ -105,12 +136,12 @@
 										记住我的登录信息！
 									</p>
 									<p class="forget-pw-and-sign-up">
-										<a href="../sign-up/sign-up.html" class="fs-opertion-btn">新用户注册</a>
-										<a href="../forget-pw/forget-pw.html" class="fs-opertion-btn">忘记密码</a>
+										<a href="../sign-up/sign-up.html" target="_blank" class="fs-opertion-btn">新用户注册</a>
+										<a href="../forget-pw/forget-pw.html" target="_blank" class="fs-opertion-btn">忘记密码</a>
 									</p>
 								</div>
 								<div class="nav-sign-in-btn-ctr">
-									<button id="login-btn-ctr" class="nav-sign-in-btn global-btn-styl">登录</button>
+									<button id="payment-login-btn-ctr" class="nav-sign-in-btn global-btn-styl">登录</button>
 								</div>
 								<div class="third-party-sign-in">
 									<p class="third-party-desc">绑定第三方用户点击图标直接登录！</p>
@@ -1245,25 +1276,49 @@
 			<div class="sign-input-wrapper payment-sign">
 				<p class="payment-sign-err" id="payment-sign-err"></p>
 				<div class="sign-input-group">
-					<div class="sign-input-layout">
-						<div class="sign-input-ctr u-ic">
-							<span class="sign-input-tle in-block">手机/邮箱：</span>
-							<input type="text" class="sign-input global-input-focus payment-userAccount" value="">
+					<div class="sign-type-list">
+						<span class="sign-type-tab in-block esp" isIp="t">手机动态登录</span>
+						<span class="sign-type-tab-hr in-block">/</span>
+						<span class="sign-type-tab in-block" isIp="f">账号登录</span>
+					</div>
+					<!-- 手机动态登录 -->
+					<div class="sign-acc-wrapper singTabType1">
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr ip-ic">
+								<span class="sign-input-tle in-block">输入您的手机号：</span>
+								<input type="text" class="sign-input global-input-focus payment-userAccount" value="">
+							</div>
+						</div>
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr c-ic add-ic">
+								<span class="sign-input-tle in-block">输入验证码：</span>
+								<input type="text" class="sign-input global-input-focus payment-userCode" value="">
+								<span class="code-img-ctr in-block get-ipcode-btn global-btn-styl" id="getCodeBtn">获 取</span>
+							</div>
 						</div>
 					</div>
-					<div class="sign-input-layout">
-						<div class="sign-input-ctr p-ic">
-							<span class="sign-input-tle in-block">确认密码：</span>
-							<input type="password" class="sign-input in-block global-input-focus payment-userPassword" value="">
+					<!-- 账号登录 -->
+					<div class="sign-acc-wrapper singTabType2" style="display: none;">
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr u-ic">
+								<span class="sign-input-tle in-block">手机/邮箱：</span>
+								<input type="text" class="sign-input global-input-focus payment-userAccount" value="">
+							</div>
 						</div>
-					</div>
-					<div class="sign-input-layout">
-						<div class="sign-input-ctr c-ic">
-							<span class="sign-input-tle in-block">验证码：</span>
-							<input type="text" class="sign-input global-input-focus payment-userCode" value="">
-							<span class="code-img-ctr in-block">
-								<img src="../developerImg/code.jpg" class="code-img">
-							</span>
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr p-ic">
+								<span class="sign-input-tle in-block">确认密码：</span>
+								<input type="password" class="sign-input in-block global-input-focus payment-userPassword" value="">
+							</div>
+						</div>
+						<div class="sign-input-layout">
+							<div class="sign-input-ctr c-ic">
+								<span class="sign-input-tle in-block">验证码：</span>
+								<input type="text" class="sign-input global-input-focus payment-userCode" value="">
+								<span class="code-img-ctr in-block">
+									<img src="../developerImg/code.jpg" class="code-img">
+								</span>
+							</div>
 						</div>
 					</div>
 					<div class="rest-operation-wrapper">

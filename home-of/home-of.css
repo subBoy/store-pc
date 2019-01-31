@@ -296,7 +296,7 @@
 	padding-left: 30px;
 	font-size: 14px;
 	line-height: 34px;
-	z-index: 11000;
+	z-index: 991;
 	background-color: #fff;
 }
 .hf-sy-nav-solt-box {
@@ -1253,6 +1253,39 @@
 .gm-colled-btn.esp {
 	background-image: url(../home-of/images/adio-7.png);
 }
+.pc-del-btn {
+	display: block;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../personal-center/images/del-ic.png');
+	cursor: pointer;
+	z-index: 990
+}
+.pc-del-btn.bg-im {
+	background-color: transparent;
+}
+.pc-change-btn {
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../personal-center/images/c-s-info.png');
+	cursor: pointer;
+	z-index: 990
+}
 .groove-item-img {
 	display: block;
 	position: relative;
@@ -1471,7 +1504,7 @@
 	cursor: pointer;
 	z-index: 13;
 }
-.getb-list-btn-wrapper:hover, .getb-num-btn-wrapper:hover, .getb-del-btn-wrapper:hover {
+.getb-list-btn-wrapper:hover, .getb-list-btn-wrapper.isfsde, .getb-num-btn-wrapper:hover, .getb-del-btn-wrapper:hover {
 	background-color: #f03e4d;
 } 
 .groove-table-item-pic {
